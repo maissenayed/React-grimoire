@@ -67,7 +67,30 @@ React.createElement() takes three arguments. They are:
 * **props:** n object containing properties ('props' in React terms) that get passed to the component. Since we're just getting started with React, we won't use these just yet — but be aware that the second options serves this purpose.
 * **children:** the last argument is the children of that component. This can be a quoted string  in which case the content will be interpreted as text. However, we can also pass in a reference to another component, allowing us to nest elements and components within each other&#x20;
 
-if we want one child for our element we can provided within the props like the example below
+
+
+The third and subsqeuent arguments to `React.createElement()` are always added to the `props` as `children` — regardless of the type.
+
+So if you create an element with a custom type and children, you can access those children on its `props`.
+
+In fact, these two `createElement` calls are equivalent:
+
+```jsx
+let a = createElement(
+  AnyType,
+  {
+    children: x
+  }
+)
+
+let b = createElement(
+  AnyType,
+  {},
+  x
+)
+```
+
+If we want one child for our element we can provided within the props like the example below
 
 ```jsx
  // Children as prop
