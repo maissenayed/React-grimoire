@@ -7,13 +7,11 @@
 * [JSX](react-fundamentals/jsx.md)
 * [React Props and styling](react-fundamentals/react-props-and-styling.md)
 * [Components](react-fundamentals/components.md)
-* [ProtoTypes](react-fundamentals/prototypes.md)
 * [Handling Events With React](react-fundamentals/handling-events-with-react.md)
 * [Arrays and key props](react-fundamentals/arrays-and-key-props.md)
-* [React Fragments](react-fundamentals/react-fragments.md)
 * [Refs](react-fundamentals/refs.md)
-* [Forms and inputs](react-fundamentals/forms-and-inputs.md)
 * [Reconciliation & Virtual DOM in React](react-fundamentals/reconciliation-and-virtual-dom-in-react.md)
+* [ProtoTypes](react-fundamentals/prototypes.md)
 
 ## 🪝 React Hooks
 
@@ -26,16 +24,10 @@
 * [useReducer](react-hooks/usereducer.md)
 * [Custom hooks](react-hooks/custom-hooks.md)
 
-## 📓 React Guidelines
-
-* [React Components Composition Guidelines](react-guidelines/react-components-composition-guidelines/README.md)
-  * [Folders Structure](react-guidelines/react-components-composition-guidelines/folders-structure.md)
-  * [Where to put React State](react-guidelines/react-components-composition-guidelines/where-to-put-react-state.md)
-* [React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
-* [When to use React.memo](react-guidelines/when-to-use-react.memo.md)
-
 ## 🔭 Concepts
 
+* [Untitled](concepts/untitled.md)
+* [React Lifecycle](concepts/react-lifecycle.md)
 * [Advanced Patterns](concepts/advanced-patterns/README.md)
   * [Compound Components Pattern](concepts/advanced-patterns/compound-components-pattern.md)
   * [Control Props Pattern](concepts/advanced-patterns/control-props-pattern.md)
@@ -43,9 +35,16 @@
   * [Custom hook pattern](concepts/advanced-patterns/custom-hook-pattern.md)
   * [State Reducer](concepts/advanced-patterns/state-reducer.md)
   * [Context Module](concepts/advanced-patterns/context-module.md)
-* [React Lifecycle](concepts/react-lifecycle.md)
 * [Acceptability](concepts/acceptability.md)
 * [Conditional React props with TypeScript](concepts/conditional-react-props-with-typescript.md)
+
+## 📓 React Guidelines
+
+* [React Components Composition Guidelines](react-guidelines/react-components-composition-guidelines/README.md)
+  * [Folders Structure](react-guidelines/react-components-composition-guidelines/folders-structure.md)
+  * [Where to put React State](react-guidelines/react-components-composition-guidelines/where-to-put-react-state.md)
+* [React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
+* [When to use React.memo](react-guidelines/when-to-use-react.memo.md)
 
 ## 🧩 React ecosystem
 
@@ -56,7 +55,6 @@
 * [State Management](react-ecosystem/state-management/README.md)
   * [MobX](react-ecosystem/state-management/mobx.md)
   * [Redux, Redux-toolkit](react-ecosystem/state-management/redux-redux-toolkit.md)
-* [Rest API's](react-ecosystem/rest-apis.md)
 * [Graphql](react-ecosystem/graphql/README.md)
   * [Apollo](react-ecosystem/graphql/apollo.md)
   * [React query](react-ecosystem/graphql/react-query.md)

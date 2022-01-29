@@ -1,17 +1,13 @@
 # Components
 
+## Custom components
+
 You frequently want to share code, just like in regular JavaScript, which you do by using functions. If you want to distribute JSX, you can do so as well. These functions are referred to as "components" in React and have some unique properties that's defined or called props.
 
 To be more specific, components are functions that tell React how to render one type of element. Each function takes a `props` object, and returns a new element that will be rendered in place of the original.
 
 ```jsx
 ...
-<body>
-  <div id="root"></div>
-  <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
-  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script type="text/babel">
  
     function message(props) {
@@ -30,7 +26,6 @@ To be more specific, components are functions that tell React how to render one 
    
     ReactDOM.render(element, document.getElementById('root'))
   </script>
-</body>
 ...
 ```
 
@@ -70,12 +65,6 @@ Because pure functional languages have such powerful expressions, statements can
 
 ```jsx
 ...
-<body>
-  <div id="root"></div>
-  <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
-  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script type="text/babel">
  
     const condition =true
@@ -87,7 +76,6 @@ Because pure functional languages have such powerful expressions, statements can
     </div>
     ReactDOM.render(element, document.getElementById('root'))
   </script>
-</body>
 ...
 ```
 
@@ -97,12 +85,6 @@ But you can use ternary operator _because like you thought it, it returns an **e
 
 ```jsx
 ...
-<body>
-  <div id="root"></div>
-  <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
-  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script type="text/babel">
  
     const condition =true
@@ -118,7 +100,6 @@ But you can use ternary operator _because like you thought it, it returns an **e
     
     ReactDOM.render(element, document.getElementById('root'))
   </script>
-</body>
 ...
 ```
 
@@ -126,12 +107,6 @@ Now let's return to our initial code&#x20;
 
 ```jsx
 ...
-<body>
-  <div id="root"></div>
-  <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
-  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script type="text/babel">
  
     function message(props) {
@@ -150,7 +125,6 @@ Now let's return to our initial code&#x20;
    
     ReactDOM.render(element, document.getElementById('root'))
   </script>
-</body>
 ...
 ```
 
@@ -178,12 +152,6 @@ And if you recall we can convert React.createElement() to JSX. Then our code wil
 
 ```jsx
 ...
-<body>
-  <div id="root"></div>
-  <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
-  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script type="text/babel">
  
     function message(props) {
@@ -209,7 +177,6 @@ And if you recall we can convert React.createElement() to JSX. Then our code wil
     
     ReactDOM.render(element, document.getElementById('root'))
   </script>
-</body>
 ...
 ```
 
@@ -225,12 +192,6 @@ So we need to tell babel to know that's a React Element and for That all our Rea
 
 ```jsx
 ...
-<body>
-  <div id="root"></div>
-  <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
-  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script type="text/babel">
  
     function message(props) {
@@ -254,7 +215,6 @@ So we need to tell babel to know that's a React Element and for That all our Rea
     );   
     ReactDOM.render(element, document.getElementById('root'))
   </script>
-</body>
 ...
 ```
 
@@ -262,12 +222,6 @@ We can even nest those element inside each others:
 
 ```jsx
 ...
-<body>
-  <div id="root"></div>
-  <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
-  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script type="text/babel">
  
     function message(props) {
@@ -298,7 +252,6 @@ We can even nest those element inside each others:
     
     ReactDOM.render(element, document.getElementById('root'))
   </script>
-</body>
 ...
 ```
 
@@ -307,3 +260,101 @@ From here one i'll will be using JSX in the next chapters as it's easier to writ
 
 But always bear in mind that anything that we will do with JSX we can do it with React raw API's .&#x20;
 {% endhint %}
+
+## React Fragments
+
+When working in React, it's a common pattern to return multiple elements by wrapping them with a container element like **div**. This works fine but by doing so, we're adding an extra node to the DOM. As your app grows, these extra nodes contribute to slow performance. Below is an example without fragments.
+
+```jsx
+const Paper = () => {
+  return (
+    <div>
+      <Header />
+      <Main />
+    </div>
+  );
+};
+
+const Home = () => {
+  return (
+    <Layout>
+      <Paper />
+      <Sidebar />
+    </Layout>
+  );
+};
+
+```
+
+As you see in the dashboard component, we wrap the child elements with a **div** and then call the **Paper** component in the **Home** component. Now, let's see how it looks in the browser.
+
+```jsx
+<Layout>
+    <div>
+        <Header />
+        <Main />
+    </div>
+    <Sidebar />
+</Layout>
+```
+
+As you can see in the example, we have an unused div that doesn't contribute to anything in the layout. This is redundant.
+
+### How to use Fragments?
+
+To solve this problem, Fragments were introduced in React. Fragments are used to group a list of children without adding extra nodes to the DOM. Let's look at an example where we use Fragments.
+
+```jsx
+const Paper = () => {
+  return (
+    <React.Fragment>
+      <Header />
+      <Main />
+    </React.Fragment>
+  );
+};
+
+const Home = () => {
+  return (
+    <React.Fragment>
+      <Paper />
+      <Sidebar />
+    </React.Fragment>
+  );
+};
+```
+
+Now, if we look at the browser we'll see that no additional elements have been added to the DOM.
+
+```jsx
+<Layout>
+    <Header/>
+    <Main/>
+    <Sidebar/>
+<Layout>
+```
+
+### Syntax
+
+Fragments can be used using 2 syntax, the first one is using **React.Fragment** which we've used multiple times above. The other one is a new shorter syntax, using empty brackets, that does the same thing.
+
+```jsx
+// Using React.Fragment tags  that support Keys or attributes
+return (
+  <React.Fragment>
+    <Paper />
+    <Sidebar />
+  </React.Fragment>
+);
+
+// Using empty brackets
+return (
+  <>
+    <Paper />
+    <Sidebar />
+  </>
+);
+```
+
+Both of these syntaxes work the same. Although, the newer syntax doesn't support keys or attributes.
+
