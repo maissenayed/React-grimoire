@@ -263,6 +263,8 @@ But always bear in mind that anything that we will do with JSX we can do it with
 
 ## React Fragments
 
+{% embed url="https://reactjs.org/docs/fragments.html" %}
+
 When working in React, it's a common pattern to return multiple elements by wrapping them with a container element like **div**. This works fine but by doing so, we're adding an extra node to the DOM. As your app grows, these extra nodes contribute to slow performance. Below is an example without fragments.
 
 ```jsx
@@ -357,4 +359,3 @@ return (
 ```
 
 Both of these syntaxes work the same. Although, the newer syntax doesn't support keys or attributes.
-

@@ -7,6 +7,7 @@
 * [JSX](react-fundamentals/jsx.md)
 * [React Props and styling](react-fundamentals/react-props-and-styling.md)
 * [Components](react-fundamentals/components.md)
+* [Build tool choice for MVP projects](react-fundamentals/build-tool-choice-for-mvp-projects.md)
 * [Handling Events With React](react-fundamentals/handling-events-with-react.md)
 * [Arrays and key props](react-fundamentals/arrays-and-key-props.md)
 * [Refs](react-fundamentals/refs.md)

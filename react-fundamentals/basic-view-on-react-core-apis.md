@@ -29,7 +29,7 @@ With that in mind, you need two JavaScript files to write React applications for
 
 Let's convert our file to use React! using just raw React APIs here.
 
-In modern applications you'll get React and React DOM files from a "package registry" like [npm](https://npmjs.com) ([react](https://npm.im/react) and [react-dom](https://npm.im/react-dom)). But we will use [https://unpkg.com/](https://unpkg.com) .It's CDN(global content delivery network) that will allow us ready to use script files  regular script tags so you don't have to bother installing them.&#x20;
+In modern applications you'll get React and React DOM files from a "package registry" like [npm](https://npmjs.com) ([react](https://npm.im/react) and [react-dom](https://npm.im/react-dom)). But we will use [https://unpkg.com/](https://unpkg.com) . It's CDN(global content delivery network) that will allow us ready to use script files regular script tags so you don't have to bother installing them.&#x20;
 
 ```jsx
  ...
