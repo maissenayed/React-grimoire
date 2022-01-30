@@ -47,12 +47,20 @@ That's because the default the browser will make a GET request to the current UR
 As we know event is a [**`SyntheticEvent`**](https://reactjs.org/docs/events.html) **** that is just React even that behave exactly  as a regular event but if you want to get the native event just by  **event.nativeEvent()** and you will get our submit event triggred by the form .
 
 {% hint style="warning" %}
-****
-
 **event.target\[index of the input].value** is the common why to get our event value but it will always be relative to the order of the form fields .&#x20;
 
 To link the label of our input we use the **`for`** attribute generally in html with react lie className we use htmlFor instead , therefor  we can access our inputes by&#x20;
 
 **event.target.elements.\[the name of the input].value**  and **** with that we will have more control on wish element value that we are interacting with
+{% endhint %}
+
+{% hint style="info" %}
+Another way to get the value is via **`ref`** in React. a **`ref`** is an object that stays consistent between renders of react component.&#x20;
+
+It has a **current** property on it which can be updated to any value at any time .In case of interacting with DOM nodes, you can pass a **`ref`** to a react element and react will set the current property to the OM node that's rendered.
+
+For this cas we use a special funtion called **`React.useRef`** that return a reference add a s ref to the input and get it value by **`inputRef.current.value`**([https://reactjs.org/docs/hooks-reference.html#useref](https://reactjs.org/docs/hooks-reference.html#useref))
+
+We will dive deeper into React.useRef() in it appropriate section .
 {% endhint %}
 
