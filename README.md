@@ -40,6 +40,14 @@ Now if we want to add some JavaScript we can just use the script tag&#x20;
 </html>
 ```
 
+{% hint style="success" %}
+**`import` and ES6 modules**
+
+Did you notice the ES6 `import` statement in the above example?
+
+In order to ensure that the `import` statements work, the `<script>` tag in your HTML file will need to have the attribute `type="module"`. Surprisingly, this actually works as-is in most modern browsers.
+{% endhint %}
+
 The first question i ever asked my self is how really JavaScript can inter-react with the DOM .
 
 How i can really create , modify or delete DOM element using JavaScript and of course it lead to my two ever JavaScript command i  wrote :
