@@ -24,7 +24,7 @@ Like this one :
 ```
 
 {% hint style="info" %}
-<mark style="color:blue;">The browser parses this HTML code and creates the DOM (Document Object Model). The browser then exposes the DOM to JavaScript, at that point your web page will become interactive where you can do the basic events that we will talk about in another Section.</mark>
+The browser parses this HTML code and creates the DOM (Document Object Model). The browser then exposes the DOM to JavaScript, at that point your web page will become interactive where you can do the basic events that we will talk about in another Section.
 {% endhint %}
 
 Now if we want to add some JavaScript we can just use the script tag&#x20;
