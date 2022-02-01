@@ -10,7 +10,7 @@
 * [Build tool choice for MVP projects](react-fundamentals/build-tool-choice-for-mvp-projects.md)
 * [Handling Events With React](react-fundamentals/handling-events-with-react.md)
 * [Form](react-fundamentals/form.md)
-* [Array and Lists](react-fundamentals/array-and-lists.md)
+* [Array and Lists](react-fundamentals/arrays-and-key-props.md)
 * [Reconciliation & Virtual DOM in React](react-fundamentals/reconciliation-and-virtual-dom-in-react.md)
 * [ProtoTypes](react-fundamentals/prototypes.md)
 
