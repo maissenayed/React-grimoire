@@ -2,6 +2,12 @@
 
 Every React element has a `props` object. For elements representing HTML tags, this is just an object containing [DOM properties](https://developer.mozilla.org/en-US/docs/Web/API/Element#Properties).
 
+Think of props as arguments to a function. React components are functions which return JSX (or more generally something that's renderable like React elements, `null`, a string, etc.). Typically when you have a piece of code that you would like to reuse, you can place that code into a function and any dynamic values that code used before can be accepted as arguments (for example `const result = 2 + 3` could be extracted to a function and accept arguments like so `const result = add(2, 3)`).
+
+{% hint style="info" %}
+NOTE: Props can be anything.  they can also be (and often are) strings, arrays, objects, functions, etc.
+{% endhint %}
+
 For example, if you want to render this HTML using `ReactDOM.render()`:
 
 ```
@@ -138,11 +144,11 @@ And in JSX&#x20;
     <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
     <script type="text/babel">
     
-      const Child = <div style={{ width: '100px', height: '100px', backgroundColor: 'aqua', padding: '10px' }}></div>;
+      const child = <div style={{ width: '100px', height: '100px', backgroundColor: 'aqua', padding: '10px' }}></div>;
       const Container = (
         <div className="blue-border">
-          <Child />
-          <Child />
+          {child}
+          {child}
         </div>
       );
 
@@ -151,7 +157,3 @@ And in JSX&#x20;
   </body>
 </html>
 ```
-
-{% hint style="warning" %}
-As you did notice the first character when i created  constant container and child was upper case and that's how we created our first components in react
-{% endhint %}

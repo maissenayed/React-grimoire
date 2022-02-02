@@ -11,6 +11,8 @@
 * [Handling Events With React](react-fundamentals/handling-events-with-react.md)
 * [Form](react-fundamentals/form.md)
 * [Array and Lists](react-fundamentals/arrays-and-key-props.md)
+* [Component State](react-fundamentals/component-state.md)
+* [Component Life Cycle](react-fundamentals/component-life-cycle.md)
 * [Reconciliation & Virtual DOM in React](react-fundamentals/reconciliation-and-virtual-dom-in-react.md)
 * [ProtoTypes](react-fundamentals/prototypes.md)
 
