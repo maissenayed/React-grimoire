@@ -65,3 +65,11 @@ But while React can’t distinguish between identical elements in an array, you 
 To see this in action, if i try adding unique `key` props to each of the checkboxes above. (keys can be strings or numbers — the only thing that matters is that they’re unique). Once you’ve added these, when click a checkbox and then click "Reverse"; the checked boxes should now move as expected!
 
 {% embed url="https://codesandbox.io/embed/array-and-list-key-js8s7?fontsize=14&hidenavigation=1&theme=dark" %}
+
+{% hint style="danger" %}
+**As you can see in our example, we've moved the content JSX and ReactDOM.render method call inside a reverseAndRender function. Then, once defined, we call the function, which will render the content on the UI on page load. It's worth noting that we've also inserted the reverseAndRender function call within the onClick function. So, whenever we click the button, the reverseAndRender function is called, and we see the updated reversed checkboxes on the UI.**
+
+****
+
+But still, it's not feasible to call the **reverseAndRender** function every time we want to update the UI. So React added the concept of **State**.
+{% endhint %}
