@@ -9,7 +9,6 @@
 * [JSX](react-fundamentals/jsx.md)
 * [React Props and styling](react-fundamentals/react-props-and-styling.md)
 * [Components](react-fundamentals/components.md)
-* [Build tool choice for MVP projects](react-fundamentals/build-tool-choice-for-mvp-projects.md)
 * [Handling Events With React](react-fundamentals/handling-events-with-react.md)
 * [Form](react-fundamentals/form.md)
 * [Array and Lists](react-fundamentals/arrays-and-key-props.md)
@@ -29,9 +28,16 @@
 * [useReducer](react-hooks/usereducer.md)
 * [Custom hooks](react-hooks/custom-hooks.md)
 
+## 📓 React Guidelines
+
+* [React Components Composition Guidelines](react-guidelines/react-components-composition-guidelines.md)
+* [React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
+* [When to use React.memo](react-guidelines/when-to-use-react.memo.md)
+* [Where to put React State](react-guidelines/where-to-put-react-state.md)
+* [Folders Structure](react-guidelines/folders-structure.md)
+
 ## 🔭 Concepts
 
-* [Untitled](concepts/untitled.md)
 * [React Lifecycle](concepts/react-lifecycle.md)
 * [Advanced Patterns](concepts/advanced-patterns/README.md)
   * [Compound Components Pattern](concepts/advanced-patterns/compound-components-pattern.md)
@@ -42,14 +48,6 @@
   * [Context Module](concepts/advanced-patterns/context-module.md)
 * [Acceptability](concepts/acceptability.md)
 * [Conditional React props with TypeScript](concepts/conditional-react-props-with-typescript.md)
-
-## 📓 React Guidelines
-
-* [React Components Composition Guidelines](react-guidelines/react-components-composition-guidelines/README.md)
-  * [Folders Structure](react-guidelines/react-components-composition-guidelines/folders-structure.md)
-  * [Where to put React State](react-guidelines/react-components-composition-guidelines/where-to-put-react-state.md)
-* [React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
-* [When to use React.memo](react-guidelines/when-to-use-react.memo.md)
 
 ## 🧩 React ecosystem
 
@@ -75,15 +73,15 @@
   * [React Hook Form VS Formik](react-ecosystem/forms-tools/react-hook-form-vs-formik.md)
 * [Internationalization](react-ecosystem/internationalization/README.md)
   * [React-Intl](react-ecosystem/internationalization/react-intl.md)
+* [Build tool choice for MVP projects](react-ecosystem/build-tool-choice-for-mvp-projects.md)
 
 ## ⁉ Testing
 
-* [Testing react query](testing/testing-react-query.md)
+* [Jest config](testing/jest-config.md)
 * [React Testing Library](testing/react-testing-library.md)
-* [Unit testing](testing/unit-testing.md)
-* [Integration test](testing/integration-test.md)
-* [Custom Hooks](testing/custom-hooks.md)
+* [Testing Hooks](testing/testing-hooks.md)
 * [Testing Apollo client](testing/testing-apollo-client.md)
+* [Testing react query](testing/testing-react-query.md)
 
 ## 🎭 Performance&#x20;
 

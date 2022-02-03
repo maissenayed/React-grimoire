@@ -56,9 +56,7 @@ But _which one should you use?_
 
 Actually, _either is fine_. There are times you can’t beat the convenience of adding a short `style` prop. And there are times when you’ll use `className` to access the extra power provided by CSS.
 
-In fact, there’s nothing wrong with mixing and matching `style` and `className`, like in this demo. You can get a feel for how each works by changing the background and border colors.
-
-**Limitations of style prop**
+#### **Limitations of style prop**
 
 If you want to use selectors, including pseudo-selectors like `:hover`, then you’ll need to use `className`.
 
