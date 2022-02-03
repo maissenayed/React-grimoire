@@ -1,8 +1,10 @@
 # Table of contents
 
+* [⁉ Introduction](README.md)
+
 ## 🧑🎓 React Fundamentals&#x20;
 
-* [The Basic javascript "Hello world"](README.md)
+* [The Basic javascript "Hello world"](<README (1).md>)
 * [Basic view on React core API's](react-fundamentals/basic-view-on-react-core-apis.md)
 * [JSX](react-fundamentals/jsx.md)
 * [React Props and styling](react-fundamentals/react-props-and-styling.md)
