@@ -25,19 +25,19 @@ before React 16.8.\* States were only available to components that are called **
 
 How do I define class components?
 
+You can create a component by using an ES6 class keyword and by extending the `Component` class provided by React like this:
+
 You just wrap a function component in a class! There are just three rules:
 
 1. The class must extend from `React.Component`
 2. You must define a `render()` method that returns a React element
 3. Props are accessed through `this.props` instead of through function arguments.
 
-You can create a component by using an ES6 class keyword and by extending the `Component` class provided by React like this:
-
 ```javascript
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { username: 'johndoe' }
+    this.state = { username: 'Mayssa' }
   }
   render() {
     const { username } = this.state
@@ -50,8 +50,6 @@ class App extends React.Component {
 }
 ```
 
-Above, I am setting the state of the component’s username to a string.
-
 ### The Constructor
 
 [According to the official documentation](https://reactjs.org/docs/react-component.html#constructor), the constructor is the right place to initialize state. Initializing state is done by setting `this.state` to an object, like you can see above. Remember: **state is a plain JavaScript object**. The initial state of the App component has been set to a state object which contains the key username, and its value `johndoe` using `this.state = { username: 'johndoe' }`.
@@ -62,11 +60,11 @@ Initializing a component state can get as complex as what you can see here:
 constructor(props) {
   super(props)
   this.state = { 
-    currentTime: 0,
+    total: 0,
     status: false, 
-    btnOne: false, 
+    isDisabled: false, 
     todoList: [],
-    name: 'John Doe'
+    name: 'Mayssa'
   }
 }
 ```
@@ -284,8 +282,6 @@ class TodoItem extends React.Component {
 
 > It's fairly easy to understand how they work—especially when seen in context—but it's also a bit difficult to grasp them conceptually. It's confusing at first because they both have abstract terms and their values look the same, but they also have very different _roles._
 
-## Context
-
 The main responsibility of a Component is to translate raw data into rich HTML. With that in mind, the _props_ and the _state_ together constitute the _raw data_ that the HTML output derives from.
 
 You could say _props_ + _state_ is the input data for the `render()` function of a Component, so we need to zoom in and see what each data type represents and where does it come from.
@@ -327,15 +323,17 @@ _**props**_** (short for **_**properties**_**) are a Component's configuration, 
 | Can set initial value for child Components?  | Yes     | Yes     |
 | Can change in child Components?              | Yes     | No      |
 
-\* Note that both _props_ and _state_ initial values received from parents override default values defined inside a Component.
+{% hint style="warning" %}
+Note that both _props_ and _state_ initial values received from parents override default values defined inside a Component.
+{% endhint %}
 
-#### Should this Component have _state_?
+### Should this Component have _state_?
 
-_state_ is optional. Since _state_ increases complexity and reduces predictability, a Component without _state_ is preferable. Even though you clearly can't do without state in an interactive app, you should avoid having too many _Stateful Components._
+_State_ is optional. Since _state_ increases complexity and reduces predictability, a Component without _state_ is preferable. Even though you clearly can't do without state in an interactive app, you should avoid having too many _Stateful Components._
 
-**Component types**
+#### **Component types**
 
-* **Stateless Component** — Only _props_, no _state._ There's not much going on besides the `render()` function and all their logic revolves around the _props_ they receive. This makes them very easy to follow (and test for that matter). We sometimes call these _dumb-as-f\*ck Components_ (which [turns out](http://www.urbandictionary.com/define.php?term=dumb%20as%20fuck) to be the only way to misuse the F-word in the English language).
+* **Stateless Component** — Only _props_, no _state._ There's not much going on besides the `render()` function and all their logic revolves around the _props_ they receive. This makes them very easy to follow (and test for that matter).&#x20;
 * **Stateful Component** — Both _props_ and _state._ We also call these _state managers_. They are in charge of client-server communication (XHR, web sockets, etc.), processing data and responding to user events. These sort of logistics should be encapsulated in a moderate number of _Stateful Components_, while all visualization and formatting logic should move downstream into as many _Stateless Components_ as possible.
 
 #### Sources of truth
