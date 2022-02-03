@@ -189,6 +189,8 @@ Below are some of the methods that do not have any lifecycle method replacement 
 2. **getSnapshotBeforeUpdate( )**
 3. **getDerivedStateFromError ( )**
 
+{% embed url="https://reactjs.org/docs/hooks-faq.html#how-do-lifecycle-methods-correspond-to-hooks" %}
+
 #### Why Hooks? / Why not Classes?
 
 The class components are long and winding. To create a 'effect logic,' we are frequently obliged to duplicate our logic in diffrent lifecycle functions.
