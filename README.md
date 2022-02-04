@@ -1,22 +1,18 @@
 # ⁉ Introduction
 
-My father always told me that knowledge mostly needs to be free. I believe that too.\
-Witnessing the struggle most people find while learning and working with react especially in finding simple tutorial here and there that give beginner knowledge, but those rarely go deep in concepts, patterns, and advanced features.
+My father always told me That knowledge mostly need to be free . I believe that too .\
+Witnessing the struggle most people find while working with react . finding simple tutorial here and there that give beginner Knowledge , but rarely going deep to concept and advanced features.
 
-Most Master classes are very expensive to afford especially in the MENA region. \
-Therefore, I wanted to create this booklet to give a learning step up to for free.&#x20;
+And most Master classes are very expensive to reach specially in MENA region. \
+Therefore I wanted to create this booklet to give the step up for people for free.&#x20;
 
 ### Disclaimer&#x20;
 
-{% hint style="danger" %}
-**It is mandatory to have a good basic knowledge with JavaScript, and DOM manipulation concepts.**
-{% endhint %}
+I recommend to have a good basic knowledge with JavaScript, DOM manipulation concepts .
 
-{% hint style="info" %}
-**I recommend to dive deep in those concept before tackling React and I assure you that not only React will be easier to understand but also anything that involves JavaScript Ecosystem will be easier to digest.**&#x20;
-{% endhint %}
+I recommend to dive deep in those concept before tackling React and i assure you not that React will be easier to understand but anything that involve JavaScript Ecosystem will be easier to digest.&#x20;
 
-### &#x20;  Useful links and resources&#x20;
+### &#x20;  Us full links and resources&#x20;
 
 {% embed url="https://www.tutorialrepublic.com/javascript-tutorial" %}
 
@@ -24,6 +20,6 @@ Therefore, I wanted to create this booklet to give a learning step up to for fre
 
 {% embed url="https://roadmap.sh/frontend" %}
 
-This is my old booklet in which you find various articles and cheat sheets, bits of code that I found useful during my career. Enjoy!&#x20;
+And this is my old Booklet you can find various articles and cheat sheets , bits of code that i found us-full in my career enjoy .&#x20;
 
 {% embed url="https://maissen.gitbook.io/maissen-grimoire" %}

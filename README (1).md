@@ -1,10 +1,12 @@
 # The Basic javascript "Hello world"
 
-Going back to basics allows us to review knowledge and, in some senses of the word, connect the dots on ambiguous aspects.
+Going back to basics allows us to review knowledge and, or we can put it this way, connect the dots on ambiguous aspects.
 
-Before tackling React, maybe we should review how to make a basic web page using vanilla JavaScript.
+Before tackling **React**, maybe we should review how to make a basic web page using **Vanilla JavaScript.**
 
-Basically the most minimal thing that we can call a web page is just one Html File that say Hello world .
+## **Minimal web page**
+
+Basically, the most minimal thing that we can call a web page is just one **HTML File** that says "Hello world".
 
 Like this one :
 
@@ -24,10 +26,14 @@ Like this one :
 ```
 
 {% hint style="info" %}
-The browser parses this HTML code and creates the DOM (Document Object Model). The browser then exposes the DOM to JavaScript, at that point your web page will become interactive where you can do the basic events that we will talk about in another Section.
+**The browser parses this HTML code and creates the DOM (Document Object Model). The browser, then, exposes the DOM to JavaScript. At that point, your web page will become interactive where you can do the basic events that we will talk about in another Section.**
 {% endhint %}
 
-Now if we want to add some JavaScript we can just use the script tag&#x20;
+To read more about the **Document Object Model (DOM)**:
+
+{% embed url="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" %}
+
+Now**,** if we want to add some **JavaScript** we can just use the **script tag**&#x20;
 
 ```html
 <html>
@@ -41,16 +47,16 @@ Now if we want to add some JavaScript we can just use the script tag&#x20;
 ```
 
 {% hint style="success" %}
-**`import` and ES6 modules**
+**ES6 modules**
 
-Did you notice the ES6 `import` statement in the above example?
-
-In order to ensure that the `import` statements work, the `<script>` tag in your HTML file will need to have the attribute `type="module"`. Surprisingly, this actually works as-is in most modern browsers.
+**In order to ensure that the ES6 features to works, the `<script>` tag in your HTML file will need to have the attribute `type="module"`. Surprisingly, this actually works as-is in most modern browsers.**
 {% endhint %}
 
-The first question i ever asked my self is how really JavaScript can inter-react with the DOM .
+## DOM Manipulation
 
-How i can really create , modify or delete DOM element using JavaScript and of course it lead to my two ever JavaScript command i  wrote :
+The first question ever that I asked myself was how can **JavaScript** interact with the **DOM**?
+
+How can I really create, modify or delete **DOM** element using **JavaScript**? These questions lead to my two first **JavaScript** commands I wrote:
 
 ```javascript
 // Create an element in the DOM .
@@ -61,15 +67,11 @@ const root = document.createElement('div')
 document.body.append(rootElement)
 ```
 
-To read more about the browser Document interface :
-
-{% embed url="https://developer.mozilla.org/en-US/docs/Web/API/Document" %}
-
 {% hint style="info" %}
-The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree. With them, you can change the document's structure, style, or content.
+**The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree. With them, you can change the document's structure, style, or content.**
 {% endhint %}
 
-Manipulating an Element is easy we can add styling or getting and adding content. Lets try to play with some stuff
+Manipulating an Element is easy we can add styling or getting and adding content. Let's try to play with some stuff
 
 ```tsx
 <!DOCTYPE html>
@@ -104,11 +106,12 @@ Manipulating an Element is easy we can add styling or getting and adding content
 </html>
 ```
 
-As you can see i added the id selector and the class selector to the root element added some styling and even added our hello world text, thus we can always use html tags to create the div element  with it's attributes but i just wanted to show how really JavaScript can leverage all of that programmatically &#x20;
+As you can see, I added the **id selector** and the **class selector** to the root element. I added some styling and even added our "hello world" text.
+
+Since we are always able to use **HTML** tags to create the **div element** with its **attributes**, I just wanted to show how **JavaScript** can leverage all of that in code. &#x20;
 
 {% hint style="warning" %}
-People were creating HTML on the server and then layering JavaScript on top of it for interactivity. However, as the requirements for that interactivity grew more difficult, this approach resulted in applications that were difficult to maintain and had performance issues.&#x20;
+**People were creating HTML on the server and then layering JavaScript on top of it for interactivity. However, as the requirements for that interactivity grew more difficult, this approach resulted in applications that were difficult to maintain and had performance issues.**&#x20;
 
-As a result, instead of defining the DOM in hand-written HTML, modern JavaScript frameworks were developed to address some of the issues. Like our beloved React
+**As a result, instead of defining the DOM in hand-written HTML, modern JavaScript frameworks were developed to address some of the issues like our beloved React.**
 {% endhint %}
-
