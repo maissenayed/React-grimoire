@@ -1,14 +1,14 @@
 # React Props and styling
 
-Every React element has a `props` object. For elements representing **HTML** tags, this is just an object containing [DOM properties](https://developer.mozilla.org/en-US/docs/Web/API/Element#Properties).
+Every React element has a `props` object. For elements representing HTML tags, this is just an object containing [DOM properties](https://developer.mozilla.org/en-US/docs/Web/API/Element#Properties).
 
-Think of props as arguments to a function. React components are functions which return JSX (or more generally something that's render-able like React elements, `null`, a string, etc.). Typically, when you have a piece of code that you would like to reuse, you can place that code into a function and any dynamic values that code used before can be accepted as arguments (for example `const result = 2 + 3` could be extracted to a function and accept arguments like so `const result = add(2, 3)`).
+Think of props as arguments to a function. React components are functions which return JSX (or more generally something that's renderable like React elements, `null`, a string, etc.). Typically when you have a piece of code that you would like to reuse, you can place that code into a function and any dynamic values that code used before can be accepted as arguments (for example `const result = 2 + 3` could be extracted to a function and accept arguments like so `const result = add(2, 3)`).
 
 {% hint style="info" %}
 NOTE: Props can be anything.  they can also be (and often are) strings, arrays, objects, functions, etc.
 {% endhint %}
 
-For example, if you want to render this **HTML** using `ReactDOM.render()`:
+For example, if you want to render this HTML using `ReactDOM.render()`:
 
 ```
 <a id="home" href="http://lsxs.me/home">Visual Systems</a>
@@ -37,7 +37,7 @@ _Not all HTML attributes map directly to props._
 
 ### Prop naming <a href="#prop-naming" id="prop-naming"></a>
 
-When creating React elements, your `props` need to be named after DOM properties — _not **HTML** attributes_. If you’re familiar with the DOM, this shouldn’t be a problem. If not, check out the article [HTML attributes vs. DOM properties](https://frontarm.com/articles/html-vs-dom-attributes/).
+When creating React elements, your `props` need to be named after DOM properties — _not HTML attributes_. If you’re familiar with the DOM, this shouldn’t be a problem. If not, check out the article [HTML attributes vs. DOM properties](https://frontarm.com/articles/html-vs-dom-attributes/).
 
 There’s a few of these naming differences you’ll come across rather frequently:
 
@@ -54,7 +54,7 @@ Styling a React element is as simple as passing in `className` and/or `style` pr
 
 But _which one should you use?_
 
-Actually, _either is fine_. There are times you can’t beat the convenience of adding a short `style` prop, and there are times when you’ll use `className` to access the extra power provided by CSS.
+Actually, _either is fine_. There are times you can’t beat the convenience of adding a short `style` prop. And there are times when you’ll use `className` to access the extra power provided by CSS.
 
 #### **Limitations of style prop**
 

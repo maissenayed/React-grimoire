@@ -2,9 +2,9 @@
 
 ## Custom components
 
-You frequently want to share code, just like in regular JavaScript, which you do by using functions. If you want to distribute JSX, you can do so as well. These functions are referred to as "components" in React and have some unique properties that's defined or called props.
+You frequently want to share code, just like in regular **JavaScript**, which you do by using functions. If you want to distribute **JSX**, you can do so as well. These functions are referred to as "components" in **React** and have some unique properties that's defined or called props.
 
-To be more specific, components are functions that tell React how to render one type of element. Each function takes a `props` object, and returns a new element that will be rendered in place of the original.
+To be more specific, components are functions that tell **React** how to render one type of element. Each function takes a `props` object, and returns a new element that will be rendered in place of the original.
 
 ```jsx
 ...
@@ -31,11 +31,11 @@ To be more specific, components are functions that tell React how to render one 
 
 So what type of `props` can a component receive?
 
-Like HTML elements, they can certainly receive strings and numbers. But custom components can also receive objects, arrays, functions — or even other elements!
+Like **HTML** elements, they can certainly receive strings and numbers. Custom components can also receive objects, arrays, functions — or even other elements!
 
-If we want to write JavaScript inside of JSX we need to wrap it with curly braces {} .we call that Interpolation
+If we want to write JavaScript inside of **JSX** we need to wrap it with curly braces {} .we call that Interpolation
 
-&#x20;Taking template literals as an example :
+Taking template literals as an example :
 
 ```javascript
 const name = "Mayssa" 
@@ -44,23 +44,23 @@ const message =`Hello I'm ${name}`
 
 Anything inside \`\` will be considered in string context but if we wrap it by ${} we can write JavaScript inside it and that's the JavaScript context . that's literally Interpolation in action .
 
-Same thing inside JSX but we just ditch the $ and use curly braces and babel will understand that we are writing JavaScript there.
+Same thing inside **JSX** but we just ditch the $ and use curly braces and babel will understand that we are writing JavaScript there.
 
 {% hint style="danger" %}
-Bear in mind that you can't do statements inside of the curly braces as babel can't interpret them so the best why to do it is to wrap it inside a function&#x20;
+**Bear in mind that you can't do statements inside of the curly braces as babel can't interpret them so the best why to do it is to wrap it inside a function**&#x20;
 
-**Expression:** Something which evaluates to a value. Example:  (1 + 5) / 2\
-**Statement:** A line of code which does something. Example: _if Somthing do something_
+**Expression: Something which evaluates to a value. Example:  (1 + 5) / 2**\
+**Statement: A line of code which does something. Example: **_**if Somthing does something**_
 {% endhint %}
 
 {% hint style="info" %}
-_OPTIONAL_ :mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board:
+_**OPTIONAL** _ :mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board::mortar\_board:
 
-For an explanation of the important differences in composability (chainability) of expressions vs statements, my favorite reference is John Backus's Turing award paper, [_Can programming be liberated from the von Neumann style?_](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4539\&rep=rep1\&type=pdf).
+**For an explanation of the important differences in composability (chainability) of expressions vs statements, my favorite reference is John Backus's Turing award paper,** [_**Can programming be liberated from the von Neumann style?**_](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4539\&rep=rep1\&type=pdf)**.**
 
-Imperative languages (C, Java, etc.) emphasize statements for program structure and have expressions as an afterthought. Expressions are prioritized in functional languages.&#x20;
+**Imperative languages (C, Java, etc.) emphasize statements for program structure and have expressions as an afterthought. Expressions are prioritized in functional languages.**&#x20;
 
-Because pure functional languages have such powerful expressions, statements can be omitted entirely.
+**Because pure functional languages have such powerful expressions, statements can be omitted entirely.**
 {% endhint %}
 
 ```jsx
@@ -79,7 +79,7 @@ Because pure functional languages have such powerful expressions, statements can
 ...
 ```
 
-But you can use ternary operator _because like you thought it, it returns an **expression**_
+But you can use ternary operator _because like you thought, it returns an **expression**_
 
 {% embed url="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" %}
 
@@ -128,7 +128,7 @@ Now let's return to our initial code&#x20;
 ...
 ```
 
-Remember React.createElement():
+Remember **React.createElement()**:
 
 ```jsx
 React.createElement(
@@ -138,17 +138,17 @@ React.createElement(
 )
 ```
 
-As we said the type argument for React.createElement() can accept various things one of them is a React Element .
+As we said, the type argument for React.createElement() can accept various things one of which is a **React Element** .
 
-In our case we want to create a React Element representing the message function.
+In our case, we want to create a **React Element** representing the message function.
 
 ```jsx
 const messageElement = React.createElement(message,props);
 ```
 
-That will work just fine as react instead of creating a DOM node , it create an element that is saved in memory and that it will call our message function when we render it on the page .
+That will work just fine as **react** instead of creating a **DOM** node. It creates an element that is saved in memory and that will call our message function when we render it on the page.
 
-And if you recall we can convert React.createElement() to JSX. Then our code will look like this
+If you can recall we can convert **React.createElement()** to **JSX**. Then our code will look something like this:
 
 ```jsx
 ...
@@ -181,14 +181,14 @@ And if you recall we can convert React.createElement() to JSX. Then our code wil
 ```
 
 {% hint style="danger" %}
-But babel compiler will not recognize message as a React Element, but instead will try to find it as a HTML Tags without a result so it will throw an error.
+**Babel compiler will not recognize message as a React Element. Instead, it will try to find it as a HTML Tags without a result so it will throw an error.**
 {% endhint %}
 
-If you want learn more about HTML tags :&#x20;
+If you want learn more about **HTML** **tags** :&#x20;
 
 {% embed url="https://maissen.gitbook.io/maissen-grimoire/html-grimoire/html-cheat-sheet" %}
 
-So we need to tell babel to know that's a React Element and for That all our React component need to start it name by **Uppercase** letter.
+So we need to let **babel** know that's a React Element, and for that, all our React component's name will need to start with **Uppercase** letter.
 
 ```jsx
 ...
@@ -256,16 +256,16 @@ We can even nest those element inside each others:
 ```
 
 {% hint style="info" %}
-From here one i'll will be using JSX in the next chapters as it's easier to write and more readable specially if we had a complex tree of components.
+**From here on, i'll will be dealing with JSX in the next chapters as it's easier to write and is more readable especially if we have a complex tree of components.**
 
-But always bear in mind that anything that we will do with JSX we can do it with React raw API's .&#x20;
+**But always bear in mind that anything that we will do with JSX we can do with React raw APIs.**&#x20;
 {% endhint %}
 
 ## React Fragments
 
 {% embed url="https://reactjs.org/docs/fragments.html" %}
 
-When working in React, it's a common pattern to return multiple elements by wrapping them with a container element like **div**. This works fine but by doing so, we're adding an extra node to the DOM. As your app grows, these extra nodes contribute to slow performance. Below is an example without fragments.
+When using **React**, it's a common pattern to return multiple elements by wrapping them with a container element like **div**. This works fine, but by doing so, we're adding an extra node to the **DOM**. As your app grows, these extra nodes contribute to slow performance. Below is an example without fragments:
 
 ```jsx
 const Paper = () => {
@@ -288,7 +288,7 @@ const Home = () => {
 
 ```
 
-As you see in the dashboard component, we wrap the child elements with a **div** and then call the **Paper** component in the **Home** component. Now, let's see how it looks in the browser.
+As you see in the dashboard component, we wrap the child elements with a **div** and then call the **Paper** component in the **Home** component. Now, let's see what it looks like in the browser.
 
 ```jsx
 <Layout>
@@ -304,7 +304,7 @@ As you can see in the example, we have an unused div that doesn't contribute to 
 
 ### How to use Fragments?
 
-To solve this problem, Fragments were introduced in React. Fragments are used to group a list of children without adding extra nodes to the DOM. Let's look at an example where we use Fragments.
+To solve this problem, Fragments were introduced in **React**. Fragments are used to group a list of children without adding extra nodes to the **DOM**. Let's look at an example where we use Fragments:
 
 ```jsx
 const Paper = () => {
@@ -326,7 +326,7 @@ const Home = () => {
 };
 ```
 
-Now, if we look at the browser we'll see that no additional elements have been added to the DOM.
+Now, if we look at the browser we'll see that no additional elements have been added to the **DOM**.
 
 ```jsx
 <Layout>
@@ -338,7 +338,7 @@ Now, if we look at the browser we'll see that no additional elements have been a
 
 ### Syntax
 
-Fragments can be used using 2 syntax, the first one is using **React.Fragment** which we've used multiple times above. The other one is a new shorter syntax, using empty brackets, that does the same thing.
+Fragments can be used using two types of syntax. The first one is using **React.Fragment** which we've used multiple times above. The other one is a new shorter syntax, using empty brackets, that does the same thing.
 
 ```jsx
 // Using React.Fragment tags  that support Keys or attributes
@@ -358,4 +358,4 @@ return (
 );
 ```
 
-Both of these syntaxes work the same. Although, the newer syntax doesn't support keys or attributes.
+Both of these types of syntax work the same. Although, the newer syntax doesn't support keys or attributes.
