@@ -1,6 +1,6 @@
 # JSX
 
-Writing our code with React.createElement() and reactDOM.render() . it's a little bit verbose. not that readable.
+Writing our code with React.createElement() and reactDOM.render(), it's a little bit verbose; not that readable.
 
 The good thing the react team thought about that too and create a HTML-like syntactic suger on top of the raw React Api's called JSX
 
@@ -15,7 +15,7 @@ const element =
   </div>
 ```
 
-Into files like this:
+into files like this:
 
 ```jsx
 const element =
@@ -30,11 +30,11 @@ const element =
 
 To use JSX with reasonable performance, you'd need a build process, which would entail (at a minimum) understanding and installing node.js and create-react-app or babel. While this is usually acceptable, there are times when you'd rather avoid the overhead.
 
-Learning all of this just to avoid typing createElement() a few times doesn't make much sense if you're just getting started. However, there will come a point when your apps will be large enough that tooling will be a worthwhile investment. And once you've arrived at this point, JSX is a fantastic tool to have. It:
+Learning all of this just to avoid typing createElement() a few times doesn't make much sense if you're just getting started. However, there will come a point when your apps will be large enough that tooling will be a worthwhile investment. And once you've arrived at this point, JSX is a fantastic tool to have:
 
 * Large element definitions are simplified.
 * &#x20;It provides visual cues and assists editors with syntax highlighting.&#x20;
-* Assists React in producing more useful error and warning messages
+* It assists React in producing more useful error and warning messages
 
 {% hint style="info" %}
 Because JSX is not actually JavaScript, you have to convert it using something called a code compiler. [Babel](https://babeljs.io) is one such tool.
@@ -50,7 +50,7 @@ If you want to see how JSX is compiled to JavaScript, use the [online babel REPL
 You'll be MUCH more effective at reading and using JSX if you can train your brain to look at it and see the compiled version of the code! I strongly advise you to put this into practice on a regular basis.
 {% endhint %}
 
-So let's convert our code to JSX, First of all like react and reactDOM we will add babel script from unpkg
+So let's convert our code to JSX. First of all, like react and reactDOM, we will add babel script from unpkg
 
 ```jsx
  ...
@@ -95,7 +95,7 @@ Then let's try to change our React.createElement() to JSX
 ...
 ```
 
-Easy right , how about children&#x20;
+Easy right? How about children?
 
 ```jsx
 ...
@@ -126,7 +126,5 @@ Easy right , how about children&#x20;
 ```
 
 {% hint style="danger" %}
-You may noticed that i changed the type of our JavaScript from module to text/babel
-
-and that's to indicate to the browser do not evaluate the script  but babel will control the compiling for that script &#x20;
+**You may have noticed that I changed the type of our JavaScript from module to text/babel and that's to indicate to the browser not to evaluate the script . However, babel will control the compiling for that script** &#x20;
 {% endhint %}
