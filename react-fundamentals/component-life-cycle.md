@@ -717,3 +717,10 @@ render() {
 }
 ```
 
+## Lifecycle Simulators
+
+I just wanted to share one of the best example of lifecycle Similator by ReactFactory.com&#x20;
+
+a very good visual representation for the React component Life cycles&#x20;
+
+{% embed url="https://reactarmory.com/guides/lifecycle-simulators" %}

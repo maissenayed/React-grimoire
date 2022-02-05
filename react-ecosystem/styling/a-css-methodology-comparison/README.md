@@ -1,7 +1,5 @@
 # A CSS methodology comparison
 
-## **Motivations and Interrogations**
-
 Using [Ant design](https://ant.design) or [material ui ](https://mui.com)is nit for fast MVP to production based apps,If you work with a modest team on a single app, you’re better off with a directory of UI components.
 
 But the question arise when having the need of sharing UI components across many projects. and I you find yourself pasting the same UI components, here comes the need for a design system
@@ -20,7 +18,7 @@ The market is overloaded of solutions, most not suitable or answering a specific
 
 This is a small effort to clear the difference between the tools  and have an objective view on the design systems tools adoption choice .
 
-### **Precursor: Common CSS Problems**
+### **Common CSS Problems**
 
 If you are already familiar with the many challenges of writing clean CSS, feel free to jump forward to my thoughts on the individual frameworks. To offer a bit of context to my thoughts, I’d like to go through why you should even care about using these new frameworks instead of just plain ol’ CSS.
 
@@ -36,4 +34,6 @@ Isn’t the point of using classes so you can reuse them? Yes, but reusing class
 
 If CSS is not broken up into files/sections, it becomes hard to find and edit the CSS you are looking for. In traditional websites, there is generally only one `styles.css` , making organization difficult to upkeep. Long stylesheets that no one understands often result in what we call “append only stylesheets”. If developers can’t easily find what they need to update, they will just append new CSS to the bottom of the sheet, instead of maintaining what they already have.
 
-The crux of CSS problems really boils down to one thing: CSS can get unwieldy very quickly if not properly managed. We would like to avoid too-long sheets, deep nested selectors, and unnecessary !important’s. Each of the following CSS methodologies approach solving these problems in their own way.
+{% hint style="info" %}
+**The crux of CSS problems really boils down to one thing: CSS can get unwieldy very quickly if not properly managed. We would like to avoid too-long sheets, deep nested selectors, and unnecessary !important’s. Each of the following CSS methodologies approach solving these problems in their own way.**
+{% endhint %}
