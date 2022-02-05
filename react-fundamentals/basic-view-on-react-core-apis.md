@@ -67,6 +67,8 @@ React.createElement(
 )
 ```
 
+{% embed url="https://reactjs.org/docs/react-api.html#createelement" %}
+
 React.createElement() takes three arguments. They are:
 
 * **type:**  The type argument can be either a **HTML** element tag name string (such as `'div'` or `'span'`), a [React component](https://reactjs.org/docs/components-and-props.html) type (a class or a function), or a [React fragment](https://reactjs.org/docs/react-api.html#reactfragment) type.
@@ -150,6 +152,8 @@ const list =
 ```javascript
 ReactDOM.render(element,containerElement);
 ```
+
+{% embed url="https://reactjs.org/docs/react-dom.html#render" %}
 
 `ReactDOM.render()` takes two arguments:
 

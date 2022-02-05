@@ -68,3 +68,4 @@ As we know, event is a [**`SyntheticEvent`**](https://reactjs.org/docs/events.ht
 **We will dive deeper into React.useRef() in it appropriate section .**
 {% endhint %}
 
+{% embed url="https://reactjs.org/docs/forms.html#gatsby-focus-wrapper" %}

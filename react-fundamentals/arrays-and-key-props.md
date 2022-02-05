@@ -73,3 +73,5 @@ To see this in action, if i try adding unique `key` props to each of the checkbo
 
 But still, it's not feasible to call the **reverseAndRender** function every time we want to update the UI. So React added the concept of **State**.
 {% endhint %}
+
+{% embed url="https://reactjs.org/docs/lists-and-keys.html#gatsby-focus-wrapper" %}

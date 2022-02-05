@@ -33,6 +33,10 @@ To read more about the **Document Object Model (DOM)**:
 
 {% embed url="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" %}
 
+{% embed url="https://vkanakaraj.wordpress.com/2009/12/18/javascript-vs-dom-vs-bom-relationship-explained" %}
+Rajakvk’s Blog
+{% endembed %}
+
 Now**,** if we want to add some **JavaScript** we can just use the **script tag**&#x20;
 
 ```html

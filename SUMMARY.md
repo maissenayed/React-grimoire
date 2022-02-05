@@ -48,6 +48,7 @@
   * [Context Module](concepts/advanced-patterns/context-module.md)
 * [Acceptability](concepts/acceptability.md)
 * [Conditional React props with TypeScript](concepts/conditional-react-props-with-typescript.md)
+* [React Hydration](concepts/react-hydration.md)
 
 ## 🧩 React ecosystem
 
@@ -64,11 +65,11 @@
   * [What query or client technology should we use  for GraphQL requests ?](react-ecosystem/graphql/what-query-or-client-technology-should-we-use-for-graphql-requests.md)
 * [Styling](react-ecosystem/styling/README.md)
   * [A CSS methodology comparison](react-ecosystem/styling/a-css-methodology-comparison/README.md)
-    * [Post CSS processor :Sass](react-ecosystem/styling/a-css-methodology-comparison/post-css-processor-sass.md)
-    * [CSS in js :Styled-components](react-ecosystem/styling/a-css-methodology-comparison/css-in-js-styled-components/README.md)
-      * [Styled-components](react-ecosystem/styling/a-css-methodology-comparison/css-in-js-styled-components/styled-components.md)
-    * [Utility Classes: Tailwind](react-ecosystem/styling/a-css-methodology-comparison/utility-classes-tailwind/README.md)
-      * [Tailwind](react-ecosystem/styling/a-css-methodology-comparison/utility-classes-tailwind/tailwind.md)
+    * [Post CSS processor :Sass](react-ecosystem/styling/a-css-methodology-comparison/sass.md)
+    * [CSS in js :Styled-components](react-ecosystem/styling/a-css-methodology-comparison/css-in-js/README.md)
+      * [Styled-components](react-ecosystem/styling/a-css-methodology-comparison/css-in-js/styled-components.md)
+    * [Utility Classes: Tailwind](react-ecosystem/styling/a-css-methodology-comparison/utility-classes/README.md)
+      * [Tailwind](react-ecosystem/styling/a-css-methodology-comparison/utility-classes/tailwind.md)
 * [Forms Tools](react-ecosystem/forms-tools/README.md)
   * [React Hook Form VS Formik](react-ecosystem/forms-tools/react-hook-form-vs-formik.md)
 * [Internationalization](react-ecosystem/internationalization/README.md)

@@ -1,4 +1,4 @@
-# Utility Classes
+# Utility Classes: Tailwind
 
 Utility-first CSS is a methodology that came about in an effort to solve all the cons mentioned above with writing traditional CSS. Utility-first CSS involves using many small helper classes to make up a component’s styles, instead of writing class names based on semantic meaning. One thing to keep in mind is that utility-first CSS doesn’t need any library, it is simply a methodology that can be applied to CSS, similar to how BEM works.
 

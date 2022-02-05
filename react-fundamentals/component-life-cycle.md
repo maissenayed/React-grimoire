@@ -717,6 +717,10 @@ render() {
 }
 ```
 
+{% embed url="https://reactjs.org/docs/state-and-lifecycle.html#gatsby-focus-wrapper" %}
+
+{% embed url="https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class" %}
+
 ## Lifecycle Simulators
 
 I just wanted to share one of the best example of lifecycle Similator by ReactFactory.com&#x20;

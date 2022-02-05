@@ -128,3 +128,5 @@ Easy right? How about children?
 {% hint style="danger" %}
 **You may have noticed that I changed the type of our JavaScript from module to text/babel and that's to indicate to the browser not to evaluate the script . However, babel will control the compiling for that script** &#x20;
 {% endhint %}
+
+{% embed url="https://reactjs.org/docs/introducing-jsx.html" %}

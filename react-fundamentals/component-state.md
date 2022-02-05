@@ -17,7 +17,7 @@ You should know how to work with class-based components as well as functional co
 
 Instead of directly learning functional components with React hooks, you should first understand class-based components so it's easy to clear the basics.
 
-
+{% embed url="https://reactjs.org/docs/faq-state.html#gatsby-focus-wrapper" %}
 
 ## The old Class Components
 

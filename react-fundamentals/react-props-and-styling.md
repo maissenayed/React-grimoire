@@ -1,5 +1,9 @@
 # React Props and styling
 
+## Props
+
+{% embed url="https://reactjs.org/docs/components-and-props.html#gatsby-focus-wrapper" %}
+
 Every React element has a `props` object. For elements representing **HTML** tags, this is just an object containing [DOM properties](https://developer.mozilla.org/en-US/docs/Web/API/Element#Properties).
 
 Think of props as arguments to a function. React components are functions which return JSX (or more generally something that's render-able like React elements, `null`, a string, etc.). Typically, when you have a piece of code that you would like to reuse, you can place that code into a function and any dynamic values that code used before can be accepted as arguments (for example `const result = 2 + 3` could be extracted to a function and accept arguments like so `const result = add(2, 3)`).
@@ -48,7 +52,9 @@ There’s a few of these naming differences you’ll come across rather frequent
 
 Remembering these differences can be a bit of a pain. But unless you’re building rockets or medical devices, trial and error probably won’t hurt. And as a bonus, memorizing these differences will help you even outside of the React ecosystem!
 
-### Styling <a href="#styling" id="styling"></a>
+## Styling <a href="#styling" id="styling"></a>
+
+{% embed url="https://reactjs.org/docs/faq-styling.html" %}
 
 Styling a React element is as simple as passing in `className` and/or `style` props.
 
