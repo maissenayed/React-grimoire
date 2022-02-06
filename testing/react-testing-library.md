@@ -89,3 +89,6 @@ When you’re writing tests that operate heavily on local or global state, you m
 ### Final thoughts
 
 The React Testing Library makes it possible to write quick, concise, powerful and maintainable frontend tests. It’s pretty easy to get started, so why don’t you give it a shot? The next step can be to [check out the docs](https://testing-library.com/docs/react-testing-library/intro/). There’s also quite a few nice articles about the library on [Dodd’s blog](https://kentcdodds.com/blog/).
+
+{% embed url="https://www.toptal.com/react/react-testing-library-tutorial" %}
+

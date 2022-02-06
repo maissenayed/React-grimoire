@@ -60,8 +60,6 @@
   * [MobX](react-ecosystem/state-management/mobx.md)
   * [Redux, Redux-toolkit](react-ecosystem/state-management/redux-redux-toolkit.md)
 * [Graphql](react-ecosystem/graphql/README.md)
-  * [Apollo](react-ecosystem/graphql/apollo.md)
-  * [React query](react-ecosystem/graphql/react-query.md)
   * [What query or client technology should we use  for GraphQL requests ?](react-ecosystem/graphql/what-query-or-client-technology-should-we-use-for-graphql-requests.md)
 * [Styling](react-ecosystem/styling/README.md)
   * [A CSS methodology comparison](react-ecosystem/styling/a-css-methodology-comparison/README.md)
@@ -78,10 +76,10 @@
 
 ## ⁉ Testing
 
+* [Setup testing env](testing/setup-testing-env.md)
 * [Jest config](testing/jest-config.md)
 * [React Testing Library](testing/react-testing-library.md)
 * [Testing Hooks](testing/testing-hooks.md)
-* [Testing Apollo client](testing/testing-apollo-client.md)
 * [Testing react query](testing/testing-react-query.md)
 
 ## 🎭 Performance&#x20;
