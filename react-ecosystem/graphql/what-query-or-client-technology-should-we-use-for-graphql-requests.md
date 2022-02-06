@@ -4,6 +4,8 @@
 
 {% embed url="https://www.npmtrends.com/apollo-client-vs-react-query" %}
 
+{% embed url="https://clevertech.biz/insights/why-we-choose-react-query-as-a-server-state-management-solution" %}
+
 ### Context and Problem Statement[​](https://docs.go-aos.io/architecture-decisions-records/Front-End/GraphQL%20React%20Client#context-and-problem-statement) <a href="#context-and-problem-statement" id="context-and-problem-statement"></a>
 
 With the creation of the new contractor client app in 2021, the front-end developer team began to question if we should continue to use [Apollo Client](https://www.apollographql.com/docs/react/) or switch to another technology such as [React Query](https://react-query.tanstack.com).
