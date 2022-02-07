@@ -179,7 +179,7 @@ Just hang on a minute longer! This seems to be even more similar to how `compone
 
 There are other life cycle for a react component, even new one are emerging  as the `getDerivedStateFromProps` as of [React 17](https://medium.com/@valerii.sukhov/react-17-lifecycle-5b68946c813c) designed to replace `componentWillReceiveProps`. and it's invoked right before calling the render method, both on the initial mount and on subsequent updates. It should return an object to update the state, or null to update nothing.
 
-Example reference — [https://reactjs.org/docs/hooks-faq.html#how-do-i-implement-getderivedstatefromprops](https://reactjs.org/docs/hooks-faq.html#how-do-i-implement-getderivedstatefromprops)
+{% embed url="https://reactjs.org/docs/hooks-faq.html#how-do-i-implement-getderivedstatefromprops" %}
 
 #### **No Lifecycle method replacement** <a href="#7c25" id="7c25"></a>
 
@@ -193,8 +193,18 @@ Below are some of the methods that do not have any lifecycle method replacement 
 
 #### Why Hooks? / Why not Classes?
 
-The class components are long and winding. To create a 'effect logic,' we are frequently obliged to duplicate our logic in diffrent lifecycle functions.
+The class components are long and winding. To create a 'effect logic,' we are frequently obliged to duplicate our logic in different lifecycle functions.
 
 Class components do not provide an easy method for sharing logic between components (HOC and friends do not provide an elegant solution) — React Hooks, on the other hand, allow us to create our custom hooks.  a much simpler solution.
 
-Yes without forgetting : bye bye evil `this`
+Other then that the use of `this` add a lot of complexity and  reduce readability of the code
+
+i have stumble upon one of **Kent C Dodds** articles that clarify more the complexity of the class components use.
+
+{% embed url="https://kentcdodds.com/blog/classes-complexity-and-functional-programming" %}
+
+{% hint style="success" %}
+**I truly recommend to have an eye on Kent C Dodds blog , it's a rich maybe the richest resources for React and JavaScript  topics.**
+{% endhint %}
+
+{% embed url="https://kentcdodds.com/blog" %}
