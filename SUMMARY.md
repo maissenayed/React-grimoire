@@ -14,7 +14,6 @@
 * [Array and Lists](react-fundamentals/arrays-and-key-props.md)
 * [Component State](react-fundamentals/component-state.md)
 * [Component Life Cycle](react-fundamentals/component-life-cycle.md)
-* [Reconciliation & Virtual DOM in React](react-fundamentals/reconciliation-and-virtual-dom-in-react.md)
 * [ProtoTypes](react-fundamentals/prototypes.md)
 
 ## 🪝 React Hooks
@@ -39,6 +38,8 @@
 ## 🔭 Concepts
 
 * [React Lifecycle](concepts/react-lifecycle.md)
+* [Reconciliation & Virtual DOM in React](concepts/reconciliation-and-virtual-dom-in-react.md)
+* [React Hydration](concepts/react-hydration.md)
 * [Advanced Patterns](concepts/advanced-patterns/README.md)
   * [Compound Components Pattern](concepts/advanced-patterns/compound-components-pattern.md)
   * [Control Props Pattern](concepts/advanced-patterns/control-props-pattern.md)
@@ -48,7 +49,6 @@
   * [Context Module](concepts/advanced-patterns/context-module.md)
 * [Acceptability](concepts/acceptability.md)
 * [Conditional React props with TypeScript](concepts/conditional-react-props-with-typescript.md)
-* [React Hydration](concepts/react-hydration.md)
 
 ## 🧩 React ecosystem
 
