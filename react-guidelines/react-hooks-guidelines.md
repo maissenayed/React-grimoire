@@ -39,3 +39,5 @@ Please remember **that every file need to be tested**.
 You can found some example on
 
 {% embed url="https://reactjs.org/docs/hooks-custom.html" %}
+
+{% embed url="https://reactjs.org/docs/hooks-rules.html" %}
