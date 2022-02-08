@@ -54,8 +54,6 @@
 
 * [Routing](react-ecosystem/routing/README.md)
   * [React-Router vs React-location](react-ecosystem/routing/react-router-vs-react-location.md)
-  * [React location](react-ecosystem/routing/react-location.md)
-  * [React Router](react-ecosystem/routing/react-router.md)
 * [State Management](react-ecosystem/state-management/README.md)
   * [MobX](react-ecosystem/state-management/mobx.md)
   * [Redux, Redux-toolkit](react-ecosystem/state-management/redux-redux-toolkit.md)
