@@ -14,7 +14,7 @@
 * [Array and Lists](react-fundamentals/arrays-and-key-props.md)
 * [Component State](react-fundamentals/component-state.md)
 * [Component Life Cycle](react-fundamentals/component-life-cycle.md)
-* [ProtoTypes](react-fundamentals/prototypes.md)
+* [PropTypes](react-fundamentals/proptypes.md)
 
 ## 🪝 React Hooks
 
