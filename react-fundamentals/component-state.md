@@ -278,6 +278,8 @@ class TodoItem extends React.Component {
 }
 ```
 
+{% embed url="https://daveceddia.com/visual-guide-to-state-in-react" %}
+
 ## _props_ vs _state_
 
 > It's fairly easy to understand how they work—especially when seen in context—but it's also a bit difficult to grasp them conceptually. It's confusing at first because they both have abstract terms and their values look the same, but they also have very different _roles._

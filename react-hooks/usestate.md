@@ -7,3 +7,5 @@
 {% embed url="https://blog.logrocket.com/react-hooks-cheat-sheet-unlock-solutions-to-common-problems-af4caf699e70" %}
 
 {% embed url="https://react-hooks-cheatsheet.com" %}
+
+{% embed url="https://daveceddia.com/usestate-hook-examples" %}
