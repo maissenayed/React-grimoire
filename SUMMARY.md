@@ -12,9 +12,9 @@
 * [Handling Events With React](react-fundamentals/handling-events-with-react.md)
 * [Form](react-fundamentals/form.md)
 * [Array and Lists](react-fundamentals/arrays-and-key-props.md)
-* [Component State](react-fundamentals/component-state.md)
-* [Component Life Cycle](react-fundamentals/component-life-cycle.md)
-* [PropTypes](react-fundamentals/proptypes.md)
+* [Component State / Todo](react-fundamentals/component-state-todo.md)
+* [Component Life Cycle /Todo](react-fundamentals/component-life-cycle-todo.md)
+* [PropTypes /Todo](react-fundamentals/proptypes-todo.md)
 
 ## 🪝 React Hooks
 
@@ -41,6 +41,7 @@
 
 ## 🔭 Concepts
 
+* [What is "Rendering"?](concepts/what-is-rendering.md)
 * [React Lifecycle](concepts/react-lifecycle.md)
 * [Reconciliation & Virtual DOM in React](concepts/reconciliation-and-virtual-dom-in-react.md)
 * [React Hydration](concepts/react-hydration.md)
