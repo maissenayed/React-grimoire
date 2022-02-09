@@ -26,9 +26,9 @@
 * [useMemo](react-hooks/usememo.md)
 * [useCallback](react-hooks/usecallback.md)
 * [useRef](react-hooks/useref.md)
-* [useImperativeHandle()](react-hooks/useimperativehandle.md)
-* [Page 2](react-hooks/page-2.md)
-* [Page 1](react-hooks/page-1.md)
+* [useImperativeHandle](react-hooks/useimperativehandle.md)
+* [useDebugValue](react-hooks/usedebugvalue.md)
+* [useLayoutEffect](react-hooks/uselayouteffect.md)
 * [Custom hooks](react-hooks/custom-hooks.md)
 
 ## 📓 React Guidelines

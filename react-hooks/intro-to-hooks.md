@@ -54,7 +54,30 @@ It is possible to divide the built-in hooks into two sections, which are given b
 [usecallback.md](usecallback.md)
 {% endcontent-ref %}
 
-* `useImperativeHandle()`
-* `useDebugValue()`
-* `useRef()`
-* `useLayoutEffect()`
+{% content-ref url="useimperativehandle.md" %}
+[useimperativehandle.md](useimperativehandle.md)
+{% endcontent-ref %}
+
+{% content-ref url="usedebugvalue.md" %}
+[usedebugvalue.md](usedebugvalue.md)
+{% endcontent-ref %}
+
+{% content-ref url="useref.md" %}
+[useref.md](useref.md)
+{% endcontent-ref %}
+
+{% content-ref url="uselayouteffect.md" %}
+[uselayouteffect.md](uselayouteffect.md)
+{% endcontent-ref %}
+
+### Rules of Hooks <a href="#rules-of-hooks" id="rules-of-hooks"></a>
+
+It ain’t Fight Club, but we do have some rules to follow:
+
+1. Only call hooks at the top level of your function. Don’t put them in loops, conditionals, or nested functions. In order for React to keep track of your hooks, the same ones need to be called in the same order every single time.
+2. Only call hooks from React function components, or from [custom hooks. ](custom-hooks.md)Don’t call them from outside a component (what would that even do?). Keeping all the calls inside components and custom hooks makes your code easier to follow too, because all the related logic is grouped together.
+3. The names of hooks must start with “use”. Like `useState` or `useEffect` (well, not those two, those are taken).
+
+The React team created some ESLint rules to catch problematic usage of hooks (install from [here](https://reactjs.org/docs/hooks-rules.html#eslint-plugin)), and the linter needs a way to identify “a hook.” Hence the naming prefix. Nothing magical going on there. The linter will be able to warn you if you violate rule 1 or 2, but only if you follow rule 3 ;)
+
+{% embed url="https://reactjs.org/docs/hooks-rules.html" %}
