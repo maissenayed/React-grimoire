@@ -54,6 +54,7 @@
   * [Context Module](concepts/advanced-patterns/context-module.md)
 * [Acceptability](concepts/acceptability.md)
 * [Conditional React props with TypeScript](concepts/conditional-react-props-with-typescript.md)
+* [Fiber](concepts/fiber.md)
 
 ## 🧩 React ecosystem
 

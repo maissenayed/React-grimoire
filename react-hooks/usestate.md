@@ -269,3 +269,10 @@ const Component =() => {
 }
 ```
 
+#### Bailing out of a state update <a href="#bailingoutofastateupdate" id="bailingoutofastateupdate"></a>
+
+If you try to update state with the same value as the current state, React won’t render the component children or fire effects, e.g., `useEffect` callbacks. React compares previous and current state via the [`Object.is` comparison algorithm](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Object/is#Description); if they are equal, it ignores the re-render.
+
+It’s important to note that in some cases, React may still render the specific component whose state was updated. That’s OK because React will _not_ go deeper into the tree, i.e., render the component’s children.
+
+If expensive calculations are done within the body of your functional component, i.e., before the return statement, consider optimizing these with `useMemo`.
