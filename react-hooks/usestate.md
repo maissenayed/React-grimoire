@@ -1,5 +1,7 @@
 # useState
 
+![](../.gitbook/assets/useState)
+
 {% embed url="https://blog.logrocket.com/react-reference-guide-hooks-api" %}
 
 {% embed url="https://enlear.academy/types-of-react-hooks-best-practices-45c275b55b1f" %}
@@ -12,11 +14,7 @@
 
 The signature for the `useState` Hook is as follows:
 
-```jsx
-                 const [state, setState] = useState(initialState);
-//                        👆      👆 
-// Think about it as a getter and a setter
-```
+![](<../.gitbook/assets/useState2 (1)>)
 
 Here, `state` and `setState` refer to the state value and updater function returned on invoking `useState` with some `initialState`.
 
@@ -30,14 +28,14 @@ It’s important to note that when your component first renders and invokes `use
 
 ```jsx
  const [state] = useState(100)
-  return <div> State variable is {state}</div>
+ return <div> State variable is {state}</div>
 ```
 
 ## Update State Variable <a href="#update-state-variable" id="update-state-variable"></a>
 
 Also, to update state, the state updater function `setState` should be invoked with a new state value, as shown below:
 
-```
+```jsx
 setState(newValue)
 ```
 
@@ -132,7 +130,6 @@ const App = ({myProp}) => {
   const [state, setState] = useState(myProp)
 }
 // only the initial myProp value on initial render is passed as initialState. subsequent updates are ignored.
-
 ```
 
 However, if the initial state is a result of an expensive computation, you could also pass a function, which will be invoked only on initial render:
@@ -145,11 +142,11 @@ const [state, setState] = useState(() => yourExpensiveComputation(props))
 
 As opposed to just passing an initial state value, state could also be initialized from a function, as shown below:
 
-```
-const StateFromFn = () => {
+```jsx
+const Component = () => {
   const [token] = useState(() => {
-    let token = window.localStorage.getItem("my-token");
-    return token || "default#-token#"
+    const token = window.localStorage.getItem("sensetive-data");
+    return token || "please don't put sensetive data here 😢😢😢😢"
   })
 
   return <div>Token is {token}</div>
@@ -160,14 +157,12 @@ const StateFromFn = () => {
 
 As opposed to strings and numbers, you could also use an object as the initial value passed to `useState`.
 
-Note that you have to pass the entire object to the `useState` updater function because the object is replaced, not merged.
-
-Consider the following code block:
+Note that you have to pass the entire object to the `useState` updater function because the object is replaced, not merged.This is very different from how `this.setState` worked in classes!
 
 ```
-function CanYouFigureThisOut() {
-  const [state, setState] = useState({ name: "React" });
-  const updateState = () => setState({ creator: "Facebook" });
+function Component() {
+  const [state, setState] = useState({ name: "Mayssa" });
+  const updateState = () => setState({ occupation: "Teacher" });
   return (
     <>
       <pre>{JSON.stringify(state)}</pre>
@@ -177,27 +172,10 @@ function CanYouFigureThisOut() {
 }
 ```
 
-![React prints the string value](https://blog.logrocket.com/wp-content/uploads/2020/08/string-value-printed.png)The string {name: ‘React’} printed to the screen.
-
-When you click the update state button, which of the state values below is printed?
+So in order to add an property to the object, we’re using the ES6 spread operator `...` to copy the existing properties into the new object,&#x20;
 
 ```
-//1. 
-{"name": "React", "creator": "Facebook"}
-
-//2. 
-{"creator": "Facebook"}
-
-//3. 
-{"name": "React"}
-```
-
-The correct answer is `2` because with Hooks, the updater function does _not_ merge objects, unlike the `setState` function in class components. It replaces the state value with whatever new value is passed as an argument.
-
-Here’s how to fix that using the functional update form of the state updater function:
-
-```
-const updateState = () =>  setState((prevState) => ({ ...prevState, creator: "Facebook" }));
+const updateState = () =>  setState((prevState) => ({ ...prevState, { occupation: "Teacher" }));
 ```
 
 Pass a function to `setState` and return a merged object by using the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread\_syntax) ([`Object.assign` also works](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Object/assign)).
@@ -247,13 +225,9 @@ function ListOfThings() {
 }
 ```
 
-Notice we’re calling useState with an initial value of an empty array `[]`, and take a look at the `addItem` function.
+Notice we’re calling useState with an initial value of an empty array `[]`,&#x20;
 
-The state updater (`setItems`, here) doesn’t “merge” new values with old – it overwrites the state with the new value. This is very different from how `this.setState` worked in classes!
-
-So in order to add an item to the array, we’re using the ES6 spread operator `...` to copy the existing items into the new array, and inserting the new item at the end.
-
-Also, just to note, this example uses `const` and an arrow function instead of the `function` from the last example. I wanted to show that either way works.
+Such as objects, in order to add an item to the array, we’re using the ES6 spread operator `...` to copy the existing items into the new array, and inserting the new item at the end.
 
 ### **M**ultiple calls to useState
 
@@ -266,8 +240,8 @@ There’s nothing wrong with calling `useState` multiple times, and in most case
 
 Multiple state variables may be used and updated from within a functional component as shown below:
 
-```
-() => {
+```jsx
+const Component =() => {
   const [age, setAge] = useState(19)
   const [siblingsNum, setSiblingsNum] = 
     useState(10)
@@ -294,3 +268,4 @@ Multiple state variables may be used and updated from within a functional compon
   )
 }
 ```
+

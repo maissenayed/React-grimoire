@@ -1,4 +1,4 @@
-# Component State
+# Component State / Todo
 
 ## What is State?
 
@@ -157,7 +157,7 @@ Your component should look like this;
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { username: 'johndoe' }
+    this.state = { username: 'Mayssa' }
   }
   handleInputChange(username) {
     this.setState({username})
@@ -235,7 +235,11 @@ handleSubmit = (event) => {
 
 The event context is obtained each time the submit button is clicked. We use `event.preventDefault()` to stop the default action of submission which would reload the page. The value entered in the input field is assigned a variable called `value`, which is then passed an argument when `todoList.concat()` is called. React updates the state of `todoList` by adding the new value to the initial empty array. This new array becomes the current state of `todoList`. When another item is added, the cycle repeats.
 
-![](https://i0.wp.com/css-tricks.com/wp-content/uploads/2018/03/react-state-handling-cycle.jpg?ssl=1)
+`Initial state` :point\_right:`[]`
+
+`After button click the form event handler will set the state to the value indicated by the input let's say read more books`
+
+`updated state d` :point\_right:`["read more books"]`
 
 The goal here is to pass the individual item to a child component as props. For this tutorial, we’ll call it the `TodoItem` component. Add the code snippet below inside the parent div which you have in `render()` method.
 

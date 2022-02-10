@@ -1,4 +1,4 @@
-# PropTypes
+# PropTypes /Todo
 
 Every React app will be composed of an hierarchical tree of components that have different props, certainly then we will need to define and structure our props , to avoid bugs and errors .
 
@@ -551,5 +551,5 @@ Component.propTypes = {
 {% embed url="https://reactjs.org/docs/typechecking-with-proptypes.html" %}
 
 {% hint style="info" %}
-**I intensify use Typescript for all what concerns Types and types checking , and with that and i don't ever use proptypes in my projects , but it's always good to have such an amazing features on your grasp**  &#x20;
+**I intensively use Typescript for all what concerns Types and types checking , and with that and i don't ever use proptypes in my projects , but it's always good to have such an amazing features on your grasp**  &#x20;
 {% endhint %}
