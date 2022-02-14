@@ -1,5 +1,7 @@
 # useState
 
+![](../.gitbook/assets/usestate-re-render-queue-ignore.png)
+
 ![](../.gitbook/assets/useState)
 
 {% embed url="https://blog.logrocket.com/react-reference-guide-hooks-api" %}
