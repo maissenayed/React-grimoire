@@ -1,6 +1,6 @@
 # useState
 
-![](../.gitbook/assets/usestate-re-render-queue-ignore.png)
+![](<../.gitbook/assets/usestate-re-render-queue-ignore (1).png>)
 
 ![](../.gitbook/assets/useState)
 
@@ -43,7 +43,7 @@ setState(newValue)
 
 By doing this, a new re-render of the component is queued. `useState` guarantees that the `state` value will always be the most recent after applying updates.
 
-![](../.gitbook/assets/usestate-re-render-queue.png)
+![](<../.gitbook/assets/re-render queue.gif>)
 
 For referential checks, the `setState` function’s reference never changes during re-renders.
 
