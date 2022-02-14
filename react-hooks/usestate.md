@@ -1,7 +1,5 @@
 # useState
 
-![](<../.gitbook/assets/usestate-re-render-queue-ignore (1).png>)
-
 ![](../.gitbook/assets/useState)
 
 {% embed url="https://blog.logrocket.com/react-reference-guide-hooks-api" %}
@@ -43,7 +41,7 @@ setState(newValue)
 
 By doing this, a new re-render of the component is queued. `useState` guarantees that the `state` value will always be the most recent after applying updates.
 
-![](<../.gitbook/assets/re-render queue.gif>)
+![](<../.gitbook/assets/re-render queue (2).gif>)
 
 For referential checks, the `setState` function’s reference never changes during re-renders.
 
@@ -121,7 +119,7 @@ In the example above, the button grows every time it’s clicked. Since the new 
 
 The `initialState` argument to `useState` is only used during your initial render.
 
-![](../.gitbook/assets/usestate-initial-render.png)
+![](<../.gitbook/assets/re-render queue (1).gif>)
 
 ```
 // this is OK 
