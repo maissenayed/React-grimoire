@@ -141,7 +141,7 @@ There are pros and cons to each, but generally speaking, the more custom your de
 
 Investment in a custom design system will be worth it if the organization has particular needs that cannot be met by open-source design systems. As customizations and adjustments to the design system increase, the cost savings you may have gained from using the existing design system will diminish, and, in the long run, you may be better off creating your own design system anyway. Be sure you know what your organization needs before you embark on design system endeavors and evaluate the tradeoffs.
 
-![](<../.gitbook/assets/re-render queue (2) (1).gif>)
+![](<../.gitbook/assets/re-render queue (2) (4).gif>)
 
 Finally, establishing a full-fledged design system for a proof of concept or an initial prototype that is expected to alter is likely to be time and money consuming. After all, the benefit is design replicability, which is in the future. Though it may be tempting to establish these right away, note that a design system isn't intended to be a portfolio of work, but rather a functional toolkit or resource that allows designers and developers to work more efficiently. Nevertheless, if you are unsure about the usefulness of a design system, think about the duration you will use to evaluate your design work. When a company anticipate years of future, iterative design work, design systems are ideal.
 
