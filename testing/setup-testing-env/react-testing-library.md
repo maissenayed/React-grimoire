@@ -1,5 +1,5 @@
 ---
-cover: ../.gitbook/assets/testinglibrary-image.jpeg
+cover: ../../.gitbook/assets/testinglibrary-image.jpeg
 coverY: 49.48680351906158
 ---
 

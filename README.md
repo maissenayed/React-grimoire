@@ -6,6 +6,14 @@ Witnessing the struggle most people find while learning and working with react e
 Most Master classes are very expensive to afford especially in the MENA region. \
 Therefore, I wanted to create this booklet to give a learning step up to for free.&#x20;
 
+If you find this book helpful , please be my gust to add it to your onbording process, or share it with the team. and it will be great if you can star it on github so it can reach more hungry minds
+
+{% embed url="https://github.com/maissenayed/React-grimoire" %}
+
+&#x20;
+
+
+
 ### Disclaimer&#x20;
 
 {% hint style="danger" %}

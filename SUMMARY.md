@@ -80,10 +80,10 @@
 
 ## ⁉ Testing
 
-* [Setup testing env](testing/setup-testing-env.md)
-* [Jest config](testing/jest-config.md)
-* [React Testing Library](testing/react-testing-library.md)
-* [Testing Hooks](testing/testing-hooks.md)
+* [Setup testing env](testing/setup-testing-env/README.md)
+  * [Jest config](testing/setup-testing-env/jest-config.md)
+  * [React Testing Library](testing/setup-testing-env/react-testing-library.md)
+  * [Testing Hooks](testing/setup-testing-env/testing-hooks.md)
 * [Testing react query](testing/testing-react-query.md)
 
 ## 🎭 Performance&#x20;
