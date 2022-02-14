@@ -41,7 +41,7 @@ setState(newValue)
 
 By doing this, a new re-render of the component is queued. `useState` guarantees that the `state` value will always be the most recent after applying updates.
 
-![](<../.gitbook/assets/re-render queue (3).gif>)
+![](<../.gitbook/assets/re-render queue (3) (1).gif>)
 
 For referential checks, the `setState` function’s reference never changes during re-renders.
 
