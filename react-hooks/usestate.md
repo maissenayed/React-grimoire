@@ -14,7 +14,7 @@
 
 The signature for the `useState` Hook is as follows:
 
-![](<../.gitbook/assets/useState2 (1)>)
+![](<../.gitbook/assets/useState2 (1).png>)
 
 Here, `state` and `setState` refer to the state value and updater function returned on invoking `useState` with some `initialState`.
 
@@ -121,7 +121,7 @@ The `initialState` argument to `useState` is only used during your initial rende
 
 ![](<../.gitbook/assets/re-render queue (1) (2).gif>)
 
-```
+```jsx
 // this is OK 
 const [state, setState] = useState(10) 
 
