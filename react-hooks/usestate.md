@@ -10,8 +10,6 @@
 
 {% embed url="https://react-hooks-cheatsheet.com" %}
 
-{% embed url="https://daveceddia.com/usestate-hook-examples" %}
-
 The signature for the `useState` Hook is as follows:
 
 ![](<../.gitbook/assets/useState2 (1).png>)

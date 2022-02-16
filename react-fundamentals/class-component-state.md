@@ -1,4 +1,8 @@
-# Component State / Todo
+---
+description: the old way prior to react 16.8.0
+---
+
+# Class Component State
 
 ## What is State?
 
@@ -21,7 +25,7 @@ Instead of directly learning functional components with React hooks, you should 
 
 ## The old Class Components
 
-before React 16.8.\* States were only available to components that are called **class components**. The only reason why people used  class components over their counterpart, functional components, is that class components could have state.&#x20;
+Before React 16.8.\* States were only available to components that are called **class components**. The only reason why people used  class components over their counterpart, functional components, is that class components could have state.&#x20;
 
 How do I define class components?
 
