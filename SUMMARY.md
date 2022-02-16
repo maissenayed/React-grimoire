@@ -29,6 +29,7 @@
 * [useImperativeHandle](react-hooks/useimperativehandle.md)
 * [useDebugValue](react-hooks/usedebugvalue.md)
 * [useLayoutEffect](react-hooks/uselayouteffect.md)
+* [Hook flow](react-hooks/hook-flow.md)
 * [Custom hooks](react-hooks/custom-hooks.md)
 
 ## 📓 React Guidelines
