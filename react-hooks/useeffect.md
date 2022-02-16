@@ -61,7 +61,7 @@ As we can see the useEffect will force the component to rerender because useEffe
 
 ### Empty dependency array
 
-It is also possible to add an empty dependency array. In this case, effects are only executed once; it is similar to the [`componentDidMount()`](https://reactjs.org/docs/react-component.html#componentdidmount) lifecycle method. \
+It is also possible to add an empty dependency array. In this case, effects are only executed once; it is similar to the [`componentDidMount()`](https://reactjs.org/docs/react-component.html#componentdidmount) lifecycle method. (similar by not exactly the same)\
 
 
 ```jsx
@@ -171,7 +171,163 @@ const ArrayDepMount = () => {
 
 Here we can see that the effect depends on the randomNumber state and it will only trigger if the randomNumber value has changed&#x20;
 
-### Cleaning up an effect <a href="#cleaningupaneffect" id="cleaningupaneffect"></a>
+### Timing of an effect <a href="#timingofaneffect" id="timingofaneffect"></a>
+
+There’s a very big difference between when the `useEffect` callback is invoked and when class methods such as `componentDidMount` and `componentDidUpdate` are invoked.
+
+The effect callback is invoked after the browser layout and painting are carried out. This makes it suitable for many common side effects, such as setting up subscriptions and event handlers since most of these shouldn’t block the browser from updating the screen.
+
+![An illustration of the effect callback](../.gitbook/assets/effect-callback-illustration.png)
+
+This is the case for `useEffect`, but this behavior is not always ideal.
+
+What if you wanted a side effect to be visible to the user before the browser’s next paint? Sometimes, this is important to prevent visual inconsistencies in the UI, e.g., with DOM mutations.
+
+For such cases, React provides another Hook called `useLayoutEffect`. It has the same signature as `useEffect`; the only difference is in when it’s fired, i.e., when the callback function is invoked.
+
+> **N.B.**, although `useEffect` is deferred until the browser has painted, **it is still guaranteed to be fired before any re-renders. This is important.**
+
+![useEffect is fired before any new re-renders](<../.gitbook/assets/effect-callback-illustration (1).png>)
+
+React will always flush a previous render’s effect before starting a new update.
+
+#### Conditionally firing an effect <a href="#conditionallyfiringaneffect" id="conditionallyfiringaneffect"></a>
+
+By default, the `useEffect` callback is invoked after every render.
+
+```
+useEffect(() => {
+  // this is invoked after every render
+})
+```
+
+This is done so that the effect is recreated if any of its dependencies change. This is great, but sometimes it’s overkill.
+
+Consider the example we had in an earlier section:
+
+```
+useEffect(() => {
+   const subscription = props.apiSubscription() 
+
+  return () => {
+     // clean up the subscription
+     subscription.unsubscribeApi()
+   }
+})
+```
+
+In this case, it doesn’t make a lot of sense to recreate the subscription every time a render happens. This should only be done when `props.apiSubscription` changes.
+
+To handle such cases, `useEffect` takes a second argument known as an array dependency.
+
+```
+useEffect(() => {
+
+}, []) //note the array passed here
+```
+
+In the example above, we can prevent the effect call from running on every render as follows:
+
+```
+useEffect(() => {
+   const subscription = props.apiSubscription() 
+
+  return () => {
+     // clean up the subscription
+     subscription.unsubscribeApi()
+   }
+}, [props.apiSubscription]) // look here
+```
+
+Let’s take a close look at the array dependency list.
+
+If you want your effect to run only on mount (clean up when unmounted), pass an empty array dependency:
+
+```
+useEffect(() => {
+   // effect callback will run on mount
+   // clean up will run on unmount. 
+}, [])
+```
+
+If your effect depends on some state or prop value in scope, be sure to pass it as an array dependency to prevent stale values being accessed within the callback. If the referenced values change over time and are used in the callback, be sure to place them in the array dependency, as seen below:
+
+```
+useEfect(() => {
+  console.log(props1 + props2 + props3)
+},[props1, props2, props3])
+```
+
+Let’s say you did this:
+
+```
+useEffect(() => {
+  console.log(props1 + props2 + props3)
+},[])
+```
+
+`props1`, `props2`, and `props3` will only have their initial values and the effect callback won’t be invoked when they change.
+
+If you skipped one of them, e.g., `props3`:
+
+```
+useEfect(() => {
+  console.log(props1 + props2 + props3)
+},[props1, props2])
+```
+
+Then the effect callback won’t run when `props3` changes.
+
+The React team recommends you use the [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks#installation) package. It warns when dependencies are specified incorrectly and suggests a fix.
+
+You should also note that the `useEffect` callback will be run at least once. Here’s an example:
+
+```
+useEfect(() => {
+  console.log(props1)
+},[props1])
+```
+
+Assuming `props1` is updated once, i.e., it changes from its initial value to another, how many times would you have `props1` logged?
+
+1. **Once**: When the component mounts
+2. **Once**: When `props1` changes
+3. **Twice**: On mount and when `props1` changes
+
+The correct answer is `3` because the effect callback is first fired after the initial render, and subsequent invocations happen when `props1` changes. Remember this.
+
+Finally, the dependency array isn’t passed as arguments to the effect function. It does seem like that, though; that’s what the dependency array represents. In the future, the React team may have an advanced compiler that creates this array automatically. Until then, make sure to add them yourself.
+
+### Multiple effects
+
+Multiple `useEffect` calls can happen within a functional component, as shown below:
+
+```
+const MultipleEffects = () => {
+  // 🍟
+  useEffect(() => {
+    const clicked = () => console.log('window clicked')
+    window.addEventListener('click', clicked)
+
+    return () => {
+      window.removeEventListener('click', clicked)
+    }
+  }, [])
+
+  // 🍟 another useEffect hook 
+  useEffect(() => {
+    console.log("another useEffect call");
+  })
+
+  return <div>
+    Check your console logs
+  </div>
+}
+```
+
+Note that `useEffect` calls can be skipped — i.e., not invoked on every render. This is done by passing a second array argument to the effect function.
+
+## Cleaning up an effect <a href="#cleaningupaneffect" id="cleaningupaneffect"></a>
 
 Some imperative code needs to be cleaned up. For example, subscriptions need to be cleaned up, timers need to be invalidated, etc. To do this, return a function from the callback passed to `useEffect`:
 
@@ -359,159 +515,3 @@ useEffect(() => {
 Just like we did with the `AbortError` in `AbortController`, Axios gives us a method called `isCancel` that allows us to check the cause of our error and know how to handle our errors.
 
 If the request fails because the Axios source aborts or cancels, then we do not want to update the state.
-
-#### Timing of an effect <a href="#timingofaneffect" id="timingofaneffect"></a>
-
-There’s a very big difference between when the `useEffect` callback is invoked and when class methods such as `componentDidMount` and `componentDidUpdate` are invoked.
-
-The effect callback is invoked after the browser layout and painting are carried out. This makes it suitable for many common side effects, such as setting up subscriptions and event handlers since most of these shouldn’t block the browser from updating the screen.
-
-![An illustration of the effect callback](../.gitbook/assets/effect-callback-illustration.png)
-
-This is the case for `useEffect`, but this behavior is not always ideal.
-
-What if you wanted a side effect to be visible to the user before the browser’s next paint? Sometimes, this is important to prevent visual inconsistencies in the UI, e.g., with DOM mutations.
-
-For such cases, React provides another Hook called `useLayoutEffect`. It has the same signature as `useEffect`; the only difference is in when it’s fired, i.e., when the callback function is invoked.
-
-> **N.B.**, although `useEffect` is deferred until the browser has painted, **it is still guaranteed to be fired before any re-renders. This is important.**
-
-![useEffect is fired before any new re-renders](<../.gitbook/assets/effect-callback-illustration (1).png>)
-
-React will always flush a previous render’s effect before starting a new update.
-
-#### Conditionally firing an effect <a href="#conditionallyfiringaneffect" id="conditionallyfiringaneffect"></a>
-
-By default, the `useEffect` callback is invoked after every render.
-
-```
-useEffect(() => {
-  // this is invoked after every render
-})
-```
-
-This is done so that the effect is recreated if any of its dependencies change. This is great, but sometimes it’s overkill.
-
-Consider the example we had in an earlier section:
-
-```
-useEffect(() => {
-   const subscription = props.apiSubscription() 
-
-  return () => {
-     // clean up the subscription
-     subscription.unsubscribeApi()
-   }
-})
-```
-
-In this case, it doesn’t make a lot of sense to recreate the subscription every time a render happens. This should only be done when `props.apiSubscription` changes.
-
-To handle such cases, `useEffect` takes a second argument known as an array dependency.
-
-```
-useEffect(() => {
-
-}, []) //note the array passed here
-```
-
-In the example above, we can prevent the effect call from running on every render as follows:
-
-```
-useEffect(() => {
-   const subscription = props.apiSubscription() 
-
-  return () => {
-     // clean up the subscription
-     subscription.unsubscribeApi()
-   }
-}, [props.apiSubscription]) // look here
-```
-
-Let’s take a close look at the array dependency list.
-
-If you want your effect to run only on mount (clean up when unmounted), pass an empty array dependency:
-
-```
-useEffect(() => {
-   // effect callback will run on mount
-   // clean up will run on unmount. 
-}, [])
-```
-
-If your effect depends on some state or prop value in scope, be sure to pass it as an array dependency to prevent stale values being accessed within the callback. If the referenced values change over time and are used in the callback, be sure to place them in the array dependency, as seen below:
-
-```
-useEfect(() => {
-  console.log(props1 + props2 + props3)
-},[props1, props2, props3])
-```
-
-Let’s say you did this:
-
-```
-useEffect(() => {
-  console.log(props1 + props2 + props3)
-},[])
-```
-
-`props1`, `props2`, and `props3` will only have their initial values and the effect callback won’t be invoked when they change.
-
-If you skipped one of them, e.g., `props3`:
-
-```
-useEfect(() => {
-  console.log(props1 + props2 + props3)
-},[props1, props2])
-```
-
-Then the effect callback won’t run when `props3` changes.
-
-The React team recommends you use the [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks#installation) package. It warns when dependencies are specified incorrectly and suggests a fix.
-
-You should also note that the `useEffect` callback will be run at least once. Here’s an example:
-
-```
-useEfect(() => {
-  console.log(props1)
-},[props1])
-```
-
-Assuming `props1` is updated once, i.e., it changes from its initial value to another, how many times would you have `props1` logged?
-
-1. **Once**: When the component mounts
-2. **Once**: When `props1` changes
-3. **Twice**: On mount and when `props1` changes
-
-The correct answer is `3` because the effect callback is first fired after the initial render, and subsequent invocations happen when `props1` changes. Remember this.
-
-Finally, the dependency array isn’t passed as arguments to the effect function. It does seem like that, though; that’s what the dependency array represents. In the future, the React team may have an advanced compiler that creates this array automatically. Until then, make sure to add them yourself.
-
-#### Multiple effects
-
-Multiple `useEffect` calls can happen within a functional component, as shown below:
-
-```
-const MultipleEffects = () => {
-  // 🍟
-  useEffect(() => {
-    const clicked = () => console.log('window clicked')
-    window.addEventListener('click', clicked)
-
-    return () => {
-      window.removeEventListener('click', clicked)
-    }
-  }, [])
-
-  // 🍟 another useEffect hook 
-  useEffect(() => {
-    console.log("another useEffect call");
-  })
-
-  return <div>
-    Check your console logs
-  </div>
-}
-```
-
-Note that`useEffect` calls can be skipped — i.e., not invoked on every render. This is done by passing a second array argument to the effect function.

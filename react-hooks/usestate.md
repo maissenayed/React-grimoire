@@ -132,21 +132,23 @@ const App = ({myProp}) => {
 // only the initial myProp value on initial render is passed as initialState. subsequent updates are ignored.
 ```
 
-However, if the initial state is a result of an expensive computation, you could also pass a function, which will be invoked only on initial render:
+### Initialize state from function
+
+If the initial state is a result of an expensive computation, you could also pass a function, which will be invoked only on initial render:
 
 ```
 const [state, setState] = useState(() => yourExpensiveComputation(props))
 ```
 
-### Initialize state from function
-
 As opposed to just passing an initial state value, state could also be initialized from a function, as shown below:
 
 ```jsx
 const Component = () => {
+  
   const [token] = useState(() => {
+  // this will only render in first initial render
     const token = window.localStorage.getItem("sensetive-data");
-    return token || "please don't put sensetive data here 😢😢😢😢"
+    return token || "please don't put sensetive data in local storage 😢😢😢😢"
   })
 
   return <div>Token is {token}</div>

@@ -22,6 +22,16 @@ The diagram above depicts the current React component lifecycle, along with the 
 
 We'll try to demonstrate the most common and important life cycles by using a component-based and hooks component as an example.
 
+{% hint style="info" %}
+**Bear in mind that Hooks have another rendering flow , but in this section we will try to explain how they mimic the old lifecycles**&#x20;
+{% endhint %}
+
+if you want to see the new hook flow please see this link:
+
+{% embed url="https://github.com/donavon/hook-flow" %}
+[https://github.com/donavon/hook-flow](https://github.com/donavon/hook-flow)
+{% endembed %}
+
 ## componentDidMount( ) <a href="#752b" id="752b"></a>
 
 We aren't actually defining DOM nodes with React even though we're defining virtual representations of nodes in our DOM tree.&#x20;
