@@ -69,3 +69,15 @@ const ArrayDep = () => {
 ```
 
 {% embed url="https://blog.logrocket.com/useeffect-vs-uselayouteffect-examples" %}
+
+### Why Use `useLayoutEffect`? <a href="#why-use-uselayouteffect" id="why-use-uselayouteffect"></a>
+
+So if `useLayoutEffect` will delay the painting of a component why would we want to use it. The biggest reason for using `useLayoutEffect` is when the code being run directly modifies the DOM in a way that is observable to the user.
+
+For example, if I needed to change the background color of a DOM element as a side effect it would be best to use `useLayoutEffect` since we are directly modifying the DOM and the changes are observable to the user. If we were to use `useEffect` we could run into an issue where the DOM is painted before the `useEffect` code is run. This would cause the DOM element to be the wrong color at first and then change to the right color due to the `useEffect` code.
+
+### You Probably Don't Need `useLayoutEffect` <a href="#you-probably-dont-need-uselayouteffect" id="you-probably-dont-need-uselayouteffect"></a>
+
+As you can see from the previous example, use cases for `useLayoutEffect` are pretty niche. In general it is best to always use `useEffect` and only switch to `useLayoutEffect` when you actually run into an issue with `useEffect` causing flickers in your DOM or incorrect results.
+
+\
