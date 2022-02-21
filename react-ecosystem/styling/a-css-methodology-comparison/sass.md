@@ -60,8 +60,9 @@ You may have heard this joke before, but it’s true! Naming things is hard! BEM
 
 It also gets tedious naming every single class for every single element you need to style, since we don’t want to mix inline styles and stylesheets. It results in a lot of classes being created simply for adding a width: 100% or some margin or padding.
 
-Sometimes we just want to add one or two little styles. Especially when it comes to layout, we don’t exactly need a reusable class that is in use only in the first specific part of your page telling the buttons how they should sit next to each other. It is a pain having to make one and come up with a name for it, which leads us nicely into our next methodology….
+Sometimes we just want to add one or two little styles. Especially when it comes to layout, we don’t exactly need a reusable class that is in use only in the first specific part of your page telling the buttons how they should sit next to each other. It is a pain having to make one and come up with a name for it, which leads us nicely into our next methodology….\
 
-### &#x20;Thoughts
+
+## Thoughts
 
 CSS preprocessors in combination with BEM definitely improve the development experience a lot, but that doesn’t mean it’s perfect. When your codebase grows, you might start to wonder in which files you should put certain styles and how it should be scoped. You also wonder if old styles are still being used. And you also have to think about performance: you don’t want to load in every single line of CSS on the first page when most of it is used on other pages.

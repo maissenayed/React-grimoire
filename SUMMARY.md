@@ -13,8 +13,8 @@
 * [🆗 Form](react-fundamentals/form.md)
 * [🆗 Array and Lists](react-fundamentals/arrays-and-key-props.md)
 * [🆗 Class Component State](react-fundamentals/class-component-state.md)
-* [⚠ Component Life Cycle](react-fundamentals/component-life-cycle.md)
-* [⚠ PropTypes](react-fundamentals/proptypes.md)
+* [⚠ Component Life Cycle](react-fundamentals/component-life-cycle-todo.md)
+* [⚠ PropTypes](react-fundamentals/proptypes-todo.md)
 
 ## 🪝 React Hooks
 
@@ -69,8 +69,7 @@
 * [Styling](react-ecosystem/styling/README.md)
   * [A CSS methodology comparison](react-ecosystem/styling/a-css-methodology-comparison/README.md)
     * [Post CSS processor :Sass](react-ecosystem/styling/a-css-methodology-comparison/sass.md)
-    * [CSS in js :Styled-components](react-ecosystem/styling/a-css-methodology-comparison/css-in-js/README.md)
-      * [Styled-components](react-ecosystem/styling/a-css-methodology-comparison/css-in-js/styled-components.md)
+    * [CSS in js :Styled-components](react-ecosystem/styling/a-css-methodology-comparison/css-in-js-styled-components.md)
     * [Utility Classes: Tailwind](react-ecosystem/styling/a-css-methodology-comparison/utility-classes/README.md)
       * [Tailwind](react-ecosystem/styling/a-css-methodology-comparison/utility-classes/tailwind.md)
 * [Forms Tools](react-ecosystem/forms-tools/README.md)
