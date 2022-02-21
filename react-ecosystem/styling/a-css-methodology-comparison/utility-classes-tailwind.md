@@ -1,4 +1,10 @@
-# Tailwind
+# ⚠ Utility Classes: Tailwind
+
+Utility-first CSS is a methodology that came about in an effort to solve all the cons mentioned above with writing traditional CSS. Utility-first CSS involves using many small helper classes to make up a component’s styles, instead of writing class names based on semantic meaning. One thing to keep in mind is that utility-first CSS doesn’t need any library, it is simply a methodology that can be applied to CSS, similar to how BEM works.
+
+I will be focusing on the library [Tailwind CSS](https://tailwindcss.com), since it is probably the most popular approach developers are flocking to for implementing utility-first css.
+
+
 
 Tailwind css is a utility-first, flex-based framework using PostCss to build any design using a composition directly in the markup&#x20;
 
@@ -112,24 +118,66 @@ I think Tailwind has a lot of practical advantage on the other css methodology l
 
 
 
-More about variants[https://tailwindcss.com/docs/functions-and-directives#variants](https://tailwindcss.com/docs/functions-and-directives#variants)
-
-Tailwind config customization[https://tailwindcss.com/docs/configuration](https://tailwindcss.com/docs/configuration)
-
 ## Useful links
 
-[https://github.com/aniftyco/awesome-tailwindcss](https://github.com/aniftyco/awesome-tailwindcss) - **Connect to preview**
+
+
+{% embed url="https://css-irl.info/a-year-of-utility-classes" %}
+
+{% embed url="https://locastic.com/blog/i-was-wrong-about-utility-first-css-and-here-is-why" %}
+
+{% embed url="https://davidtheclark.com/on-utility-classes" %}
+
+{% embed url="https://adamwathan.me/css-utility-classes-and-separation-of-concerns" %}
+
+{% embed url="https://blog.logrocket.com/css-utility-classes-library-extendable-styles" %}
+
+{% embed url="https://johnpolacek.github.io/the-case-for-atomic-css" %}
+
+{% embed url="https://css-tricks.com/if-were-gonna-criticize-utility-class-frameworks-lets-be-fair-about-it" %}
+
+{% embed url="https://css-tricks.com/building-a-scalable-css-architecture-with-bem-and-utility-classes" %}
+
+{% embed url="https://github.com/aniftyco/awesome-tailwindcss" %}
 
 components / libs / frameworks :
 
-* un starter téléchargeable :[https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation)
-* une lib d’icônes par les fondateurs de tailwind :[https://heroicons.com](https://heroicons.com)
-* html to tailwind :[https://usewindy.com](https://usewindy.com)
-* librairie de composants prêts à copy/paste :[https://blocks.wickedtemplates.com/](https://blocks.wickedtemplates.com)templates tailwind :[https://www.creative-tim.com/search?utf8=✓\&q=tailwind\&buton=](https://www.creative-tim.com/search?utf8=%E2%9C%93\&q=tailwind\&buton=)
-* framework ui de tailwind (early-access) :[https://tailwindui.com/components](https://tailwindui.com/components)
-* librairie de composants :[https://tailblocks.cc/](https://tailblocks.cc)
-* projets développés par la communautés :[https://builtwithtailwind.com/](https://builtwithtailwind.com)
-* composants non-stylés, pleinement accessible et customisable avec tailwind :[https://github.com/tailwindlabs/headlessui/blob/develop/packages/%40headlessui-react/README.md](https://github.com/tailwindlabs/headlessui/blob/develop/packages/%40headlessui-react/README.md)
+* un starter téléchargeable :
+
+{% embed url="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation" %}
+
+* une lib d’icônes par les fondateurs de tailwind :
+
+{% embed url="https://heroicons.com" %}
+
+* html to tailwind :
+
+{% embed url="https://usewindy.com" %}
+
+* librairie de composants prêts à copy/paste :
+
+{% embed url="https://blocks.wickedtemplates.com" %}
+
+templates tailwind :
+
+{% embed url="https://www.creative-tim.com/search?buton=&q=tailwind&utf8=%E2%9C%93" %}
+
+* framework ui de tailwind (early-access) :
+
+{% embed url="https://tailwindui.com/components" %}
+
+* librairie de composants :
+
+{% embed url="https://tailblocks.cc" %}
+
+* projets développés par la communautés :
+
+{% embed url="https://builtwithtailwind.com" %}
+
+* composants non-stylés, pleinement accessible et customisable avec tailwind:
+
+{% embed url="https://github.com/tailwindlabs/headlessui/blob/develop/packages/%40headlessui-react/README.md" %}
+
 * Tailwind Components - Community-driven Tailwind CSS component repository.
 * Tailwind Toolbox - Templates, components and resources.
 * Meraki UI Components - Beautiful Tailwind CSS components that support RTL languages.
