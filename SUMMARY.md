@@ -42,9 +42,9 @@
 
 ## 🔭 Concepts
 
-* [What is "Rendering"?](concepts/what-is-rendering.md)
+* [🆗 What is "Rendering"?](concepts/what-is-rendering.md)
 * [🆗 React Lifecycle](concepts/react-lifecycle.md)
-* [Reconciliation & Virtual DOM in React](concepts/reconciliation-and-virtual-dom-in-react.md)
+* [🆗 Reconciliation & Virtual DOM in React](concepts/reconciliation-and-virtual-dom-in-react.md)
 * [React Hydration](concepts/react-hydration.md)
 * [Advanced Patterns](concepts/advanced-patterns/README.md)
   * [Compound Components Pattern](concepts/advanced-patterns/compound-components-pattern.md)
