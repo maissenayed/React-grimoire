@@ -2,7 +2,7 @@
 description: a prop which should only be set when another prop has a specific value.
 ---
 
-# Conditional React props with TypeScript
+# 🆗 Conditional React props with TypeScript
 
 Relationships between React component props can make you feel the pinch. This article will be your road-map to conditional props pattern employed using Typescript. I will propose different situations and demonstrate the answers to these questions:&#x20;
 

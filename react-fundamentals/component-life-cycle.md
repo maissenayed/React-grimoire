@@ -1,4 +1,4 @@
-# Component Life Cycle
+# ⚠ Component Life Cycle
 
 ## What is the React component lifecycle? <a href="#whatisthereactcomponentlifecycle" id="whatisthereactcomponentlifecycle"></a>
 
@@ -17,7 +17,9 @@ In React, components go through a **lifecycle** of events:
 **Note that we will use functional components mainly 99% time even React team is recommending that. but for deep understanding of how our components live inside our app we will use in this section only class components** &#x20;
 {% endhint %}
 
-**Mounting** a component is similar to bringing a newborn baby into the world. This is the component's first glimpse of life. The component, which is mainly composed of your code and React's internals, is then inserted into the **DOM** at this point.
+`Mounting`, `updating`, and `unmounting` are the three main steps that each component goes through. You might conceive of it as component natural life cycle: they get born (mount), get to live (update), and get to die (unmount).&#x20;
+
+**Mounting** a component is parallel to bringing a newborn baby into the world. This is the component's first experience with life. At this point, the component, which is mostly made up of your code and React's source code, is inserted into the **DOM**.
 
 During the **updating** phase, the React component "grows" after the **mounting** phase. Without updates, the component would remain in the **DOM** as it was when it was first created. As you might expect, many of the components you write until now will require updating, whether through a change in **state** or **props**. As a result, they must also go through the **updating** process.
 

@@ -1,4 +1,4 @@
-# Basic view on React core API's
+# 🆗 Basic view on React core API's
 
 In this section we will try to understand raw **React API,** how we implement them ,what do they do and how are they different from just generating **DOM** Nodes with **Vanilla JavaScript.**
 

@@ -4,24 +4,24 @@
 
 ## 🧑🎓 React Fundamentals&#x20;
 
-* [The Basic javascript "Hello world"](<README (1).md>)
-* [Basic view on React core API's](react-fundamentals/basic-view-on-react-core-apis.md)
-* [JSX](react-fundamentals/jsx.md)
-* [React Props and styling](react-fundamentals/react-props-and-styling.md)
-* [Components](react-fundamentals/components.md)
-* [Handling Events With React](react-fundamentals/handling-events-with-react.md)
-* [Form](react-fundamentals/form.md)
-* [Array and Lists](react-fundamentals/arrays-and-key-props.md)
-* [Class Component State](react-fundamentals/class-component-state.md)
-* [Component Life Cycle /Todo](react-fundamentals/component-life-cycle-todo.md)
-* [PropTypes /Todo](react-fundamentals/proptypes-todo.md)
+* [🆗 The Basic javascript "Hello world"](<README (1).md>)
+* [🆗 Basic view on React core API's](react-fundamentals/basic-view-on-react-core-apis.md)
+* [🆗 JSX](react-fundamentals/jsx.md)
+* [🆗 React Props and styling](react-fundamentals/react-props-and-styling.md)
+* [🆗 Components](react-fundamentals/components.md)
+* [🆗 Handling Events With React](react-fundamentals/handling-events-with-react.md)
+* [🆗 Form](react-fundamentals/form.md)
+* [🆗 Array and Lists](react-fundamentals/arrays-and-key-props.md)
+* [🆗 Class Component State](react-fundamentals/class-component-state.md)
+* [⚠ Component Life Cycle](react-fundamentals/component-life-cycle.md)
+* [⚠ PropTypes](react-fundamentals/proptypes.md)
 
 ## 🪝 React Hooks
 
-* [Intro to hooks](react-hooks/intro-to-hooks.md)
-* [useState](react-hooks/usestate.md)
-* [useEffect](react-hooks/useeffect.md)
-* [useRef](react-hooks/useref.md)
+* [🆗 Intro to hooks](react-hooks/intro-to-hooks.md)
+* [🆗 useState](react-hooks/usestate.md)
+* [⚠ useEffect](react-hooks/useeffect.md)
+* [⚠ useRef](react-hooks/useref.md)
 * [useMemo](react-hooks/usememo.md)
 * [useContext](react-hooks/usecontext.md)
 * [useCallback](react-hooks/usecallback.md)
@@ -43,7 +43,7 @@
 ## 🔭 Concepts
 
 * [What is "Rendering"?](concepts/what-is-rendering.md)
-* [React Lifecycle](concepts/react-lifecycle.md)
+* [🆗 React Lifecycle](concepts/react-lifecycle.md)
 * [Reconciliation & Virtual DOM in React](concepts/reconciliation-and-virtual-dom-in-react.md)
 * [React Hydration](concepts/react-hydration.md)
 * [Advanced Patterns](concepts/advanced-patterns/README.md)
@@ -54,7 +54,7 @@
   * [State Reducer](concepts/advanced-patterns/state-reducer.md)
   * [Context Module](concepts/advanced-patterns/context-module.md)
 * [Acceptability](concepts/acceptability.md)
-* [Conditional React props with TypeScript](concepts/conditional-react-props-with-typescript.md)
+* [🆗 Conditional React props with TypeScript](concepts/conditional-react-props-with-typescript.md)
 * [Fiber](concepts/fiber.md)
 
 ## 🧩 React ecosystem
@@ -77,7 +77,7 @@
   * [React Hook Form VS Formik](react-ecosystem/forms-tools/react-hook-form-vs-formik.md)
 * [Internationalization](react-ecosystem/internationalization/README.md)
   * [React-Intl](react-ecosystem/internationalization/react-intl.md)
-* [Build tool choice for MVP projects](react-ecosystem/build-tool-choice-for-mvp-projects.md)
+* [🆗 Build tool choice for MVP projects](react-ecosystem/build-tool-choice-for-mvp-projects.md)
 
 ## ⁉ Testing
 
@@ -93,7 +93,7 @@
 
 ## 🖼 Design system
 
-* [What's a design system anyway ?​?](design-system/whats-a-design-system-anyway.md)
+* [🆗 What's a design system anyway ?​?](design-system/whats-a-design-system-anyway.md)
 
 ***
 

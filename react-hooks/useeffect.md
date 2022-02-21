@@ -1,4 +1,4 @@
-# useEffect
+# ⚠ useEffect
 
 `React.useEffect` is a built-in hook that allows you to run some custom code after React renders (and re-renders) your component to the DOM. It accepts a callback function which React will call after the DOM has been rendered but before all of that let's dive deep into what is an effect
 
@@ -19,14 +19,6 @@ Sometimes, however, we need our components to reach outside this data-flow proce
 * Logging messages to the console or other service
 * Setting or getting values in local storage
 * Fetching data or subscribing and unsubscribing to services
-
-
-
-{% embed url="https://overreacted.io/a-complete-guide-to-useeffect" %}
-
-{% embed url="https://blog.logrocket.com/guide-to-react-useeffect-hook" %}
-
-## UseEffect
 
 &#x20;[`useEffect`](https://reactjs.org/docs/hooks-reference.html#useeffect)  is a hook to let you  invoke side effects from within functional components,
 
@@ -61,8 +53,7 @@ As we can see the useEffect will force the component to rerender because useEffe
 
 ### Empty dependency array
 
-It is also possible to add an empty dependency array. In this case, effects are only executed once; it is similar to the [`componentDidMount()`](https://reactjs.org/docs/react-component.html#componentdidmount) lifecycle method. (similar by not exactly the same)\
-
+It is also possible to add an empty dependency array. In this case, effects are only executed once; it is similar to the [`componentDidMount()`](https://reactjs.org/docs/react-component.html#componentdidmount) lifecycle method. (similar by not exactly the same)
 
 ```jsx
 import * as React from "react";
@@ -89,9 +80,7 @@ const BasicEffect = () => {
 
 ### Triggering Effect
 
-#### Reference problem
-
-So let's take this examle
+#### Let's take this example
 
 ```jsx
 import * as React from "react";
@@ -135,7 +124,7 @@ You have the ability to opt out from this behavior. This is managed with depende
 
 More often than not, this is what we want; we usually want to execute side effects after specific conditions, e.g., data has changed, a prop changed, or the user first sees our component.&#x20;
 
-#### Skipping effects
+### Skipping effects
 
 ```jsx
 const ArrayDepMount = () => {
@@ -171,132 +160,11 @@ const ArrayDepMount = () => {
 
 Here we can see that the effect depends on the randomNumber state and it will only trigger if the randomNumber value has changed&#x20;
 
-### Timing of an effect <a href="#timingofaneffect" id="timingofaneffect"></a>
-
-There’s a very big difference between when the `useEffect` callback is invoked and when class methods such as `componentDidMount` and `componentDidUpdate` are invoked.
-
-The effect callback is invoked after the browser layout and painting are carried out. This makes it suitable for many common side effects, such as setting up subscriptions and event handlers since most of these shouldn’t block the browser from updating the screen.
-
-![An illustration of the effect callback](../.gitbook/assets/effect-callback-illustration.png)
-
-This is the case for `useEffect`, but this behavior is not always ideal.
-
-What if you wanted a side effect to be visible to the user before the browser’s next paint? Sometimes, this is important to prevent visual inconsistencies in the UI, e.g., with DOM mutations.
-
-For such cases, React provides another Hook called `useLayoutEffect`. It has the same signature as `useEffect`; the only difference is in when it’s fired, i.e., when the callback function is invoked.
-
-> **N.B.**, although `useEffect` is deferred until the browser has painted, **it is still guaranteed to be fired before any re-renders. This is important.**
-
-![useEffect is fired before any new re-renders](<../.gitbook/assets/effect-callback-illustration (1).png>)
-
-React will always flush a previous render’s effect before starting a new update.
-
-#### Conditionally firing an effect <a href="#conditionallyfiringaneffect" id="conditionallyfiringaneffect"></a>
-
-By default, the `useEffect` callback is invoked after every render.
-
-```
-useEffect(() => {
-  // this is invoked after every render
-})
-```
-
-This is done so that the effect is recreated if any of its dependencies change. This is great, but sometimes it’s overkill.
-
-Consider the example we had in an earlier section:
-
-```
-useEffect(() => {
-   const subscription = props.apiSubscription() 
-
-  return () => {
-     // clean up the subscription
-     subscription.unsubscribeApi()
-   }
-})
-```
-
-In this case, it doesn’t make a lot of sense to recreate the subscription every time a render happens. This should only be done when `props.apiSubscription` changes.
-
-To handle such cases, `useEffect` takes a second argument known as an array dependency.
-
-```
-useEffect(() => {
-
-}, []) //note the array passed here
-```
-
-In the example above, we can prevent the effect call from running on every render as follows:
-
-```
-useEffect(() => {
-   const subscription = props.apiSubscription() 
-
-  return () => {
-     // clean up the subscription
-     subscription.unsubscribeApi()
-   }
-}, [props.apiSubscription]) // look here
-```
-
-Let’s take a close look at the array dependency list.
-
-If you want your effect to run only on mount (clean up when unmounted), pass an empty array dependency:
-
-```
-useEffect(() => {
-   // effect callback will run on mount
-   // clean up will run on unmount. 
-}, [])
-```
-
-If your effect depends on some state or prop value in scope, be sure to pass it as an array dependency to prevent stale values being accessed within the callback. If the referenced values change over time and are used in the callback, be sure to place them in the array dependency, as seen below:
-
-```
-useEfect(() => {
-  console.log(props1 + props2 + props3)
-},[props1, props2, props3])
-```
-
-Let’s say you did this:
-
-```
-useEffect(() => {
-  console.log(props1 + props2 + props3)
-},[])
-```
-
-`props1`, `props2`, and `props3` will only have their initial values and the effect callback won’t be invoked when they change.
-
-If you skipped one of them, e.g., `props3`:
-
-```
-useEfect(() => {
-  console.log(props1 + props2 + props3)
-},[props1, props2])
-```
-
-Then the effect callback won’t run when `props3` changes.
+{% hint style="warning" %}
+**If your effect depends on some state or prop value in scope, be sure to pass it as an array dependency to prevent stale values being accessed within the callback. If the referenced values change over time and are used in the callback, be sure to place them in the array dependency**
+{% endhint %}
 
 The React team recommends you use the [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks#installation) package. It warns when dependencies are specified incorrectly and suggests a fix.
-
-You should also note that the `useEffect` callback will be run at least once. Here’s an example:
-
-```
-useEfect(() => {
-  console.log(props1)
-},[props1])
-```
-
-Assuming `props1` is updated once, i.e., it changes from its initial value to another, how many times would you have `props1` logged?
-
-1. **Once**: When the component mounts
-2. **Once**: When `props1` changes
-3. **Twice**: On mount and when `props1` changes
-
-The correct answer is `3` because the effect callback is first fired after the initial render, and subsequent invocations happen when `props1` changes. Remember this.
-
-Finally, the dependency array isn’t passed as arguments to the effect function. It does seem like that, though; that’s what the dependency array represents. In the future, the React team may have an advanced compiler that creates this array automatically. Until then, make sure to add them yourself.
 
 ### Multiple effects
 
@@ -400,118 +268,8 @@ To fix this error, we use the cleanup function to resolve it.
 
 According to React’s official documentation, “React performs the cleanup when the component unmounts. However… effects run for every render and not just once. This is why React also cleans up effects from the previous render before running the effects next time.”
 
-The cleanup is commonly used to cancel all subscriptions made and cancel fetch requests. Now, let’s write some code and see how we can accomplish these cancellations.
+The cleanup is commonly used to cancel all subscriptions made and cancel fetch requests.
 
-#### Cleaning up a subscription
+{% embed url="https://overreacted.io/a-complete-guide-to-useeffect" %}
 
-To begin cleaning up a subscription, we must first unsubscribe because we don’t want to expose our app to memory leaks and we want to optimize our app.
-
-To unsubscribe from our subscriptions before our component unmounts, let’s set our variable, `isApiSubscribed`, to `true` and then we can set it to `false` when we want to unmount:
-
-```
-useEffect(() => {
-    // set our variable to true
-    let isApiSubscribed = true;
-    axios.get(API).then((response) => {
-        if (isApiSubscribed) {
-            // handle success
-        }
-    });
-    return () => {
-        // cancel the subscription
-        isApiSubscribed = false;
-    };
-}, []);
-```
-
-In the above code, we set the variable `isApiSubscribed` to `true` and then use it as a condition to handle our success request. We, however, set the variable `isApiSubscribed` to `false` when we unmount our component.
-
-#### Canceling a fetch request
-
-There are different ways to cancel fetch request calls: either we use [`AbortController`](https://blog.logrocket.com/axios-or-fetch-api/) or we [use Axios’ cancel token](https://github.com/axios/axios#cancellation).
-
-To use `AbortController`, we must create a controller using the `AbortController()` constructor. Then, when our fetch request initiates, we pass `AbortSignal` as an option inside the request’s `option` object.
-
-This associates the controller and signal with the fetch request and lets us cancel it anytime using `AbortController.abort()`:
-
-```
->useEffect(() => {
-    const controller = new AbortController();
-    const signal = controller.signal;
-
-        fetch(API, {
-            signal: signal
-        })
-        .then((response) => response.json())
-        .then((response) => {
-            // handle success
-        });
-    return () => {
-        // cancel the request before component unmounts
-        controller.abort();
-    };
-}, []);
-```
-
-We can go further and add an error condition in our catch so our fetch request won’t throw errors when we abort. This error happens because, while unmounting, we still try to update the state when we handle our errors.
-
-What we can do is write a condition and know what kind of error we will get; if we get an abort error, then we don’t want to update the state:
-
-```
-useEffect(() => {
-  const controller = new AbortController();
-  const signal = controller.signal;
-
-   fetch(API, {
-      signal: signal
-    })
-    .then((response) => response.json())
-    .then((response) => {
-      // handle success
-      console.log(response);
-    })
-    .catch((err) => {
-      if (err.name === 'AbortError') {
-        console.log('successfully aborted');
-      } else {
-        // handle error
-      }
-    });
-  return () => {
-    // cancel the request before component unmounts
-    controller.abort();
-  };
-}, []);
-```
-
-Now, even if we get impatient and navigate to another page before our request resolves, we won’t get that error again because the request will abort before the component unmounts. If we get an abort error, state won’t update either.
-
-So, let’s see how we can do the same using the Axios’ cancellation option, the Axios cancel token,
-
-We first store the `CancelToken.source()` from Axios in a constant named source, pass the token as an Axios option, and then cancel the request anytime with `source.cancel()`:
-
-```
-useEffect(() => {
-  const CancelToken = axios.CancelToken;
-  const source = CancelToken.source();
-  axios
-    .get(API, {
-      cancelToken: source.token
-    })
-    .catch((err) => {
-      if (axios.isCancel(err)) {
-        console.log('successfully aborted');
-      } else {
-        // handle error
-      }
-    });
-  return () => {
-    // cancel the request before component unmounts
-    source.cancel();
-  };
-}, []);
-```
-
-Just like we did with the `AbortError` in `AbortController`, Axios gives us a method called `isCancel` that allows us to check the cause of our error and know how to handle our errors.
-
-If the request fails because the Axios source aborts or cancels, then we do not want to update the state.
+{% embed url="https://blog.logrocket.com/guide-to-react-useeffect-hook" %}

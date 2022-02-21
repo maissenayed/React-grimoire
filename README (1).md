@@ -1,4 +1,4 @@
-# The Basic javascript "Hello world"
+# 🆗 The Basic javascript "Hello world"
 
 Going back to basics allows us to review knowledge and, or we can put it this way, connect the dots on ambiguous aspects.
 

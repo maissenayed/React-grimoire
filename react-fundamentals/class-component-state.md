@@ -2,11 +2,11 @@
 description: the old way prior to react 16.8.0
 ---
 
-# Class Component State
+# 🆗 Class Component State
 
 ## What is State?
 
-State, in React, is a **plain JavaScript object** that allows you keep track of a component’s data. The state of a component can change. A change to the state of a component depends on the functionality of the application. Changes can be based on user response, new messages from server-side, network response, or anything.
+In React, a state is a simple JavaScript object that allows you to keep track of the data of a component. A component's state can change. A change in the state of a component is determined by the application's functionality. Changes can be triggered by user input, new server-side messages, network responses, or anything else.
 
 Component state is expected to be private to the component and controlled by the same component. To make changes to a component’s state, you have to make them inside the component — the initialization and updating of the component’s state.
 
@@ -14,10 +14,10 @@ In React, all the code we write is defined inside a component.
 
 There are mainly two ways of creating a component in React:
 
-* class-based component
-* functional component
+* class-based component (the old way)
+* functional component (the new way )
 
-You should know how to work with class-based components as well as functional components, including hooks.
+You should know how to work with class-based components as well as functional components, with hooks.
 
 Instead of directly learning functional components with React hooks, you should first understand class-based components so it's easy to clear the basics.
 
@@ -56,7 +56,9 @@ class App extends React.Component {
 
 ### The Constructor
 
-[According to the official documentation](https://reactjs.org/docs/react-component.html#constructor), the constructor is the right place to initialize state. Initializing state is done by setting `this.state` to an object, like you can see above. Remember: **state is a plain JavaScript object**. The initial state of the App component has been set to a state object which contains the key username, and its value `johndoe` using `this.state = { username: 'johndoe' }`.
+[According to the official documentation](https://reactjs.org/docs/react-component.html#constructor), the constructor is the right place to initialize state. Initializing state is done by setting `this.state` to an object, like you can see above. Remember: **state is a plain JavaScript object**. The initial state of the App component has been set to a state object which contains the key username, and its value `Mayssa` using&#x20;
+
+`this.state = { username: 'Mayssa' }`.
 
 Initializing a component state can get as complex as what you can see here:
 
@@ -69,6 +71,7 @@ constructor(props) {
     isDisabled: false, 
     todoList: [],
     name: 'Mayssa'
+    ...
   }
 }
 ```
@@ -336,10 +339,6 @@ _**props**_** (short for **_**properties**_**) are a Component's configuration, 
 {% hint style="warning" %}
 Note that both _props_ and _state_ initial values received from parents override default values defined inside a Component.
 {% endhint %}
-
-### Should this Component have _state_?
-
-_State_ is optional. Since _state_ increases complexity and reduces predictability, a Component without _state_ is preferable. Even though you clearly can't do without state in an interactive app, you should avoid having too many _Stateful Components._
 
 #### **Component types**
 
