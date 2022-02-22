@@ -21,7 +21,7 @@
 * [🆗 Intro to hooks](react-hooks/intro-to-hooks.md)
 * [🆗 useState](react-hooks/usestate.md)
 * [⚠ useEffect](react-hooks/useeffect.md)
-* [⚠ useRef](react-hooks/useref.md)
+* [🆗 useRef](react-hooks/useref.md)
 * [useMemo](react-hooks/usememo.md)
 * [⚠ useContext](react-hooks/usecontext.md)
 * [useCallback](react-hooks/usecallback.md)

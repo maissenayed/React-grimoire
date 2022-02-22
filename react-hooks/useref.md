@@ -2,7 +2,7 @@
 description: useRef is like class instance variable for function components.
 ---
 
-# ⚠ useRef
+# 🆗 useRef
 
 ## What are refs
 
@@ -149,6 +149,46 @@ The [GSAP library](https://blog.logrocket.com/animations-react-hooks-greensock/)
 {% embed url="https://codesandbox.io/embed/gsap-timelines-with-functional-components-forked-eqbvug?fontsize=14&hidenavigation=1&theme=dark" %}
 
 When the element gets unmounted, we’ll clean the DOM state and actions by terminating any ongoing animation with the `kill()` method supplied by the `Timeline` instance.
+
+#### **Ref is null on initial rendering**
+
+During initial rendering, the reference supposed to hold the DOM element is empty:
+
+{% embed url="https://codesandbox.io/embed/empty-on-initial-rendering-forked-4jlhq6?expanddevtools=1&fontsize=14&hidenavigation=1&moduleview=1&theme=dark" %}
+
+During initial rendering React still determines what is the output of the component, so there's no DOM structure created yet. That's why `inputRef.current` evaluates to `undefined` during initial rendering.
+
+`useEffect(callback, [])` hook invokes the callback right after mounting, when the input element has already been created in DOM.
+
+`callback` function of the `useEffect(callback, [])` is the right place to access `inputRef.current` because it is guaranteed that the DOM is constructed.
+
+### &#x20;Updating references restriction <a href="#3-updating-references-restriction" id="3-updating-references-restriction"></a>
+
+The function scope of the functional component should either calculate the output or invoke hooks.
+
+That's why updating a reference (as well as updating state) shouldn't be performed inside the immediate scope of the component's function.
+
+The reference must be updated either inside a `useEffect()` callback or inside handlers (event handlers, timer handlers, etc).
+
+```jsx
+import { useRef, useEffect } from 'react';
+function MyComponent({ prop }) {
+  const myRef = useRef(0);
+  useEffect(() => {
+    myRef.current++; // Good!
+    setTimeout(() => {
+      myRef.current++; // Good!
+    }, 1000);
+  }, []);
+  const handler = () => {
+    myRef.current++; // Good!
+  };
+  myRef.current++; // Bad!
+  if (prop) {
+    myRef.current++; // Bad!
+  }
+  return <button onClick={handler}>My button</button>s
+```
 
 {% hint style="info" %}
 #### `useRef` vs. `createRef`
