@@ -12,7 +12,7 @@ and check out the [#references](https://www.notion.so/React-Components-Compositi
 
 Start by highlighting and identify the composition of the top-level App component and the composition of global layers like pages, global layers ( such as Headers, Sidebars, Layouts, Footer ), etc…
 
-If you want, you can create a list to sort your new components by types or folders they'll go in as you read through this document. ( see: [Folders Structure ](folders-structure.md))
+If you want, you can create a list to sort your new components by types or folders they'll go in as you read through this document.&#x20;
 
 #### Shared components definition roadmap (no code involved)
 
@@ -69,27 +69,28 @@ Once all the possibly sharable components of the page are standardized :
 5. handle loading/error states
 6. finish and adjust styles
 
-#### Testing :
-
 The state management needs to be reduced to simple components, context, and hooks. This will allow us to test our files very easily and independently.
+
+#### Testing :
 
 Every development needs to be tested before merging to the main branch.
 
-#### On memoization / performance :
-
-There's been a lot of conversation around the use of memo() and useMemo() since the react hooks have been released but memoization is rarely necessary. A good composition of your components and state is often the right solution and this is in part why these guidelines are important. Depending on how you need to optimize your rendering, maybe consider learning more about [keys](https://reactjs.org/docs/lists-and-keys.html#keys) , [refs](https://reactjs.org/docs/forwarding-refs.html#gatsby-focus-wrapper) and [advanced react development](https://reactjs.org/docs/optimizing-performance.html) .
-
-read :
-
-* [https://epicreact.dev/memoization-and-react/](https://epicreact.dev/memoization-and-react/)
-* [https://reactjs.org/docs/hooks-reference.html#usememo](https://reactjs.org/docs/hooks-reference.html#usememo)
-* [https://overreacted.io/before-you-memo/](https://overreacted.io/before-you-memo/)
-
 #### References and articles :
 
-* [https://reactjs.org/docs/hello-world.html](https://reactjs.org/docs/hello-world.html) Please read the official react documentation for a better understanding of the process evoked here. The "Main principles" section is the most important part and we encourage you to check the "Advanced guides" too.
-* [https://overreacted.io/](https://overreacted.io) - a blog by Dan Abramov ( react core team ) you should read [https://overreacted.io/writing-resilient-components/](https://overreacted.io/writing-resilient-components/)
-* props naming conventions / good practices :
-* [https://dlinau.wordpress.com/2016/02/22/how-to-name-props-for-react-components/](https://dlinau.wordpress.com/2016/02/22/how-to-name-props-for-react-components/)
-* [https://airbnb.io/javascript/react/](https://airbnb.io/javascript/react/)
-* if you're looking for a good react newsletter : [https://react.statuscode.com/](https://react.statuscode.com)
+{% embed url="https://overreacted.io/writing-resilient-components" %}
+
+{% embed url="https://dlinau.wordpress.com/2016/02/22/how-to-name-props-for-react-components" %}
+
+{% embed url="https://airbnb.io/javascript/react" %}
+
+{% embed url="https://react.statuscode.com" %}
+
+{% embed url="https://formidable.com/blog/2021/react-composition" %}
+
+{% embed url="https://codeburst.io/a-complete-guide-to-props-children-in-react-c315fab74e7c" %}
+
+{% embed url="https://javascript.plainenglish.io/a-complete-guide-of-the-composition-process-of-a-react-native-app-dd9f89542c46" %}
+
+{% embed url="https://www.codeinwp.com/blog/react-best-practices" %}
+
+{% embed url="https://github.com/mediamonks" %}

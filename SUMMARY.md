@@ -20,17 +20,17 @@
 
 * [🆗 Intro to hooks](react-hooks/intro-to-hooks.md)
 * [🆗 useState](react-hooks/usestate.md)
-* [⚠ useEffect](react-hooks/useeffect.md)
+* [☢ useEffect](react-hooks/useeffect.md)
 * [🆗 useRef](react-hooks/useref.md)
-* [useMemo](react-hooks/usememo.md)
+* [❕ useMemo](react-hooks/usememo.md)
 * [⚠ useContext](react-hooks/usecontext.md)
-* [useCallback](react-hooks/usecallback.md)
-* [useReducer](react-hooks/usereducer.md)
+* [❕ useCallback](react-hooks/usecallback.md)
+* [❕ useReducer](react-hooks/usereducer.md)
 * [⚠ useImperativeHandle](react-hooks/useimperativehandle.md)
 * [⚠ useDebugValue](react-hooks/usedebugvalue.md)
 * [⚠ useLayoutEffect](react-hooks/uselayouteffect.md)
-* [Hook flow](react-hooks/hook-flow.md)
-* [Custom hooks](react-hooks/custom-hooks.md)
+* [❕ Hook flow](react-hooks/hook-flow.md)
+* [❕ Custom hooks](react-hooks/custom-hooks.md)
 
 ## 📓 React Guidelines
 
@@ -38,7 +38,6 @@
 * [React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
 * [When to use React.memo](react-guidelines/when-to-use-react.memo.md)
 * [Where to put React State](react-guidelines/where-to-put-react-state.md)
-* [Folders Structure](react-guidelines/folders-structure.md)
 
 ## 🔭 Concepts
 
