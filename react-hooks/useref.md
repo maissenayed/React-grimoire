@@ -140,6 +140,16 @@ With this, you can go ahead and create [instance-like variables](https://reactjs
 
 Remember, the only difference between `useRef` and creating a `{current: ...}` object yourself is that `useRef` will give you the same `ref` object on every render.
 
+### Integrating with DOM-based libraries
+
+As good as React is, there are a lot of utilities and libraries outside its ecosystem that have been in use on the web for years. For example, using refs allows us to combine React with a great animation library. It’s good to take advantage of their stability and resolution for some specific problems.
+
+The [GSAP library](https://blog.logrocket.com/animations-react-hooks-greensock/) is a popular choice for animation examples. To use it, we need to send a DOM element to any of its methods.
+
+{% embed url="https://codesandbox.io/embed/gsap-timelines-with-functional-components-forked-eqbvug?fontsize=14&hidenavigation=1&theme=dark" %}
+
+When the element gets unmounted, we’ll clean the DOM state and actions by terminating any ongoing animation with the `kill()` method supplied by the `Timeline` instance.
+
 ## &#x20;Update state from ref
 
 There’s one more thing to note. `useRef` doesn’t notify you when its content changes, i.e., mutating the `current` property doesn’t cause a re-render. For cases such as performing a state update after React sets the current property to a DOM node, make [useCallback](usecallback.md) ref as follows:
