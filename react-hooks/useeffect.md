@@ -103,26 +103,11 @@ const BasicEffect = () => {
 
 We still have an infinite loop , but why is that&#x20;
 
-```jsx
-useEffect(() => {
-  // this will run if `counter1` OR `counter2` changes
-  console.log('Either counter1 or counter2 changed (or both');
-}, [counter1, counter2]);
-```
+![](../.gitbook/assets/dependency.png)
 
 The dependency array basically tells the hook to "only trigger when the dependency array changes". In the above example, it means "run the callback every time the `counter` variable changes".
 
 If you have multiple elements in a dependency array, the hook will trigger if _any_ element of the dependency array changes.
-
-#### The importance of the dependency array
-
-&#x20;if you do not provide a dependency array, every scheduled `useEffect` is executed. This means that after every render cycle, every effect defined in the corresponding component is executed one after the other based on the positioning in the source code.
-
-So the order of your effect definitions matter. In our case, our single `useEffect` statement is executed whenever one of the state variables change.
-
-You have the ability to opt out from this behavior. This is managed with dependencies you provide as array entries. In these cases, React only executes the `useEffect` statement if at least one of the provided dependencies has changed since the previous run. In other words, with the dependency array, you make the execution dependent on certain conditions.
-
-More often than not, this is what we want; we usually want to execute side effects after specific conditions, e.g., data has changed, a prop changed, or the user first sees our component.&#x20;
 
 ### Skipping effects
 
@@ -166,13 +151,23 @@ Here we can see that the effect depends on the randomNumber state and it will on
 
 The React team recommends you use the [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks#installation) package. It warns when dependencies are specified incorrectly and suggests a fix.
 
+#### The importance of the dependency array
+
+&#x20;if you do not provide a dependency array, every scheduled `useEffect` is executed. This means that after every render cycle, every effect defined in the corresponding component is executed one after the other based on the positioning in the source code.
+
+So the order of your effect definitions matter. In our case, our single `useEffect` statement is executed whenever one of the state variables change.
+
+You have the ability to opt out from this behavior. This is managed with dependencies you provide as array entries. In these cases, React only executes the `useEffect` statement if at least one of the provided dependencies has changed since the previous run. In other words, with the dependency array, you make the execution dependent on certain conditions.
+
+More often than not, this is what we want; we usually want to execute side effects after specific conditions, e.g., data has changed, a prop changed, or the user first sees our component. :arrow\_down:
+
 ### Multiple effects
 
 Multiple `useEffect` calls can happen within a functional component, as shown below:
 
-```
+```jsx
 const MultipleEffects = () => {
-  // 🍟
+  // ⏬ 
   useEffect(() => {
     const clicked = () => console.log('window clicked')
     window.addEventListener('click', clicked)
@@ -182,7 +177,7 @@ const MultipleEffects = () => {
     }
   }, [])
 
-  // 🍟 another useEffect hook 
+  // ⏬  another useEffect hook 
   useEffect(() => {
     console.log("another useEffect call");
   })
@@ -215,12 +210,7 @@ As stated previously, the `useEffect` cleanup function helps developers clean ef
 
 However, it is pertinent to note that the `useEffect` cleanup function does not only run when our component wants to unmount, it also runs right before the execution of the next scheduled effect.
 
-In fact, after our effect executes, the next scheduled effect is usually based on the `dependency(array)`:
-
-```
-// The dependency is an array
-useEffect( callback, dependency )
-```
+In fact, after our effect executes, the next scheduled effect is usually based on the dependency array
 
 Therefore, when our effect is dependent on our prop or anytime we set up something that persists, we then have a reason to call the cleanup function.
 
@@ -239,6 +229,8 @@ To fix this error, we use the cleanup function to resolve it.
 According to React’s official documentation, “React performs the cleanup when the component unmounts. However… effects run for every render and not just once. This is why React also cleans up effects from the previous render before running the effects next time.”
 
 The cleanup is commonly used to cancel all subscriptions made and cancel fetch requests.
+
+### Usefull links
 
 {% embed url="https://overreacted.io/a-complete-guide-to-useeffect" %}
 
