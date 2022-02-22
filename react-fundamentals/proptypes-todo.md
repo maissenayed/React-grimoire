@@ -1,4 +1,4 @@
-# ⚠ PropTypes
+# ℹ PropTypes
 
 Every React app will be composed of an hierarchical tree of components that have different props, certainly then we will need to define and structure our props , to avoid bugs and errors .
 

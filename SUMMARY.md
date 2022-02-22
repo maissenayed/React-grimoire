@@ -13,8 +13,8 @@
 * [🆗 Form](react-fundamentals/form.md)
 * [🆗 Array and Lists](react-fundamentals/arrays-and-key-props.md)
 * [🆗 Class Component State](react-fundamentals/class-component-state.md)
-* [⚠ Component Life Cycle](react-fundamentals/component-life-cycle-todo.md)
-* [⚠ PropTypes](react-fundamentals/proptypes-todo.md)
+* [ℹ Class Component Life Cycle](react-fundamentals/class-component-life-cycle.md)
+* [ℹ PropTypes](react-fundamentals/proptypes-todo.md)
 
 ## 🪝 React Hooks
 

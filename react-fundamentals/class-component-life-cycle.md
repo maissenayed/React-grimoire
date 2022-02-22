@@ -1,4 +1,4 @@
-# ⚠ Component Life Cycle
+# ℹ Class Component Life Cycle
 
 ## What is the React component lifecycle? <a href="#whatisthereactcomponentlifecycle" id="whatisthereactcomponentlifecycle"></a>
 
@@ -12,7 +12,7 @@ In React, components go through a **lifecycle** of events:
 4. Error handling (verifying that your code works and is bug-free)
 
 {% hint style="info" %}
-**SInce React 16.8.\* and the introduction of hooks , React component life cycles become implicit working under the hood, That's why we will tackle the life cycles on the class components examples , where we can invoke the explicitly.**
+**SInce React 16.8.\* and the introduction of hooks , React component life cycles become implicit working under the hood, That's why we will tackle the life cycles on the class components examples , where we can invoke them explicitly.**
 
 **Note that we will use functional components mainly 99% time even React team is recommending that. but for deep understanding of how our components live inside our app we will use in this section only class components** &#x20;
 {% endhint %}
@@ -25,7 +25,7 @@ During the **updating** phase, the React component "grows" after the **mounting*
 
 The final phase is called the **unmounting** phase. At this stage, the component “dies”. In React jargon , it is removed from  the **DOM**.
 
-There’s one more phase a React component can go through: the **error handling** phase. This occurs when your code doesn’t run or there’s a bug somewhere. Think of it like an annual physical.
+There’s one more phase a React component can go through: the **error handling** phase. This occurs when your code doesn’t run or there’s a bug somewhere.&#x20;
 
 {% hint style="warning" %}
 **Note that a React component may not go through every phase. For example, a component could be mounted one minute and then unmounted the next   without any updates or error handling.**&#x20;
@@ -47,7 +47,7 @@ The mounting phase refers to the phase during which a component is created and i
 
 The following methods are called in order.
 
-#### <mark style="color:blue;">**`1. constructor()`**</mark> <a href="#constructor" id="constructor"></a>
+#### **constructor()** <a href="#constructor" id="constructor"></a>
 
 The <mark style="color:blue;">**constructor()**</mark> is the very first method called as the component is “brought to life.”
 
@@ -70,7 +70,7 @@ const MyComponent extends React.Component {
 
 It’s worth reiterating that this is the first method invoked   before the component is mounted to the DOM. The constructor is not where you would introduce any side effects or subscriptions, such as event handlers.
 
-#### 2. `static getDerivedStateFromProps()` <a href="#staticgetderivedstatefromprops" id="staticgetderivedstatefromprops"></a>
+#### static getDerivedStateFromProps() <a href="#staticgetderivedstatefromprops" id="staticgetderivedstatefromprops"></a>
 
 `static getDerivedStateFromProps` is a new React lifecycle method as of [React 17](https://medium.com/@valerii.sukhov/react-17-lifecycle-5b68946c813c) designed to replace `componentWillReceiveProps`.
 
