@@ -46,7 +46,7 @@ const Counter = () => {
     <div>
       Counter:{counter}
       <div>
-        <button onClick={handleClick}>Get older! </button>
+        <button onClick={handleClick}>add to the counter </button>
       </div>
     </div>
   )
@@ -55,9 +55,9 @@ const Counter = () => {
 
 ### Functional updates <a href="#functionalupdates" id="functionalupdates"></a>
 
-The state updater function returned by `useState` can be invoked in two ways. The first is by passing a new value directly as an argument:
+The state setter function returned by `useState` can be invoked in two ways. The first is by passing a new value directly as an argument:
 
-```
+```jsx
 const [state, setState] = useState(initialStateValue)
 
 // update state as follows
@@ -68,7 +68,7 @@ This is correct and works perfectly in most cases. However, there are cases wher
 
 Here’s the example above revised to use the functional update form:
 
-```
+```jsx
 const [state, setState] = useState(initialStateValue)
 
 // update state as follows
@@ -83,7 +83,7 @@ When your new state depends on the previous state value — e.g., a computation 
 
 Here’s an example:
 
-```
+```jsx
 const Counter = () => {
   const [count, setCount] = useState(0);
   return (
@@ -151,7 +151,7 @@ As opposed to strings and numbers, you could also use an object as the initial v
 
 Note that you have to pass the entire object to the `useState` updater function because the object is replaced, not merged.This is very different from how `this.setState` worked in classes!
 
-```
+```jsx
 function Component() {
   const [state, setState] = useState({ name: "Mayssa" });
   const updateState = () => setState({ occupation: "Teacher" });
@@ -178,17 +178,17 @@ Remember: state can hold any kind of value! Here’s an example of useState hold
 
 Typing into the box and hitting Enter will add an item to the list.
 
-```
+```jsx
 function ListOfThings() {
-  const [items, setItems] = useState([]);
+  const [itemsList, setItemsList] = useState([]);
   const [itemName, setItemName] = useState("");
 
   const addItem = event => {
     event.preventDefault();
-    setItems([
-      ...items,
+    setItemsList([
+      ...itemsList,
       {
-        id: items.length,
+        id: itemsList.length, // just for the sake of the example , never put the index of the item in the array as an id
         name: itemName
       }
     ]);
@@ -208,7 +208,7 @@ function ListOfThings() {
         </label>
       </form>
       <ul>
-        {items.map(item => (
+        {itemsList.map(item => (
           <li key={item.id}>{item.name}</li>
         ))}
       </ul>
@@ -267,4 +267,4 @@ If you try to update state with the same value as the current state, React won�
 
 It’s important to note that in some cases, React may still render the specific component whose state was updated. That’s OK because React will _not_ go deeper into the tree, i.e., render the component’s children.
 
-If expensive calculations are done within the body of your functional component, i.e., before the return statement, consider optimizing these with `useMemo`.
+If expensive calculations are done within the body of your functional component, i.e., before the return statement, consider optimizing these with `useMemo`.(we will cover [useMemo  in another section](usememo.md))&#x20;

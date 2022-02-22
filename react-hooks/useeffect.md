@@ -197,47 +197,17 @@ Note that `useEffect` calls can be skipped — i.e., not invoked on every render
 
 ## Cleaning up an effect <a href="#cleaningupaneffect" id="cleaningupaneffect"></a>
 
-Some imperative code needs to be cleaned up. For example, subscriptions need to be cleaned up, timers need to be invalidated, etc. To do this, return a function from the callback passed to `useEffect`:
-
-```
-useEffect(() => {
-  const subscription = props.apiSubscription() 
-
-  return () => {
-     // clean up the subscription
-     subscription.unsubscribeApi()
-   }
-})
-```
-
-The cleanup function is guaranteed to be invoked before the component is removed from the user interface.
-
-What about cases where a component is rendered multiple times, e.g., a certain component `A` renders twice? In this case, on first render, the effect subscription is set up and cleaned before the second render. In the second render, a new subscription is set up.
-
-![](../.gitbook/assets/component-rendered-multiple-times.png)
-
-he implication of this is that a new subscription is created on every render. There are cases where you wouldn’t want this to happen, and you’d rather limit when the effect callback is invoked. Please refer to the next section for this.
-
 React’s `useEffect` cleanup function saves applications from unwanted behaviors like memory leaks by cleaning up effects. In doing so, we can optimize our application’s performance.
-
-To start off this article, you should have a basic understanding of what `useEffect` is, including using it to fetch APIs. This article will explain the cleanup function of the `useEffect` Hook and, hopefully, by the end of this article, you should be able to use the cleanup function comfortably.
 
 ### What is the `useEffect` cleanup function?
 
-Just like the name implies, the `useEffect` cleanup is a function [in the ](https://blog.logrocket.com/guide-to-react-useeffect-hook/)[`useEffect`](https://blog.logrocket.com/guide-to-react-useeffect-hook/) [Hook](https://blog.logrocket.com/guide-to-react-useeffect-hook/) that allows us to tidy up our code before our component unmounts. When our code runs and reruns for every render, `useEffect` also cleans up after itself using the cleanup function.
+Just like the name implies, the `useEffect` cleanup is a function that allows us to tidy up our code before our component unmounts. When our code runs and reruns for every render, `useEffect` also cleans up after itself using the cleanup function.
 
 The `useEffect` Hook is built in a way that we can return a function inside it and this return function is where the cleanup happens. The cleanup function prevents memory leaks and removes some unnecessary and unwanted behaviors.
 
 Note that you don’t update the state inside the return function either:
 
-```
-useEffect(() => {
-        effect
-        return () => {
-            cleanup
-        }
-    }, [input])
-```
+![](../.gitbook/assets/cleanuo.png)
 
 ### Why is the `useEffect` cleanup function useful?
 
