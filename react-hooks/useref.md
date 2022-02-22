@@ -27,7 +27,7 @@ class Foobar extends Component {
 
   render() {
     return (
-      <input ref={this.myInput}/>        {/* pass "this.myInput" as prop */}
+      <input ref={this.myInput}/>        {/* pass "this.myInput" as ref */}
     );
   }
 }
@@ -41,20 +41,50 @@ The `useRef` Hook in React can be used to directly access DOM nodes, as well as 
 
 The basic signature for the `useRef` Hook looks like this:
 
-```
-const refObject = useRef(initialValue)
-```
+![](<../.gitbook/assets/useRef (2)>)
 
 `useRef` returns a mutable object whose value is set as: `{current: initialValue}`.
 
-{% hint style="info" %}
-* returns a 'ref' object.
-* Call signature: `const` refObject `= useRef(initialValueToBePersisted)`
-* Value is persisted in the refObject`.current` property.
-* values are accessed from the `.current` property of the returned object.
-* The`.current` property could be initialised to an initial value e.g. `useRef(initialValue)`
-* The object is persisted for the entire lifetime of the component.
-{% endhint %}
+### Mutable values
+
+The reference object  is mutable which means we can access the reference value using `reference.current` and update it by assigning reference.current to a new value or variable.&#x20;
+
+There are two important behaviours to remember about useRef() references:
+
+1. The reference value stays the same (persists) between component re-renders.
+2. Updating a reference value does not re-render the component.
+
+The difference between using `useRef` and manually setting an object value directly within your component, e.g., `const myObject = {current: initialValue}`, is that the `ref` object remains the same all through the lifetime of the component, i.e., across re-renders.
+
+![](../.gitbook/assets/ddddd)
+
+To update the value stored in the `ref` object, you go ahead and mutate the `current` property as follows:
+
+![](../.gitbook/assets/ttttt)
+
+The returned object from invoking `useRef` will persist for the full lifetime of the component regardless of re-renders.
+
+#### Example click count Logger&#x20;
+
+```jsx
+import { useRef } from 'react';
+const countLogger = () => {
+    const reference = useRef(0);
+
+    const handleClick = () => {
+        reference.current++;
+        console.log(`${reference.current} button clicks`);
+    }
+
+    console.log("Component rendered");
+
+    return (
+        <button onClick={handleClick}>Click me!</button>
+    )
+}
+```
+
+Here `const reference = useRef(0)` creates a reference reference initialized to 0. We use this reference object to store the number of clicks on a button. On clicking the button, the reference value is updated and logged to the console. As you might have noticed in your console that "Component rendered" is logged only once (during the initial render) which means that the button clicks, more precisely, the reference value updates do not trigger component re-renders.
 
 ### Directly access DOM nodes
 
@@ -62,37 +92,13 @@ When combined with the `ref` attribute, we could use `useRef` to obtain the unde
 
 One of the many concepts that React popularized among developers is the concept of declarative views. Before declarative views, most of us were modifying the DOM by calling functions that explicitly changed it.
 
-As mentioned at the introduction of this article, we are now declaring views based on a state, and — though we are still calling functions to alter this state — we are not in control of when the DOM will change or even if it should change.
+we are now declaring views based on a state, and — though we are still calling functions to alter this state — we are not in control of when the DOM will change or even if it should change.
 
 Because of this inversion of control, we’d lose this imperative nature if it weren’t for refs.
 
-The difference between using `useRef` and manually setting an object value directly within your component, e.g., `const myObject = {current: initialValue}`, is that the `ref` object remains the same all through the lifetime of the component, i.e., across re-renders.
-
-```
-const App = () => {
-   const refObject = useRef("value")
-   //refObject will always be {current: "value"} every time App is re-rendered. 
-}
-```
-
-To update the value stored in the `ref` object, you go ahead and mutate the `current` property as follows:
-
-```
-const App = () => {
-   const refObject = useRef("value")
-
-   //update ref 
-   refObject.current = "new value" 
-
-  //refObject will always be {current: "new value"} 
-}
-```
-
-The returned object from invoking `useRef` will persist for the full lifetime of the component regardless of re-renders.
-
 A common use case for `useRef` is to manage child DOM nodes:
 
-```
+```jsx
 function TextInputWithFocusButton() {
   //1. create a ref object with initialValue of null
   const inputEl = useRef(null);
@@ -118,52 +124,27 @@ The example above works because if you pass a `ref` object to React, e.g., `<div
 
 `useRef` returns a plain JavaScript object, so it can be used for holding more than just DOM nodes — it can hold whatever value you want. This makes it the perfect choice for simulating instance-like variables in functional components:
 
-```
-const App = ({prop1}) => {
-    // save props1 in ref object on render
-        const initialProp1 = useRef(prop1)
+![](<../.gitbook/assets/ttttt1 (2)>)
 
-    useEffect(() => {
-       // see values logged here
-       console.log({
-         initialProp1: initialProp1.current,
-         prop1
-       })
-    }, [prop1])
-}
-```
+In the example above, we log `initialProp` and `prop` via `useEffect`. This will be logged on mount and every time `prop` changes.
 
-In the example above, we log `initialProp1` and `prop1` via `useEffect`. This will be logged on mount and every time `prop1` changes.
+Since `initialProp` is `prop` saved on initial render, it never changes. It’ll always be the initial value of `props`. Here’s what we mean.
 
-Since `initialProp1` is `prop1` saved on initial render, it never changes. It’ll always be the initial value of `props1`. Here’s what we mean.
+If `prop` passed to `App` were changed from **`1`** to **`5`** , coming from state update , the following will be logged:
 
-If the first value of `props1` passed to `App` were `2`, i.e., `<App prop1={2} />`, the following will be logged on mount:
+![jsx](<../.gitbook/assets/22 (1)>)
 
-```
-{
-  initialProp1: 2,
-  prop1: 2,
-}
-```
-
-If `prop1` passed to `App` were changed from `2` to `5` — say, owing to a state update — the following will be logged:
-
-```
-{
-  initialProp1: 2, // note how this remains the same
-  prop1: 5,
-}
-```
-
-`initialProp1` remains the same through the lifetime of the component because it is saved in the `ref` object. The only way to update this value is by mutating the current property of the `ref` object: `initialProp1.current =`` `_`*new value*`_.
+`initialProp` remains the same through the lifetime of the component because it is saved in the `ref` object. The only way to update this value is by mutating the current property of the `ref` object: `initialProp.current =`` `_`*new value*`_.
 
 With this, you can go ahead and create [instance-like variables](https://reactjs.org/docs/hooks-faq.html#is-there-something-like-instance-variables) that don’t change within your functional component.
 
 Remember, the only difference between `useRef` and creating a `{current: ...}` object yourself is that `useRef` will give you the same `ref` object on every render.
 
-There’s one more thing to note. `useRef` doesn’t notify you when its content changes, i.e., mutating the `current` property doesn’t cause a re-render. For cases such as performing a state update after React sets the current property to a DOM node, make use of a callback ref as follows:
+## &#x20;Update state from ref
 
-```
+There’s one more thing to note. `useRef` doesn’t notify you when its content changes, i.e., mutating the `current` property doesn’t cause a re-render. For cases such as performing a state update after React sets the current property to a DOM node, make [useCallback](usecallback.md) ref as follows:
+
+```jsx
 function UpdateStateOnSetRef() {
   // set up local state to be updated when ref object is updated
   const [height, setHeight] = useState(0);
@@ -193,7 +174,10 @@ function UpdateStateOnSetRef() {
 
 ### `useRef` vs. `createRef`
 
-``
+## Difference between state and references
+
+1. Updating state does trigger component re-rendering but updating a reference does not.
+2. The state update is asynchronous (state variable is updated after re-rendering - [**read more why is it async** ](https://lifesaver.codes/answer/rfclarification-why-is-setstate-asynchronous)), while the reference update is synchronous.
 
 {% embed url="https://blog.logrocket.com/complete-guide-react-refs" %}
 
