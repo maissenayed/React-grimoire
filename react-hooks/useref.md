@@ -150,6 +150,13 @@ The [GSAP library](https://blog.logrocket.com/animations-react-hooks-greensock/)
 
 When the element gets unmounted, we’ll clean the DOM state and actions by terminating any ongoing animation with the `kill()` method supplied by the `Timeline` instance.
 
+{% hint style="info" %}
+#### `useRef` vs. `createRef`
+
+* &#x20;createRef every time when it runs, it creates a new ref object.
+* `useRef` only creates a ref object for a particular _component instance_ when it's first rendered. In the following rerenders, it'll just returns the existing ref object associated with that component instance. That's why we can trust it to persist a value across rerenders!
+{% endhint %}
+
 ## &#x20;Update state from ref
 
 There’s one more thing to note. `useRef` doesn’t notify you when its content changes, i.e., mutating the `current` property doesn’t cause a re-render. For cases such as performing a state update after React sets the current property to a DOM node, make [useCallback](usecallback.md) ref as follows:
@@ -178,21 +185,7 @@ function UpdateStateOnSetRef() {
 }
 ```
 
-\
-\
-
-
-### `useRef` vs. `createRef`
-
 ## Difference between state and references
 
 1. Updating state does trigger component re-rendering but updating a reference does not.
 2. The state update is asynchronous (state variable is updated after re-rendering - [**read more why is it async** ](https://lifesaver.codes/answer/rfclarification-why-is-setstate-asynchronous)), while the reference update is synchronous.
-
-{% embed url="https://blog.logrocket.com/complete-guide-react-refs" %}
-
-{% embed url="https://blog.logrocket.com/react-reference-guide-hooks-api" %}
-
-{% embed url="https://dmitripavlutin.com/react-useref-guide" %}
-
-{% embed url="https://learnreact.design/posts/react-useref-by-example#what-is-useref-used-for" %}
