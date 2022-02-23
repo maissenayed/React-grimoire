@@ -25,7 +25,7 @@ Here, is that same chat notification implemented with Tailwind classes:
 Right off the bat, you’re probably thinking “Ew, talk about hard to read markup.” Even the developers of Tailwind will admit, in terms of first impressions, it’s not great, and that you have to try it to believe it! When I first looked into Tailwind, I was skeptical. I value readable code, and this seems like the opposite so why are so many developers swearing by Tailwind’s approach to utility-first?\
 
 
-### **Tailwind CSS: Pros**
+### **Utility-First: Pros**
 
 **Context Switching**
 
