@@ -30,27 +30,19 @@ Each component in Context is context-aware. Essentially, instead of passing prop
 
 The `createContext` method is used to create a Context object to which components can subscribe. These components are able to get the context value from the closest matching Provider above them in the tree.
 
-```
-const NewContext = React.createContext({ color: 'black' });
-```
+![](<../.gitbook/assets/create conntext (1)>)
 
-Components are usually wrapped in a Provider in order to get their context value. However, when there’s no matching Provider above a component in the tree, the component will get its context from the default argument `{ color: 'black' }` in the `createContext` method. This is especially useful when testing components in isolation.
+Components are usually wrapped in a Provider in order to get their context value. However, when there’s no matching Provider above a component in the tree, the component will get its context from the default argument `initialContext` in the `createContext` method. This is especially useful when testing components in isolation.
 
 #### `Context.Provider` <a href="#contextprovider" id="contextprovider"></a>
 
 The `React.createContext` method will return a Provider component when it is called. Providers are React components from Context objects that allow other components to access those context values and subscribe to their changes.
 
-```
-const { Provider } = NewContext;
-```
+![](<../.gitbook/assets/destrcut context (2)>)
 
 The Provider component accepts a `value` prop, which can then be accessed by its consuming child components. A Provider can have multiple child components or consumers.
 
-```
-<Provider value={{color: 'blue'}}>
-  {children}
-</Provider>
-```
+![](../.gitbook/assets/provider)
 
 Components will use the default context value from the `createContext` method when they have no matching parent Provider. However, once a Provider is available, even if its `value` prop is `undefined`, its child components or consumers will use its value.
 
@@ -62,17 +54,13 @@ Consuming the context can be performed in 2 ways.
 
 The first way, the one I recommend, is to use the `useContext(Context)` React hook:
 
-```
-import { useContext } from 'react';function MyComponent() {  const value = useContext(Context);  return <span>{value}</span>;}
-```
+![](../.gitbook/assets/consumer)
 
 The hook returns the value of the context: `value = useContext(Context)`. The hook also makes sure to re-render the component when the context value changes.
 
 The second way is by using a render function supplied as a child to `Context.Consumer` special component available on the context instance:
 
-```
-function MyComponent() {  return (    <Context.Consumer>      {value => <span>{value}</span>}    </Context.Consumer>  );}
-```
+![](../.gitbook/assets/re)
 
 Again, in case if the context value changes, `<Context.Consumer>` will re-render its render function.
 
@@ -86,8 +74,19 @@ If the consumer isn't wrapped inside the provider, but still tries to access the
 
 The simplest way to pass data from a parent to a child component is when the parent assigns props to its child component:
 
-```
-function Application() {  const userName = "John Smith";  return <UserInfo userName={userName} />;}function UserInfo({ userName }) {  return <span>{userName}</span>;}
+```jsx
+function UserInfo({ userName }) {
+  return <span>{userName}</span>;
+}
+
+function Application() {
+  const userName = "John Smith";
+  return <UserInfo userName={userName} />;
+}
+
+function UserInfo({ userName }) {
+  return <span>{userName}</span>;
+}
 ```
 
 The parent component `<Application />` assigns `userName` data to its child component `<UserInfo name={userName} />` using the `userName` prop.
@@ -100,15 +99,11 @@ For example, let's say that `<Application />` component (the one having the glob
 
 Here's how such a structuring would look:
 
-```
-function Application() {  const userName = "John Smith";  return (    <Layout userName={userName}>      Main content    </Layout>  );}function Layout({ children, userName }) {  return (    <div>      <Header userName={userName} />      <main>        {children}      </main>    </div>  )}function Header({ userName }) {  return (    <header>      <UserInfo userName={userName} />    </header>  );}function UserInfo({ userName }) {  return <span>{userName}</span>;}
-```
-
-[Try the demo.](https://codesandbox.io/s/props-drilling-xhrfd?file=/src/Application.js)
+{% embed url="https://codesandbox.io/embed/props-drilling-forked-sxvek3?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApplication.js&theme=dark" %}
 
 You can see the problem: because `<UserInfo />` component renders deep down in the tree, and all the parent components (`<Layout />` and `<Header />`) have to pass the `userName` prop.
 
-This problem is also known as [props drilling](https://kentcdodds.com/blog/prop-drilling).
+{% embed url="https://kentcdodds.com/blog/prop-drilling" %}
 
 React context is a possible solution. Let's see how to apply it in the next section.
 
@@ -118,15 +113,11 @@ As a quick reminder, applying the React context requires 3 actors: the context, 
 
 Here's how the sample application would look when applying the context to it:
 
-```
-import { useContext, createContext } from 'react';const UserContext = createContext('Unknown');function Application() {  const userName = "John Smith";  return (    <UserContext.Provider value={userName}>      <Layout>        Main content      </Layout>    </UserContext.Provider>  );}function Layout({ children }) {  return (    <div>      <Header />      <main>        {children}      </main>    </div>  );}function Header() {  return (    <header>      <UserInfo />    </header>  );}function UserInfo() {  const userName = useContext(UserContext);  return <span>{userName}</span>;}
-```
-
-[Try the demo.](https://codesandbox.io/s/react-context-example-gzovv?file=/src/Application.js)
+{% embed url="https://codesandbox.io/embed/react-context-example-forked-8nvoez?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApplication.js&theme=dark" %}
 
 Let's look into more detail what has been done.
 
-First, `const UserContext = createContext('Unknown')` creates the context that's going to hold the user name information.
+First, `const UserContext = createContext('')` creates the context that's going to hold the user name information.
 
 Second, inside the `<Application />` component, the application's child components are wrapped inside the user context provider: `<UserContext.Provider value={userName}>`. Note that the `value` prop of the provider component is important: this is how you set the value of the context.
 
@@ -140,19 +131,11 @@ When the context value is changed by altering `value` prop of the context provid
 
 For example, if I change the user name from `'John Smith'` to `'Smith, John Smith'`, then `<UserInfo />` consumer immediately re-renders to display the latest context value:
 
-```
-import { createContext, useEffect, useState } from 'react';const UserContext = createContext('Unknown');function Application() {  const [userName, setUserName] = useState('John Smith');  useEffect(() => {    setTimeout(() => {      setUserName('Smith, John Smith');    }, 2000);  }, []);  return (    <UserContext.Provider value={userName}>      <Layout>        Main content      </Layout>    </UserContext.Provider>  );}// ...
-```
+{% embed url="https://codesandbox.io/embed/react-context-example-change-forked-p6xsf7?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApplication.js&theme=dark" %}
 
-[Try the demo.](https://codesandbox.io/s/react-context-example-change-hw32y?file=/src/Application.js)
+at first you'd see `'Maissen Ayed'` (context value) displayed on the screen. After 2 seconds, the context value changes to `'Ayed, Maissen Ayed"`, and correspondingly the screen is updated with the new value.
 
-Open the [demo](https://codesandbox.io/s/react-context-example-change-hw32y?file=/src/Application.js) and you'd see `'John Smith'` (context value) displayed on the screen. After 2 seconds, the context value changes to `'Smith, John Smith'`, and correspondingly the screen is updated with the new value.
-
-The demo shows that `<UserInfo />` component, the consumer that renders the context value on the screen, re-renders when the context value changes.
-
-```
-function UserInfo() {  const userName = useContext(UserContext);  return <span>{userName}</span>;}
-```
+The consumer that renders the context value on the screen, re-renders when the context value changes.
 
 ### 4. Updating the context <a href="#4-updating-the-context" id="4-updating-the-context"></a>
 
@@ -162,11 +145,7 @@ But this can be easily implemented by integrating a state management mechanism (
 
 In the following example, `<Application />` component uses `useState()` hook to manage the context value.
 
-```
-import { createContext, useState, useContext, useMemo } from 'react';const UserContext = createContext({  userName: '',  setUserName: () => {},});function Application() {  const [userName, setUserName] = useState('John Smith');  const value = useMemo(    () => ({ userName, setUserName }),     [userName]  );    return (    <UserContext.Provider value={value}>      <UserNameInput />      <UserInfo />    </UserContext.Provider>  );}function UserNameInput() {  const { userName, setUserName } = useContext(UserContext);  const changeHandler = event => setUserName(event.target.value);  return (    <input      type="text"      value={userName}      onChange={changeHandler}    />  );}function UserInfo() {  const { userName } = useContext(UserContext);  return <span>{userName}</span>;}
-```
-
-[Try the demo.](https://codesandbox.io/s/update-context-value-l39t0?file=/src/App.js)
+{% embed url="https://codesandbox.io/embed/update-context-value-forked-6wrbvt?fontsize=14&hidenavigation=1&theme=dark" %}
 
 `<UserNameInput />` consumer reads the context value, from where `userName` and `setUserName` are extracted. The consumer then can update the context value by invoking the update function `setUserName(newContextValue)`.
 
@@ -174,7 +153,7 @@ import { createContext, useState, useContext, useMemo } from 'react';const UserC
 
 Note that `<Application />` memoizes the context value. Memoization keeps the context value object the same as long as `userName` is the same, preventing re-rendering of consumers every time the `<Application />` re-renders.
 
-Otherwise, without memoization, `const value = { userName, setUserName }` would create different object instances during re-rendering of `<Application />`, triggering re-rendering in context consumers. See more about [referential equality of objects](https://dmitripavlutin.com/how-to-compare-objects-in-javascript/#1-referential-equality).
+Otherwise, without memoization, `const value = { userName, setUserName }` would create different object instances during re-rendering of `<Application />`, triggering re-rendering in context consumers.&#x20;
 
 ### Global shared state with React Context
 
