@@ -4,7 +4,7 @@ description: Context is React’s way of handling shared data between multiple c
 
 # ⚠ useContext
 
-### Introduction to prop drilling
+## Introduction to prop drilling
 
 There has always been a need to share data with different components when working with React. This can be achieved in the most basic way using prop drilling. Prop drilling allows for unidirectional data sharing between components. The data passed or shared in the form of props.
 
@@ -18,7 +18,7 @@ For the data in the A component to be accessed in the C component, it has to be 
 
 From the above explanation, you can understand the basics of what prop drilling is and why we need it.
 
-### React Context <a href="#gettingstartedwithreactcontext" id="gettingstartedwithreactcontext"></a>
+## React Context <a href="#gettingstartedwithreactcontext" id="gettingstartedwithreactcontext"></a>
 
 {% embed url="https://reactjs.org/docs/context.html" %}
 
@@ -141,7 +141,7 @@ at first you'd see `'Maissen Ayed'` (context value) displayed on the screen. Aft
 
 The consumer that renders the context value on the screen, re-renders when the context value changes.
 
-### 4. Updating the context <a href="#4-updating-the-context" id="4-updating-the-context"></a>
+#### 4. Updating the context <a href="#4-updating-the-context" id="4-updating-the-context"></a>
 
 The React Context API is stateless by default and doesn't provide a dedicated method to update the context value from consumer components.
 
@@ -204,8 +204,6 @@ You can find more from the creator of redux him self&#x20;
 {% embed url="https://blog.isquaredsoftware.com/2018/03/redux-not-dead-yet" %}
 
 ## Usefull links
-
-{% embed url="https://medium.com/vectoscalar/react-context-api-a-complete-guide-bc0898b71dc9" %}
 
 {% embed url="https://blog.logrocket.com/pitfalls-of-overusing-react-context" %}
 
