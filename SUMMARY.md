@@ -30,7 +30,8 @@
 * [⚠ useDebugValue](react-hooks/usedebugvalue.md)
 * [⚠ useLayoutEffect](react-hooks/uselayouteffect.md)
 * [❕ Hook flow](react-hooks/hook-flow.md)
-* [❕ Custom hooks](react-hooks/custom-hooks.md)
+* [❕ Custom hooks](react-hooks/custom-hooks/README.md)
+  * [Use Local Storage](react-hooks/custom-hooks/use-local-storage.md)
 
 ## 📓 React Guidelines
 

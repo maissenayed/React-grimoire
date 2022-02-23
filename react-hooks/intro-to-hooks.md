@@ -75,7 +75,7 @@ It is possible to divide the built-in hooks into two sections, which are given b
 It ain’t Fight Club, but we do have some rules to follow:
 
 1. Only call hooks at the top level of your function. Don’t put them in loops, conditionals, or nested functions.
-2. Only call hooks from React function components, or from [custom hooks. ](custom-hooks.md)Don’t call them from outside a component (what would that even do?). Keeping all the calls inside components and custom hooks makes your code easier to follow too, because all the related logic is grouped together.
+2. Only call hooks from React function components, or from [custom hooks. ](custom-hooks/)Don’t call them from outside a component (what would that even do?). Keeping all the calls inside components and custom hooks makes your code easier to follow too, because all the related logic is grouped together.
 3. The names of hooks must start with “use”. Like `useState` or `useEffect` (well, not those two, those are taken).
 
 ![](<../.gitbook/assets/Hook rule.png>)

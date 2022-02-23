@@ -230,7 +230,11 @@ According to React’s official documentation, “React performs the cleanup whe
 
 The cleanup is commonly used to cancel all subscriptions made and cancel fetch requests.
 
-### Usefull links
+{% embed url="https://alexsidorenko.com/blog/useeffect-cleanups" %}
+
+## Usefull links
+
+{% embed url="https://alexsidorenko.com/blog/useeffect" %}
 
 {% embed url="https://overreacted.io/a-complete-guide-to-useeffect" %}
 

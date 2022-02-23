@@ -10,9 +10,7 @@ Sometimes when using React you’ll need an escape hatch to write imperative-sty
 
 React provides a way to get references to DOM nodes by using `React.createRef()`. It’s really just an equivalent of this all-too-familiar snippet of JavaScript:
 
-```javascript
-document.getElementById('element');
-```
+![](<../.gitbook/assets/sdfd (1)>)
 
 This is exactly what `React.createRef()` does, although it requires a bit of a different setup.
 
@@ -229,3 +227,5 @@ function UpdateStateOnSetRef() {
 
 1. Updating state does trigger component re-rendering but updating a reference does not.
 2. The state update is asynchronous (state variable is updated after re-rendering - [**read more why is it async** ](https://lifesaver.codes/answer/rfclarification-why-is-setstate-asynchronous)), while the reference update is synchronous.
+
+{% embed url="https://alexsidorenko.com/blog/react-render-refs" %}
