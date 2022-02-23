@@ -1,14 +1,16 @@
-# ⚠ Post CSS processor :Sass
+# 🆗 Post CSS processor :Sass
 
-At the core of it all lies CSS, the bread and butter if you will. This is what every web developer should learn first, and in many cases plain ol’ CSS is all that you’ll need. Setting the foundation for your learning is important, and should be done prior to learning any new “fancier” ideas.
+CSS is at the heart of it all, the bread and butter, if you will. This is what every web developer should learn first, and in many cases, plain ol' CSS will suffice. Setting the foundation for your learning is critical, and it should be done before learning any new "fancier" ideas.
 
-Sass is a preprocessor scripting language that is compiled into CSS. Sass is an improved way of writing CSS, that gives developers powerful tools like variables, mixins, and nesting, basically it makes writing CSS simpler and more efficient.
+Sass is a scripting language for preprocessors that is compiled into CSS. Sass is an improved way of writing CSS that provides developers with powerful tools such as variables, mixins, and nesting; in short, it makes CSS writing easier and more efficient.
+
+Officially described as “[CSS with superpowers](https://sass-lang.com),” SCSS (or Sass) offers a way to write styles for websites with more enhanced CSS syntax. In general, browsers do not know how to process SCSS features, such as functions, mixins, and nesting. We’ll need to convert them to regular CSS files to run them in the browser.
 
 ### **Sass: Pros**
 
 **Sass Features**
 
-Sass lets you use powerful tools that you can’t in vanilla CSS, like variables, mathematical operations, mixins, loops, functions, imports and other interesting functionalities that make writing CSS much more powerful. I won’t go too in-depth in these as that is a whole blog post in and of itself. Basically, you can think of Sass as writing CSS, but with more features!
+Variables, mathematical operations, mixins, loops, functions, imports, and other interesting functionalities that make writing CSS much more powerful are all available in Sass. Simply put, Sass is like writing CSS, but with more features!
 
 **Variables:**&#x20;
 
@@ -30,7 +32,7 @@ Line of code comparing sass to CSS for mixins
 
 **Modules**
 
-Although this feature isn’t exclusive to Sass, using bundlers like webpack allows you to split your Sass (or CSS, in the case of using CSS modules) into files. This is valuable as it helps organize code, making CSS maintenance easier.
+Although not unique to Sass, using bundlers such as webpack allows you to split your Sass (or CSS, in the case of CSS modules) into files. This is useful because it helps organize code and makes CSS maintenance easier.
 
 **Freedom**
 
@@ -66,3 +68,15 @@ Sometimes we just want to add one or two little styles. Especially when it comes
 ## Thoughts
 
 CSS preprocessors in combination with BEM definitely improve the development experience a lot, but that doesn’t mean it’s perfect. When your codebase grows, you might start to wonder in which files you should put certain styles and how it should be scoped. You also wonder if old styles are still being used. And you also have to think about performance: you don’t want to load in every single line of CSS on the first page when most of it is used on other pages.
+
+## Usefull-Links:
+
+{% embed url="https://sass-lang.com/guide" %}
+
+{% embed url="https://blog.logrocket.com/the-definitive-guide-to-scss" %}
+
+{% embed url="https://cheesecakelabs.com/blog/css-architecture-first-steps#:~:text=What%20is%20a%20CSS%20Architecture,to%20scale%20and%20more%20reusable." %}
+
+{% embed url="https://www.cqlcorp.com/insights/widely-used-css-architectures-and-how-they-function" %}
+
+{% embed url="https://blog.allegro.tech/2021/07/css-architecture-and-performance-of-micro-frontends.html" %}
