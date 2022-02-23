@@ -20,6 +20,8 @@ From the above explanation, you can understand the basics of what prop drilling 
 
 ### React Context <a href="#gettingstartedwithreactcontext" id="gettingstartedwithreactcontext"></a>
 
+{% embed url="https://reactjs.org/docs/context.html" %}
+
 According to the React docs, Context provides a way to pass data through the component tree from parent to child components, without having to pass props down manually at each level.
 
 Each component in Context is context-aware. Essentially, instead of passing props down through every single component on the tree, the components in need of a prop can simply ask for it, without needing intermediary helper components that only help relay the prop.
@@ -63,6 +65,8 @@ The second way is by using a render function supplied as a child to `Context.Con
 ![](../.gitbook/assets/re)
 
 Again, in case if the context value changes, `<Context.Consumer>` will re-render its render function.
+
+![](../.gitbook/assets/contextcompere.png)
 
 ![React Context](https://dmitripavlutin.com/90649ae4bdf379c482ad24e0dd220bc4/react-context-3.svg)
 
@@ -195,7 +199,11 @@ In my experience with Redux, it can be relatively complex to achieve something t
 
 Ultimately, Redux and Context should be considered complementary tools that work together instead of alternatives. My recommendation is to use Redux for complex global state management and Context for prop drilling.
 
-{% embed url="https://reactjs.org/docs/context.html" %}
+You can find more from the creator of redux him self&#x20;
+
+{% embed url="https://blog.isquaredsoftware.com/2018/03/redux-not-dead-yet" %}
+
+## Usefull links
 
 {% embed url="https://medium.com/vectoscalar/react-context-api-a-complete-guide-bc0898b71dc9" %}
 
