@@ -1,3 +1,0 @@
-# Acceptability
-
-In progress

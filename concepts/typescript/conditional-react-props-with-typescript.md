@@ -159,7 +159,7 @@ Now finally, in the `Avatar` component, both the `icon` and `src` props will be 
 
 Now if we try to provide both props, we will see a TypeScript error:
 
-![](<../.gitbook/assets/Screenshot from 2021-11-15 21-37-00.png>)
+![](<../../.gitbook/assets/Screenshot from 2021-11-15 21-37-00.png>)
 
 ## Conditional prop variation
 

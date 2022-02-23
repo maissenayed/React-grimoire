@@ -8,7 +8,7 @@
 
 {% embed url="https://en.m.wikipedia.org/wiki/Side_effect_(computer_science)" %}
 
-Side effects are basically anything that affects something outside of the scope of the current function that’s being executed. In our dashboard, this includes:
+Side effects are basically anything that affects something outside of the scope of the current function that’s being executed.&#x20;
 
 ## React side Effect
 
