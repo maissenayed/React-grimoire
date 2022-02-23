@@ -82,6 +82,100 @@ You can have as many consumers as you want for a single context. If the context 
 
 If the consumer isn't wrapped inside the provider, but still tries to access the context value (using `useContext(Context)` or `<Context.Consumer>`), then the value of the context would be the default value argument supplied to `createContext(defaultValue)` factory function that had created the context.
 
+### Use case: global user name <a href="#3-use-case-global-user-name" id="3-use-case-global-user-name"></a>
+
+The simplest way to pass data from a parent to a child component is when the parent assigns props to its child component:
+
+```
+function Application() {  const userName = "John Smith";  return <UserInfo userName={userName} />;}function UserInfo({ userName }) {  return <span>{userName}</span>;}
+```
+
+The parent component `<Application />` assigns `userName` data to its child component `<UserInfo name={userName} />` using the `userName` prop.
+
+That's the usual way how data is passed using props. You can use this approach without problems.
+
+The situation changes when `<UserInfo />` child component isn't a direct child of `<Application />` but is contained within multiple ancestors.
+
+For example, let's say that `<Application />` component (the one having the global data `userName`) renders `<Layout />` component, which in turn renders `<Header />` component, which in turn finally renders `<UserInfo />` component (that'd like to access `userName`).
+
+Here's how such a structuring would look:
+
+```
+function Application() {  const userName = "John Smith";  return (    <Layout userName={userName}>      Main content    </Layout>  );}function Layout({ children, userName }) {  return (    <div>      <Header userName={userName} />      <main>        {children}      </main>    </div>  )}function Header({ userName }) {  return (    <header>      <UserInfo userName={userName} />    </header>  );}function UserInfo({ userName }) {  return <span>{userName}</span>;}
+```
+
+[Try the demo.](https://codesandbox.io/s/props-drilling-xhrfd?file=/src/Application.js)
+
+You can see the problem: because `<UserInfo />` component renders deep down in the tree, and all the parent components (`<Layout />` and `<Header />`) have to pass the `userName` prop.
+
+This problem is also known as [props drilling](https://kentcdodds.com/blog/prop-drilling).
+
+React context is a possible solution. Let's see how to apply it in the next section.
+
+#### 3.1 Context to the rescue <a href="#31-context-to-the-rescue" id="31-context-to-the-rescue"></a>
+
+As a quick reminder, applying the React context requires 3 actors: the context, the provider extracted from the context, and the consumer.
+
+Here's how the sample application would look when applying the context to it:
+
+```
+import { useContext, createContext } from 'react';const UserContext = createContext('Unknown');function Application() {  const userName = "John Smith";  return (    <UserContext.Provider value={userName}>      <Layout>        Main content      </Layout>    </UserContext.Provider>  );}function Layout({ children }) {  return (    <div>      <Header />      <main>        {children}      </main>    </div>  );}function Header() {  return (    <header>      <UserInfo />    </header>  );}function UserInfo() {  const userName = useContext(UserContext);  return <span>{userName}</span>;}
+```
+
+[Try the demo.](https://codesandbox.io/s/react-context-example-gzovv?file=/src/Application.js)
+
+Let's look into more detail what has been done.
+
+First, `const UserContext = createContext('Unknown')` creates the context that's going to hold the user name information.
+
+Second, inside the `<Application />` component, the application's child components are wrapped inside the user context provider: `<UserContext.Provider value={userName}>`. Note that the `value` prop of the provider component is important: this is how you set the value of the context.
+
+Finally, `<UserInfo />` becomes the consumer of the context by using the built-in `useContext(UserContext)` hook. The hook is called with the context as an argument and returns the user name value.
+
+`<Layout />` and `<Header />` intermediate components don't have to pass down the `userName` prop. That is the great benefit of the context: it removes the burden of passing down data through the intermediate components.
+
+#### 3.2 When context changes <a href="#32-when-context-changes" id="32-when-context-changes"></a>
+
+When the context value is changed by altering `value` prop of the context provider (`<Context.Provider value={value} />`), then all of its consumers are being notified and re-rendered.
+
+For example, if I change the user name from `'John Smith'` to `'Smith, John Smith'`, then `<UserInfo />` consumer immediately re-renders to display the latest context value:
+
+```
+import { createContext, useEffect, useState } from 'react';const UserContext = createContext('Unknown');function Application() {  const [userName, setUserName] = useState('John Smith');  useEffect(() => {    setTimeout(() => {      setUserName('Smith, John Smith');    }, 2000);  }, []);  return (    <UserContext.Provider value={userName}>      <Layout>        Main content      </Layout>    </UserContext.Provider>  );}// ...
+```
+
+[Try the demo.](https://codesandbox.io/s/react-context-example-change-hw32y?file=/src/Application.js)
+
+Open the [demo](https://codesandbox.io/s/react-context-example-change-hw32y?file=/src/Application.js) and you'd see `'John Smith'` (context value) displayed on the screen. After 2 seconds, the context value changes to `'Smith, John Smith'`, and correspondingly the screen is updated with the new value.
+
+The demo shows that `<UserInfo />` component, the consumer that renders the context value on the screen, re-renders when the context value changes.
+
+```
+function UserInfo() {  const userName = useContext(UserContext);  return <span>{userName}</span>;}
+```
+
+### 4. Updating the context <a href="#4-updating-the-context" id="4-updating-the-context"></a>
+
+The React Context API is stateless by default and doesn't provide a dedicated method to update the context value from consumer components.
+
+But this can be easily implemented by integrating a state management mechanism (like `useState()` or `useReducer()` hooks), and providing an update function right in the context next to the value itself.
+
+In the following example, `<Application />` component uses `useState()` hook to manage the context value.
+
+```
+import { createContext, useState, useContext, useMemo } from 'react';const UserContext = createContext({  userName: '',  setUserName: () => {},});function Application() {  const [userName, setUserName] = useState('John Smith');  const value = useMemo(    () => ({ userName, setUserName }),     [userName]  );    return (    <UserContext.Provider value={value}>      <UserNameInput />      <UserInfo />    </UserContext.Provider>  );}function UserNameInput() {  const { userName, setUserName } = useContext(UserContext);  const changeHandler = event => setUserName(event.target.value);  return (    <input      type="text"      value={userName}      onChange={changeHandler}    />  );}function UserInfo() {  const { userName } = useContext(UserContext);  return <span>{userName}</span>;}
+```
+
+[Try the demo.](https://codesandbox.io/s/update-context-value-l39t0?file=/src/App.js)
+
+`<UserNameInput />` consumer reads the context value, from where `userName` and `setUserName` are extracted. The consumer then can update the context value by invoking the update function `setUserName(newContextValue)`.
+
+`<UserInfo />` is another consumer of the context. When `<UserNameInput />` updates the context, this component is updated too.
+
+Note that `<Application />` memoizes the context value. Memoization keeps the context value object the same as long as `userName` is the same, preventing re-rendering of consumers every time the `<Application />` re-renders.
+
+Otherwise, without memoization, `const value = { userName, setUserName }` would create different object instances during re-rendering of `<Application />`, triggering re-rendering in context consumers. See more about [referential equality of objects](https://dmitripavlutin.com/how-to-compare-objects-in-javascript/#1-referential-equality).
+
 ### Global shared state with React Context
 
 Another use case for React Context is using it as a global state mechanism, like we have in between `TopNav` and `Profile`. Updating the `username` in `Profile` immediately updates the shared state in `UserProvider`, providing a mechanism for global state management.

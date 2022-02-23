@@ -60,7 +60,7 @@
 
 * [Routing](react-ecosystem/routing/README.md)
   * [React-Router vs React-location](react-ecosystem/routing/react-router-vs-react-location.md)
-* [State Management](react-ecosystem/state-management.md)
+* [State Management](react-ecosystem/state-management/README.md)
 * [Graphql](react-ecosystem/graphql/README.md)
   * [What query or client technology should we use  for GraphQL requests ?](react-ecosystem/graphql/what-query-or-client-technology-should-we-use-for-graphql-requests.md)
 * [⚠ Styling](react-ecosystem/styling/README.md)
@@ -70,8 +70,8 @@
     * [⚠ Utility Classes: Tailwind](react-ecosystem/styling/a-css-methodology-comparison/utility-classes-tailwind.md)
 * [Forms Tools](react-ecosystem/forms-tools/README.md)
   * [React Hook Form VS Formik](react-ecosystem/forms-tools/react-hook-form-vs-formik.md)
-* [TypeScript](react-ecosystem/typescript/README.md)
-  * [🆗 Conditional React props with TypeScript](react-ecosystem/typescript/conditional-react-props-with-typescript.md)
+* [TypeScript](concepts/typescript/README.md)
+  * [🆗 Conditional React props with TypeScript](concepts/typescript/conditional-react-props-with-typescript.md)
 * [🆗 Build tool choice for MVP projects](react-ecosystem/build-tool-choice-for-mvp-projects.md)
 
 ## ⁉ Testing
