@@ -1,3 +1,7 @@
+---
+description: A piece of the puzzle
+---
+
 # 🆗 Components
 
 ## Custom components

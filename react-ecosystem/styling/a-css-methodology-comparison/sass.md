@@ -6,53 +6,65 @@ Sass is a scripting language for preprocessors that is compiled into CSS. Sass i
 
 Officially described as “[CSS with superpowers](https://sass-lang.com),” SCSS (or Sass) offers a way to write styles for websites with more enhanced CSS syntax. In general, browsers do not know how to process SCSS features, such as functions, mixins, and nesting. We’ll need to convert them to regular CSS files to run them in the browser.
 
-### **Sass: Pros**
+## **Sass: Pros**
 
-**Sass Features**
+### **Sass Features**
 
 Variables, mathematical operations, mixins, loops, functions, imports, and other interesting functionalities that make writing CSS much more powerful are all available in Sass. Simply put, Sass is like writing CSS, but with more features!
 
-**Variables:**&#x20;
+### Variables
 
-![](https://ttt.studio/wp-content/uploads/2021/10/Variables-2-1024x223.png?x42814)
+Think of variables as a way to store information that you want to reuse throughout your stylesheet. You can store things like colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the `$` symbol to make something a variable. Here's an example:
 
-Line of code comparing sass to CSS for variables
+![](<../../../.gitbook/assets/Screenshot from 2022-02-23 18-54-55.png>)
 
-**Nesting:**
+When the Sass is processed, it takes the variables we define for the `$font-stack` and `$primary-color` and outputs normal CSS with our variable values placed in the CSS. This can be extremely powerful when working with brand colors and keeping them consistent throughout the site.
 
-![](https://ttt.studio/wp-content/uploads/2021/10/Nesting-1024x400.png?x42814)
+### Nesting
 
-Line of code comparing sass to CSS for nesting
+When writing HTML you've probably noticed that it has a clear nested and visual hierarchy. CSS, on the other hand, doesn't.
 
-**Mixins:**
+Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML. Be aware that overly nested rules will result in over-qualified CSS that could prove hard to maintain and is generally considered bad practice.
 
-![](https://ttt.studio/wp-content/uploads/2021/10/Mixins-1024x210.png?x42814)
+With that in mind, here's an example of some typical styles for a site's navigation:
 
-Line of code comparing sass to CSS for mixins
+![](<../../../.gitbook/assets/Screenshot from 2022-02-23 18-59-25.png>)
 
-**Modules**
+You'll notice that the `ul`, `li`, and `a` selectors are nested inside the `nav` selector. This is a great way to organize your CSS and make it more readable.
+
+### Mixins
+
+Some things in CSS are a bit tedious to write, especially with CSS3 and the many vendor prefixes that exist. A mixin lets you make groups of CSS declarations that you want to reuse throughout your site. It helps keep your Sass very DRY. You can even pass in values to make your mixin more flexible. Here's an example for `theme`.
+
+![](<../../../.gitbook/assets/Screenshot from 2022-02-23 18-59-54.png>)
+
+To create a mixin you use the `@mixin` directive and give it a name. We've named our mixin `theme`. We're also using the variable `$theme` inside the parentheses so we can pass in a `theme` of whatever we want. After you create your mixin, you can then use it as a CSS declaration starting with `@include` followed by the name of the mixin.
+
+### **Modules**
 
 Although not unique to Sass, using bundlers such as webpack allows you to split your Sass (or CSS, in the case of CSS modules) into files. This is useful because it helps organize code and makes CSS maintenance easier.
 
-**Freedom**
+![](<../../../.gitbook/assets/Screenshot from 2022-02-23 18-59-46.png>)
 
-A big benefit of Sass (compared to the other two frameworks in this post) is the freedom to write your own CSS how you want. At TTT we generally stick to the BEM (Block Element Modifier methodology, however writing your own Sass lets you write your CSS however you think is best.&#x20;
+### **Freedom**
 
-### **Sass: Cons**
+A big benefit of Sass is the freedom to write your own CSS how you want. At TTT we generally stick to the BEM (Block Element Modifier methodology, however writing your own Sass lets you write your CSS however you think is best.&#x20;
 
-**Freedom!**
+## **Sass: Cons**
+
+### **Freedom!**
 
 As we just read, the freedom that Sass gives you allows you to write code in whichever way you want, which can be great, but is also dangerous if misused. As the saying goes “_With great power comes great responsibility.”_&#x20;
 
 Many developers, such as juniors or backend devs, don’t have a complete understanding of CSS, which can lead to unnecessarily complex CSS that future developers are too afraid to touch in fear of breaking things. Because Sass offers such freedoms, these developers aren’t “reined in” by the framework. This misuse can be avoided by having solid CSS guidelines and code review, however, it is on the **developer (or team of developers)** to enforce those guidelines.&#x20;
 
-**Context Switching**
+### **Context Switching**
 
 Picture this: You are working away on your component, creating `div`‘s, `p`‘s, and `headers`. You know these will need some styling, so you assign some class names that you think make sense! Now that you’re done your markup, you switch over to your CSS file to start styling and….you’ve forgotten what the class names were and have to tab back to your markup. If this hasn’t happened to you, well then your memory is better than mine.&#x20;
 
 The fact remains that there is a disconnect between your styles and your markup. Many of you may be thinking, but that’s a good thing, “separation of concerns” right? And yes, as developers we live by this principle, and at first glance, yes we should keep the markup (the content) and the styling separate right? However in practice, styling and markup are not separate concerns at all! How many times have you had to add a `div` purely for styling purposes? Markup and styles are so intertwined now, we as frontend developers are constantly tabbing between our HTML and CSS, causing a maybe minor inconvenience, but an inconvenience nonetheless.
 
-**Naming**
+### **Naming**
 
 > _There are only two hard things in Computer Science: cache invalidation and naming things._
 >

@@ -9,5 +9,3 @@ For more about renders and component rendering process i advise to read this blo
 {% embed url="https://alexsidorenko.com/blog/react-render-cheat-sheet" %}
 
 ##
-
-##

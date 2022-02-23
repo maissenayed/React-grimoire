@@ -1,3 +1,7 @@
+---
+description: Functions have arguments , component have Props
+---
+
 # 🆗 React Props and styling
 
 ## Props
