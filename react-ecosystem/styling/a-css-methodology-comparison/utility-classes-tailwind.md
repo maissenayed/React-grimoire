@@ -140,67 +140,40 @@ I think Tailwind has a lot of practical advantage on the other css methodology l
 
 {% embed url="https://github.com/aniftyco/awesome-tailwindcss" %}
 
-components / libs / frameworks :
-
-* un starter téléchargeable :
-
 {% embed url="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation" %}
-
-* une lib d’icônes par les fondateurs de tailwind :
 
 {% embed url="https://heroicons.com" %}
 
-* html to tailwind :
-
 {% embed url="https://usewindy.com" %}
-
-* librairie de composants prêts à copy/paste :
 
 {% embed url="https://blocks.wickedtemplates.com" %}
 
-templates tailwind :
-
 {% embed url="https://www.creative-tim.com/search?buton=&q=tailwind&utf8=%E2%9C%93" %}
-
-* framework ui de tailwind (early-access) :
 
 {% embed url="https://tailwindui.com/components" %}
 
-* librairie de composants :
-
 {% embed url="https://tailblocks.cc" %}
-
-* projets développés par la communautés :
 
 {% embed url="https://builtwithtailwind.com" %}
 
-* composants non-stylés, pleinement accessible et customisable avec tailwind:
-
 {% embed url="https://github.com/tailwindlabs/headlessui/blob/develop/packages/%40headlessui-react/README.md" %}
 
-* Tailwind Components - Community-driven Tailwind CSS component repository.
-* Tailwind Toolbox - Templates, components and resources.
-* Meraki UI Components - Beautiful Tailwind CSS components that support RTL languages.
-* Tailwind Templates - Collection of templates and components.
-* Treact - React UI templates and components built using Tailwind CSS.
-* Jakarta LTE - Admin template using Tailwind CSS.
-* themes.dev - Handcrafted, free and premium Tailwind CSS themes and components.
-* Kutty - Accessible and reusable components that are commonly used in web applications.
-* Tailwindow - Collection of Tailwind CSS component blocks and UI elements.
-* Sail UI - Collection of basic UI components built on Tailwind CSS.
-* Tailwind Kit - Framework-agnostic, Vue.js, React and Angular components.
-* lofi ui - Low-fidelity Tailwind CSS components.
-* Gust UI - Sleek Tailwind CSS components for web applications in React and HTML.
-* Windstrap - Tailwind CSS with Bootstrap JS.
-* Daisy UI - UI Components for Tailwind C
-* extension vscode pour trier les classes tailwind :[https://github.com/heybourn/headwind](https://github.com/heybourn/headwind) - **Connect to preview**
-* !!! CSS converter :[https://tailwind-converter.netlify.app/](https://tailwind-converter.netlify.app) | [https://transform.tools/css-to-tailwind](https://transform.tools/css-to-tailwind)
-* Productivity[https://blog.logrocket.com/10-tailwind-css-tips-to-boost-your-productivity/](https://blog.logrocket.com/10-tailwind-css-tips-to-boost-your-productivity/)
-* Productivity, tools, plugins …[https://github.com/aniftyco/awesome-tailwindcss](https://github.com/aniftyco/awesome-tailwindcss)
-* Figma plugin[https://www.figma.com/community/file/768809027799962739](https://www.figma.com/community/file/768809027799962739)
-* Customize default base styles according to a a custom DSM :[https://tailwindcss.com/docs/adding-base-styles](https://tailwindcss.com/docs/adding-base-styles)[https://tailwindcss.com/docs/preflight](https://tailwindcss.com/docs/preflight)
-* Difference of implementation for all or some of the following designs :
-* [https://tailwindcss.com/docs/hover-focus-and-other-states](https://tailwindcss.com/docs/hover-focus-and-other-states)
-* One should install the extension tailwinds intellisense to get lining, auto-complete and css syntax highlight
-* Preflight styles[https://tailwindcss.com/docs/preflight](https://tailwindcss.com/docs/preflight)[https://unpkg.com/tailwindcss@2.0.2/dist/base.css](https://unpkg.com/tailwindcss@2.0.2/dist/base.css)
-* Production optimization[https://tailwindcss.com/docs/optimizing-for-production](https://tailwindcss.com/docs/optimizing-for-production)
+{% embed url="https://github.com/heybourn/headwind" %}
+
+{% embed url="https://tailwind-converter.netlify.app" %}
+
+{% embed url="https://transform.tools/css-to-tailwind" %}
+
+{% embed url="https://blog.logrocket.com/10-tailwind-css-tips-to-boost-your-productivity" %}
+
+{% embed url="https://github.com/aniftyco/awesome-tailwindcss" %}
+
+{% embed url="https://www.figma.com/community/file/768809027799962739" %}
+
+{% embed url="https://tailwindcss.com/docs/adding-base-styleshttps://tailwindcss.com/docs/preflight" %}
+
+{% embed url="https://tailwindcss.com/docs/hover-focus-and-other-states" %}
+
+{% embed url="https://tailwindcss.com/docs/preflighthttps://unpkg.com/tailwindcss@2.0.2/dist/base.css" %}
+
+{% embed url="https://tailwindcss.com/docs/optimizing-for-production" %}

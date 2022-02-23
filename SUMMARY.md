@@ -77,11 +77,7 @@
 
 ## ⁉ Testing
 
-* [Setup testing env](testing/setup-testing-env/README.md)
-  * [Jest config](testing/setup-testing-env/jest-config.md)
-  * [React Testing Library](testing/setup-testing-env/react-testing-library.md)
-  * [Testing Hooks](testing/setup-testing-env/testing-hooks.md)
-* [Testing react query](testing/testing-react-query.md)
+* [In Progress](testing/in-progress.md)
 
 ## 🎭 Performance&#x20;
 
