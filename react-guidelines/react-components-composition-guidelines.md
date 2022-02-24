@@ -94,3 +94,5 @@ Every development needs to be tested before merging to the main branch.
 {% embed url="https://www.codeinwp.com/blog/react-best-practices" %}
 
 {% embed url="https://github.com/mediamonks" %}
+
+{% embed url="https://dmitripavlutin.com/7-architectural-attributes-of-a-reliable-react-component" %}

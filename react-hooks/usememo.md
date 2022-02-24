@@ -1,7 +1,5 @@
 # ❕ useMemo
 
-{% embed url="https://dmitripavlutin.com/react-usememo-hook" %}
-
 As Apps grow in size and complexity, creating efficient React code becomes more important than ever. Re-rendering large components is costly, and providing a significant amount of work for the browser through a single-page application (SPA) increases processing time and can potentially drive away users.
 
 A concern that most people have while working with React.js is performance. React is amazing and if used wisely you should not have re-render problems when states change.
@@ -85,10 +83,29 @@ You can play with the example below and try the two scenarios with useMemo and w
 
 {% embed url="https://codesandbox.io/embed/factorial-with-memoization-forked-xu9dwk?fontsize=14&hidenavigation=1&theme=dark" %}
 
+{% hint style="info" %}
+#### **When not to use it** <a href="#e3e7" id="e3e7"></a>
+
+Nothing is bulletproof in real life, so even those hooks that were made to improve performance in some cases will slow down your app.
+
+> Performance optimizations are not free. They ALWAYS come with a cost but do NOT always come with a benefit to offset that cost.
+
+To have the memorization working React needs to deal with this data, calculate it and save it (deals with a garbage collector, etc). My opinion is that those hooks should only be used if:
+
+* You have some calculations that will be computationally expensive
+* When you need to compare it (like the case of passing a function down to a Child Component)
+{% endhint %}
+
 ### Use memoization with care <a href="#4-use-memoization-with-care" id="4-use-memoization-with-care"></a>
 
 While `useMemo()` can improve the performance of the component, you have to make sure to profile the component with and without the hook. Only after that make the conclusion whether memoization worth it.
 
 When memoization is used inappropriately, it could harm the performance.
+
+{% embed url="https://kentcdodds.com/blog/usememo-and-usecallback" %}
+
+{% embed url="https://reactjs.org/docs/hooks-reference.html#usememo" %}
+
+{% embed url="https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0" %}
 
 {% embed url="https://alexsidorenko.com/blog/react-render-usememo" %}

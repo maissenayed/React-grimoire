@@ -11,3 +11,5 @@ Lifting State Up
 {% embed url="https://kentcdodds.com/blog/prop-drilling" %}
 
 {% embed url="https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster" %}
+
+{% embed url="https://dmitripavlutin.com/react-state-management" %}
