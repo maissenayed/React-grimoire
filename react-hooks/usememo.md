@@ -73,8 +73,22 @@ export const App =()=> {
 
 ### Factorial example
 
+Every time you change the input value, the factorial is calculated `factorialOf(n)` and `'factorialOf function has been called'` is logged to console.
 
+On the other side, each time you click _Re-render_ button, `inc` state value is updated. Updating `inc` state value triggers `<Factorial />` re-rendering. But, as a secondary effect, during re-rendering the factorial is recalculated again — `'factorialOf function has been called'` is logged to console.
+
+How can you memorize the factorial calculation when the component re-renders? Welcome `useMemo()` hook!
+
+By using `useMemo(() => factorialOf(number), [number])` instead of simple `factorialOf(number)`, React memorizes the factorial calculation.
+
+You can play with the example below and try the two scenarios with useMemo and without
 
 {% embed url="https://codesandbox.io/embed/factorial-with-memoization-forked-xu9dwk?fontsize=14&hidenavigation=1&theme=dark" %}
+
+### Use memoization with care <a href="#4-use-memoization-with-care" id="4-use-memoization-with-care"></a>
+
+While `useMemo()` can improve the performance of the component, you have to make sure to profile the component with and without the hook. Only after that make the conclusion whether memoization worth it.
+
+When memoization is used inappropriately, it could harm the performance.
 
 {% embed url="https://alexsidorenko.com/blog/react-render-usememo" %}
