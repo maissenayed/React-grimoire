@@ -39,7 +39,7 @@
 * [🆗 React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
 * [🆗 When to use React.memo](react-guidelines/when-to-use-react.memo.md)
 * [🆗 Where to put React State](react-guidelines/where-to-put-react-state.md)
-* [Concepts to always have in mind](react-guidelines/concepts-to-always-have-in-mind.md)
+* [⏰ Concepts to always have in mind](react-guidelines/concepts-to-always-have-in-mind.md)
 
 ## 🔭 Concepts
 
