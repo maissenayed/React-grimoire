@@ -8,6 +8,8 @@ We highly recommend you to go to :
 
 {% embed url="https://reactjs.org/docs/components-and-props.html" %}
 
+{% embed url="https://reactjs.org/docs/composition-vs-inheritance.html" %}
+
 Component composition is the fundamental concept in React that’s essential to learn to become a solid React developer. Newer React devs tend to use inheritance and Context to solve problems that could often be solved more elegantly using composition.
 
 Let’s review the basic principles behind composition in React and brush up on our fundamentals.
@@ -82,9 +84,7 @@ Reusable components are often agnostic. They don’t know what they render, neit
 
 If you’re having a hard time figuring out what elements you should create components, you can start to imagine what are states you need to create and how they’ll flow with data through your UI ([https://reactjs.org/docs/thinking-in-react.html](https://reactjs.org/docs/thinking-in-react.html) ). if you need, consider using a scoped [react context](https://reactjs.org/docs/context.html) too.
 
-If you feel like you need to create components for some composition in your most complex pages, you're free to define them **in the same file** as long as it serves **only for composition** and the logic cannot be shared between other components. Otherwise, it should be added to the `components/` or `hoc/` folders.&#x20;
 
-( "what's composition?" : [https://reactjs.org/docs/composition-vs-inheritance.html](https://reactjs.org/docs/composition-vs-inheritance.html) )
 
 * Alongside the previous point, for each underlying component extracted, if some wrappers are business logic components, associate the logic attached by simply writing what this logic is supposed to accomplish. This includes smart components with logic.
 * If you see that some non-business logic used in multiple places, think about creating **custom hooks** ( please read the [**react hooks guidelines**](broken-reference) ) at page-level or shared for the app. If you think that some of the business logic of your page could be or should be isolated in a custom hook, please discuss this subject with your colleague to define if it's a good idea or not               ( maybe you should consider moving this logic in an API / library / micro-front / ... instead )&#x20;

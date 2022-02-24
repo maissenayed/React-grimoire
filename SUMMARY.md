@@ -42,11 +42,6 @@
 
 ## 🔭 Concepts
 
-* [React Under the hood](concepts/react-under-the-hood/README.md)
-  * [🆗 What is "Rendering"?](concepts/react-under-the-hood/what-is-rendering.md)
-  * [🆗 React Lifecycle](concepts/react-under-the-hood/react-lifecycle.md)
-  * [🆗 Reconciliation & Virtual DOM in React](concepts/react-under-the-hood/reconciliation-and-virtual-dom-in-react.md)
-  * [🆗 Fiber](concepts/react-under-the-hood/fiber.md)
 * [Advanced Patterns](concepts/advanced-patterns/README.md)
   * [Compound Components Pattern](concepts/advanced-patterns/compound-components-pattern.md)
   * [Control Props Pattern](concepts/advanced-patterns/control-props-pattern.md)
@@ -56,6 +51,11 @@
   * [Context Module](concepts/advanced-patterns/context-module.md)
 * [Server side rendering(ssr)](concepts/server-side-rendering-ssr/README.md)
   * [React Hydration](concepts/server-side-rendering-ssr/react-hydration.md)
+* [React Under the hood](concepts/react-under-the-hood/README.md)
+  * [🆗 What is "Rendering"?](concepts/react-under-the-hood/what-is-rendering.md)
+  * [🆗 React Lifecycle](concepts/react-under-the-hood/react-lifecycle.md)
+  * [🆗 Reconciliation & Virtual DOM in React](concepts/react-under-the-hood/reconciliation-and-virtual-dom-in-react.md)
+  * [🆗 Fiber](concepts/react-under-the-hood/fiber.md)
 
 ## 🧩 React ecosystem
 
