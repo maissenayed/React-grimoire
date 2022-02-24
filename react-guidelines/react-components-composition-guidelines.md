@@ -1,4 +1,4 @@
-# ⚠ React Components Composition Guidelines
+# 🆗 React Components Composition Guidelines
 
 > One of the many great parts of React is how it makes you think about apps as you build them.
 
@@ -83,8 +83,6 @@ Always Start by highlighting and identify the composition of the top-level App c
 Reusable components are often agnostic. They don’t know what they render, neither hold any specific logic, they just render.
 
 If you’re having a hard time figuring out what elements you should create components, you can start to imagine what are states you need to create and how they’ll flow with data through your UI ([https://reactjs.org/docs/thinking-in-react.html](https://reactjs.org/docs/thinking-in-react.html) ). if you need, consider using a scoped [react context](https://reactjs.org/docs/context.html) too.
-
-
 
 * Alongside the previous point, for each underlying component extracted, if some wrappers are business logic components, associate the logic attached by simply writing what this logic is supposed to accomplish. This includes smart components with logic.
 * If you see that some non-business logic used in multiple places, think about creating **custom hooks** ( please read the [**react hooks guidelines**](broken-reference) ) at page-level or shared for the app. If you think that some of the business logic of your page could be or should be isolated in a custom hook, please discuss this subject with your colleague to define if it's a good idea or not               ( maybe you should consider moving this logic in an API / library / micro-front / ... instead )&#x20;

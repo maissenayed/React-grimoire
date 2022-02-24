@@ -1,4 +1,4 @@
-# Concepts to always have in mind
+# ⏰ Concepts to always have in mind
 
 ## MODERN JAVASCRIPT CORE CONCEPTS YOU NEED TO KNOW TO USE REACT <a href="#section-1-modern-javascript-core-concepts-you-need-to-know-to-use-react" id="section-1-modern-javascript-core-concepts-you-need-to-know-to-use-react"></a>
 

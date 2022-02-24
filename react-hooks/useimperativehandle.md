@@ -1,4 +1,4 @@
-# ⚠ useImperativeHandle
+# 🆗 useImperativeHandle
 
 ### useImperativeHandle React Hook
 
