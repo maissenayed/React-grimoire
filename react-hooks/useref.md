@@ -210,4 +210,108 @@ function UpdateStateOnSetRef() {
 1. Updating state does trigger component re-rendering but updating a reference does not.
 2. The state update is asynchronous (state variable is updated after re-rendering - [**read more why is it async** ](https://lifesaver.codes/answer/rfclarification-why-is-setstate-asynchronous)), while the reference update is synchronous.
 
+### forwardRef in React? <a href="#why-do-we-need-forwardref-in-react" id="why-do-we-need-forwardref-in-react"></a>
+
+So what is forwardRef, and why is it important?
+
+Let's start with an example: Let's say we have an `Input` component in our React application that looks like the following:
+
+```javascript
+const Input = (props) => {
+  return <input {...props} />;
+};
+```
+
+Now, we also want to focus the input component on the click of a button.
+
+To achieve that, we simply need to create a new reference in our app, pass it down to `Input`, and call `.focus()` on the element, right? Wrong!
+
+By default, the `ref` prop **only works on HTML elements**, not on React components.
+
+When we want to pass down a reference to a React component, **we need to tell React which HTML element it should reference**, as there can be more than one in our component.
+
+That's where `forwardRef` becomes useful. It allows us to specify which exact HTML element we want to reference.
+
+### How to use forwardRef <a href="#how-to-use-forwardref" id="how-to-use-forwardref"></a>
+
+Our task is to forward the ref that the `Input` component receives to the HTML input element.
+
+We do that by wrapping the component in `forwardRef`. The function accepts a callback with two parameters:
+
+1. The component props
+2. The ref to be forwarded
+
+This callback is our function component, which now accepts a second property.
+
+```javascript
+const Input = forwardRef((props, ref) => {
+  // Here goes the content of our component
+});
+```
+
+In the returned JSX code, we now need to pass the ref we receive in the function to the correct HTML component, which in our case is the `input` element.
+
+```javascript
+const Input = forwardRef((props, ref) => {
+  return (
+    <input
+      ref={ref}      {...props}
+    />
+  );
+});
+```
+
+Et voilá, focussing the input via refs works!
+
+Here's the code for doing so:
+
+```javascript
+import React, { useState, useRef, forwardRef } from 'React';
+
+const Input = forwardRef((props, ref) => {
+  return <input ref={ref} {...props} />;
+});
+
+const App = () => {
+  const inputRef = useRef(null);
+  const [value, setValue] = useState('');
+  const onInputChange = (e) => {
+    e.preventDefault();
+    setValue(e.target.value);
+  };
+
+  const focus = () => {
+    inputRef.current?.focus();
+  };
+
+  return (
+    <>
+      <Input value={value} onChange={onInputChange} ref={inputRef} />
+      <button onClick={focus}>Focus</button>
+    </>
+  );
+};
+```
+
+#### Custom names for DevTools <a href="#custom-names-for-devtools" id="custom-names-for-devtools"></a>
+
+The `forwardRef` function **takes the name of the component from the function** it accepts as a parameter. If you're using anonymous or arrow functions, your DevTools will display the component like this:
+
+![React DevTools anonymous function forwardRef](https://felixgerschau.com/static/8cc0dcf5e6d3a8bd5fd9e6a2636a5de0/b3e51/anonymous-function-devtools.png)
+
+There are a few ways to avoid this. First, you could use a regular function expression with a name like this:
+
+```javascript
+const Input = forwardRef(function Input(props, ref) {
+  return <input ref={ref} {...props} />;
+});
+```
+
+If you're like me and haven't used this syntax in the last three years, you can also set the display name manually by adding the following line to the end of the file:
+
+```javascript
+Input.displayName = 'Input';
+
+```
+
 {% embed url="https://alexsidorenko.com/blog/react-render-refs" %}
