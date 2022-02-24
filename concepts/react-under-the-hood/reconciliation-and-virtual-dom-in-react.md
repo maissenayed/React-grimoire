@@ -1,6 +1,6 @@
 # 🆗 Reconciliation & Virtual DOM in React
 
-For more of virtual Dom and Reconciliation&#x20;
+For more of virtual DOM and Reconciliation&#x20;
 
 {% embed url="https://www.fatalerrors.org/a/virtual-dom-and-diff-algorithm-in-react.html" %}
 
