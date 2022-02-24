@@ -28,7 +28,7 @@
 * [❕ useReducer](react-hooks/usereducer.md)
 * [⚠ useImperativeHandle](react-hooks/useimperativehandle.md)
 * [⚠ useLayoutEffect](react-hooks/uselayouteffect.md)
-* [⚠ Hook flow](react-hooks/hook-flow.md)
+* [🆗 Hook flow](react-hooks/hook-flow.md)
 * [❕ Custom hooks](react-hooks/custom-hooks/README.md)
   * [Use Local Storage](react-hooks/custom-hooks/use-local-storage.md)
   * [⚠ useDebugValue](react-hooks/custom-hooks/usedebugvalue.md)

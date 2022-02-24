@@ -60,5 +60,3 @@ useDebugValue(user, user => user.getNameSlowly())
 In the above code we pass the user to `useDebugValue` as the first parameter and then as a second parameter we pass a function. This function will always take whatever you pass as the first parameter to `useDebugValue` as its argument and then whatever that function returns is displayed as the debug value label.
 
 This means that the code to calculate the label is never actually run until the moment someone tries to inspect the hook with their dev tools. This is perfect since it will have no performance impact on your site, but can still provide valuable debug information.
-
-\

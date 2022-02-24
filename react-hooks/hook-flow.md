@@ -1,4 +1,4 @@
-# ⚠ Hook flow
+# 🆗 Hook flow
 
 > But what exactly is the React Hook Flow?
 
@@ -77,3 +77,9 @@ This Phase executed the code inside a **useEffect** hook.
 A great example of hook flow i found is Kent c dodds example :
 
 {% embed url="https://codesandbox.io/embed/hook-flow-dqk28u?fontsize=14&hidenavigation=1&theme=dark" %}
+
+## Usefull Links
+
+{% embed url="https://reactjs.org/docs/hooks-reference.html" %}
+
+{% embed url="https://github.com/donavon/hook-flow" %}
