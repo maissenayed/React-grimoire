@@ -79,7 +79,7 @@ For such cases, React provides another Hook called `useLayoutEffect`. It has the
 
 > **N.B.**, although `useEffect` is deferred until the browser has painted, **it is still guaranteed to be fired before any re-renders. This is important.**
 
-![useEffect is fired before any new re-renders](<../.gitbook/assets/effect-callback-illustration (1).png>)
+![useEffect is fired before any new re-renders](../.gitbook/assets/useeffect-invoked-before-new-re-render.png)
 
 React will always flush a previous render’s effect before starting a new update.
 
