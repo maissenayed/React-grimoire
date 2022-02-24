@@ -17,7 +17,7 @@ This is exactly what `React.createRef()` does, although it requires a bit of a d
 ```jsx
 import React, { Component } from 'react';
 
-class Foobar extends Component {
+class Component extends Component {
   constructor(props) {
     super(props);
     this.myInput = React.createRef();    // initialize "this.myInput"  
@@ -99,18 +99,18 @@ A common use case for `useRef` is to manage child DOM nodes:
 ```jsx
 function TextInputWithFocusButton() {
   //1. create a ref object with initialValue of null
-  const inputEl = useRef(null);
+  const inputRef = useRef(null);
 
   const onButtonClick = () => {
     // 4. `current` points to the mounted text input element
     // 5. Invoke the imperative focus method from the current property
-    inputEl.current.focus();
+    inputRef.current.focus();
   };
 
   return (
     <>
       {/* 2. as soon as input is rendered, the element will be saved in the ref object, i.e., {current: *dom node*}  */}
-      <input ref={inputEl} type="text" />
+      <input ref={inputRef} type="text" />
       {/* 3. clicking the button invokes the onButtonClick handler above */}
       <button onClick={onButtonClick}>Focus the input</button>
     </>
@@ -168,25 +168,7 @@ That's why updating a reference (as well as updating state) shouldn't be perform
 
 The reference must be updated either inside a `useEffect()` callback or inside handlers (event handlers, timer handlers, etc).
 
-```jsx
-import { useRef, useEffect } from 'react';
-function MyComponent({ prop }) {
-  const myRef = useRef(0);
-  useEffect(() => {
-    myRef.current++; // Good!
-    setTimeout(() => {
-      myRef.current++; // Good!
-    }, 1000);
-  }, []);
-  const handler = () => {
-    myRef.current++; // Good!
-  };
-  myRef.current++; // Bad!
-  if (prop) {
-    myRef.current++; // Bad!
-  }
-  return <button onClick={handler}>My button</button>s
-```
+![](../.gitbook/assets/badgo.png)
 
 {% hint style="info" %}
 #### `useRef` vs. `createRef`
