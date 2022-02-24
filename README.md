@@ -22,6 +22,8 @@ If you find this book helpful , please be my gust to add it to your onbording pr
 
 ### &#x20;  Useful links and resources&#x20;
 
+{% embed url="https://javascript.info" %}
+
 {% embed url="https://www.tutorialrepublic.com/javascript-tutorial" %}
 
 {% embed url="https://github.com/leonardomso/33-js-concepts" %}
