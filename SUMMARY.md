@@ -23,7 +23,7 @@
 * [☢ useEffect](react-hooks/useeffect.md)
 * [🆗 useRef](react-hooks/useref.md)
 * [⚠ useContext](react-hooks/usecontext.md)
-* [❕ useMemo](react-hooks/usememo.md)
+* [🆗 useMemo](react-hooks/usememo.md)
 * [❕ useCallback](react-hooks/usecallback.md)
 * [❕ useReducer](react-hooks/usereducer.md)
 * [⚠ useImperativeHandle](react-hooks/useimperativehandle.md)

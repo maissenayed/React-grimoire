@@ -1,6 +1,6 @@
 # ⁉ Introduction
 
-My father always told me that knowledge optimally knowledge should be free, I believe that too.\
+My father always told me that knowledge optimally should be free, I believe that too.\
 Witnessing the struggle most people find while learning and working with react especially in finding simple tutorial here and there that give beginner knowledge, but those rarely go deep in concepts, patterns, and advanced features.
 
 Most Master classes are very expensive to afford especially in the MENA region. \

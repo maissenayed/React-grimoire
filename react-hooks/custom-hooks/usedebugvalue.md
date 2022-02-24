@@ -9,7 +9,7 @@ This debug information is displayed within the React dev tools. These tools are 
 Let's look at a quick example.
 
 ```js
-export default function useUser() {
+export const useUser =()=> {
   const [user, setUser] = useState(getUser())
 
   useDebugValue(user == null ? 'No User' : user.name)
