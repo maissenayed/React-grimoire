@@ -24,7 +24,7 @@
 * [🆗 useRef](react-hooks/useref.md)
 * [⚠ useContext](react-hooks/usecontext.md)
 * [🆗 useMemo](react-hooks/usememo.md)
-* [⚠ useCallback](react-hooks/usecallback.md)
+* [🆗 useCallback](react-hooks/usecallback.md)
 * [❕ useReducer](react-hooks/usereducer.md)
 * [⚠ useImperativeHandle](react-hooks/useimperativehandle.md)
 * [⚠ useLayoutEffect](react-hooks/uselayouteffect.md)
@@ -39,6 +39,7 @@
 * [React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
 * [🆗 When to use React.memo](react-guidelines/when-to-use-react.memo.md)
 * [🆗 Where to put React State](react-guidelines/where-to-put-react-state.md)
+* [Concepts to always have in mind](react-guidelines/concepts-to-always-have-in-mind.md)
 
 ## 🔭 Concepts
 
