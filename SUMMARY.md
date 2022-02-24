@@ -35,10 +35,10 @@
 
 ## 📓 React Guidelines
 
-* [React Components Composition Guidelines](react-guidelines/react-components-composition-guidelines.md)
+* [⚠ React Components Composition Guidelines](react-guidelines/react-components-composition-guidelines.md)
 * [React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
-* [When to use React.memo](react-guidelines/when-to-use-react.memo.md)
-* [Where to put React State](react-guidelines/where-to-put-react-state.md)
+* [🆗 When to use React.memo](react-guidelines/when-to-use-react.memo.md)
+* [🆗 Where to put React State](react-guidelines/where-to-put-react-state.md)
 
 ## 🔭 Concepts
 
@@ -59,17 +59,14 @@
 
 ## 🧩 React ecosystem
 
-* [⚠ Styling](react-ecosystem/styling/README.md)
-  * [A CSS methodology comparison](react-ecosystem/styling/a-css-methodology-comparison/README.md)
-    * [🆗 Post CSS processor :Sass](react-ecosystem/styling/a-css-methodology-comparison/sass.md)
-    * [🆗 CSS in js :Styled-components](react-ecosystem/styling/a-css-methodology-comparison/css-in-js/README.md)
-    * [⚠ Utility Classes: Tailwind](react-ecosystem/styling/a-css-methodology-comparison/utility-classes-tailwind.md)
-* [Graphql](react-ecosystem/graphql/README.md)
-  * [What query or client technology should we use  for GraphQL requests ?](react-ecosystem/graphql/what-query-or-client-technology-should-we-use-for-graphql-requests.md)
 * [Forms Tools](react-ecosystem/forms-tools/README.md)
   * [React Hook Form VS Formik](react-ecosystem/forms-tools/react-hook-form-vs-formik.md)
 * [TypeScript](concepts/typescript/README.md)
   * [🆗 Conditional React props with TypeScript](concepts/typescript/conditional-react-props-with-typescript.md)
+* [A CSS methodology comparison](react-ecosystem/a-css-methodology-comparison/README.md)
+  * [🆗 Post CSS processor :Sass](react-ecosystem/a-css-methodology-comparison/post-css-processor-sass.md)
+  * [🆗 CSS in js :Styled-components](react-ecosystem/a-css-methodology-comparison/css-in-js-styled-components.md)
+  * [⚠ Utility Classes: Tailwind](react-ecosystem/a-css-methodology-comparison/utility-classes-tailwind.md)
 * [🆗 Build tool choice for MVP projects](react-ecosystem/build-tool-choice-for-mvp-projects.md)
 
 ## ⁉ Testing

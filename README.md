@@ -4,7 +4,7 @@ My father always told me that knowledge optimally should be free, I believe that
 Witnessing the struggle most people find while learning and working with react especially in finding simple tutorial here and there that give beginner knowledge, but those rarely go deep in concepts, patterns, and advanced features.
 
 Most Master classes are very expensive to afford especially in the MENA region. \
-Therefore, I wanted to create this booklet to give a learning step up to for free.&#x20;
+Therefore, I wanted to create this booklet to give a learning step up , It's worth of month of work , where i tried to study my resources and reference and present them as simple as possible but also trying my best to showcase good examples and edge cases &#x20;
 
 If you find this book helpful , please be my gust to add it to your onbording process, or share it with the team. and it will be great if you can star it on github so it can reach more hungry minds
 

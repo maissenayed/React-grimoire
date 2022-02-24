@@ -1,4 +1,4 @@
-# When to use React.memo
+# 🆗 When to use React.memo
 
 Since the release of the react hooks, there has been a lot of discussion about the use of memo() and useMemo(), but memoization is rarely required. A good composition of your components and state is frequently the best solution, which is why these guidelines are important. Consider learning more about keys, refs, and advanced react development depending on how you need to optimize your rendering.
 

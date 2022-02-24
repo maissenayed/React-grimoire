@@ -1,6 +1,6 @@
-# Where to put React State
+# 🆗 Where to put React State
 
-Lifting State Up
+## Lifting State Up
 
 ![](<../.gitbook/assets/Where\_to\_put\_React\_State (1).png>)
 
