@@ -20,6 +20,12 @@ If you find this book helpful , please be my gust to add it to your onbording pr
 **I recommend to dive deep in those concept before tackling React and I assure you that not only React will be easier to understand but also anything that involves JavaScript Ecosystem will be easier to digest.**&#x20;
 {% endhint %}
 
+{% hint style="warning" %}
+Git book has only a  light theme , if you are like me and you like always you reading materials on Dark themed pages , please try this chrome extension
+
+[https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh)
+{% endhint %}
+
 ### &#x20;  Useful links and resources&#x20;
 
 {% embed url="https://javascript.info" %}
