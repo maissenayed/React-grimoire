@@ -2,7 +2,9 @@
 
 > But what exactly is the React Hook Flow?
 
-You probably already know the Lifecycle Methods like componentDidMount or componentDidUpdate. These are used in Class Components. Since most of the time, it’s easier to write a functional component these functions are not available. For this, the React Core Team introduced hooks in Version 16.8. Hooks get called in a specific order, and that’s what we call the hook flow.
+{% hint style="info" %}
+**You probably already know the Lifecycle Methods like componentDidMount or componentDidUpdate. These are used in Class Components. Since most of the time, it’s easier to write a functional component these functions are not available. For this, the React Core Team introduced hooks in Version 16.8. Hooks get called in a specific order, and that’s what we call the hook flow.**
+{% endhint %}
 
 {% embed url="https://raw.githubusercontent.com/donavon/hook-flow/master/hook-flow.png" %}
 
@@ -12,7 +14,7 @@ React Hooks flow includes:
 2. Update (when state changes based on any event)
 3. UnMount
 
-
+### Definition <a href="#dd44" id="dd44"></a>
 
 ### Render <a href="#dd44" id="dd44"></a>
 
@@ -42,7 +44,7 @@ In here the functions returned in the **useEffect** hook get executed.
 
 This Phase executed the code inside a **useEffect** hook.
 
-
+## Phases
 
 ### Mount:
 
