@@ -58,8 +58,8 @@ It is possible to divide the built-in hooks into two sections, which are given b
 [useimperativehandle.md](useimperativehandle.md)
 {% endcontent-ref %}
 
-{% content-ref url="usedebugvalue.md" %}
-[usedebugvalue.md](usedebugvalue.md)
+{% content-ref url="custom-hooks/usedebugvalue.md" %}
+[usedebugvalue.md](custom-hooks/usedebugvalue.md)
 {% endcontent-ref %}
 
 {% content-ref url="useref.md" %}

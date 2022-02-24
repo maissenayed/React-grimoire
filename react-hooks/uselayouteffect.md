@@ -1,6 +1,8 @@
 # ⚠ useLayoutEffect
 
-{% embed url="https://blog.logrocket.com/useeffect-vs-uselayouteffect-examples" %}
+{% embed url="https://dev.to/afozbek/react-hooks-uselayouteffect-42pi" %}
+
+
 
 ### Timing of an effect <a href="#timingofaneffect" id="timingofaneffect"></a>
 

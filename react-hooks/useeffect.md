@@ -239,3 +239,5 @@ The cleanup is commonly used to cancel all subscriptions made and cancel fetch r
 {% embed url="https://overreacted.io/a-complete-guide-to-useeffect" %}
 
 {% embed url="https://blog.logrocket.com/guide-to-react-useeffect-hook" %}
+
+{% embed url="https://academind.com/tutorials/useeffect-abort-http-requests" %}

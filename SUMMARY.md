@@ -27,11 +27,11 @@
 * [❕ useCallback](react-hooks/usecallback.md)
 * [❕ useReducer](react-hooks/usereducer.md)
 * [⚠ useImperativeHandle](react-hooks/useimperativehandle.md)
-* [⚠ useDebugValue](react-hooks/usedebugvalue.md)
 * [⚠ useLayoutEffect](react-hooks/uselayouteffect.md)
 * [❕ Hook flow](react-hooks/hook-flow.md)
 * [❕ Custom hooks](react-hooks/custom-hooks/README.md)
   * [Use Local Storage](react-hooks/custom-hooks/use-local-storage.md)
+  * [⚠ useDebugValue](react-hooks/custom-hooks/usedebugvalue.md)
 
 ## 📓 React Guidelines
 
@@ -59,16 +59,13 @@
 
 ## 🧩 React ecosystem
 
-* [Routing](react-ecosystem/routing/README.md)
-  * [React-Router vs React-location](react-ecosystem/routing/react-router-vs-react-location.md)
-* [State Management](react-ecosystem/state-management/README.md)
-* [Graphql](react-ecosystem/graphql/README.md)
-  * [What query or client technology should we use  for GraphQL requests ?](react-ecosystem/graphql/what-query-or-client-technology-should-we-use-for-graphql-requests.md)
 * [⚠ Styling](react-ecosystem/styling/README.md)
   * [A CSS methodology comparison](react-ecosystem/styling/a-css-methodology-comparison/README.md)
     * [🆗 Post CSS processor :Sass](react-ecosystem/styling/a-css-methodology-comparison/sass.md)
     * [🆗 CSS in js :Styled-components](react-ecosystem/styling/a-css-methodology-comparison/css-in-js/README.md)
     * [⚠ Utility Classes: Tailwind](react-ecosystem/styling/a-css-methodology-comparison/utility-classes-tailwind.md)
+* [Graphql](react-ecosystem/graphql/README.md)
+  * [What query or client technology should we use  for GraphQL requests ?](react-ecosystem/graphql/what-query-or-client-technology-should-we-use-for-graphql-requests.md)
 * [Forms Tools](react-ecosystem/forms-tools/README.md)
   * [React Hook Form VS Formik](react-ecosystem/forms-tools/react-hook-form-vs-formik.md)
 * [TypeScript](concepts/typescript/README.md)

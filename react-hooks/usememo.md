@@ -2,6 +2,8 @@
 
 As Apps grow in size and complexity, creating efficient React code becomes more important than ever. Re-rendering large components is costly, and providing a significant amount of work for the browser through a single-page application (SPA) increases processing time and can potentially drive away users.
 
+{% embed url="https://dev.to/afozbek/react-hooks-usememo-4n23" %}
+
 A concern that most people have while working with React.js is performance. React is amazing and if used wisely you should not have re-render problems when states change.
 
 First, let's understand the concept of memoization and why we need it.

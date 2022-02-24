@@ -20,7 +20,7 @@ export default function useUser() {
 
 In this custom `useUser` hook we have a `useDebugValue` hook that takes a string as its only argument. Passing a single string to `useDebugValue` is by far the most common way to use this hook and when you do you will see something interesting in the React dev tools if you click on a component that utilizes this hook. On the right side of the screen you will see a section labeled `hooks` and inside the section you will see the `User` hook and next to that you will see the debug information we passed to `useDebugValue`.
 
-![](../.gitbook/assets/user.jpg)
+![](../../.gitbook/assets/user.jpg)
 
 ### Advanced Usage <a href="#advanced-usage" id="advanced-usage"></a>
 
@@ -32,7 +32,7 @@ Passing a label to `useDebugValue` is by far the most common way to use this hoo
 useDebugValue(user)
 ```
 
-![](../.gitbook/assets/object-open.png)
+![](../../.gitbook/assets/object-open.png)
 
 {% hint style="info" %}
 **When the hook is closed it will show a stringified label of the parameter if possible, but when you expand the hook for details you will see a `DebugValue` section that you can expand for more details on the object.**
@@ -43,10 +43,9 @@ useDebugValue(user)
 ```js
 useDebugValue("#1")
 useDebugValue("#2")
-
 ```
 
-![](../.gitbook/assets/multiple-open.png)
+![](../../.gitbook/assets/multiple-open.png)
 
 As you can see this works pretty much exactly the same as if you had just passed an array to `useDebugValue`. Internally, React just combines all the `useDebugValue` hooks into one array in the debug tools.
 
