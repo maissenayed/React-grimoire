@@ -4,6 +4,6 @@
 
 {% embed url="https://greensock.com/react-advanced#imperative-communication" %}
 
-Finally, if you are using useImperativeHandle, then you **should only use it in combination with the forwardRef**
-
-****
+{% hint style="info" %}
+**Finally, if you are using useImperativeHandle, then you should only use it in combination with the forwardRef**
+{% endhint %}

@@ -2,11 +2,7 @@
 
 > Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
 
-If you're not familiar with the concept of react hooks, please read this before going any further.
-
-{% embed url="https://reactjs.org/docs/hooks-intro.html" %}
-
-&#x20;Before react 16.8, it was already possible to reuse some stateful logic across your app with higher-order components and render props but Custom Hooks let you do it without adding more components to your tree.
+Before react 16.8, it was already possible to reuse some stateful logic across your app with higher-order components and render props but Custom Hooks let you do it without adding more components to your tree.
 
 Hooks are a way to reuse _stateful logic_, not state itself. In fact, each _call_ to a Hook has a completely isolated state — so you can even use the same custom Hook twice in one component.
 
@@ -41,3 +37,5 @@ You can found some example on
 {% embed url="https://reactjs.org/docs/hooks-custom.html" %}
 
 {% embed url="https://reactjs.org/docs/hooks-rules.html" %}
+
+{% embed url="https://www.smashingmagazine.com/2020/04/react-hooks-best-practices" %}
