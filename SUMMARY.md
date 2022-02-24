@@ -26,8 +26,8 @@
 * [🆗 useMemo](react-hooks/usememo.md)
 * [🆗 useCallback](react-hooks/usecallback.md)
 * [❕ useReducer](react-hooks/usereducer.md)
-* [⚠ useImperativeHandle](react-hooks/useimperativehandle.md)
-* [⚠ useLayoutEffect](react-hooks/uselayouteffect.md)
+* [🆗 useImperativeHandle](react-hooks/useimperativehandle.md)
+* [🆗 useLayoutEffect](react-hooks/uselayouteffect.md)
 * [🆗 Hook flow](react-hooks/hook-flow.md)
 * [❕ Custom hooks](react-hooks/custom-hooks/README.md)
   * [Use Local Storage](react-hooks/custom-hooks/use-local-storage.md)
@@ -35,8 +35,8 @@
 
 ## 📓 React Guidelines
 
-* [⚠ React Components Composition Guidelines](react-guidelines/react-components-composition-guidelines.md)
-* [React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
+* [🆗 React Components Composition Guidelines](react-guidelines/react-components-composition-guidelines.md)
+* [🆗 React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
 * [🆗 When to use React.memo](react-guidelines/when-to-use-react.memo.md)
 * [🆗 Where to put React State](react-guidelines/where-to-put-react-state.md)
 * [Concepts to always have in mind](react-guidelines/concepts-to-always-have-in-mind.md)
@@ -51,7 +51,7 @@
   * [State Reducer](concepts/advanced-patterns/state-reducer.md)
   * [Context Module](concepts/advanced-patterns/context-module.md)
 * [Server side rendering(ssr)](concepts/server-side-rendering-ssr/README.md)
-  * [React Hydration](concepts/server-side-rendering-ssr/react-hydration.md)
+  * [🆗 React Hydration](concepts/server-side-rendering-ssr/react-hydration.md)
 * [React Under the hood](concepts/react-under-the-hood/README.md)
   * [🆗 What is "Rendering"?](concepts/react-under-the-hood/what-is-rendering.md)
   * [🆗 React Lifecycle](concepts/react-under-the-hood/react-lifecycle.md)
