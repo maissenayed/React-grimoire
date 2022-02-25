@@ -46,6 +46,10 @@ console.log(sum1 === sum1); // => true
 ```
 {% endhint %}
 
+{% embed url="https://epicreact.dev/memoization-and-react" %}
+
+{% embed url="https://inlehmansterms.net/2015/03/01/javascript-memoization" %}
+
 ## **useMemo** <a href="#bfb8" id="bfb8"></a>
 
 ![](../.gitbook/assets/fddffd.png)
@@ -123,5 +127,3 @@ When memoization is used inappropriately, it could harm the performance.
 {% embed url="https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0" %}
 
 {% embed url="https://alexsidorenko.com/blog/react-render-usememo" %}
-
-{% embed url="https://inlehmansterms.net/2015/03/01/javascript-memoization" %}

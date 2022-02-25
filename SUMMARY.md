@@ -25,7 +25,7 @@
 * [⚠ useContext](react-hooks/usecontext.md)
 * [🆗 useMemo](react-hooks/usememo.md)
 * [🆗 useCallback](react-hooks/usecallback.md)
-* [❕ useReducer](react-hooks/usereducer.md)
+* [🆗 useReducer](react-hooks/usereducer.md)
 * [🆗 useImperativeHandle](react-hooks/useimperativehandle.md)
 * [🆗 useLayoutEffect](react-hooks/uselayouteffect.md)
 * [🆗 Hook flow](react-hooks/hook-flow.md)

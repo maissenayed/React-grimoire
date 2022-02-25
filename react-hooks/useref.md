@@ -315,3 +315,5 @@ Input.displayName = 'Input';
 ```
 
 {% embed url="https://alexsidorenko.com/blog/react-render-refs" %}
+
+{% embed url="https://epicreact.dev/the-latest-ref-pattern-in-react" %}

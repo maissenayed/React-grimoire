@@ -1,4 +1,4 @@
-# ❕ useReducer
+# 🆗 useReducer
 
 React's `useState` hook can get you a really long way with React state management. That said, sometimes you want to separate the state logic from the components that make the state changes. In addition, if you have multiple elements of state that typically change together, then having an object that contains those elements of state can be quite helpful.
 
@@ -478,7 +478,5 @@ The engine order telegraph helps separate the bridge from the engine room. The s
 {% embed url="https://engineering.zalando.com/posts/2016/08/design-patterns-redux.html?gh_src=4n3gxh1%3Fgh_src%3D4n3gxh1" %}
 
 {% embed url="https://sourcemaking.com/design_patterns/command" %}
-![](../.gitbook/assets/1\_PPs7sjqT1JKidDIngXrd4w.png)
-{% endembed %}
 
 {% embed url="https://refactoring.guru/design-patterns/command" %}
