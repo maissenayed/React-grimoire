@@ -232,6 +232,58 @@ The cleanup is commonly used to cancel all subscriptions made and cancel fetch r
 
 {% embed url="https://alexsidorenko.com/blog/useeffect-cleanups" %}
 
+## Fetch Data from an API
+
+### Create the asynchronous function
+
+Then, let's create an [asynchronous function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async\_function) to fetch our data. An asynchronous function is a function that needs to wait after the [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Promise) is resolved before continuing. In our case, the function will need to wait after the data is fetched (our promise) before continuing.
+
+```jsx
+const fetchData = async (url) => {
+    try {
+        const response = await fetch(url);
+        const json = await response.json();
+        console.log(json);
+		} catch (error) {
+        console.log("error", error);
+		}
+};
+```
+
+Put the fetchData function above in the useEffect hook and call it, like so:
+
+```jsx
+useEffect(() => {
+    // advice free ap
+    const url = "https://api.adviceslip.com/advice";
+
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url);
+        const json = await response.json();
+        console.log(json);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+
+    fetchData();
+}, []);
+```
+
+The function we just created is wrapped in a [try...catch statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) so that the function catches the errors and prints them in the console. This helps debug and prevents the app to crash unexpectedly.
+
+Inside of the try, we are using the built-in [fetch API from JavaScript](https://developer.mozilla.org/en-US/docs/Web/API/Fetch\_API) to get the advice from the Advice Slip JSON API. We put the [await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await) keyword just in front of it to tell the function to wait for the fetch task to be done before running the next line of code.
+
+Once we get a response, we are parsing it using the [.json() function](https://developer.mozilla.org/en-US/docs/Web/API/Body/json), meaning that we are transforming the response into JSON data that we can easily read. Then, we are printing the JSON data in the console.
+
+Then, instead of printing the advice in the console, we'll save it in the advice state.
+
+```jsx
+const [advice, setAdvice] = useState("")
+setAdvice(json.slip.advice)
+```
+
 ## Usefull links
 
 {% embed url="https://alexsidorenko.com/blog/useeffect" %}
@@ -241,3 +293,12 @@ The cleanup is commonly used to cancel all subscriptions made and cancel fetch r
 {% embed url="https://blog.logrocket.com/guide-to-react-useeffect-hook" %}
 
 {% embed url="https://academind.com/tutorials/useeffect-abort-http-requests" %}
+
+{% embed url="https://www.digitalocean.com/community/tutorials/how-to-call-web-apis-with-the-useeffect-hook-in-react" %}
+
+{% embed url="https://devtrium.com/posts/async-functions-useeffect" %}
+
+{% embed url="https://epicreact.dev/myths-about-useeffect" %}
+
+{% embed url="https://kentcdodds.com/blog/react-hooks-pitfalls" %}
+
