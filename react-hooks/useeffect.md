@@ -284,6 +284,8 @@ const [advice, setAdvice] = useState("")
 setAdvice(json.slip.advice)
 ```
 
+{% embed url="https://codesandbox.io/embed/fetch-data-from-an-api-forked-b0euj8?fontsize=14&hidenavigation=1&theme=dark" %}
+
 ## Usefull links
 
 {% embed url="https://alexsidorenko.com/blog/useeffect" %}
