@@ -232,9 +232,6 @@ Now, in the child component, we receive the props, which, when emitted, will tri
 
 Wiring all these terms together, here's how the state update using a reducer works.
 
-\
-
-
 ![](../.gitbook/assets/diagram.svg)
 
 As a result of an event handler or after completing a fetch request, you call the _dispatch_ function with the _action object_.
