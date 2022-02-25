@@ -12,7 +12,17 @@ First, let's understand the concept of memoization and why we need it.
 
 > In computing, memorization or memorization is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again.
 
-Memorization is the idea to keep the value returned of a function or the function itself saved and don’t re-run it if the values sent to it don’t change.
+Memoization: a performance optimization technique which eliminates the need to recompute a value for a given input by storing the original computation and returning that stored value when the same input is provided. Caching is a form of memoization. Here's a simple implementation of memoization:
+
+```jsx
+const values = {}
+function addOne(num: number) {
+  if (values[num] === undefined) {
+    values[num] = num + 1 // <-- here's the computation
+  }
+  return values[num]
+}
+```
 
 {% hint style="info" %}
 ## Understanding JavaScript equality check <a href="#2855" id="2855"></a>
@@ -113,3 +123,5 @@ When memoization is used inappropriately, it could harm the performance.
 {% embed url="https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0" %}
 
 {% embed url="https://alexsidorenko.com/blog/react-render-usememo" %}
+
+{% embed url="https://inlehmansterms.net/2015/03/01/javascript-memoization" %}
