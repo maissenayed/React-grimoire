@@ -99,7 +99,7 @@ If you’re having a hard time figuring out what elements you should create comp
 
 ```
 
-#### References and articles :
+## References and articles :
 
 {% embed url="https://overreacted.io/writing-resilient-components" %}
 

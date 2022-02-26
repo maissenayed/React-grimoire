@@ -116,7 +116,7 @@ I think Tailwind has a lot of practical advantage on the other css methodology l
 
 
 
-## Useful links
+## References and articles :
 
 {% embed url="https://chrome.google.com/webstore/detail/css-to-tailwind/jlmlldiahhaejpjnonbddoniicdemakl" %}
 

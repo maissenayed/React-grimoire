@@ -221,7 +221,7 @@ You can find more from the creator of redux him self&#x20;
 
 {% embed url="https://blog.isquaredsoftware.com/2018/03/redux-not-dead-yet" %}
 
-## Usefull links
+## References and articles :
 
 {% embed url="https://blog.logrocket.com/pitfalls-of-overusing-react-context" %}
 

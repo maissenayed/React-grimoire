@@ -118,9 +118,7 @@ When memoization is used inappropriately, it could harm the performance.
 
 {% embed url="https://kentcdodds.com/blog/usememo-and-usecallback" %}
 
-## Usefull links
-
-
+## References and articles :
 
 {% embed url="https://reactjs.org/docs/hooks-reference.html#usememo" %}
 

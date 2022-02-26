@@ -471,6 +471,8 @@ The _engine order telegraph_ is the _dispatch_ function, the _commands_ are the 
 
 The engine order telegraph helps separate the bridge from the engine room. The same way the `useReducer()` hook helps separate the rendering from the state management logic.
 
+## References and articles :
+
 {% embed url="https://kentcdodds.com/blog/should-i-usestate-or-usereducer" %}
 
 {% embed url="https://kentcdodds.com/blog/how-to-implement-usestate-with-usereducer" %}

@@ -36,6 +36,8 @@ You can found some example on
 
 {% embed url="https://reactjs.org/docs/hooks-custom.html" %}
 
+## References and articles :
+
 {% embed url="https://reactjs.org/docs/hooks-rules.html" %}
 
 {% embed url="https://www.smashingmagazine.com/2020/04/react-hooks-best-practices" %}

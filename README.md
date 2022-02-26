@@ -26,7 +26,7 @@ Git book has only a  light theme , if you are like me and you like always you re
 [https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh)
 {% endhint %}
 
-### &#x20;  Useful links and resources&#x20;
+### &#x20;References and articles :
 
 {% embed url="https://javascript.info" %}
 

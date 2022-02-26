@@ -6,6 +6,8 @@
 
 {% embed url="https://reactjs.org/docs/lifting-state-up.html" %}
 
+## References and articles :
+
 {% embed url="https://kentcdodds.com/blog/application-state-management-with-react" %}
 
 {% embed url="https://kentcdodds.com/blog/prop-drilling" %}

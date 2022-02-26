@@ -10,6 +10,8 @@ Also maybe in the future everything will be memorized by react it self &#x20;
 
 {% embed url="https://www.youtube.com/watch?v=lGEMwh32soc" %}
 
+## References and articles :
+
 {% embed url="https://epicreact.dev/memoization-and-react" %}
 
 {% embed url="https://reactjs.org/docs/hooks-reference.html#usememo" %}

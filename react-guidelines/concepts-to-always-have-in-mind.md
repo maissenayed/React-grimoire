@@ -1388,7 +1388,7 @@ class Button extends React.Component {
 }
 ```
 
-## UseFull Links
+## References and articles :
 
 {% embed url="https://reactpatterns.com" %}
 

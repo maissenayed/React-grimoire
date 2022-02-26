@@ -106,6 +106,8 @@ For example, if I needed to change the background color of a DOM element as a si
 
 As you can see from the previous example, use cases for `useLayoutEffect` are pretty niche. In general it is best to always use `useEffect` and only switch to `useLayoutEffect` when you actually run into an issue with `useEffect` causing flickers in your DOM or incorrect results.
 
+## References and articles :
+
 {% embed url="https://kentcdodds.com/blog/useeffect-vs-uselayouteffect" %}
 
 {% embed url="https://blog.logrocket.com/useeffect-vs-uselayouteffect-examples" %}
