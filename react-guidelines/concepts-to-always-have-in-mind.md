@@ -1388,3 +1388,8 @@ class Button extends React.Component {
 }
 ```
 
+## UseFull Links
+
+{% embed url="https://reactpatterns.com" %}
+
+{% embed url="https://rangle.github.io/react-training/advanced" %}

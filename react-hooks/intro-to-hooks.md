@@ -86,4 +86,6 @@ It ain’t Fight Club, but we do have some rules to follow:
 
 {% embed url="https://reactjs.org/docs/hooks-rules.html" %}
 
+{% embed url="https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e" %}
+
 {% embed url="https://blog.logrocket.com/react-hooks-frustrations" %}
