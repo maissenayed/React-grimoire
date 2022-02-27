@@ -48,7 +48,7 @@
   * [Props Getters Pattern](concepts/advanced-patterns/props-getters-pattern.md)
   * [Custom hook pattern](concepts/advanced-patterns/custom-hook-pattern.md)
   * [State Reducer](concepts/advanced-patterns/state-reducer.md)
-  * [Context Module](concepts/advanced-patterns/context-module.md)
+  * [⚠ Context Module](concepts/advanced-patterns/context-module.md)
 * [Server side rendering(ssr)](concepts/server-side-rendering-ssr/README.md)
   * [🆗 React Hydration](concepts/server-side-rendering-ssr/react-hydration.md)
 * [React Under the hood](concepts/react-under-the-hood/README.md)
