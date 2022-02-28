@@ -268,3 +268,7 @@ If you try to update state with the same value as the current state, React won�
 It’s important to note that in some cases, React may still render the specific component whose state was updated. That’s OK because React will _not_ go deeper into the tree, i.e., render the component’s children.
 
 If expensive calculations are done within the body of your functional component, i.e., before the return statement, consider optimizing these with `useMemo`.(we will cover [useMemo  in another section](usememo.md))&#x20;
+
+Reference
+
+{% embed url="https://juejin.cn/post/6844903833764642830" %}
