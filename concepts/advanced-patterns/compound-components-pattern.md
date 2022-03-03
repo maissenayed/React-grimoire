@@ -1,4 +1,4 @@
-# Compound Components Pattern
+# ⚠ Compound Components Pattern
 
 ## What is the Compound Component pattern? <a href="#what-is-the-compound-component-pattern" id="what-is-the-compound-component-pattern"></a>
 
@@ -216,4 +216,4 @@ Overall, this implementation has less code and better performance. That’s beca
 
 However, the main advantage is that we have a much more flexible API for our Accordion, and the example code that broke earlier now works just fine.
 
-\
+{% embed url="https://antongunnarsson.com/compound-components-in-react" %}

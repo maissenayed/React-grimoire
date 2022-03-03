@@ -1,4 +1,4 @@
-# Props Getters Pattern
+# ⚠ Props Getters Pattern
 
 {% embed url="https://kentcdodds.com/blog/how-to-give-rendering-control-to-users-with-prop-getters" %}
 

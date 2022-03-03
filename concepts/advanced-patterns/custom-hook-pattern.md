@@ -1,4 +1,4 @@
-# Custom hook pattern
+# ⚠ Custom hook pattern
 
 {% embed url="https://blog.bitsrc.io/new-react-design-pattern-return-component-from-hooks-79215c3eac00" %}
 
