@@ -39,3 +39,5 @@ Git book has only a  light theme , if you are like me and you like always you re
 This is my old booklet in which you find various articles and cheat sheets, bits of code that I found useful during my career. Enjoy!&#x20;
 
 {% embed url="https://maissen.gitbook.io/maissen-grimoire" %}
+
+{% embed url="https://www.youtube.com/watch?list=PL0vfts4VzfNgUUEtEjxDVfh4iocVR3qIb&v=Tn6-PIqc4UM" %}
