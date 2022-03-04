@@ -20,6 +20,8 @@ These questions have been recurring since the past, and the React community has 
 building a Component for other developers. Therefore, the actor “clients” refers directly to these developers (And not the final user which will use your website/application).
 {% endhint %}
 
+{% embed url="https://codesandbox.io/s/react-patterns-uenl15?file=%2Fsrc%2Fpatterns%2Fcompound-component%2FCounter.js" %}
+
 {% embed url="https://advanced-react-patterns.netlify.app" %}
 
 {% embed url="https://www.benmvp.com/blog/picking-right-react-component-pattern" %}
