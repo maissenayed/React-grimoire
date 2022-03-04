@@ -197,4 +197,7 @@ Let's see how our code will be using these two script files&#x20;
 
 {% embed url="https://epicreact.dev/importing-react-through-the-ages" %}
 
-##
+{% embed url="https://cdmana.com/2021/12/202112180423000605.html" %}
+
+{% embed url="https://zhenyong.github.io/react/docs/top-level-api.html" %}
+

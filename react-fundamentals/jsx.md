@@ -133,4 +133,10 @@ Easy right? How about children?
 **You may have noticed that I changed the type of our JavaScript from module to text/babel and that's to indicate to the browser not to evaluate the script . However, babel will control the compiling for that script** &#x20;
 {% endhint %}
 
+## References and articles :&#x20;
+
 {% embed url="https://reactjs.org/docs/introducing-jsx.html" %}
+
+{% embed url="https://reactjs.org/docs/jsx-in-depth.html" %}
+
+{% embed url="https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html" %}

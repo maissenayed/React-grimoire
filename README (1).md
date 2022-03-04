@@ -123,3 +123,9 @@ Since we are always able to use **HTML** tags to create the **div element** with
 
 **As a result, instead of defining the DOM in hand-written HTML, modern JavaScript frameworks were developed to address some of the issues like our beloved React.**
 {% endhint %}
+
+## References and articles :&#x20;
+
+{% embed url="https://javascript.info/document" %}
+
+{% embed url="https://www.youtube.com/watch?v=y17RuWkWdn8" %}
