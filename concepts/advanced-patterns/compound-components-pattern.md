@@ -1,5 +1,11 @@
 # ⚠ Compound Components Pattern
 
+## Compound Components Pattern <a href="#6eaa" id="6eaa"></a>
+
+This pattern allows creating expressive and declarative components, without unnecessary [pr](https://kentcdodds.com/blog/prop-drilling)
+
+[ op drilling](https://kentcdodds.com/blog/prop-drilling). You should consider using this pattern if you want to make your **** component more customizable, with a better separation of concern and an understandable API.
+
 ## What is the Compound Component pattern? <a href="#what-is-the-compound-component-pattern" id="what-is-the-compound-component-pattern"></a>
 
 As mentioned before, the Compound components pattern allows writing a declarative and flexible API for complex components. You build the component using multiple loosely coupled child components. Each of them performs a different task, yet they all share the same implicit state. When put together, these child components make up our compound component.
@@ -215,5 +221,53 @@ export const AccordionPanel = ({
 Overall, this implementation has less code and better performance. That’s because `cloneElement` causes a slight performance penalty.
 
 However, the main advantage is that we have a much more flexible API for our Accordion, and the example code that broke earlier now works just fine.
+
+## Counter example
+
+#### l Advantages
+
+**· Reduced API complexity: Instead of putting all props in one huge parent component and descending into sub UI components, each prop is tied to the most appropriate SubComponent.**
+
+![](https://blog.kakaocdn.net/dn/yf23A/btriac3DGbW/K3mrlDDkP4fx0dlAToJhA1/img.jpg)
+
+**· Flexible markup structure: The component's UI has great flexibility and can create multiple cases from one component. For example, the user can change the order of SubComponents or decide which of them should be displayed.**
+
+![](https://blog.kakaocdn.net/dn/8ZzdS/btrh4NYxSeo/tVje3ivYkfDqGi2oCDkcdk/img.jpg)
+
+**· Separation of concerns: Most of the logic is contained in the main Counter component, and React.Context is used to share the states and handlers of all child components . This allows for a clear separation of responsibilities.**
+
+![](https://blog.kakaocdn.net/dn/dGLSX7/btriac3DKnt/gjeFYUUFMUCEcZZUp2KlT1/img.jpg)
+
+#### ㅣ Disadvantages
+
+**· Too much flexibility in the UI: More flexibility means it's more likely to cause unexpected behavior. For example, there may be unneeded child components, the child components may be out of order, and the necessary child components may not exist.**\
+**Depending on how you want your users to use your component, you may want to limit your flexibility to some extent.**
+
+&#x20;
+
+![](https://blog.kakaocdn.net/dn/r59h6/btribAQterl/b96c4sa5jUwYsjusvqEz51/img.jpg)
+
+**· JSX too heavy: Applying this pattern JSXThe number of lines increases, especially if you are using a linter like EsLint or a code formatter like Prettier . It's not a big deal at the single-component level, but the difference becomes more apparent as you scale up.**\
+
+
+&#x20;
+
+![](https://blog.kakaocdn.net/dn/b5O5mN/btriaVAxR9y/TR7AH27P5cr511615WWgkk/img.jpg)
+
+#### ㅣ Evaluation items
+
+**· Reversal of Control: 1/4**
+
+**· Implementation Complexity: 1/4**
+
+&#x20;
+
+#### ㅣ Libraries that use this pattern
+
+·  React Bootstrap
+
+· Reach UI
+
+&#x20;
 
 {% embed url="https://antongunnarsson.com/compound-components-in-react" %}
