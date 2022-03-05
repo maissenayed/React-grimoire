@@ -175,3 +175,5 @@ I think Tailwind has a lot of practical advantage on the other css methodology l
 {% embed url="https://tailwindcss.com/docs/preflighthttps://unpkg.com/tailwindcss@2.0.2/dist/base.css" %}
 
 {% embed url="https://tailwindcss.com/docs/optimizing-for-production" %}
+
+{% embed url="https://www.youtube.com/watch?v=mr15Xzb1Ook" %}

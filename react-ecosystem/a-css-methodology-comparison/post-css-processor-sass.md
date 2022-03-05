@@ -92,3 +92,5 @@ CSS preprocessors in combination with BEM definitely improve the development exp
 {% embed url="https://www.cqlcorp.com/insights/widely-used-css-architectures-and-how-they-function" %}
 
 {% embed url="https://blog.allegro.tech/2021/07/css-architecture-and-performance-of-micro-frontends.html" %}
+
+{% embed url="https://www.youtube.com/watch?v=akDIJa0AP5c" %}
