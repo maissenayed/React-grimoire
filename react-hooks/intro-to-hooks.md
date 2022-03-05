@@ -1,26 +1,26 @@
-# 🆗 Intro to hooks
+# 🏁 Intro to hooks
 
-React Hooks fancy name for functions that allows you to hook into React state and lifecycle features in functional components. This was introduced with React 16.8 update and has become a must-needed part of any React application since then.
+React Hooks is a fancy name for functions that let you hook into React state and lifecycle features in functional components. This was introduced with the React 16.8 update and has since become an essential component of any React application.
 
 ## What are React Hooks? <a href="#b5a7" id="b5a7"></a>
 
-> _With the new addition of hooks( along with React 16.8), functional components could maintain states and lifecycle features without using classes. Simply hooks are features that allow you to “hook into” React state and lifecycle features from function components._
+> Hooks, which were introduced with React 16.8, allowed functional components to maintain states and lifecycle features without the use of classes. Simply put, hooks are features that allow function components to "hook into" React state and lifecycle features.
 
 __
 
 ## Why We Need React Hooks? <a href="#c1d9" id="c1d9"></a>
 
-Previously, If you write a function component and notice that you need to apply some state to it all you have to do is, change that functional component into a class.
+Previously, if you wrote a function component and realized you needed to apply some state to it, all you had to do was convert it to a class.
 
-> _But with the new update, you can just use a Hook inside the function component, making the refactoring procedure easy._
+> However, with the new update, you can simply use a Hook within the function component, making the refactoring process much easier.
 
 also, there are many advantages of using React hooks like:
 
-* More flexibility in reusing an existing piece of code.
-* There is no need to refactor the functional component into a class component when it grows complex.
-* You don’t have to worry about this at all.
-* No more bindings for methods
-* It is simpler to distinguish logic and UI using hooks.
+* Increased flexibility in reusing existing code.
+* &#x20;When the functional component becomes complex, there is no need to refactor it into a class component.&#x20;
+* You don't need to be concerned about this at all.
+* &#x20;There will be no more method bindings.&#x20;
+* Using hooks makes it easier to distinguish between logic and UI.
 
 ## React Hook Types <a href="#d8b1" id="d8b1"></a>
 
@@ -74,9 +74,9 @@ It is possible to divide the built-in hooks into two sections, which are given b
 
 It ain’t Fight Club, but we do have some rules to follow:
 
-1. Only call hooks at the top level of your function. Don’t put them in loops, conditionals, or nested functions.
-2. Only call hooks from React function components, or from [custom hooks. ](custom-hooks/)Don’t call them from outside a component (what would that even do?). Keeping all the calls inside components and custom hooks makes your code easier to follow too, because all the related logic is grouped together.
-3. The names of hooks must start with “use”. Like `useState` or `useEffect` (well, not those two, those are taken).
+1. Hooks should only be called at the top level of your function. They should not be used in loops, conditionals, or nested functions.
+2. Hooks should only be called from React function components or custom hooks. Don't call them from outside of a component (what good would that do?). Keeping all calls within components and custom hooks also makes your code easier to follow because all related logic is grouped together.
+3. Hook names must begin with "use." similar to `useState` or `useEffect` (well, not those two, those are taken).
 
 ![](<../.gitbook/assets/Hook rule.png>)
 

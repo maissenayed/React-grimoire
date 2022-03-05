@@ -18,7 +18,7 @@
 
 ## 🪝 React Hooks
 
-* [🆗 Intro to hooks](react-hooks/intro-to-hooks.md)
+* [🏁 Intro to hooks](react-hooks/intro-to-hooks.md)
 * [🆗 useState](react-hooks/usestate.md)
 * [☢ useEffect](react-hooks/useeffect.md)
 * [🆗 useRef](react-hooks/useref.md)

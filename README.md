@@ -1,12 +1,15 @@
 # ⁉ Introduction
 
-My father always told me that knowledge should be freely available, and I agree. Witnessing the difficulties that most people face while learning and working with react, particularly in finding simple tutorials here and there that are extremely useful knowledge for the beginning phase, but rarely go deep in concepts, patterns, and advanced features.
+My father always told me that knowledge optimally should be free, I believe that too.\
+Witnessing the struggle most people find while learning and working with react especially in finding simple tutorial here and there that they are extremely helpful knowledge for the begging phase, but those rarely go deep in concepts, patterns, and advanced features.
 
 Also Finding unique content blogs, channels, podcasts it's a big endeavor specially for new comers.&#x20;
 
-As a result, I wanted to create this booklet to provide a learning step up. It's the result of months of work in which I tried to study my resources and references and present them as simply as possible while also highlighting good examples and edge cases.
+Therefore, I wanted to create this booklet to give a learning step up , It's worth of months of work, where i tried to study my resources and references and present them as simple as possible but also trying my best to showcase good examples and edge cases.&#x20;
 
-If you find this book useful, please feel free to add it to your reading list, bookmark it, or share it with the team. It would also be great if you could put it on Github so that it can reach more hungry minds.
+
+
+If you find this book helpful , please be my gust to add it to your onbording process or your personal bookmark, or share it with the team. and it will be great if you can :star: it on Github so it can reach more hungry minds
 
 {% hint style="info" %}
 **This is an open source project, if you want to contribute please be my gust and send  Pr**&#x20;
