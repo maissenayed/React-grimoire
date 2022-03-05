@@ -1,14 +1,14 @@
 # ❕ Custom hooks
 
-How do you imagine the communication between the _view_ and the _logic_? The _view_ need to draw elements for user, It is responsible to catch user’s interaction and display data. On the other hand, the logic is responsible to request, generate and process the _data_, and save it for future access. In _React_, we can put _States_ and detect its changes by _Effects_, throughout this two _Hooks_, we can handle a _store-action_ _app_. But, we can also create our own Hooks. _Custom Hook_ is in fact a single function, prefixed by the word _“use”_, for example “_useTable_” or “_usePayment_”. This _hooks_ allows to encapsulate and abstract complex operations, into a functional and linear code.
+How do you envision the interaction between the Ui and the logic? The view must draw elements for the user, as well as record and display data from the user's interactions. The logic, on the other hand, is in charge of requesting, generating, and processing data, as well as saving it for future use. In React, we can put States and detect their changes with Effects, and we can handle a store-action app with these two Hooks. However, we can also make our own Hooks. Custom Hook is actually a single function, prefixed with the word "use," such as "useTable" or "usePayment." This hooks enable the encapsulation and abstraction of complex operations into functional and linear code.
 
-To make a _hook_, we need to understand that a _custom hook_ is an extension for other _hooks_, and it is intended to expose a _CUSTOM PROGRAMMING INTERFACE_. In this article, we will learn about this concept.
+To create a hook, we must first understand that a custom hook is an extension for other hooks that is designed to expose a CUSTOM PROGRAMMING INTERFACE.&#x20;
 
 ## Functions and Results <a href="#b7fd" id="b7fd"></a>
 
-_Function_ is like a black-box that do something with input and throw some output. Similar to a _**crushing machine**_. The machine takes something and crushes it into a result (maybe a bin block). Using functions allows solve tasks without the complex understanding about details. Imagine fetch data from server and have to remember whole process every time.
+A function is similar to a black box that does something with input and produces some output. The same as a crushing machine. The machine takes something and crushes it into a finished product (maybe a bin block). Using functions allows you to solve tasks without having to have a deep understanding of the details. Consider retrieving data from a server and having to remember the entire process each time. When we write a custom function, we can return any result we want. This is known as the "programming interface" or "programming layout." The goal is to return the states and actions required to initiate a conversation between the black-box (the function inside) and the external code. As in a window.
 
-When we make a custom function, we are free to return any result. This result is called “the programming interface” or maybe “the programming layout”. The idea is return the states and actions necessary to create a dialog between the black-box (the function inside) and the external code. Like a window.
+
 
 > The function is the black-box that exposes a programming interface to brings data throughout complex logic to simplify logic.
 

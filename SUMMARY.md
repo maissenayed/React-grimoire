@@ -4,9 +4,9 @@
 
 ## 🧑🎓 React Fundamentals&#x20;
 
-* [🆗 The Basic javascript "Hello world"](<README (1).md>)
-* [🆗 Basic view on React core API's](react-fundamentals/basic-view-on-react-core-apis.md)
-* [🆗 JSX](react-fundamentals/jsx.md)
+* [🏁 The Basic javascript "Hello world"](<README (1).md>)
+* [🏁 Basic view on React core API's](react-fundamentals/basic-view-on-react-core-apis.md)
+* [🏁 JSX](react-fundamentals/jsx.md)
 * [🆗 React Props and styling](react-fundamentals/react-props-and-styling.md)
 * [🆗 Components](react-fundamentals/components.md)
 * [🆗 Handling Events With React](react-fundamentals/handling-events-with-react.md)
@@ -28,7 +28,7 @@
 * [🆗 useReducer](react-hooks/usereducer.md)
 * [🆗 useLayoutEffect](react-hooks/uselayouteffect.md)
 * [🆗 useImperativeHandle](react-hooks/useimperativehandle.md)
-* [🆗 Hook flow](react-hooks/hook-flow.md)
+* [🏁 Hook flow](react-hooks/hook-flow.md)
 * [❕ Custom hooks](react-hooks/custom-hooks/README.md)
   * [⚠ useDebugValue](react-hooks/custom-hooks/usedebugvalue.md)
 
