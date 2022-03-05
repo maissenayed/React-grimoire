@@ -1,7 +1,5 @@
 # 🆗 Fiber
 
-In progress
-
 ## References and articles :
 
 {% embed url="https://github.com/acdlite/react-fiber-architecture#what-is-a-fiber" %}
