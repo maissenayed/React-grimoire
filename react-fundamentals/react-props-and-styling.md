@@ -176,6 +176,8 @@ And in JSX&#x20;
 
 ## References and articles :&#x20;
 
+{% embed url="https://beta.reactjs.org/learn/passing-props-to-a-component" %}
+
 {% embed url="https://blog.yipl.com.np/demystifying-react-styling-approaches-433b84d20337" %}
 
 {% embed url="https://www.taniarascia.com/overview-of-css-concepts" %}

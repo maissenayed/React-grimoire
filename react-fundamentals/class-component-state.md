@@ -297,9 +297,7 @@ class TodoItem extends React.Component {
 
 The main responsibility of a Component is to translate raw data into rich HTML. With that in mind, the _props_ and the _state_ together constitute the _raw data_ that the HTML output derives from.
 
-You could say _props_ + _state_ is the input data for the `render()` function of a Component, so we need to zoom in and see what each data type represents and where does it come from.
 
-### Common ground
 
 Before separating _props_ and _state_, let's also identify where they overlap.
 
@@ -325,7 +323,7 @@ _**props**_** (short for **_**properties**_**) are a Component's configuration, 
 
 **We didn't say **_**props**_** are also serializable because it's pretty common to pass down callback functions through **_**props.**_
 
-### **Changing **_**props**_** and **_**state**_
+
 
 |                                              | _props_ | _state_ |
 | -------------------------------------------- | ------- | ------- |
@@ -337,12 +335,12 @@ _**props**_** (short for **_**properties**_**) are a Component's configuration, 
 | Can change in child Components?              | Yes     | No      |
 
 {% hint style="warning" %}
-Note that both _props_ and _state_ initial values received from parents override default values defined inside a Component.
+**Note that both **_**props**_** and **_**state**_** initial values received from parents override default values defined inside a Component.**
 {% endhint %}
 
 #### **Component types**
 
-* **Stateless Component** — Only _props_, no _state._ There's not much going on besides the `render()` function and all their logic revolves around the _props_ they receive. This makes them very easy to follow (and test for that matter).&#x20;
+* **Pure Component** — Only _props_, no _state._ There's not much going on besides the `render()` function and all their logic revolves around the _props_ they receive. This makes them very easy to follow (and test for that matter).&#x20;
 * **Stateful Component** — Both _props_ and _state._ We also call these _state managers_. They are in charge of client-server communication (XHR, web sockets, etc.), processing data and responding to user events. These sort of logistics should be encapsulated in a moderate number of _Stateful Components_, while all visualization and formatting logic should move downstream into as many _Stateless Components_ as possible.
 
 ## References and articles :&#x20;

@@ -22,8 +22,8 @@ const animals = ["🦇" ,"🐕" ,"🐈" , "🐄"]
 
 function App() {
   return (
-    <div className="keys">
-      <ul style={{ listStyle: "none", paddingLeft: 0 }}>
+    <div>
+      <ul>
         {animals.map((item) => (
           <li>
             <div>{item}</div>
@@ -67,7 +67,7 @@ To see this in action, if i try adding unique `key` props to each of the checkbo
 {% embed url="https://codesandbox.io/embed/array-and-list-key-js8s7?fontsize=14&hidenavigation=1&theme=dark" %}
 
 {% hint style="danger" %}
-**As you can see in our example, we've moved the content JSX and ReactDOM.render method call inside a reverseAndRender function. Then, once defined, we call the function, which will render the content on the UI on page load. It's worth noting that we've also inserted the reverseAndRender function call within the onClick function. So, whenever we click the button, the reverseAndRender function is called, and we see the updated reversed checkboxes on the UI.**
+**In our example, we've encapsulated the content JSX and ReactDOM.render method call within a reverseAndRender function. After that, we call the function, which will render the content on the UI when the page loads. It's also worth noting that the reverseAndRender function call has been inserted within the onClick function. So, whenever we click the button, the reverseAndRender function is called, and the updated reversed checkboxes are displayed on the UI.**
 
 ****
 

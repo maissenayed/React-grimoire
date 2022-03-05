@@ -1,4 +1,4 @@
-# 🆗 Handling Events With React
+# 🏁 Handling Events With React
 
 Handling events with **React** elements is very similar to handling events on **DOM** elements. There are some syntax differences:
 
@@ -7,13 +7,13 @@ Handling events with **React** elements is very similar to handling events on **
 
 In the **JavaScript** community, these handler functions are sometimes called **callback functions**, or **callbacks** for short (but this is really just a fancy way of saying _function_.) For example, you could use a callback to verify if a button is clicked
 
-```
+```jsx
 <button onClick={() => alert("I'm clicked")}>Click me</button>
 ```
 
 ## Event props
 
-**React’s** event props are named after **DOM** events from raw **JavaScript**. For example, the `onClick` prop from the above example is named after the [DOM `click` event](https://developer.mozilla.org/en-US/docs/Web/Events/click). If you’ve used **jQuery** or raw **JavaScript** before, **React’s** events will feel familiar.
+**React’s** event props are named after **DOM** events from raw **JavaScript**. For example, the `onClick` prop from the above example is named after the [`DOM click event`](https://developer.mozilla.org/en-US/docs/Web/Events/click). If you’ve used **jQuery** or raw **JavaScript** before, **React’s** events will feel familiar.
 
 React has props for most DOM events. For example:
 
@@ -107,3 +107,4 @@ There are also a number of positioning properties:
 
 {% embed url="https://www.the-guild.dev/blog/react-dom-event-handling-system" %}
 
+{% embed url="https://reactjs.org/docs/events.html" %}

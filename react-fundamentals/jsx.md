@@ -2,7 +2,7 @@
 description: The Elegant React way
 ---
 
-# 🆗 JSX
+# 🏁 JSX
 
 Writing our code with React.createElement() and reactDOM.render(), it's a little bit verbose; not that readable.
 
@@ -99,6 +99,10 @@ Then let's try to change our React.createElement() to JSX
 ...
 ```
 
+{% hint style="danger" %}
+**You may have noticed that I changed the type of our JavaScript from module to text/babel and that's to indicate to the browser not to evaluate the script . However, babel will control the compiling for that script** &#x20;
+{% endhint %}
+
 Easy right? How about children?
 
 ```jsx
@@ -129,16 +133,26 @@ Easy right? How about children?
 ...
 ```
 
-{% hint style="danger" %}
-**You may have noticed that I changed the type of our JavaScript from module to text/babel and that's to indicate to the browser not to evaluate the script . However, babel will control the compiling for that script** &#x20;
+{% hint style="success" %}
+JSX appears to be HTML, but it is transformed into plain JavaScript objects under the hood by babel.
+
+You can't return two objects from a function unless they're wrapped in an array. This explains why you can't return two JSX tags without first wrapping them in another tag or fragment.
 {% endhint %}
 
+
+
 ## References and articles :&#x20;
+
+{% embed url="https://beta.reactjs.org/learn/writing-markup-with-jsx" %}
+
+{% embed url="https://beta.reactjs.org/learn/javascript-in-jsx-with-curly-braces" %}
 
 {% embed url="https://reactjs.org/docs/introducing-jsx.html" %}
 
 {% embed url="https://reactjs.org/docs/jsx-in-depth.html" %}
 
 {% embed url="https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html" %}
+
+{% embed url="https://www.frontendcheatsheets.com/cheatsheets/react/jsx" %}
 
 {% embed url="https://www.youtube.com/watch?index=2&list=PLNqp92_EXZBKa1U7JbgUwBnDk3XzYDvXe&v=HwNArS3f1Ss" %}

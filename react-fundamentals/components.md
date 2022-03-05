@@ -368,4 +368,10 @@ Both of these types of syntax work the same. Although, the newer syntax doesn't 
 
 ## References and articles :&#x20;
 
+{% embed url="https://beta.reactjs.org/learn/your-first-component" %}
+
+{% embed url="https://beta.reactjs.org/learn/conditional-rendering#conditionally-assigning-jsx-to-a-variable" %}
+
+{% embed url="https://www.frontendcheatsheets.com/cheatsheets/react/components" %}
+
 {% embed url="https://www.youtube.com/watch?index=4&list=PLNqp92_EXZBKa1U7JbgUwBnDk3XzYDvXe&v=ekIDdZE7YjM" %}
