@@ -10,18 +10,27 @@ It is made for small teams projects, but shines with Design System-ready teams
 
 ### Example
 
-Here, you can find a chat notification implemented with classic CSS:
+Here, you can find a button design implemented with classic CSS:
 
-![Line of code for a chat notification with classic CSS](https://ttt.studio/wp-content/uploads/2021/10/classic-css.png?x42814)
+![](../../.gitbook/assets/css)
 
 
 
-Here, is that same chat notification implemented with Tailwind classes:
+Here, is that same Button implemented with Tailwind classes:
 
-![Line of code for a chat notification with a Tailwind CSS](https://ttt.studio/wp-content/uploads/2021/10/tailwind-css-1024x423.png?x42814)
+![](../../.gitbook/assets/tail)
 
-Right off the bat, you’re probably thinking “Ew, talk about hard to read markup.” Even the developers of Tailwind will admit, in terms of first impressions, it’s not great, and that you have to try it to believe it! When I first looked into Tailwind, I was skeptical. I value readable code, and this seems like the opposite so why are so many developers swearing by Tailwind’s approach to utility-first?\
+In the above line of code, a simple button is defined using the following classes:
 
+* `bg-blue-500` class sets the background color of the button to blue. The number 500 specifies the shade.
+* `hover:bg-blue-700` class makes the button a slightly different shade of blue upon hovering.
+* `text-white` makes the text ‘Button’ white.
+* `font-bold` is used to bold the text.
+* `py-2` sets the height.
+* `px-4` sets the width.
+* `rounded-full` rounds the shape of the button.
+
+Right off the bat, you’re probably thinking “Ew, talk about hard to read markup.” Even the developers of Tailwind will admit, in terms of first impressions, it’s not great, and that you have to try it to believe it! When I first looked into Tailwind, I was skeptical. I value readable code, and this seems like the opposite so why are so many developers swearing by Tailwind’s approach to utility-first?
 
 ### **Utility-First: Pros**
 
@@ -47,7 +56,7 @@ Because the styling is done in the markup instead of an external stylesheet, whe
 
 You might be thinking, “okay utility sounds nice but what about when I want a button to have the same style throughout the app?”. Good news, it’s called “utility-first” not “utility-only.” You can still create regular classes while using Tailwind! If you need a button component, you can easily extract your Tailwind code to reusable classes
 
-![Line of code with Tailwind CSS showing a button](https://ttt.studio/wp-content/uploads/2021/10/button-1024x297.png?x42814)
+![](../../.gitbook/assets/aply)
 
 As you start to write utility-first css, you may come to the realization that most “components” don’t end up being reused anyway. It might seem necessary to have a class for your “Notification Bar” component, but will that class actually get reused somewhere? Probably not! You may use your `<NotificationBar />` component multiple places, but if your code is already extracted to its own component, what need will those _classes_ have elsewhere?
 
@@ -60,10 +69,6 @@ Browsers cache static assets, which is good for performance, but if you just nee
 **Hard to Read Markup**
 
 Readability definitely suffers when using utility classes. Especially if you need different class names for different breakpoints or hover events, you can very quickly end up with very long class names.&#x20;
-
-![Line of code with Tailwind CSS showing hard to read markup](https://ttt.studio/wp-content/uploads/2021/10/markup-1024x285.png?x42814)
-
-I couldn’t even screencap this whole line for an image. Just know that this scrolls on about another screen width…
 
 **Learning Curve**
 
@@ -93,7 +98,7 @@ I think Tailwind has a lot of practical advantage on the other css methodology l
 
 * No need of creating atomic classes, with unique class names with constrained set of properties. With react, Tailwind automatically creates css classnames tied to the actual components names. Making it extremely easy to track components styling while designing
 * The css files don’t grow infinitely until they become legacy resource no one understands. Any time a components needs style update, only it’s classname is updated and or interchanged. No need to maintain many css files. Of course, it is possible to use custom css files, usually in the form of CSS modules. But TailwindCSS provides us a simple way of creating a dedicated DSM by modifying and creating directly the utilities classnames we need to design our system.
-* Changes in styles are extremely easy to track and control. Since we rarely write custom css files, it’s very hard to get out of the framework and break something unintentionally. It is also very easy to use reusable, utility-first components pre-design by the team
+* Changes in styles are extremely easy to track and control. Since we rarely write custom css files, it’s very hard to get out of the framework and break something unintentionally. It is also very easy to use reusable
 * Unlike inline css, it is impossible to collapse css properties. The values of any constraint is pre-defined and you cannot get out of the custom DSM. This is a great advantage for consistent UIs a given app, and multiple apps using the same DSM
 * Inline styles are limited and cannot use some common css properties like Hover, focus, and other state variants, which are built-in Tailwind system
 * Everything is build in CSS under the hood, with 0 JavaScript involved
@@ -113,8 +118,6 @@ I think Tailwind has a lot of practical advantage on the other css methodology l
 * Multi projects configuration made simple with configuration presets
 * Uniformisation between frontend engineering team
 * Extensibility + development of the state of the art
-
-
 
 ## References and articles :
 
