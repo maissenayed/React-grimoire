@@ -95,3 +95,5 @@ It ain’t Fight Club, but we do have some rules to follow:
 {% embed url="https://blog.logrocket.com/react-hooks-frustrations" %}
 
 {% embed url="https://www.youtube.com/watch?v=TNhaISOUy6Q" %}
+
+{% embed url="https://www.youtube.com/watch?v=dpw9EHDh2bM" %}

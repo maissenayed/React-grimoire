@@ -77,3 +77,5 @@ But still, it's not feasible to call the **reverseAndRender** function every tim
 {% embed url="https://reactjs.org/docs/lists-and-keys.html#gatsby-focus-wrapper" %}
 
 {% embed url="https://epicreact.dev/why-react-needs-a-key-prop" %}
+
+{% embed url="https://www.youtube.com/watch?index=3&list=PLNqp92_EXZBKa1U7JbgUwBnDk3XzYDvXe&v=MJaGti42c5c" %}

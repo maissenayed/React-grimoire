@@ -101,4 +101,9 @@ There are also a number of positioning properties:
 
 {% embed url="https://stackblitz.com/edit/vitejs-vite-rsusfx?devtoolsheight=33&embed=1&file=src%2Fcomponent%2FMouse.jsx&hideExplorer=1&view=preview" %}
 
+## References and articles :&#x20;
+
 {% embed url="https://reactjs.org/docs/handling-events.html#gatsby-focus-wrapper" %}
+
+{% embed url="https://www.the-guild.dev/blog/react-dom-event-handling-system" %}
+

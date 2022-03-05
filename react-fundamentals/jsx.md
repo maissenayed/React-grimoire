@@ -140,3 +140,5 @@ Easy right? How about children?
 {% embed url="https://reactjs.org/docs/jsx-in-depth.html" %}
 
 {% embed url="https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html" %}
+
+{% embed url="https://www.youtube.com/watch?index=2&list=PLNqp92_EXZBKa1U7JbgUwBnDk3XzYDvXe&v=HwNArS3f1Ss" %}

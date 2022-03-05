@@ -63,17 +63,11 @@ That's it. We have `React` and `ReactDOM` as global variable that we can use in 
 
 **Syntax:**
 
-```jsx
-React.createElement(
-  type,
-  {...props},
-  [...children]
-)
-```
+![](<../.gitbook/assets/d (1).png>)
 
 {% embed url="https://reactjs.org/docs/react-api.html#createelement" %}
 
-React.createElement() takes three arguments. They are:
+`React.createElement()` takes three arguments. They are:
 
 * **type:**  The type argument can be either a **HTML** element tag name string (such as `'div'` or `'span'`), a [React component](https://reactjs.org/docs/components-and-props.html) type (a class or a function), or a [React fragment](https://reactjs.org/docs/react-api.html#reactfragment) type.
 * **props:** n object containing properties ('**props**' in **React** terms) that get passed to the component. Since we're just getting started with **React**, we won't use these just yet — but be aware that the second options serves this purpose.
@@ -87,20 +81,7 @@ So if you create an element with a custom type and children, you can access thos
 
 In fact, these two `createElement()` calls are equivalent:
 
-```jsx
-let a = createElement(
-  AnyType,
-  {
-    children: x
-  }
-)
-
-let b = createElement(
-  AnyType,
-  {},
-  x
-)
-```
+![](../.gitbook/assets/d.png)
 
 If we want one child for our element we can provide it within the **props** like the example below
 
@@ -153,9 +134,7 @@ const list =
 
 **Syntax:**
 
-```javascript
-ReactDOM.render(element,containerElement);
-```
+![](../.gitbook/assets/dddd.png)
 
 {% embed url="https://reactjs.org/docs/react-dom.html#render" %}
 
@@ -200,4 +179,3 @@ Let's see how our code will be using these two script files&#x20;
 {% embed url="https://cdmana.com/2021/12/202112180423000605.html" %}
 
 {% embed url="https://zhenyong.github.io/react/docs/top-level-api.html" %}
-

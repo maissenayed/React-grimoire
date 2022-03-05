@@ -125,3 +125,5 @@ When memoization is used inappropriately, it could harm the performance.
 {% embed url="https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0" %}
 
 {% embed url="https://alexsidorenko.com/blog/react-render-usememo" %}
+
+{% embed url="https://www.youtube.com/watch?v=DEPwA3mv_R8" %}

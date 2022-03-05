@@ -83,3 +83,5 @@ A great example of hook flow i found is Kent c dodds example :
 {% embed url="https://reactjs.org/docs/hooks-reference.html" %}
 
 {% embed url="https://github.com/donavon/hook-flow" %}
+
+{% embed url="https://egghead.io/lessons/react-understand-the-react-hook-flow" %}

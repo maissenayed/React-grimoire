@@ -4,6 +4,8 @@ description: A piece of the puzzle
 
 # 🆗 Components
 
+![](../.gitbook/assets/download.png)
+
 ## Custom components
 
 You frequently want to share code, just like in regular **JavaScript**, which you do by using functions. If you want to distribute **JSX**, you can do so as well. These functions are referred to as "components" in **React** and have some unique properties that's defined or called props.
@@ -363,3 +365,7 @@ return (
 ```
 
 Both of these types of syntax work the same. Although, the newer syntax doesn't support keys or attributes.
+
+## References and articles :&#x20;
+
+{% embed url="https://www.youtube.com/watch?index=4&list=PLNqp92_EXZBKa1U7JbgUwBnDk3XzYDvXe&v=ekIDdZE7YjM" %}

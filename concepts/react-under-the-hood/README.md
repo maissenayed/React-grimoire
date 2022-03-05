@@ -19,3 +19,7 @@ This is a list of various articles on react source code and architecture
 {% embed url="https://eliav2.github.io/how-react-hooks-work" %}
 
 {% embed url="https://itnext.io/under-the-hood-of-react-hooks-805dc68581c3" %}
+
+{% embed url="https://www.youtube.com/watch?v=7YhdqIR2Yzo" %}
+
+{% embed url="https://www.youtube.com/watch?v=BXTU4NmMu8A" %}

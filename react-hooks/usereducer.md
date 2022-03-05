@@ -482,3 +482,5 @@ The engine order telegraph helps separate the bridge from the engine room. The s
 {% embed url="https://sourcemaking.com/design_patterns/command" %}
 
 {% embed url="https://refactoring.guru/design-patterns/command" %}
+
+{% embed url="https://www.youtube.com/watch?v=aM1bxz-82Qw" %}

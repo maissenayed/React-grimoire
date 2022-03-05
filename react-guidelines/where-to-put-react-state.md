@@ -12,6 +12,12 @@
 
 {% embed url="https://kentcdodds.com/blog/prop-drilling" %}
 
+{% embed url="https://kentcdodds.com/blog/colocation" %}
+
+{% embed url="https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster" %}
+
 {% embed url="https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster" %}
 
 {% embed url="https://dmitripavlutin.com/react-state-management" %}
+
+{% embed url="https://hackernoon.com/reactjs-lifting-state-up-explained" %}

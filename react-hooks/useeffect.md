@@ -304,3 +304,10 @@ setAdvice(json.slip.advice)
 
 {% embed url="https://kentcdodds.com/blog/react-hooks-pitfalls" %}
 
+{% embed url="https://www.youtube.com/watch?t=4s&v=lStfMBiWROQ" %}
+
+{% embed url="https://www.youtube.com/watch?v=F-0SZ_TicXA" %}
+
+{% embed url="https://www.youtube.com/watch?t=628s&v=dH6i3GurZW8" %}
+
+{% embed url="https://www.youtube.com/watch?index=6&list=PLNqp92_EXZBKa1U7JbgUwBnDk3XzYDvXe&v=OCg4DJyVGk0" %}

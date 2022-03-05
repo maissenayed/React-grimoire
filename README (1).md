@@ -12,22 +12,9 @@ Before tackling **React**, maybe we should review how to make a basic web page u
 
 Basically, the most minimal thing that we can call a web page is just one **HTML File** that says "Hello world".
 
-Like this one :
+Like this one&#x20;
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   <div id='root'>Hello World</div>
-</body>
-</html>
-```
+![](.gitbook/assets/ssddssd.png)
 
 {% hint style="info" %}
 **The browser parses this HTML code and creates the DOM (Document Object Model). The browser, then, exposes the DOM to JavaScript. At that point, your web page will become interactive where you can do the basic events that we will talk about in another Section.**
@@ -43,16 +30,7 @@ Rajakvk’s Blog
 
 Now**,** if we want to add some **JavaScript** we can just use the **script tag**&#x20;
 
-```html
-<html>
-  <body>
-    <div id='root'>Hello World</div>
-    <script type="module">
-      // your JavaScript here
-    </script>
-  </body>
-</html>
-```
+![](.gitbook/assets/fdsfdf.png)
 
 {% hint style="success" %}
 **ES6 modules**
@@ -66,14 +44,7 @@ The first question ever that I asked myself was how can **JavaScript** interact 
 
 How can I really create, modify or delete **DOM** element using **JavaScript**? These questions lead to my two first **JavaScript** commands I wrote:
 
-```javascript
-// Create an element in the DOM .
-const root = document.createElement('div')
-
-// the constant root is now a taking some space in our memory without doing anything ,
-// To make it show up we need to append it the document body (DOM tree).
-document.body.append(rootElement)
-```
+![](.gitbook/assets/dsqdsqsd.png)
 
 {% hint style="info" %}
 **The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree. With them, you can change the document's structure, style, or content.**

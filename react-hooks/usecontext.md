@@ -226,3 +226,7 @@ You can find more from the creator of redux him self&#x20;
 {% embed url="https://blog.logrocket.com/pitfalls-of-overusing-react-context" %}
 
 {% embed url="https://kentcdodds.com/blog/how-to-use-react-context-effectively" %}
+
+{% embed url="https://www.youtube.com/watch?t=2s&v=1kFX3B2IyH0" %}
+
+{% embed url="https://www.youtube.com/watch?v=MpdFj8MEuJA" %}

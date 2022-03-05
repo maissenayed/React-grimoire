@@ -269,6 +269,6 @@ It’s important to note that in some cases, React may still render the specific
 
 If expensive calculations are done within the body of your functional component, i.e., before the return statement, consider optimizing these with `useMemo`.(we will cover [useMemo  in another section](usememo.md))&#x20;
 
-Reference
+## References and articles :&#x20;
 
 {% embed url="https://juejin.cn/post/6844903833764642830" %}

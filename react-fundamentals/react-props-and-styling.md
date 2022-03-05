@@ -10,15 +10,23 @@ description: Functions have arguments , component have Props
 
 Every React element has a `props` object. For elements representing **HTML** tags, this is just an object containing [DOM properties](https://developer.mozilla.org/en-US/docs/Web/API/Element#Properties).
 
+Props stand for Properties. They are the read-only components which work similar to the HTML attributes. Prop is a way of passing data from parent to child component.
+
 Think of props as arguments to a function. React components are functions which return JSX (or more generally something that's render-able like React elements, `null`, a string, etc.). Typically, when you have a piece of code that you would like to reuse, you can place that code into a function and any dynamic values that code used before can be accepted as arguments (for example `const result = 2 + 3` could be extracted to a function and accept arguments like so `const result = add(2, 3)`).
 
 {% hint style="info" %}
-NOTE: Props can be anything.  they can also be (and often are) strings, arrays, objects, functions, etc.
+**NOTE: Props can be anything.  they can also be (and often are) strings, arrays, objects, functions, etc.**
 {% endhint %}
+
+As we already know, the react components arrange the UI in the form of a tree where the parent component becomes the root and child components become branches and sub-branches. Now suppose parent component wants to send data to one of its deeply nested components. Let us say from component 1 you need to send a property to component 6. How will you do that?
+
+![prop - React Components - Edureka](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/08/prop-1.png)
+
+You cannot pass down a property directly to the target component. This is because React follows the rule where properties have to flow down from a parent component to an _immediate_ child component. This means you can’t skip a layer of child components when sending a property and the child components can’t send property back up to a parent as well. You can have default props in case a parent component doesn’t pass down props so that they are still set. This is why React has one-way data binding.
 
 For example, if you want to render this **HTML** using `ReactDOM.render()`:
 
-```
+```jsx
 <a id="home" href="http://lsxs.me/home">Visual Systems</a>
 ```
 
@@ -165,3 +173,11 @@ And in JSX&#x20;
   </body>
 </html>
 ```
+
+## References and articles :&#x20;
+
+{% embed url="https://blog.yipl.com.np/demystifying-react-styling-approaches-433b84d20337" %}
+
+{% embed url="https://www.taniarascia.com/overview-of-css-concepts" %}
+
+{% embed url="https://www.youtube.com/watch?t=141s&v=ouncVBiye_M" %}

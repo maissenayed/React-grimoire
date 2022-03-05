@@ -10,7 +10,7 @@ This pattern transforms a component into a Controlled Component . External state
 
 &#x20;
 
-![wishette](https://blog.kakaocdn.net/dn/dvk8p6/btrh9RZNfGO/kAO6ZnaPjLLpYN3tW7pgnk/img.jpg)
+![](https://blog.kakaocdn.net/dn/dvk8p6/btrh9RZNfGO/kAO6ZnaPjLLpYN3tW7pgnk/img.jpg)
 
 #### ㅣ Disadvantages
 
