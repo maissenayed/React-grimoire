@@ -74,7 +74,7 @@ The value returned from `useContext` is determined by the value `prop` of the ne
 
 Note that using the `useContext` Hook within a component implicitly subscribes to the nearest `Provider` in the component tree, i.e., when the `Provider` updates, this Hook will trigger a serenader with the latest value passed to that `Provider`.
 
-![Re-render triggered with new provider value](../.gitbook/assets/re-render-triggered-provider-value.png)
+![](<../.gitbook/assets/re-render queue (3) (2).gif>)
 
 Here’s an even more important point to remember. If the ancestor component uses `React.memo` or `shouldComponentUpdate`, a re-render will still happen starting at the component that calls `useContext`.
 
