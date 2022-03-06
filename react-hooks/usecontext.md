@@ -10,9 +10,9 @@ There has always been a need to share data with different components when workin
 
 Let’s consider the diagram below:
 
-![](../.gitbook/assets/props-drilling.png)
-
 &#x20;
+
+![](<../.gitbook/assets/re-render queue (1) (1).gif>)
 
 For the data in the A component to be accessed in the C component, it has to be passed down as prop to the B component, and then finally the C component. This is known as threading.
 
