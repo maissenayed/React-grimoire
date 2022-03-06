@@ -25,7 +25,7 @@ If you find this book useful, please feel free to add it to your reading list, b
 {% endhint %}
 
 {% hint style="warning" %}
-**Git book has only a light theme, if you are like me and you like always you reading materials on Dark themed pages, please try this chrome extension**
+**Git book has only a light theme, if you are like me and you like always your reading materials on Dark themed pages, please try this chrome extension**
 
 [https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh)
 {% endhint %}
