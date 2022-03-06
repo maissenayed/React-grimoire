@@ -1,8 +1,8 @@
 # 🆗 useCallback
 
-## useCallback <a href="#44df" id="44df"></a>
 
-So the goal of `useCallback` is to avoid unnecessary re-renders, it receives two values: a function that will be memorized and an array of dependencies that will update this function each time any of the values change.
+
+The goal of `useCallback` is to avoid unnecessary re-renders, it receives two values: a function that will be memorized and an array of dependencies that will update this function each time any of the values change.
 
 ![](../.gitbook/assets/dsfsgsgg.png)
 
@@ -49,8 +49,17 @@ function MyComponent() {
 
 Imagine you have a component that renders a big list of items:
 
-```
-import useSearch from './fetch-items';function MyBigList({ term, onItemClick }) {  const items = useSearch(term);  const map = item => <div onClick={onItemClick}>{item}</div>;  return <div>{items.map(map)}</div>;}export default React.memo(MyBigList);
+```jsx
+import useSearch from './useSearch';
+
+function MyBigList({ term, onItemClick }) {
+  const items = useSearch(term);
+  
+  const map = (item) => <div onClick={onItemClick}>{item}</div>;
+  
+  return <div>{items.map(map)}</div>;
+}
+export default React.memo(MyBigList)
 ```
 
 The list could be big, maybe hundreds of items. To prevent useless list re-renderings, you wrap it into `React.memo()`.

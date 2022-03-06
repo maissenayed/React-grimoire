@@ -5,7 +5,7 @@ Using [Ant design](https://ant.design) or [material ui ](https://mui.com)is nit 
 But the question arise when having the need of sharing UI components across many projects. and I you find yourself pasting the same UI components, here comes the need for a design system
 
 {% hint style="info" %}
-if you want to know more about the difference between ui libs and design system please read ([What's a design system anyway ?​?](../../design-system/whats-a-design-system-anyway.md))
+if you want to know more about the difference between ui libs and design system please read ([What's a design system anyway ?​?](../../../design-system/whats-a-design-system-anyway.md))
 {% endhint %}
 
 {% hint style="warning" %}
@@ -39,6 +39,8 @@ If CSS is not broken up into files/sections, it becomes hard to find and edit th
 {% hint style="info" %}
 **The crux of CSS problems really boils down to one thing: CSS can get unwieldy very quickly if not properly managed. We would like to avoid too-long sheets, deep nested selectors, and unnecessary !important’s. Each of the following CSS methodologies approach solving these problems in their own way.**
 {% endhint %}
+
+
 
 ## References and articles :
 

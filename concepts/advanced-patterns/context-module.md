@@ -4,7 +4,7 @@
 
 {% embed url="https://vtechguys.medium.com/context-module-pattern-in-react-dd3e89d56f2d" %}
 
-**One liner:** The Context Module Functions Pattern allows you to encapsulate a complex set of state changes into a utility function which can be tree-shaken and lazily loaded.
+The Context Module Functions Pattern enables you to encapsulate a complex set of state changes in a utility function that can be tree-shaken and loaded lazily.
 
 Let's take a look at an example of a simple context and a reducer combo:
 
@@ -47,7 +47,6 @@ export {CounterProvider, useCounter}
 ```
 
 ```jsx
-// src/screens/counter.js
 import {useCounter} from 'context/counter'
 
 function Counter() {
@@ -65,7 +64,6 @@ function Counter() {
 ```
 
 ```jsx
-// src/index.js
 import {CounterProvider} from 'context/counter'
 
 function App() {
@@ -98,7 +96,7 @@ return <CounterContext.Provider value={value} {...props} />
 const {state, increment, decrement} = useCounter()
 ```
 
-This isn't a _bad_ solution necessarily. But [DanAbramov](https://twitter.com/dan\_abramov/status/1125758606765383680):
+This isn't a _bad_ solution necessarily. But [DanAbramov](https://twitter.com/dan\_abramov/status/1125758606765383680) said:
 
 > Helper methods are object junk that we need to recreate and compare for no purpose other than superficially nicer looking syntax.
 

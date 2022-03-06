@@ -1,5 +1,9 @@
 # ℹ Class Component Life Cycle
 
+> The actual source code contents comes from [Ohans Emmanuel](https://blog.logrocket.com/author/ohansemmanuel/) blog.
+>
+> If you have interests, you can check blog for more interesting content .
+
 ## What is the React component lifecycle? <a href="#whatisthereactcomponentlifecycle" id="whatisthereactcomponentlifecycle"></a>
 
 What are the **lifecycle** methods in **React**? To put it simply, the React component **lifecycle** can be thought of as a component's "lifetime." **Lifecycle** methods are a series of events that occur during a React component's birth, growth, and death.
@@ -33,9 +37,9 @@ There’s one more phase a React component can go through: the **error handling*
 
 ## React lifecycle methods? <a href="#whatarereactlifecyclemethods" id="whatarereactlifecyclemethods"></a>
 
-Each React lifecycle phase has a number of lifecycle methods that you can override to run code at specified times during the process. These are popularly known as component lifecycle methods.
+Each React lifecycle phase has a set of lifecycle methods that you can override to run code at specific points throughout the process. These are commonly referred to as component lifecycle methods.
 
-The diagram below shows the React lifecycle methods associated with the mounting, updating, umounting :
+The diagram below shows the React lifecycle methods.associated with the mounting, updating, umounting :
 
 {% embed url="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram" %}
 Credits : Wojciech Maj
@@ -51,7 +55,7 @@ The following methods are called in order.
 
 The <mark style="color:blue;">**constructor()**</mark> is the very first method called as the component is “brought to life.”
 
-The constructor method is called before the component is mounted to the DOM. In most cases, you would initialize state and bind event handlers methods within the constructor method.
+Before the component is mounted to the DOM, the constructor method is called. In most cases, the constructor method would be used to initialize state and bind event handler methods.
 
 Here’s a quick example of the `constructor()` React lifecycle method in action:
 
@@ -719,6 +723,8 @@ render() {
 }
 ```
 
+{% embed url="https://codesandbox.io/s/life-cycles-yxpiym" %}
+
 {% embed url="https://reactjs.org/docs/state-and-lifecycle.html#gatsby-focus-wrapper" %}
 
 {% embed url="https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class" %}
@@ -730,3 +736,5 @@ I just wanted to share one of the best example of lifecycle Similator by ReactFa
 a very good visual representation for the React component Life cycles&#x20;
 
 {% embed url="https://reactarmory.com/guides/lifecycle-simulators" %}
+
+{% embed url="https://blog.logrocket.com/react-lifecycle-methods-tutorial-examples" %}

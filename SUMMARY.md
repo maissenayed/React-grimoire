@@ -23,7 +23,7 @@
 * [☢ useEffect](react-hooks/useeffect.md)
 * [🆗 useRef](react-hooks/useref.md)
 * [⚠ useContext](react-hooks/usecontext.md)
-* [🆗 useMemo](react-hooks/usememo.md)
+* [🏁 useMemo](react-hooks/usememo.md)
 * [🆗 useCallback](react-hooks/usecallback.md)
 * [🆗 useReducer](react-hooks/usereducer.md)
 * [🆗 useLayoutEffect](react-hooks/uselayouteffect.md)
@@ -50,26 +50,26 @@
   * [⚠ State Reducer](concepts/advanced-patterns/state-reducer.md)
   * [⚠ Context Module](concepts/advanced-patterns/context-module.md)
 * [React Under the hood](concepts/react-under-the-hood/README.md)
-  * [🆗 What is "Rendering"?](concepts/react-under-the-hood/what-is-rendering.md)
-  * [🆗 React Lifecycle](concepts/react-under-the-hood/react-lifecycle.md)
-  * [🆗 Reconciliation & Virtual DOM in React](concepts/react-under-the-hood/reconciliation-and-virtual-dom-in-react.md)
-  * [🆗 Fiber](concepts/react-under-the-hood/fiber.md)
+  * [🏁 What is "Rendering"?](concepts/react-under-the-hood/what-is-rendering.md)
+  * [🏁 React Lifecycle](concepts/react-under-the-hood/react-lifecycle.md)
+  * [🏁 Reconciliation & Virtual DOM in React](concepts/react-under-the-hood/reconciliation-and-virtual-dom-in-react.md)
+  * [🏁 Fiber](concepts/react-under-the-hood/fiber.md)
 
 ## 🧩 React ecosystem
 
 * [Forms Tools](react-ecosystem/forms-tools/README.md)
   * [React Hook Form VS Formik](react-ecosystem/forms-tools/react-hook-form-vs-formik.md)
 * [TypeScript](concepts/typescript/README.md)
-  * [🆗 Conditional React props with TypeScript](concepts/typescript/conditional-react-props-with-typescript.md)
-* [A CSS methodology comparison](react-ecosystem/a-css-methodology-comparison/README.md)
-  * [🆗 Post CSS processor :Sass](react-ecosystem/a-css-methodology-comparison/post-css-processor-sass.md)
-  * [🆗 CSS in js :Styled-components](react-ecosystem/a-css-methodology-comparison/css-in-js-styled-components.md)
-  * [🆗 Utility Classes: Tailwind](react-ecosystem/a-css-methodology-comparison/utility-classes-tailwind.md)
-* [🆗 Build tool choice for MVP projects](react-ecosystem/build-tool-choice-for-mvp-projects.md)
+  * [🏁 Conditional React props with TypeScript](concepts/typescript/conditional-react-props-with-typescript.md)
+* [🏁 Build tool choice for MVP projects](react-ecosystem/build-tool-choice-for-mvp-projects.md)
 
 ## ⁉ Testing
 
-* [In Progress](testing/in-progress.md)
+* [In Progress](testing/in-progress/README.md)
+  * [A CSS methodology comparison](testing/in-progress/a-css-methodology-comparison/README.md)
+    * [🆗 Post CSS processor :Sass](testing/in-progress/a-css-methodology-comparison/post-css-processor-sass.md)
+    * [🆗 CSS in js :Styled-components](testing/in-progress/a-css-methodology-comparison/css-in-js-styled-components.md)
+    * [🆗 Utility Classes: Tailwind](testing/in-progress/a-css-methodology-comparison/utility-classes-tailwind.md)
 
 ## 🎭 Performance&#x20;
 

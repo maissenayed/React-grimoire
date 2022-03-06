@@ -108,3 +108,5 @@ There are also a number of positioning properties:
 {% embed url="https://www.the-guild.dev/blog/react-dom-event-handling-system" %}
 
 {% embed url="https://reactjs.org/docs/events.html" %}
+
+{% embed url="https://beta.reactjs.org/learn/adding-interactivity" %}

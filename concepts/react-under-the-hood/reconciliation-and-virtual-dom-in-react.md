@@ -1,4 +1,4 @@
-# 🆗 Reconciliation & Virtual DOM in React
+# 🏁 Reconciliation & Virtual DOM in React
 
 ## References and articles :
 

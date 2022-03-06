@@ -1,4 +1,4 @@
-# 🆗 React Lifecycle
+# 🏁 React Lifecycle
 
 In React applications, code is separated into components to isolate different aspects of the user experience as well as the logic required to paint the user interface. These components define how the user should interact with the content and how they should see it.
 

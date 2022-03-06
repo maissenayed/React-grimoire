@@ -1,16 +1,8 @@
 # 🆗 useImperativeHandle
 
-### useImperativeHandle React Hook
 
-Since, if you are looking for this useImperativeHandle tutorial, then it must be sure you have already worked with other basics React Hooks like [useState](https://codezup.com/how-to-implement-callback-for-usestate-react-hook/), useEffect, etc.
 
-We usually or approx. 99% time we often use these basics hooks and we have never tried or found what we can do with the useImperativeHandle Hook.
-
-What I have seen like, useImperativeHandle, useLayoutEffect, and useDebugValue are the least used hooks to date.
-
-In this tutorial, we will discuss only the useImperativeHandle, later we are gonna cover useLayoutEffect and useDebugValue in a separate tutorial.
-
-So, According to the definition on [Reactjs’ official website](https://reactjs.org/docs/hooks-reference.html#useimperativehandle), useImperativeHandle customizes the instance value that is exposed to parent components when using ref.
+According to the definition on [Reactjs’ official website](https://reactjs.org/docs/hooks-reference.html#useimperativehandle), useImperativeHandle customizes the instance value that is exposed to parent components when using ref.
 
 As to let useImperativeHandle work, it must be wrapped inside the forwardRef. If you didn’t know about forwardRef, [you can visit our previous article on forwardRef](https://codezup.com/forwardref-in-functional-components-react-hooks/).
 

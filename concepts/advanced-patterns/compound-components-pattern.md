@@ -172,7 +172,7 @@ function Accordion({ children }) {
 }
 ```
 
-e create `MenuContext` and use `MenuContext.Provider` to pass `openItem` and `setOpenItem` props. Also note how we wrapped `value` with [useMemo](https://reactjs.org/docs/hooks-reference.html#usememo) to prevent redundant re-renders.
+&#x20;create `MenuContext` and use `MenuContext.Provider` to pass `openItem` and `setOpenItem` props. Also note how we wrapped `value` with [useMemo](https://reactjs.org/docs/hooks-reference.html#usememo) to prevent redundant re-renders.
 
 #### MenuItem <a href="#accordionitem-1" id="accordionitem-1"></a>
 

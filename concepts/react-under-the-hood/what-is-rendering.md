@@ -1,4 +1,4 @@
-# 🆗 What is "Rendering"?
+# 🏁 What is "Rendering"?
 
 ## Component render process&#x20;
 

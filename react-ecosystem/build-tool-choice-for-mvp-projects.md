@@ -1,4 +1,4 @@
-# 🆗 Build tool choice for MVP projects
+# 🏁 Build tool choice for MVP projects
 
 Creating React app really doesn't need any fancy builder as you can do it by your self we just simple CDN, thus that approach can work for small exercises or just playing with code , in real world we use building tools that facilitate the task of configuring the project bundling the app and managing 3'rd tiers libraries.
 
