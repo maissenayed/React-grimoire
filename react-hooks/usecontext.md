@@ -70,7 +70,7 @@ Again, in case if the context value changes, `<Context.Consumer>` will re-render
 
 The value returned from `useContext` is determined by the value `prop` of the nearest `Provider` above the calling component in the tree.
 
-![useContext value will be 1](../.gitbook/assets/usecontext-value-1.png)
+![](<../.gitbook/assets/re-render queue (2) (6).gif>)
 
 Note that using the `useContext` Hook within a component implicitly subscribes to the nearest `Provider` in the component tree, i.e., when the `Provider` updates, this Hook will trigger a serenader with the latest value passed to that `Provider`.
 
