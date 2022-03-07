@@ -1,6 +1,8 @@
-# 🏁 Reconciliation & Virtual DOM in React
+# ⚠ Reconciliation & Virtual DOM in React
 
-## References and articles :
+## References and articles :thumbsup:
+
+{% embed url="https://shopify-1.gitbook.io/react/3.-advanced-topics/reconciliation" %}
 
 {% embed url="https://www.fatalerrors.org/a/virtual-dom-and-diff-algorithm-in-react.html" %}
 

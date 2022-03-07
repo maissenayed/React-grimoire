@@ -12,6 +12,17 @@ A function is analogous to a black box that performs some action on input and pr
 
 ## Custom Hook <a href="#8fa7" id="8fa7"></a>
 
+### Why custom hooks? <a href="#why-custom-hooks" id="why-custom-hooks"></a>
+
+Because hooks can be treated in a variety of ways like functions, what we know about functions still applies.
+
+* They're reusable
+* We can break our larger hooks into smaller hooks
+* We can compose our smaller hooks together, like lego bricks
+* They're testable
+
+Sure, you could always re-use the same sequence of hooks in each component (useState, useEffect, update state...), but why repeat yourself when you could extract the logic out into a well-tested custom hook?
+
 A Custom Hook is in fact this. A window-programming-interface to expose states and actions and simplify the code. Let’s see an example.
 
 We define a hook called "**useCounter**" in the following code. It reveals the "count" value thus far (state of current counting). And receive actions such as "reset with some value," "increment by one," "decrement by one," "add some value," and "subtract some value." This programming interface is accessible to any component and always performs the same function.

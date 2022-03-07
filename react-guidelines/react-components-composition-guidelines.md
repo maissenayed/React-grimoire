@@ -1,4 +1,4 @@
-# 🆗 React Components Composition Guidelines
+# 🏁 React Components Composition Guidelines
 
 > One of the many great parts of React is how it makes you think about apps as you build them.
 
@@ -10,13 +10,13 @@ We highly recommend you to go to :
 
 {% embed url="https://reactjs.org/docs/composition-vs-inheritance.html" %}
 
-Component composition is the fundamental concept in React that’s essential to learn to become a solid React developer. Newer React devs tend to use inheritance and Context to solve problems that could often be solved more elegantly using composition.
+Component composition is a fundamental concept in React that must be learned in order to become a competent React developer. Inheritance and Context are frequently used by newer React developers to solve problems that could be solved more elegantly using composition.
 
-Let’s review the basic principles behind composition in React and brush up on our fundamentals.
+Let's go over the fundamental principles of composition in React and brush up on our fundamentals.
 
 ### Overview of Component composition <a href="#overview-of-component-composition" id="overview-of-component-composition"></a>
 
-Simply put, component composition means building more complex components on top of simpler ones. There are two ways to go about it:
+To put it simply, component composition is the process of layering more complex components on top of simpler ones. There are two approaches to take:
 
 * Specialized components
 * Container components
@@ -25,11 +25,13 @@ Let’s cover these two approaches in more detail.
 
 ## Specialized component <a href="#specialized-component" id="specialized-component"></a>
 
-Specialized components are more opinionated versions of generic components. In other words, specialized components are usually non-reusable versions of the generic components that we tailored for a specific use case.
+Specialized components differ from generic components in that they are more opinionated. In other words, specialized components are typically non-reusable versions of generic components that have been customized for a specific use case.
 
-We create specialized components by rendering generic ones and configuring the props to match our specific use case.
+We make specialized components by rendering generic ones and configuring the props to our specific use case.
 
-Let’s see an example where we create our newsletter sign-up form using a generic form component.\
+Let's look at an example where we use a generic form component to create a newsletter sign-up form.
+
+\
 We will start with the generic form:
 
 ![](../.gitbook/assets/text.png)
@@ -40,15 +42,15 @@ Now, we will create the specialized `NewsletterForm` component on top of our `Fo
 
 ![](../.gitbook/assets/fsdfdfff.png)
 
-identifying patterns that you use a lot throughout your app and turning them into generic reusable components is an important skill to develop.
+Identifying patterns that you use frequently throughout your app and converting them into generic reusable components is a valuable skill to learn.
 
-Once you have a solid set of generic components, it’s much easier and faster to create specialized ones on top of them. That’s why it’s always a good idea to include a UI component library in your new project.
+Once you've established a solid foundation of generic components, building specialized ones on top of them becomes much easier and faster. That is why including a UI component library in your new project is always a good idea.
 
 ## Container component <a href="#container-component" id="container-component"></a>
 
-The container component provides certain functionality without knowing its children ahead of time. This kind of component usually has a `children` prop that lets you pass any arbitrary content. Good examples of container components are sidebars or dialogs.
+Without knowing its children ahead of time, the container component provides certain functionality. This type of component typically includes a children prop that allows you to pass any arbitrary content. Sidebars and dialogs are good examples of container components.
 
-The container component is a flexible and versatile pattern. An example I often use in my applications is the gate component that checks the user’s authentication status before rendering its children.&#x20;
+The container component is a versatile and adaptable pattern. A gate component that checks the user's authentication status before rendering its children is an example I frequently use in my applications.
 
 Now, let’s see this pattern in action and create a simple version of the gating component:
 
@@ -56,48 +58,88 @@ Now, let’s see this pattern in action and create a simple version of the gatin
 
 ### Container with multiple child props <a href="#container-with-multiple-child-props" id="container-with-multiple-child-props"></a>
 
-In some cases, you might need container components with multiple places to inject your custom content.
+In some cases, you may require container components with multiple injection points for your custom content.
 
-One example could be a hypothetical `Dashboard` component that accepts header and content components.
+A hypothetical **Dashboard** component that accepts header and content components is one example.
 
 ![](../.gitbook/assets/dash.png)
 
-When you need to build a container with multiple “holes,” you can break away from the pattern of using the `children` prop and add custom props for your injected content.
+When you need to create a container with multiple "holes," you can deviate from the children prop pattern and use custom props for your injected content.
 
 ### Why composition is important <a href="#why-composition-is-important" id="why-composition-is-important"></a>
 
-By now, you should see that component composition is extremely useful when working with React. Still, let’s list the main advantages of using component composition:
+You should be able to see by now that component composition is extremely useful when working with React. Still, here are the main benefits of using component composition:
 
-* When building your components on top of the generic ones, you have fewer components that feel like a black box. That, in turn, will improve the transparency in your code and will make it more readable.
-* Using intelligent component composition, you can often avoid prop drilling without Context or Redux. More often than not, when you think you need Context to pass props, you need to rethink your component composition.
-* Over time, you will build a component toolbox that will increase the velocity of your development. Creating new components will become much faster.
+* When you build your components on top of generic ones, you end up with fewer components that feel like a black box. This, in turn, will improve the transparency and readability of your code.
+* You can often avoid prop drilling without Context or Redux by using intelligent component composition. When you believe you need Context to pass props, you should rethink your component composition.
+* You will gradually accumulate a component toolbox, which will increase the velocity of your development. Developing new components will become much more efficient.
 
 ## Tips and tricks
 
-Always Start by highlighting and identify the composition of the top-level App component and the composition of global layers like pages, global layers ( such as Headers, Sidebars, Layouts, Footer ), etc…
+Always begin by highlighting and identifying the composition of the top-level App component as well as the composition of global layers such as pages, global layers (such as Headers, Sidebars, Layouts, Footer), and so on...
 
-#### Shared components definition roadmap (no code involved)
+{% embed url="https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns" %}
 
-1. Given your base material ( mockups/wireframes or existing ) begin page by page, examine all the elements, look at the current data the page is requesting, list every data involved. To correctly implement user actions, separate concerns, and simplify the development process, you also need to list all the current user actions on the page. Then extract the "final components" identified ( root react component without wrappers/providers ).
+{% embed url="https://www.lukew.com/ff/entry.asp?1514=" %}
+
+{% embed url="https://responsivedesign.is/patterns" %}
+
+### Shared components definition roadmap&#x20;
+
+Beginning with your base material (**mockups/wireframes, etc..)**, examine all the elements, look at the current data the page is requesting, and list all data involved.&#x20;
 
 Reusable components are often agnostic. They don’t know what they render, neither hold any specific logic, they just render.
 
-If you’re having a hard time figuring out what elements you should create components, you can start to imagine what are states you need to create and how they’ll flow with data through your UI ([https://reactjs.org/docs/thinking-in-react.html](https://reactjs.org/docs/thinking-in-react.html) ). if you need, consider using a scoped [react context](https://reactjs.org/docs/context.html) too.
+{% embed url="https://reactjs.org/docs/thinking-in-react.html" %}
 
-* Alongside the previous point, for each underlying component extracted, if some wrappers are business logic components, associate the logic attached by simply writing what this logic is supposed to accomplish. This includes smart components with logic.
-* If you see that some non-business logic used in multiple places, think about creating **custom hooks** ( please read the [**react hooks guidelines**](broken-reference) ) at page-level or shared for the app. If you think that some of the business logic of your page could be or should be isolated in a custom hook, please discuss this subject with your colleague to define if it's a good idea or not               ( maybe you should consider moving this logic in an API / library / micro-front / ... instead )&#x20;
-* &#x20;Process and standardize the props. Inspect the similar components by summarizing the common props, list them and try to create a uniform experience across every component. ( ex: if you have two components that take a string and displays it as a title one props is name `title` and the other `headerText` consider using only one of them across both components )
+* If some wrappers are business logic components, simply write what this logic is supposed to accomplish. This includes intelligent components with logic.
+* &#x20;Props should be processed and standardised. Examine the similar components by summarizing the common props, listing them, and attempting to create a consistent experience across all components. (For example, if you have two components that take a string and display it as a title, one prop is name `title` and the other `label`, use only one of them across both components.)
 
 ```tsx
 // from
-<Dialog title="some text" />
-<Card headerText="some text" />
+<Box title="some text" />
+<Card label="some text" />
 
 // to 
-<Dialog title="some text" />
+<Box title="some text" />
 <Card title="some text" />
 
 ```
+
+### Separate constants and helpers into different files <a href="#00fa" id="00fa"></a>
+
+My objective when writing React components is to keep each file under 200 lines. This means moving `helper` functions into a separate `component.utils.ts` file and constants into a `component.constants.ts` file to make the component smaller and easier to read.
+
+### Avoid nesting render functions <a href="#83bd" id="83bd"></a>
+
+This is one of my least favorite practices to come across in the code I review. Don't create a function that lives inside another component when extracting markup and logic from a component. Nesting components is almost always a bad idea because it makes code difficult to read.
+
+Move the new component to its own files and rely on props rather than using a globally nested state.
+
+{% hint style="warning" %}
+```jsx
+// Don't write nested render functions
+const Menu = () => {
+  
+  const MenuItem = () => {
+    return <button>...</button>
+  }
+  
+  return <MenuItem />
+}
+```
+{% endhint %}
+
+{% hint style="success" %}
+```jsx
+// Extract to its own component
+import MenuItem from '../components/MenuItem'
+
+const Menu = () => {
+  return <div> <MenuItem/> </div>
+}
+```
+{% endhint %}
 
 ## References and articles :
 
@@ -109,7 +151,11 @@ If you’re having a hard time figuring out what elements you should create comp
 
 {% embed url="https://react.statuscode.com" %}
 
+{% embed url="https://www.fullstory.com/blog/creating-scalable-testable-and-readable-react-apps-part-1" %}
+
 {% embed url="https://formidable.com/blog/2021/react-composition" %}
+
+{% embed url="https://maxrozen.com/guidelines-improve-react-app-folder-structure" %}
 
 {% embed url="https://codeburst.io/a-complete-guide-to-props-children-in-react-c315fab74e7c" %}
 

@@ -52,6 +52,8 @@ Anything inside \`\` will be considered in string context but if we wrap it by $
 
 Same thing inside **JSX** but we just ditch the $ and use curly braces and babel will understand that we are writing JavaScript there.
 
+
+
 {% hint style="danger" %}
 **Bear in mind that you can't do statements inside of the curly braces as babel can't interpret them so the best why to do it is to wrap it inside a function**&#x20;
 
@@ -266,6 +268,80 @@ We can even nest those element inside each others:
 
 **But always bear in mind that anything that we will do with JSX we can do with React raw APIs.**&#x20;
 {% endhint %}
+
+
+
+## Conditional Rendering
+
+You can decide to conditionally evaluate one JSX expression over another using different techniques.
+
+### if-statement
+
+You can use the _if...else statement_ .
+
+```jsx
+const formatName =
+  ({ firstName, lastName }: Person) => `${firstName} ${lastName}`;
+  
+interface Person {
+  firstName: string;
+  lastName: string;
+}
+  
+interface HelloWorldProps {
+  person?: Person;
+}
+  
+const HelloWorld = (props: HelloWorldProps) => {
+  if (props.person) {
+    return <div>Hello {formatName(props.person)}</div>;
+  } else {
+    return <div>Hello World</div>;
+  }
+};
+```
+
+### Logical operator &&
+
+_In some cases, rather than using the if_ keyword , it is more convenient and more concise to use an on-the-fly condition (Inline If) with the && operator.
+
+```jsx
+function Mailbox(props) {
+  const unreadMessages = props.unreadMessages;
+  return (
+    <div>
+      <h1>Hello!</h1>
+      {unreadMessages.length > 0 &&
+        <h2>
+          You have {unreadMessages.length} unread messages.
+        </h2>
+      }
+    </div>
+  );
+}
+```
+
+### Conditional ternary operator (... ? ... : ...)
+
+```jsx
+function Mailbox(props) {
+  const unreadMessages = props.unreadMessages;
+  return (
+    <div>
+      <h1>Hello!</h1>
+      {unreadMessages.length === 0 ? (
+        <h2>
+          Sorry no new messages :(
+        </h2>) : (
+        <h2>
+          You have {unreadMessages.length} unread messages.
+        </h2>
+        )
+      }
+    </div>
+  );
+}
+```
 
 ## React Fragments
 

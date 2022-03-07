@@ -34,10 +34,10 @@
 
 ## 📓 React Guidelines
 
-* [🆗 React Components Composition Guidelines](react-guidelines/react-components-composition-guidelines.md)
+* [🏁 React Components Composition Guidelines](react-guidelines/react-components-composition-guidelines.md)
 * [🆗 React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
-* [🆗 When to use React.memo](react-guidelines/when-to-use-react.memo.md)
-* [🆗 Where to put React State](react-guidelines/where-to-put-react-state.md)
+* [🆗 The use of React.memo](react-guidelines/the-use-of-react.memo.md)
+* [🆗 Lifting State Up](react-guidelines/lifting-state-up.md)
 
 ## 🔭 Concepts
 
@@ -51,7 +51,7 @@
 * [React Under the hood](concepts/react-under-the-hood/README.md)
   * [🏁 What is "Rendering"?](concepts/react-under-the-hood/what-is-rendering.md)
   * [🏁 React Lifecycle](concepts/react-under-the-hood/react-lifecycle.md)
-  * [🏁 Reconciliation & Virtual DOM in React](concepts/react-under-the-hood/reconciliation-and-virtual-dom-in-react.md)
+  * [⚠ Reconciliation & Virtual DOM in React](concepts/react-under-the-hood/reconciliation-and-virtual-dom-in-react.md)
   * [🏁 Fiber](concepts/react-under-the-hood/fiber.md)
 * [⏰ Concepts to always have in mind](concepts/concepts-to-always-have-in-mind.md)
 
