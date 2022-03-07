@@ -1,4 +1,4 @@
-# ℹ PropTypes
+# 🏁 PropTypes
 
 Every React app will be composed of an hierarchical tree of components that have different props, certainly then we will need to define and structure our props , to avoid bugs and errors .
 
@@ -220,14 +220,16 @@ It will always be nicer if we had pre built validators for our props , as it wil
 
 However, in later versions of React, this utility has been moved to a separate package named [`prop-types`](https://www.npmjs.com/package/prop-types), so you need to add it as a dependency for your project in order to get access to the `PropTypes` utility.
 
-```
+{% code title="" %}
+```jsx
 npm install prop-types --save
 yarn add prop-types 
 ```
+{% endcode %}
 
 It can be imported into your project files as follows:
 
-```
+```jsx
 import PropTypes from 'prop-types';
 ```
 
