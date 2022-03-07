@@ -11,8 +11,8 @@
 * [🆗 Components](react-fundamentals/components.md)
 * [🏁 Handling Events With React](react-fundamentals/handling-events-with-react.md)
 * [🏁 Form](react-fundamentals/form.md)
-* [🆗 Array and Lists](react-fundamentals/arrays-and-key-props.md)
-* [🆗 Class Component State](react-fundamentals/class-component-state.md)
+* [🏁 Array and Lists](react-fundamentals/arrays-and-key-props.md)
+* [🏁 Class Component State](react-fundamentals/class-component-state.md)
 * [ℹ Class Component Life Cycle](react-fundamentals/class-component-life-cycle.md)
 * [🏁 PropTypes](react-fundamentals/proptypes-todo.md)
 
@@ -36,8 +36,8 @@
 
 * [🏁 React Components Composition Guidelines](react-guidelines/react-components-composition-guidelines.md)
 * [🆗 React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
-* [🆗 The use of React.memo](react-guidelines/the-use-of-react.memo.md)
-* [🆗 Lifting State Up](react-guidelines/lifting-state-up.md)
+* [🏁 The use of React.memo](react-guidelines/when-to-use-react.memo.md)
+* [🆗 Lifting State Up](react-guidelines/where-to-put-react-state.md)
 
 ## 🔭 Concepts
 
@@ -81,7 +81,7 @@
 
 ## 🖼 Design system
 
-* [🆗 What's a design system anyway ?​?](design-system/whats-a-design-system-anyway.md)
+* [🏁 What's a design system anyway ?​?](design-system/whats-a-design-system-anyway.md)
 
 ***
 

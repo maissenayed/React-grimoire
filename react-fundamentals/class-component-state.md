@@ -2,24 +2,24 @@
 description: the old way prior to react 16.8.0
 ---
 
-# 🆗 Class Component State
+# 🏁 Class Component State
 
 ## What is State?
 
-In React, a state is a simple JavaScript object that allows you to keep track of the data of a component. A component's state can change. A change in the state of a component is determined by the application's functionality. Changes can be triggered by user input, new server-side messages, network responses, or anything else.
+A state in React is a simple JavaScript object that allows you to keep track of a component's data. The state of a component can change. The functionality of the application determines a change in the state of a component. User input, new server-side messages, network responses, or anything else can cause changes.
 
-Component state is expected to be private to the component and controlled by the same component. To make changes to a component’s state, you have to make them inside the component — the initialization and updating of the component’s state.
+The state of a component is expected to be private to the component and controlled by the same component. To change the state of a component, you must do so within the component — the initialization and updating of the component's state.
 
-In React, all the code we write is defined inside a component.
+The state of a component is expected to be private to the component and controlled by the same component. To change the state of a component, you must do so within the component — the initialization and updating of the component's state.
 
-There are mainly two ways of creating a component in React:
+In React, there are primarily two ways to create a component:
 
 * class-based component (the old way)
 * functional component (the new way )
 
-You should know how to work with class-based components as well as functional components, with hooks.
+You should be familiar with both class-based and functional components, as well as hooks.
 
-Instead of directly learning functional components with React hooks, you should first understand class-based components so it's easy to clear the basics.
+Instead of learning functional components directly with React hooks, you should first understand class-based components so that you can quickly master the fundamentals.
 
 {% embed url="https://reactjs.org/docs/faq-state.html#gatsby-focus-wrapper" %}
 
@@ -29,7 +29,7 @@ Before React 16.8.\* States were only available to components that are called **
 
 How do I define class components?
 
-You can create a component by using an ES6 class keyword and by extending the `Component` class provided by React like this:
+You can make a component by extending the **React** Component class with an **ES6** class keyword, as shown below:
 
 You just wrap a function component in a class! There are just three rules:
 
@@ -56,7 +56,7 @@ class App extends React.Component {
 
 ### The Constructor
 
-[According to the official documentation](https://reactjs.org/docs/react-component.html#constructor), the constructor is the right place to initialize state. Initializing state is done by setting `this.state` to an object, like you can see above. Remember: **state is a plain JavaScript object**. The initial state of the App component has been set to a state object which contains the key username, and its value `Mayssa` using&#x20;
+[According to the official documentation](https://reactjs.org/docs/react-component.html#constructor), State should be initialized in the **constructor**. Setting `this.state` to an object, as shown above, is how state is initialized. Remember that state is a simple JavaScript object. The App component's initial state has been set to a state object containing the key username and its value. Mayssa makes use of
 
 `this.state = { username: 'Mayssa' }`.
 
@@ -106,7 +106,7 @@ render() {
 The difference is that I extracted the username from state in the first example, but it can also be written as `const status = this.state.username`. Thanks to [ES6 destructuring](https://css-tricks.com/new-favorite-es6-toy-destructured-objects-parameters/), I do not have to go that route. Do not get confused when you see things like this. It is important to know that I am not reassigning state when I did that. The initial setup of state was done in the constructor, and should not be done again&#x20;
 
 {% hint style="danger" %}
-**Never ever directly update/mutate state in React, as it's a bad practice and it will cause issues in your application. Also, your component will not be re-rendered on state change if you make a direct state change.**
+**Directly updating/mutating state in React is a terrible practice that will cause problems in your application. In addition, if you make a direct state change, your component will not be re-rendered.**
 {% endhint %}
 
 A state can be accessed using `this.state."property name"`. Do not forget that aside from the point where you initialized your state, the next time you are to make use of `this.state` is when you want to access the state.
@@ -128,7 +128,7 @@ setState(updater, [callback])
 
 The only permissible way to update a component’s state is by using `setState()`. Let’s see how this works practically.
 
-First, I will start with creating the method that gets called to update the component’s username. This method should receive an argument, and it is expected to use that argument to update the state.
+First, I'll write the method that is called to update the component's username. This method is expected to receive an argument and to use that argument to update the state.
 
 ```javascript
 handleInputChange(username) {
@@ -136,7 +136,7 @@ handleInputChange(username) {
 }
 ```
 
-Once again, you can see that I am passing in an object to `setState()`. With that done, I will need to pass this function to the event handler that gets called when the value of an input box is changed. The event handler will give the context of the event that was triggered which makes it possible to obtain the value entered in the input box using `event.target.value`. This is the argument passed to `handleInputChange()` method. So, the render method should look like this.
+You can see that I am again passing an object to `setState().` After that, I'll need to pass this function to the event handler, which is called whenever the value of an input box changes. The event handler will provide the context of the triggered event, allowing the value entered in the input box to be obtained using `event.target.value.` This is the argument passed to the method `handleInputChange()`. As a result, the render method should look something like this.
 
 ```javascript
 render() {
@@ -156,7 +156,7 @@ render() {
 }
 ```
 
-Each time `setState()` is called, a request is sent to React to update the DOM using the newly updated state. Having this mindset makes you understand that state update can be delayed.
+When `setState()` is called, a request to React is sent to update the **DOM** with the newly updated state. Having this mindset allows you to recognize that state updates may be delayed.
 
 Your component should look like this;
 
@@ -189,7 +189,7 @@ class App extends React.Component {
 
 ### Passing State as Props
 
-A state can be passed as props from a parent to the child component. To see this in action, let’s create a new component for creating a To Do List. This component will have an input field to enter daily tasks and the tasks will be passed as props to the child component.
+A state can be passed as a prop from a parent component to a child component. To demonstrate this, let's create a new component for making a To Do List. This component will have an input field where users can enter daily tasks, which will be passed as props to the child component.
 
 Try to create the parent component on your own, using the lessons you have learned thus far.
 
@@ -228,7 +228,7 @@ render() {
 }
 ```
 
-Each time a new item is entered and the submit button is clicked, the method `handleSubmit` gets called. This method will be used to update the state of the component. The way I want to update it is by using `concat` to add the new value in the `todoList` array. Doing so will set the value for `todoList` inside the `setState()` method. Here’s how that should look:
+The method `handleSubmit` is called every time a new item is entered and the submit button is clicked. This method will be used to update the component's state. I want to update it by concatenating the new value into the `todoList` array. This will set the `todoList` value inside the `setState()` method. This is how it should look:
 
 ```javascript
 handleSubmit = (event) => {
@@ -240,7 +240,7 @@ handleSubmit = (event) => {
 }
 ```
 
-The event context is obtained each time the submit button is clicked. We use `event.preventDefault()` to stop the default action of submission which would reload the page. The value entered in the input field is assigned a variable called `value`, which is then passed an argument when `todoList.concat()` is called. React updates the state of `todoList` by adding the new value to the initial empty array. This new array becomes the current state of `todoList`. When another item is added, the cycle repeats.
+Each time the submit button is pressed, the event context is obtained. We use `event.preventDefault()` to prevent the default action of submission from reloading the page. When `todoList.concat()` is called, the value entered in the input field is assigned to a variable called value, which is then passed an argument. React updates the **todoList's** state by appending the new value to the initial empty array. This new array becomes the **todoList's** current state. The cycle is restarted when another item is added.
 
 `Initial state` :point\_right:`[]`
 
@@ -257,7 +257,7 @@ The goal here is to pass the individual item to a child component as props. For 
 </div>
 ```
 
-You’re using `map` to loop through the `todoList` array, which means the individual item is then passed to the `TodoItem` component as props. To make use of this, you need to have a `TodoItem` component that receives props and renders it on the DOM. I will show you how to do this using functional and class components.
+You're using `map` to iterate through the `todoList` array, which means that each item is passed as props to the `TodoItem` component. To use this, you must have a `TodoItem` component that accepts props and renders them on the **DOM**. I'll demonstrate how to do this with functional and class components.
 
 Written as a functional component:
 
@@ -293,9 +293,9 @@ class TodoItem extends React.Component {
 
 ## _props_ vs _state_
 
-> It's fairly easy to understand how they work—especially when seen in context—but it's also a bit difficult to grasp them conceptually. It's confusing at first because they both have abstract terms and their values look the same, but they also have very different _roles._
+> It's relatively simple to understand how they work, especially when seen in context, but it's more difficult to grasp them conceptually. It's perplexing at first because they both have abstract terms and values that appear to be the same, but they also play very different roles.
 
-The main responsibility of a Component is to translate raw data into rich HTML. With that in mind, the _props_ and the _state_ together constitute the _raw data_ that the HTML output derives from.
+A Component's primary responsibility is to convert raw data into rich HTML. Keeping this in mind, the props and state together form the raw data from which the HTML output is generated.
 
 
 
@@ -308,9 +308,10 @@ Before separating _props_ and _state_, let's also identify where they overlap.
 #### Does this go inside _props_ or _state_?
 
 {% hint style="info" %}
-If a Component needs to alter one of its attributes at some point in time, that attribute should be part of its _state_, otherwise it should just be a _prop_ for that Component.
+**If a Component needs to change one of its attributes at some point in time, that attribute should be part of the Component's state; otherwise, it should be a prop for that Component.**
 {% endhint %}
 
+{% hint style="success" %}
 _**To recapitulate :**_
 
 _**props**_** (short for **_**properties**_**) are a Component's configuration, its **_**options**_** if you may. They are received from above and immutable as far as the Component receiving them is concerned.**
@@ -322,6 +323,7 @@ _**props**_** (short for **_**properties**_**) are a Component's configuration, 
 **A Component manages its own **_**state**_** internally, but—besides setting an initial state—has no business fiddling with the **_**state**_** of its children. You could say the state is private.**
 
 **We didn't say **_**props**_** are also serializable because it's pretty common to pass down callback functions through **_**props.**_
+{% endhint %}
 
 
 

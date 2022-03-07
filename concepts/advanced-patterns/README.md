@@ -17,10 +17,14 @@ AS a React developer, you may have asked the following question at least once.
 These questions have been recurring since the past, and the React community has come up with some advanced patterns as answers to them.
 
 {% hint style="warning" %}
-building a Component for other developers. Therefore, the actor “clients” refers directly to these developers (And not the final user which will use your website/application).
+**building a Component for other developers. Therefore, the actor “clients” refers directly to these developers (And not the final user which will use your website/application).**
 {% endhint %}
 
+The Final sand box with all the patterns
+
 {% embed url="https://codesandbox.io/s/react-patterns-uenl15?file=%2Fsrc%2Fpatterns%2Fcompound-component%2FCounter.js" %}
+
+## References and articles :
 
 {% embed url="https://advanced-react-patterns.netlify.app" %}
 

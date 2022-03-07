@@ -1,6 +1,6 @@
-# 🆗 Array and Lists
+# 🏁 Array and Lists
 
-## Create a list
+## Creating a list
 
 If there’s one unchanging thing about web applications, it’s that they have lists. And so as you might expect, most frameworks attempt to make your life easier with a special syntax for lists.
 

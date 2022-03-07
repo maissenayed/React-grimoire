@@ -1,4 +1,4 @@
-# 🆗 What's a design system anyway ?​?
+# 🏁 What's a design system anyway ?​?
 
 
 
@@ -23,7 +23,7 @@ _— Freecodecamp.org_
 _— css-tricks.com_
 
 {% hint style="info" %}
-_`We can conclude by defining the design system`_`by a complete set of standards intended to manage design at scale` __ `using reusable components and patterns.`
+_**`We can conclude by defining the design system`**_**`by a complete set of standards intended to manage design at scale` **_****_** `using reusable components and patterns.`**
 {% endhint %}
 
 ## **Contents of a Design System** <a href="#309a" id="309a"></a>
@@ -44,16 +44,16 @@ Atomic Design is a methodology developed by [Brad Frost](https://bradfrost.com/b
 
 ### What Is A Style Guide?
 
-**Style guides** include specific implementation guidelines, visual references, and design principles for developing interfaces and other design deliverables. Most style guides are focused on branding or editorial style.
+**Style guides** include specific implementation guidelines, visual references, and design principles for developing interfaces and other design deliverers. Most style guides are focused on branding or editorial style.
 
 {% hint style="info" %}
-* Acceptable logo usage, color palette, font trademarks, and print media are frequently specified in branding style guides.
-* Writing style, grammar, punctuation, Voice and Tone, and other content-editing criteria are all specified in editorial style guidelines. Many websites and magazines have style guides, which content teams are expected to adhere to.
+* **Acceptable logo usage, color palette, font trademarks, and print media are frequently specified in branding style guides.**
+* **Writing style, grammar, punctuation, Voice and Tone, and other content-editing criteria are all specified in editorial style guidelines. Many websites and magazines have style guides, which content teams are expected to adhere to.**
 {% endhint %}
 
-But style guides also offer guidance on content such as visual- and interaction-design standards.
+However, style guides also provide content guidance, such as visual and interaction design standards.
 
-These guidelines are sometimes incorporated into the component library as well, to provide relevant guidance in context.
+These guidelines are occasionally incorporated into the component library to provide context-specific guidance.
 
 The simplest list of style guide content can be like this
 
@@ -82,7 +82,7 @@ Goldman Sachs foundation style guide
 
 ### What Is A **Component** Library?
 
-Many people associate design systems with component libraries (also known as design libraries): these large library includes predefined, reusable user interface elements and serve as a one-stop  check point for designers and developers to learn about and build various UI components. Building these libraries takes a significant amount of time and effort.&#x20;
+Many people associate design systems with component libraries (also referred to as design libraries): these large libraries contain predefined, reusable user interface elements and serve as a one-stop shop for designers and developers to learn about and build various UI components. It takes a significant amount of time and effort to build these libraries.
 
 In general, they include some graphical examples of components.
 
@@ -137,9 +137,9 @@ So there are generally three approaches to using a design system:
 * **adapting** an existing design system
 * **creating your own** proprietary or custom design system
 
-There are pros and cons to each, but generally speaking, the more custom your design-system solution is, the more time and money it will take to implement. Thus, using an existing design system is the lowest-cost approach and requires the least time to implement. (It will, still, need more time than if you continue design as usual, however, because you will have to either replace or update some UI elements and agree upon a standard).
+Each has advantages and disadvantages, but in general, the more customized your design-system solution, the more time and money it will take to implement. As a result, using an existing design system is the least expensive and takes the least amount of time to implement. (It will still take longer than if you just keep designing as usual because you will have to replace or update some UI elements and agree on a standard.)
 
-Investment in a custom design system will be worth it if the organization has particular needs that cannot be met by open-source design systems. As customizations and adjustments to the design system increase, the cost savings you may have gained from using the existing design system will diminish, and, in the long run, you may be better off creating your own design system anyway. Be sure you know what your organization needs before you embark on design system endeavors and evaluate the tradeoffs.
+If the organization has specific needs that cannot be met by open-source design systems, the investment in a custom design system will be worthwhile. As customizations and adjustments to the design system increase, the cost savings you may have gained by using the existing design system will diminish, and you may be better off creating your own design system anyway in the long run. Before embarking on design system endeavors and weighing the tradeoffs, make sure you understand what your organization requires.
 
 ![](<../.gitbook/assets/re-render queue (2) (4).gif>)
 
