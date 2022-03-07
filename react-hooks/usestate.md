@@ -1,4 +1,4 @@
-# 🆗 useState
+# 🏁 useState
 
 ![](../.gitbook/assets/useState)
 
@@ -25,15 +25,19 @@ It’s important to note that when your component first renders and invokes `use
 
 Also, to update state, the state updater function `setState` should be invoked with a new state value, as shown below:
 
-```jsx
-setState(newValue)
-```
+![](../.gitbook/assets/code.png)
 
 By doing this, a new re-render of the component is queued. `useState` guarantees that the `state` value will always be the most recent after applying updates.
 
 ![](<../.gitbook/assets/re-render queue (5).gif>)
 
 For referential checks, the `setState` function’s reference never changes during re-renders.
+
+{% hint style="info" %}
+**If you try to update state with the same value as the current state, React won’t render the component children or fire effects, e.g., `useEffect` callbacks. React compares previous and current state via the** [**`Object.is` comparison algorithm**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Object/is#Description)**; if they are equal, it ignores the re-render.**
+
+**It’s important to note that in some cases, React may still render the specific component whose state was updated. That’s OK because React will **_**not**_** go deeper into the tree, i.e., render the component’s children.**
+{% endhint %}
 
 Here an example of a Counter component that use `useState` to update the counter by one for each click
 
@@ -112,9 +116,6 @@ The `initialState` argument to `useState` is only used during your initial rende
 ![](<../.gitbook/assets/re-render queue (1) (2).gif>)
 
 ```jsx
-// this is OK 
-const [state, setState] = useState(10) 
-
 // subsequent prop updates are ignored 
 const App = ({myProp}) => {
   const [state, setState] = useState(myProp)
@@ -145,7 +146,7 @@ const Component = () => {
 }
 ```
 
-### **use with objects**
+### **Use with objects**
 
 As opposed to strings and numbers, you could also use an object as the initial value passed to `useState`.
 
@@ -166,13 +167,13 @@ function Component() {
 
 So in order to add an property to the object, we’re using the ES6 spread operator `...` to copy the existing properties into the new object,&#x20;
 
-```
-const updateState = () =>  setState((prevState) => ({ ...prevState, { occupation: "Teacher" }));
+```jsx
+const updateState = () => { setState((prevState) => ({ ...prevState, occupation: "Teacher" })); };
 ```
 
 Pass a function to `setState` and return a merged object by using the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread\_syntax) ([`Object.assign` also works](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Object/assign)).
 
-### **use with arrays**
+### **Use with arrays**
 
 Remember: state can hold any kind of value! Here’s an example of useState holding an array.
 
@@ -260,12 +261,6 @@ const Component =() => {
   )
 }
 ```
-
-#### Bailing out of a state update <a href="#bailingoutofastateupdate" id="bailingoutofastateupdate"></a>
-
-If you try to update state with the same value as the current state, React won’t render the component children or fire effects, e.g., `useEffect` callbacks. React compares previous and current state via the [`Object.is` comparison algorithm](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Object/is#Description); if they are equal, it ignores the re-render.
-
-It’s important to note that in some cases, React may still render the specific component whose state was updated. That’s OK because React will _not_ go deeper into the tree, i.e., render the component’s children.
 
 If expensive calculations are done within the body of your functional component, i.e., before the return statement, consider optimizing these with `useMemo`.(we will cover [useMemo  in another section](usememo.md))&#x20;
 

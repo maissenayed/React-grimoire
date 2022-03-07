@@ -19,7 +19,7 @@
 ## 🪝 React Hooks
 
 * [🏁 Intro to hooks](react-hooks/intro-to-hooks.md)
-* [🆗 useState](react-hooks/usestate.md)
+* [🏁 useState](react-hooks/usestate.md)
 * [☢ useEffect](react-hooks/useeffect.md)
 * [🆗 useRef](react-hooks/useref.md)
 * [⚠ useContext](react-hooks/usecontext.md)
@@ -38,7 +38,6 @@
 * [🆗 React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
 * [🆗 When to use React.memo](react-guidelines/when-to-use-react.memo.md)
 * [🆗 Where to put React State](react-guidelines/where-to-put-react-state.md)
-* [⏰ Concepts to always have in mind](react-guidelines/concepts-to-always-have-in-mind.md)
 
 ## 🔭 Concepts
 
@@ -54,6 +53,7 @@
   * [🏁 React Lifecycle](concepts/react-under-the-hood/react-lifecycle.md)
   * [🏁 Reconciliation & Virtual DOM in React](concepts/react-under-the-hood/reconciliation-and-virtual-dom-in-react.md)
   * [🏁 Fiber](concepts/react-under-the-hood/fiber.md)
+* [⏰ Concepts to always have in mind](concepts/concepts-to-always-have-in-mind.md)
 
 ## 🧩 React ecosystem
 

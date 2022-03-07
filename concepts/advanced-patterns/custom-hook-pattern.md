@@ -1,44 +1,70 @@
 # ⚠ Custom hook pattern
 
-### &#x20;Custom Hook Pattern
+Let's take a closer look at "reversal of control" here. Now the main logic is a user custom Hook forwarded to These hooks are user-accessible and allow easier control of the component by exposing several internal logic ( States , Handlers ) .
 
-Let's take a closer look at "reversal of control" here. Now the main logic is a user custom Hookis forwarded to These hooks are user-accessible and allow easier control of the component by exposing several internal logic ( States , Hnadlers ) .
+## Advantages
+
+More Control: Users can change the behavior of the main component by inserting their own logic between hooks and JSX components.
+
+```jsx
+import React from "react";
+import { Counter } from "./Counter";
+import { useCounter } from "./useCounter";
+
+const Component =()=> {
+  const { count, handleIncrement, handleDecrement } = useCounter(0);
+  const MAX_COUNT = 10;
+
+  const handleClickIncrement = () => {
+    //Put your custom logic
+    if (count < MAX_COUNT) {
+      handleIncrement();
+    }
+  };
+
+  return (
+    <>
+      <Counter value={count}>
+        <Counter.Decrement
+          icon={"minus"}
+          onClick={handleDecrement}
+        />
+        <Counter.Label>Counter</Counter.Label>
+        <Counter.Count />
+        <Counter.Increment
+          icon={"plus"}
+          onClick={handleClickIncrement}
+        />
+      </Counter>
+      <div>
+        <button onClick={handleClickIncrement} >
+          Custom increment btn 1
+        </button>
+      </div>
+    </>
+  );
+}
+
+export { Component };
+```
 
 &#x20;
 
-#### ㅣ Example
+![](https://blog.kakaocdn.net/dn/bIx0uy/btrh9RSWNVh/y3eFHfdUAKbbqZB7cO5Ul1/img.jpg)
 
-Github: [https://github.com/alex83130/advanced-react-patterns/tree/main/src/patterns/custom-hooks](https://github.com/alex83130/advanced-react-patterns/tree/main/src/patterns/custom-hooks)
+## &#x20;Disadvantages
 
-#### ㅣ Advantages
+Implementation complexity: the logic is decoupled from the rendering and it is up to you to connect the two. To properly implement a component, you need a deep understanding of how the component works.
 
-· More Control: Users can change the behavior of the main component by inserting their own logic between hooks and JSX components.
+![](https://blog.kakaocdn.net/dn/Opk2U/btrh5ZdmQfg/kXcePR9sx9HgPFpkSBMf0K/img.jpg)
 
-&#x20;
+## Libraries that use this pattern
 
-![wishette](https://blog.kakaocdn.net/dn/bIx0uy/btrh9RSWNVh/y3eFHfdUAKbbqZB7cO5Ul1/img.jpg)
+{% embed url="https://react-table.tanstack.com/docs/examples/basic" %}
 
-#### ㅣ Disadvantages
+{% embed url="https://react-hook-form.com/api" %}
 
-· Implementation complexity: the logic is decoupled from the rendering and it is up to you to connect the two. To properly implement a component, you need a deep understanding of how the component works.
-
-&#x20;
-
-![wishette](https://blog.kakaocdn.net/dn/Opk2U/btrh5ZdmQfg/kXcePR9sx9HgPFpkSBMf0K/img.jpg)
-
-#### ㅣ Evaluation items
-
-&#x20; · Reversal of control: 2/4
-
-&#x20; · Implementation complexity: 2/4
-
-&#x20;
-
-#### ㅣ Libraries that use this pattern
-
-&#x20; · [React table](https://react-table.tanstack.com/docs/examples/basic)
-
-&#x20; · [React hook form](https://react-hook-form.com/api)
+## References and articles :
 
 {% embed url="https://blog.bitsrc.io/new-react-design-pattern-return-component-from-hooks-79215c3eac00" %}
 

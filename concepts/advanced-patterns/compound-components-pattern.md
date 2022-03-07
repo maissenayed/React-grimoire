@@ -12,7 +12,7 @@ You should consider using this pattern if you want to make your **** component m
 
 let's imagine that we were going to implement a custom select. A naive implementation would look something like this:
 
-```
+```jsx
 <CustomSelect
   options={[
     {value: '1', display: 'Option 1'},
@@ -70,50 +70,7 @@ JSX too heavy: Applying this pattern JSXThe number of lines increases, especiall
 
 ![](https://blog.kakaocdn.net/dn/b5O5mN/btriaVAxR9y/TR7AH27P5cr511615WWgkk/img.jpg)
 
-## Accordion Example <a href="#what-is-the-compound-component-pattern" id="what-is-the-compound-component-pattern"></a>
-
-You have, no doubt, encountered compound components before when working with a UI library. Take a look at this snippet:
-
-```jsx
-export default function App() {
-  return (
-    <div className="App">
-      <Menu>
-        <Item id="1">
-          <AccordionHeader>Header 1</AccordionHeader>
-          <AccordionPanel>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </AccordionPanel>
-        </AccordionItem>
-        <AccordionItem id="2">
-          <AccordionHeader>Header 2</AccordionHeader>
-          <AccordionPanel>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
-          </AccordionPanel>
-        </AccordionItem>
-        <AccordionItem id="3">
-          <AccordionHeader>Header 3</AccordionHeader>
-          <AccordionPanel>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
-          </AccordionPanel>
-        </AccordionItem>
-      </Accordion>
-    </div>
-  );
-}
-```
-
-Does the structure look familiar? That’s what the API typically looks like for compound components.
-
-Here’s the structure of the Accordion component at a high level:
-
-![](https://isamatov.com/images/compound-components-react/accordion-diagram.png)
-
+{% hint style="info" %}
 As a side note, a lot of UI libraries like ant D use `.` for their compound component API like so:
 
 ```jsx
@@ -127,125 +84,8 @@ As a side note, a lot of UI libraries like ant D use `.` for their compound comp
 ```
 
 This approach is strictly optional and you can write your component however you prefer. It doesn’t affect the end result in any significant way.
+{% endhint %}
 
-
-
-Now that you’re hopefully convinced to give this thing a shot, let’s start with the tutorial. We will build the `Menu` we’ve been talking about this whole time.
-
-Example
-
-```jsx
-import styled from "@emotion/styled";
-import {
-  Children,
-  cloneElement,
-  Context,
-  createContext,
-  ReactNode,
-  useContext,
-  useMemo,
-  useState
-} from "react";
-
-const AccordionContext = createContext({
-  openItem: "",
-  setOpenItem: null
-});
-const AccordionContainer = styled.div`
-  border: 1px solid #d3d3d3;
-  border-radius: 8px;
-  padding: 8px;
-`;
-
-function Accordion({ children }) {
-  const [openItem, setOpenItem] = useState("");
-
-  const value = useMemo(() => ({ openItem, setOpenItem }), [openItem]);
-
-  return (
-    <AccordionContainer>
-      <AccordionContext.Provider value={value}>
-        {children}
-      </AccordionContext.Provider>
-    </AccordionContainer>
-  );
-}
-```
-
-&#x20;create `MenuContext` and use `MenuContext.Provider` to pass `openItem` and `setOpenItem` props. Also note how we wrapped `value` with [useMemo](https://reactjs.org/docs/hooks-reference.html#usememo) to prevent redundant re-renders.
-
-#### MenuItem <a href="#accordionitem-1" id="accordionitem-1"></a>
-
-Here’s the code for `MenuItem`:
-
-```jsx
-export const AccordionItem = ({
-  children,
-  id
-}) => {
-  return (
-    <div>
-      {Children.map(children, (child: any) => cloneElement(child, { id }))}
-    </div>
-  );
-};
-```
-
-Notice how we no longer need to pass the props received from the Accordion. But we’re still using `cloneElement` here to pass the `id` prop.
-
-#### MenuPanel & MenuHeader <a href="#accordionpanel--accordionheader" id="accordionpanel--accordionheader"></a>
-
-These child elements now pull the shared state directly from the context using the `useContext` hook. Here’s the implementation of both of them:
-
-```jsx
-const useAccordionContext = () => useContext(AccordionContext);
-
-const AccordionHeaderContainer = styled.div`
-  padding: 8px 16px;
-  background: #f5f5f5;
-  border-top: 1px solid #d3d3d3;
-  cursor: pointer;
-`;
-
-const AccordionPanelContainer = styled.div`
-  padding: ${({ padding }: { padding: string }) => padding};
-  height: ${({ height }: { height: string }) => height};
-  overflow: hidden;
-  border-bottom: 1px solid #d3d3d3;
-`;
-
-export const AccordionHeader = ({
-  id,
-  children
-}) => {
-  const { setOpenItem } = useAccordionContext();
-  return (
-    <AccordionHeaderContainer onClick={() => setOpenItem(id)}>
-      {children}
-    </AccordionHeaderContainer>
-  );
-};
-
-export const AccordionPanel = ({
-  children,
-  id
-}) => {
-  const { openItem } = useAccordionContext();
-  return (
-    <AccordionPanelContainer
-      padding={openItem === id ? "16px" : "0px"}
-      height={openItem === id ? "fit-content" : "2px"}
-    >
-      {children}
-    </AccordionPanelContainer>
-  );
-};
-```
-
-Overall, this implementation has less code and better performance. That’s because `cloneElement` causes a slight performance penalty.
-
-However, the main advantage is that we have a much more flexible API for our Accordion, and the example code that broke earlier now works just fine.
-
-
+## References and articles :
 
 {% embed url="https://antongunnarsson.com/compound-components-in-react" %}

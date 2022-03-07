@@ -1,9 +1,5 @@
 # ⚠ Context Module
 
-{% embed url="https://medium.com/shunze0925/advanced-react-patterns-note-a0fcad56e43b" %}
-
-{% embed url="https://vtechguys.medium.com/context-module-pattern-in-react-dd3e89d56f2d" %}
-
 The Context Module Functions Pattern enables you to encapsulate a complex set of state changes in a utility function that can be tree-shaken and loaded lazily.
 
 Let's take a look at an example of a simple context and a reducer combo:
@@ -161,3 +157,10 @@ function Counter() {
 ```
 
 **This may look like overkill, and it is.** However, in some situations this pattern can not only help you reduce duplication, but it also [helps improve performance](https://twitter.com/dan\_abramov/status/1125774170154065920) and helps you avoid mistakes in dependency lists.\
+
+
+## References and articles :
+
+{% embed url="https://vtechguys.medium.com/context-module-pattern-in-react-dd3e89d56f2d" %}
+
+{% embed url="https://medium.com/shunze0925/advanced-react-patterns-note-a0fcad56e43b" %}
