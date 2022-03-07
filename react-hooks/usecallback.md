@@ -1,12 +1,12 @@
-# 🆗 useCallback
+# 🏁 useCallback
 
 
 
-The goal of `useCallback` is to avoid unnecessary re-renders, it receives two values: a function that will be memorized and an array of dependencies that will update this function each time any of the values change.
+The goal of **useCallback** is to avoid unnecessary re-renderings; it accepts two values: a memorized function and an array of dependencies that will update this function whenever any of the values change.
 
 ![](../.gitbook/assets/dsfsgsgg.png)
 
-React saves a reference to the function when wrapped with `useCallback`. Pass this reference as a property to new components to reduce rendering time.
+When a function is wrapped with **useCallback**, React saves a reference to it. To reduce rendering time, pass this reference as a property to new components.
 
 ### Purpose of useCallback
 
@@ -16,21 +16,18 @@ function MyComponent() {
   const handleClick = () => {
     console.log('Clicked!');
   };
-
-  // ...
+ ...
 }
 ```
 
-**handleClick** is a different function object on every rendering of MyComponent.
+On each rendering of MyComponent, **handleClick** is a different function object.
 
 But in some cases you need to maintain a single function instance between renderings:
 
 1. A functional component wrapped inside `React.memo()` accepts a function object prop
 2. When the function object is a dependency to other hooks, e.g. `useEffect(..., [callback])`
-3. When the function has some internal state, e.g. when the [function is debounced or throttled](https://dmitripavlutin.com/react-throttle-debounce/#2-debouncing-a-callback-the-first-attempt).
 
-That’s when useCallback(callbackFun, deps) is helpful: given the same dependency values deps, the hook returns (aka memoizes) the function instance between renderings:\
-
+This is where **useCallback**(callbackFun, deps) comes in handy: Given the same deps, the hook returns (aka **memoizes**) the function instance between renderings:
 
 ```jsx
 import { useCallback } from 'react';
@@ -40,8 +37,7 @@ function MyComponent() {
   const handleClick = useCallback(() => {
     console.log('Clicked!');
   }, []);
-
-  // ...
+ ...
 }
 ```
 
@@ -62,7 +58,7 @@ function MyBigList({ term, onItemClick }) {
 export default React.memo(MyBigList)
 ```
 
-The list could be big, maybe hundreds of items. To prevent useless list re-renderings, you wrap it into `React.memo()`.
+The list could be lengthy, possibly containing hundreds of items. You wrap it in **`React.memo`** to avoid unnecessary list re-renderings ().
 
 The parent component of `MyBigList` provides a handler function to know when an item is clicked:
 
