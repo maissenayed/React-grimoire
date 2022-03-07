@@ -1,8 +1,10 @@
-# 🆗 React hooks guidelines
+# 🏁 React hooks guidelines
 
 > Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
 
-Before react 16.8, it was already possible to reuse some stateful logic across your app with higher-order components and render props but Custom Hooks let you do it without adding more components to your tree.
+{% hint style="info" %}
+**Before react 16.8, it was already possible to reuse some stateful logic across your app with higher-order components and render props but Custom Hooks let you do it without adding more components to your tree.**
+{% endhint %}
 
 Hooks are a way to reuse _stateful logic_, not state itself. In fact, each _call_ to a Hook has a completely isolated state — so you can even use the same custom Hook twice in one component.
 
@@ -22,11 +24,11 @@ Hooks core motivations :
 
 With this in mind, you can create new custom hooks when :
 
-1. there is similar stateful logic across components
-2. you want to write specific stateful logic but you don't want to render anything
-3. you want to extract logic from your component body because it could make it easier to read/understand/maintain or if you want to separate concerns between render and logic.
+* There is similar stateful logic across components
+* You want to write specific stateful logic without rendering anything.
+* You want to extract logic from your component body to make it easier to read/understand/maintain, or you want to separate render and logic concerns.
 
-Hooks can be easily shared between pages, components, and hooks too! So when you're designing a new custom hook, take some time to identify if there's some shareable logic that can be isolated in the `hooks/` folder.
+Hooks can be shared easily between pages, components, and hooks! So, when creating a new custom hook, consider whether there is any shareable logic that can be isolated in the `hooks/` folder.
 
 Otherwise, you have the choice between letting your custom hook's code in the same file as your page or creating a new file aside your component's file.
 
@@ -38,9 +40,9 @@ You can found some example on
 
 ## Document your custom hooks! <a href="#document-your-custom-hooks" id="document-your-custom-hooks"></a>
 
-The more custom hooks your team creates, as with most things in a large organization, the easier it is to lose track of them.
+As with most things in a large organization, the more custom hooks your team creates, the easier it is to lose track of them.
 
-I recommend that you keep a record of every hook you create. If not for your team, then for yourself in the future. Whether it's a README in each hook's folder or a doc in a wiki, make sure people are aware of your hook's existence, what it does, and what your intentions were.
+It's a good idea to keep track of every hook you make. If not for the sake of your team, then for the sake of yourself in the future. Make sure people are aware of your hook's existence, what it does, and what your intentions were, whether it's a **README** in each hook's folder or a doc in a wiki.
 
 A note like "This was a massive hack where we only covered case X due to this buggy API we use" is far more valuable than nothing.
 
@@ -55,7 +57,7 @@ Adding [JSDOC](https://jsdoc.app/about-getting-started.html) comments above your
 const useMyCustomHook = (props) => { };
 ```
 
-Don't assume that your code is self-documenting or simple to understand. You're probably thinking your code is simple because it's still fresh in your mind.
+Don't make the mistake of assuming that your code is self-documenting or simple to understand. Because it's still fresh in your mind, you're probably thinking your code is simple.
 
 ## Testing custom hooks <a href="#testing-custom-hooks" id="testing-custom-hooks"></a>
 

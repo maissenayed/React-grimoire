@@ -173,8 +173,8 @@ The reference must be updated either inside a `useEffect()` callback or inside h
 {% hint style="info" %}
 #### `useRef` vs. `createRef`
 
-* &#x20;createRef every time when it runs, it creates a new ref object.
-* `useRef` only creates a ref object for a particular _component instance_ when it's first rendered. In the following rerenders, it'll just returns the existing ref object associated with that component instance. That's why we can trust it to persist a value across rerenders!
+* &#x20;**createRef every time when it runs, it creates a new ref object.**
+* **`useRef` only creates a ref object for a particular **_**component instance**_** when it's first rendered. In the following rerenders, it'll just returns the existing ref object associated with that component instance. That's why we can trust it to persist a value across rerenders!**
 {% endhint %}
 
 ## &#x20;Update state from ref
@@ -311,7 +311,6 @@ If you're like me and haven't used this syntax in the last three years, you can 
 
 ```javascript
 Input.displayName = 'Input';
-
 ```
 
 ## References and articles :

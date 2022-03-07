@@ -1,4 +1,4 @@
-# 🆗 useImperativeHandle
+# 🏁 useImperativeHandle
 
 
 
@@ -12,17 +12,17 @@ Now, the basic signature for the useImperativeHandle Hook is:
 useImperativeHandle(ref, createHandle, [deps])
 ```
 
-useImperativeHandle React Hook accepts a ref object and a function whose return value replaces the stored value in the ref object and the whole function will be updated when the deps array changes.
+useImperativeHandle React Hook accepts a ref object and a function whose return value replaces the ref object's stored value, and the entire function is updated when the deps array changes.
 
 **With useImperativeHandle React Hook, we can do 2 things:**
 
-1. If you do not use the useImperativeHandle Hook and use simple ref, then it will not allow us to control the value that is returned.
+* If you do not use the useImperativeHandle Hook and use simple ref, then it will not allow us to control the value that is returned.
 
-So, like if you are referring to an element, then the current object of ref will contain the whole element inside it.
+So, for example, if you are referring to an element, the current object of ref will contain the entire element within it.
 
-But, instead of returning the instance element, we can explicitly state what the return value should be like the focus, blur, functions we want to return from child component to parent component.
+However, instead of returning the instance element, we can specify what the return value should be, such as the focus, blur, or functions we want to return from child component to parent component.
 
-1. And one more thing useImperativeHandle Hook will do, instead of returning native functions like a blur, focus, etc, we can also return custom-defined functions via the createHandle function.
+* In addition, instead of returning native functions like blur, focus, and so on, useImperativeHandle Hook allows us to return custom-defined functions via the createHandle function.
 
 So, before discussing the example, we all know Reactjs code is to have a unidirectional flow of data and logic.
 
@@ -113,11 +113,11 @@ export default TextInput
 
 {% embed url="https://codesandbox.io/embed/useimperativehandler-2wccpz?autoresize=1&expanddevtools=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2FTextInput.js&theme=dark" %}
 
-So in the above example, we have created three Javascript files named App.js, Phone.js, and TextInput.js.
+In the preceding example, we created three Javascript files: **App.js, Phone.js**, and **TextInput.js.**
 
-So, App.js is the main component that will render the child component.
+So, **App.js** is the main component that will render the child component.
 
-Here, Phone.js is the parent component of TextInput Component which is a kind of reusable component.
+**Phone.js** is the parent component of **TextInput** Component, which is a reusable component in this case.
 
 As we created TextInput as a reusable component, we want some functionalities like validation, verification, updation common to all parent components where we use TextInput.
 
@@ -125,15 +125,15 @@ But the arguments may differ or the data may differ for every component. That me
 
 While similarly, another component like the Phone has some different validators like Must be of n Length, which starts with +91 validators and all.
 
-So, if we need to manually validate every Component where we are using the TextInput, we need to redundant the code in all components. So, there will be no reusable kind of thing.
+So, if we need to manually validate every Component that uses TextInput, we must duplicate the code in all components. As a result, there will be nothing reusable.&#x20;
 
-But by using useImperativeHandle React Hook, we can simply access the child component methods and functions by declaring them inside the createHandle function of useImperativeHandle Hook.
+However, by declaring the child component methods and functions inside the createHandle function of useImperativeHandle Hook, we can easily access them.
 
-That’s why we can access the verify() and validate() function even we did not pass ref directly to the HTML input element.
+As a result, even though we did not pass ref directly to the HTML input element, we can access the verify() and validate() functions.&#x20;
 
-So, as I discussed in the conditions above, instead of returning the whole element, we can return some of the functions whether they are custom or javascript native functions, and restrict the other accessibility of the DOM.
+So, as I mentioned in the conditions above, instead of returning the entire element, we can return some of the functions, whether custom or javascript native functions, and limit the DOM's other accessibility.
 
-So, if you uncomment the line where we are calling the focus() method, you will get the error. As we know this is the javascript native function and it should be accessed everywhere by ref current property but with using useImperativeHandle Hook, we can restrict [DOM](https://codezup.com/dom-in-javascript-with-examples-document-object-model/) and also specify what should be exposed to another end.
+So, if you remove the comment from the line where we are calling the focus() method, you will get the error. As we know, this is a javascript native function that should be accessed everywhere via the ref current property, but by using the useImperativeHandle Hook, we can restrict the DOM and also specify what should be exposed to the other end.
 
 ### Real Example
 

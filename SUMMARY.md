@@ -27,7 +27,7 @@
 * [🆗 useCallback](react-hooks/usecallback.md)
 * [🆗 useReducer](react-hooks/usereducer.md)
 * [🆗 useLayoutEffect](react-hooks/uselayouteffect.md)
-* [🆗 useImperativeHandle](react-hooks/useimperativehandle.md)
+* [🏁 useImperativeHandle](react-hooks/useimperativehandle.md)
 * [🏁 Hook flow](react-hooks/hook-flow.md)
 * [🏁 Custom hooks](react-hooks/custom-hooks/README.md)
   * [🏁 useDebugValue](react-hooks/custom-hooks/usedebugvalue.md)
@@ -35,7 +35,7 @@
 ## 📓 React Guidelines
 
 * [🏁 React Components Composition Guidelines](react-guidelines/react-components-composition-guidelines.md)
-* [🆗 React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
+* [🏁 React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
 * [🏁 The use of React.memo](react-guidelines/when-to-use-react.memo.md)
 * [🆗 Lifting State Up](react-guidelines/where-to-put-react-state.md)
 
