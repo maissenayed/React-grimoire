@@ -1,4 +1,4 @@
-# 🆗 Utility Classes: Tailwind
+# 🏁 Utility Classes: Tailwind
 
 Utility-first CSS is a methodology that came about in an effort to solve all the cons mentioned above with writing traditional CSS. Utility-first CSS involves using many small helper classes to make up a component’s styles, instead of writing class names based on semantic meaning. One thing to keep in mind is that utility-first CSS doesn’t need any library, it is simply a methodology that can be applied to CSS, similar to how BEM works.
 
@@ -12,13 +12,13 @@ It is made for small teams projects, but shines with Design System-ready teams
 
 Here, you can find a button design implemented with classic CSS:
 
-![](../../../.gitbook/assets/css)
+![](../../.gitbook/assets/css)
 
 
 
 Here, is that same Button implemented with Tailwind classes:
 
-![](../../../.gitbook/assets/tail)
+![](../../.gitbook/assets/tail)
 
 In the above line of code, a simple button is defined using the following classes:
 
@@ -56,7 +56,7 @@ Because the styling is done in the markup instead of an external stylesheet, whe
 
 You might be thinking, “okay utility sounds nice but what about when I want a button to have the same style throughout the app?”. Good news, it’s called “utility-first” not “utility-only.” You can still create regular classes while using Tailwind! If you need a button component, you can easily extract your Tailwind code to reusable classes
 
-![](../../../.gitbook/assets/aply)
+![](../../.gitbook/assets/aply)
 
 As you start to write utility-first css, you may come to the realization that most “components” don’t end up being reused anyway. It might seem necessary to have a class for your “Notification Bar” component, but will that class actually get reused somewhere? Probably not! You may use your `<NotificationBar />` component multiple places, but if your code is already extracted to its own component, what need will those _classes_ have elsewhere?
 
@@ -119,6 +119,10 @@ I think Tailwind has a lot of practical advantage on the other css methodology l
 * Uniformisation between frontend engineering team
 * Extensibility + development of the state of the art
 
+## Bundle Info
+
+{% embed url="https://bundlephobia.com/package/tailwindcss@3.0.23" %}
+
 ## References and articles :
 
 {% embed url="https://chrome.google.com/webstore/detail/css-to-tailwind/jlmlldiahhaejpjnonbddoniicdemakl" %}
@@ -128,6 +132,8 @@ I think Tailwind has a lot of practical advantage on the other css methodology l
 {% embed url="https://locastic.com/blog/i-was-wrong-about-utility-first-css-and-here-is-why" %}
 
 {% embed url="https://davidtheclark.com/on-utility-classes" %}
+
+{% embed url="https://css-irl.info/a-year-of-utility-classes" %}
 
 {% embed url="https://adamwathan.me/css-utility-classes-and-separation-of-concerns" %}
 

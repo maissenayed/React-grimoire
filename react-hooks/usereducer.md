@@ -14,7 +14,7 @@ To begin with useReducer, first, we need to understand how JavaScript's built-in
 
 The reduce method calls a function (a reducer function), operates on each element of an array and always returns a single value.
 
-```
+```jsx
 function reducer(accumulator, currentvalue, currentIndex, sourceArray){
   // returns a single value
 }
@@ -34,13 +34,13 @@ As stated, the above reducer function takes in 4 parameters -
 
 Let's see reduce function in action, by creating a simple array of elements :
 
-```
+```jsx
 const items = [1, 10, 13, 24, 5]
 ```
 
 Now, We will create a simple function called `sum`, to add up all the elements in the items array. The `sum` function is our reducer function, as explained above in the syntax
 
-```
+```jsx
 const items = [1, 10, 13, 24, 5]
 
 function sum(a,b, c, d){
@@ -52,7 +52,7 @@ As we can see, I am passing four parameters named `a, b, c, d`, these parameters
 
 Finally, calling the `reduce` method on our `sum` reducer function as follows
 
-```
+```jsx
 const items = [1, 10, 13, 24, 5];
 
 function sum(a, b, c, d){
@@ -71,7 +71,7 @@ Let's understand what's going on here :
 
 When the `reduce` method gets called on the `sum` function, the accumulator ( here `a`) is placed on the zeroth index (1), the Current Value (here b) is on `10`. On the next loop of the `sum` function, the accumulator adds up `a + b` from the previous iteration and stores it up in `accumulator` (a) while the current value(b) points to 13 now. Similarly, the accumulator keeps on adding the items from the array whatever the Current Index is pointing until it reaches the very end of it. Hence resulting in the summation of all the items in the array.
 
-```
+```jsx
 // We can do a console.log to check iteration in every function loop :
 
 const items = [1,10,13,24,5];
@@ -100,7 +100,7 @@ console.log(out);
 
 In addition to this, there is an optional `initial value`, when provided will set the accumulator to the initial value first, before going out for the first index item in the array. The syntax could look like this :
 
-```
+```jsx
 items.reduce(sum, initial value)
 ```
 
@@ -134,7 +134,7 @@ This is essentially what happens with `useReducer` in React: it accepts a reduce
 
 The reducer function itself accepts two parameters and returns one value. The first parameter is the current state, and the second is the action. The state is the data we are manipulating. The reducer function receives an action, which is executed by a `dispatch` function.
 
-```
+```jsx
 function reducer(state, action) { }
 
 dispatch({ type: 'increment' })
@@ -148,7 +148,7 @@ The action is like an instruction you pass to the reducer function. Based on the
 
 The initial state is the second argument passed to the `useReducer` Hook, and it represents the default state.
 
-```
+```jsx
 const initialState = { count: 1 }
 
 // wherever our useReducer is located
@@ -167,7 +167,7 @@ In programming, lazy initialization is the tactic of delaying the creation of an
 
 As mentioned above, `useReducer` can accept a third parameter, which is an optional `init` function for creating the initial state lazily. It lets you extract logic for calculating the initial state outside of the reducer function, as you can see below:
 
-```
+```jsx
 const initFunc = (initialCount) => {
     if (initialCount !== 0) {
         initialCount=+0
@@ -195,7 +195,7 @@ The actions that will be dispatched by our components should be represented as o
 
 The `dispatch` is the second value returned from the `useReducer` Hook and can be used in our JSX to update the state.
 
-```
+```jsx
 // creating our reducer function
 function reducer(state, action) {
   switch (action.type) {
@@ -220,13 +220,13 @@ Of particular note is the fact that we can pass the `dispatch` function to other
 
 Let’s say we have a component we want to pass our dispatch function to as props. We can easily do that like this from the parent component:
 
-```
+```jsx
 <Increment count={state.count} handleIncrement={() => dispatch({type: 'increment'})}/>
 ```
 
 Now, in the child component, we receive the props, which, when emitted, will trigger the dispatch function and update the state:
 
-```
+```jsx
 <button onClick={handleIncrement}>Increment</button>
 ```
 
@@ -404,7 +404,7 @@ Let’s take a look into how both Hooks are declared and used:
 
 ### **Declaring state with `useState`**
 
-```
+```jsx
 const [state, setState] = useState('default state');
 ```
 
@@ -412,7 +412,7 @@ const [state, setState] = useState('default state');
 
 ### **Declaring state with `useReducer`**
 
-```
+```jsx
 const [state, dispatch] = useReducer(reducer, initialState)
 ```
 
@@ -420,19 +420,19 @@ const [state, dispatch] = useReducer(reducer, initialState)
 
 ### **Updating state with `useState`**
 
-```
+```jsx
 <input type='text' value={state} onChange={(e) => setState(e.currentTarget.value)} />
 ```
 
 ### **Updating state with `useReducer`**
 
-```
+```jsx
 <button onClick={() => dispatch({ type: 'decrement'})}>Decrement</button>
 ```
 
 We’ll discuss the `dispatch` function in greater depth a bit later. Optionally, an action object may also have a `payload`:
 
-```
+```jsx
 <button onClick={() => dispatch({ type: 'decrement', payload: 0})}>Decrement</button>
 ```
 

@@ -1,7 +1,5 @@
 # 🏁 useImperativeHandle
 
-
-
 According to the definition on [Reactjs’ official website](https://reactjs.org/docs/hooks-reference.html#useimperativehandle), useImperativeHandle customizes the instance value that is exposed to parent components when using ref.
 
 As to let useImperativeHandle work, it must be wrapped inside the forwardRef. If you didn’t know about forwardRef, [you can visit our previous article on forwardRef](https://codezup.com/forwardref-in-functional-components-react-hooks/).
@@ -34,7 +32,7 @@ But, for just the simple access, we can’t just be embedded or use the Redux or
 
 So, at that place, useImperativeHandle Hook also comes into play to make the flow bidirectional.
 
-#### Example of useImperativeHandle React Hook
+## Example of useImperativeHandle React Hook
 
 **App.js**
 
@@ -135,7 +133,7 @@ So, as I mentioned in the conditions above, instead of returning the entire elem
 
 So, if you remove the comment from the line where we are calling the focus() method, you will get the error. As we know, this is a javascript native function that should be accessed everywhere via the ref current property, but by using the useImperativeHandle Hook, we can restrict the DOM and also specify what should be exposed to the other end.
 
-### Real Example
+## Real Example
 
 The [GSAP library](https://blog.logrocket.com/animations-react-hooks-greensock/) is a popular choice for animation examples. To use it, we need to send a DOM element to any of its methods.
 

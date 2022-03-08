@@ -1,11 +1,10 @@
-# ⚠ Context Module
+# 🏁 Context Module
 
-The Context Module Functions Pattern enables you to encapsulate a complex set of state changes in a utility function that can be tree-shaken and loaded lazily.
+You can use the Context Module Functions Pattern to encapsulate a complex set of state changes in a utility function that can be tree-shaken and loaded lazily.
 
 Let's take a look at an example of a simple context and a reducer combo:
 
 ```jsx
-// src/context/counter.js
 const CounterContext = React.createContext()
 
 function CounterProvider({step = 1, initialCount = 0, ...props}) {
@@ -96,10 +95,9 @@ This isn't a _bad_ solution necessarily. But [DanAbramov](https://twitter.com/da
 
 > Helper methods are object junk that we need to recreate and compare for no purpose other than superficially nicer looking syntax.
 
-What Dan recommends (and what Facebook does) is pass dispatch as we had originally. And to solve the annoyance we were trying to solve in the first place, they use importable "helpers" that accept `dispatch`. Let's take a look at how that would look:
+What Dan suggests (and what Facebook does) is to use pass dispatch, as we did originally. And, to address the annoyance that we were attempting to address in the first place, they employ importable "helpers" that accept **dispatch**. Let's take a look at what that might look like:
 
 ```jsx
-// src/context/counter.js
 const CounterContext = React.createContext()
 
 function CounterProvider({step = 1, initialCount = 0, ...props}) {
@@ -141,7 +139,6 @@ export {CounterProvider, useCounter, increment, decrement}
 ```
 
 ```jsx
-// src/screens/counter.js
 import {useCounter, increment, decrement} from 'context/counter'
 
 function Counter() {
@@ -156,8 +153,7 @@ function Counter() {
 }
 ```
 
-**This may look like overkill, and it is.** However, in some situations this pattern can not only help you reduce duplication, but it also [helps improve performance](https://twitter.com/dan\_abramov/status/1125774170154065920) and helps you avoid mistakes in dependency lists.\
-
+**This may look like overkill, and it is.** However, in some situations this pattern can not only help you reduce duplication, but it also [helps improve performance](https://twitter.com/dan\_abramov/status/1125774170154065920) and helps you avoid mistakes in dependency lists.
 
 ## References and articles :
 

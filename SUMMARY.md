@@ -47,7 +47,7 @@
   * [⚠ Props Getters Pattern](concepts/advanced-patterns/props-getters-pattern.md)
   * [⚠ Custom hook pattern](concepts/advanced-patterns/custom-hook-pattern.md)
   * [⚠ State Reducer](concepts/advanced-patterns/state-reducer.md)
-  * [⚠ Context Module](concepts/advanced-patterns/context-module.md)
+  * [🏁 Context Module](concepts/advanced-patterns/context-module.md)
 * [React Under the hood](concepts/react-under-the-hood/README.md)
   * [🏁 What is "Rendering"?](concepts/react-under-the-hood/what-is-rendering.md)
   * [🏁 React Lifecycle](concepts/react-under-the-hood/react-lifecycle.md)

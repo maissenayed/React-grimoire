@@ -1,4 +1,4 @@
-# 🆗 CSS in js :Styled-components
+# 🏁 CSS in js :Styled-components
 
 ## Introduction
 
@@ -8,7 +8,7 @@ CSS-in-js is a quick implementation solution. Even though we recognize the benef
 
 CSS-in-JS has similar ideas to Tailwind regarding `separation of concerns`, namely, that there is no separation between markup and styling, however styled-components provides a way to write regular CSS within your Javascript code, which is especially handy for things like theming.
 
-![An example of a React Button component written with styled-components.](../../../.gitbook/assets/styled-comp1.png)
+![An example of a React Button component written with styled-components.](../../.gitbook/assets/styled-comp1.png)
 
 ### **CSS-in-JS: Pros**
 
@@ -26,7 +26,7 @@ This also enforces best code practices when it comes to making small, reusable c
 
 Because your CSS code is contained within your JS code, you can use any JS functionality to determine styling. This is one of the most appealing aspects of CSS-in-JS to me. Traditionally, this would have to be done with classes, so if you had five different button types, you'd need the corresponding classes for each. With styled-components, you can handle everything in JS, making your workflow much more efficient.
 
-![Line of code highlighting Javascript functionality within CSS](../../../.gitbook/assets/styled-comp2.png)
+![Line of code highlighting Javascript functionality within CSS](../../.gitbook/assets/styled-comp2.png)
 
 This is especially useful for **theming** + styles based on user input
 
@@ -47,3 +47,7 @@ Although the argument exists that writing CSS-in-JS improves efficiency, it does
 Another key issue, and this may sound unlikely, is security. A library like `styled-components` lets you embed JavaScript in CSS, this implies that if there’s sensitive code, like user input in your CSS, your app would be prone to XSS attacks. Thus it’s important to keep stuff like user input away from your styles and for everyone else on your team – if it’s a collaborative project – to understand this as well. Given this security risk, it’s worth asking if styling a JS component is even worth it.
 
 {% embed url="https://www.youtube.com/watch?v=BkgU_-KGK9w" %}
+
+## Bundle Info
+
+{% embed url="https://bundlephobia.com/package/styled-components@5.3.3" %}
