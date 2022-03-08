@@ -28,7 +28,7 @@
 * [🆗 useReducer](react-hooks/usereducer.md)
 * [🆗 useLayoutEffect](react-hooks/uselayouteffect.md)
 * [🏁 useImperativeHandle](react-hooks/useimperativehandle.md)
-* [🏁 Hook flow](react-hooks/hook-flow.md)
+* [🆗 Hook flow](react-hooks/hook-flow.md)
 * [🏁 Custom hooks](react-hooks/custom-hooks/README.md)
   * [🏁 useDebugValue](react-hooks/custom-hooks/usedebugvalue.md)
 
@@ -51,7 +51,7 @@
 * [React Under the hood](concepts/react-under-the-hood/README.md)
   * [🏁 What is "Rendering"?](concepts/react-under-the-hood/what-is-rendering.md)
   * [🏁 React Lifecycle](concepts/react-under-the-hood/react-lifecycle.md)
-  * [⚠ Reconciliation & Virtual DOM in React](concepts/react-under-the-hood/reconciliation-and-virtual-dom-in-react.md)
+  * [🏁 Reconciliation & Virtual DOM in React](concepts/react-under-the-hood/reconciliation-and-virtual-dom-in-react.md)
   * [🏁 Fiber](concepts/react-under-the-hood/fiber.md)
 * [⏰ Concepts to always have in mind](concepts/concepts-to-always-have-in-mind.md)
 

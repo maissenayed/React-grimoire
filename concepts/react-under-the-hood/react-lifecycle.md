@@ -32,6 +32,10 @@ if you want to see the new hook flow please see this link:
 [https://github.com/donavon/hook-flow](https://github.com/donavon/hook-flow)
 {% endembed %}
 
+{% embed url="https://wavez.github.io/react-hooks-lifecycle" %}
+[https://github.com/Wavez/react-hooks-lifecycle](https://github.com/Wavez/react-hooks-lifecycle)
+{% endembed %}
+
 ## componentDidMount( ) <a href="#752b" id="752b"></a>
 
 We aren't actually defining DOM nodes with React even though we're defining virtual representations of nodes in our DOM tree.&#x20;
