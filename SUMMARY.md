@@ -63,9 +63,9 @@
   * [🏁 Conditional React props with TypeScript](concepts/typescript/conditional-react-props-with-typescript.md)
 * [🏁 Build tool choice for MVP projects](react-ecosystem/build-tool-choice-for-mvp-projects.md)
 * [A CSS methodology comparison](react-ecosystem/a-css-methodology-comparison/README.md)
-  * [🆗 Post CSS processor :Sass](react-ecosystem/a-css-methodology-comparison/post-css-processor-sass.md)
-  * [🆗 CSS in js :Styled-components](react-ecosystem/a-css-methodology-comparison/css-in-js-styled-components.md)
-  * [🆗 Utility Classes: Tailwind](react-ecosystem/a-css-methodology-comparison/utility-classes-tailwind.md)
+  * [🏁 Post CSS processor :Sass](react-ecosystem/a-css-methodology-comparison/post-css-processor-sass.md)
+  * [🏁 CSS in js :Styled-components](react-ecosystem/a-css-methodology-comparison/css-in-js-styled-components.md)
+  * [🏁 Utility Classes: Tailwind](react-ecosystem/a-css-methodology-comparison/utility-classes-tailwind.md)
 
 ## ⁉ Testing
 
