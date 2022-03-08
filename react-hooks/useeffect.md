@@ -1,21 +1,21 @@
-# ☢ useEffect
+# 🏁 useEffect
 
-`React.useEffect` is a built-in hook that allows you to run some custom code after React renders (and re-renders) your component to the DOM. It accepts a callback function which React will call after the DOM has been rendered but before all of that let's dive deep into what is an effect
+`React.useEffect` is an in-built **hook** that lets you run custom code after React renders (and re-renders) your component to the **DOM**. It accepts a callback function that React will call after the **DOM** has been rendered, but first, let's define an effect.
 
 ## What are effects
 
-"Side Effect" is not a react-specific term. It is a general concept about behaviours of functions. A function is said to have side effect if it trys to modify anything outside its body. For example, if it modifies a global variable, then it is a side effect. If it makes a network call, it is a side effect as well.
+The term "Side Effect" does not refer to a specific reaction. It is a broad concept referring to the behaviors of functions. If a function attempts to modify anything outside of its body, it is said to have a side effect. It is a side effect, for example, if it modifies a global variable. It is also a side effect if it makes a network call.
 
 {% embed url="https://en.m.wikipedia.org/wiki/Side_effect_(computer_science)" %}
 
-Side effects are basically anything that affects something outside of the scope of the current function that’s being executed.&#x20;
+Side effects are defined as anything that has an effect on something that is not within the scope of the current function being executed.
 
 ## React side Effect
 
-Sometimes, however, we need our components to reach outside this data-flow process and directly interact with other APIs. An action that impinges on the outside world in some way is called a _side effect_. Common side effects include the following:
+However, there are times when we need our components to interact with APIs that are not part of the data-flow process. A side effect is an action that has an impact on the outside world in some way. The following are common side effects:
 
 * handling subscriptions with event listeners
-* dealing with manual DOM changes.
+* dealing with manual **DOM** changes.
 * Logging messages to the console or other service
 * Setting or getting values in local storage
 * Fetching data or subscribing and unsubscribing to services
@@ -49,7 +49,7 @@ const BasicEffect = () => {
 
 {% embed url="https://codesandbox.io/embed/useeffecetconitnous-rerender-w850cp?fontsize=14&hidenavigation=1&theme=dark" %}
 
-As we can see the useEffect will force the component to rerender because useEffect is always invoked after each rerender so when the after the counter is updated useEffect will invoke  handleClick and we find our self in an infinite loop&#x20;
+As we can see, **useEffect** will force the component to redraw because it is always invoked after each redraw, so when the counter is updated, **useEffect** will invoke **handleClick**, and we will be in an infinite loop.
 
 ### Empty dependency array
 
@@ -80,7 +80,7 @@ const BasicEffect = () => {
 
 ### Triggering Effect
 
-#### Let's take this example
+Let's take this example
 
 ```jsx
 import * as React from "react";
@@ -143,23 +143,25 @@ const ArrayDepMount = () => {
 }
 ```
 
-Here we can see that the effect depends on the randomNumber state and it will only trigger if the randomNumber value has changed&#x20;
+We can see that the effect is dependent on the randomNumber state and will only be triggered if the randomNumber value has changed.
 
 {% hint style="warning" %}
-**If your effect depends on some state or prop value in scope, be sure to pass it as an array dependency to prevent stale values being accessed within the callback. If the referenced values change over time and are used in the callback, be sure to place them in the array dependency**
+**If your effect is dependent on a state or prop value in scope, make sure to pass it as an array dependency to avoid accessing stale values within the callback. If the values referenced change over time and are used in the callback, include them in the array dependency.**
 {% endhint %}
 
 The React team recommends you use the [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks#installation) package. It warns when dependencies are specified incorrectly and suggests a fix.
 
-#### The importance of the dependency array
+{% hint style="info" %}
+### The importance of the dependency array
 
-&#x20;if you do not provide a dependency array, every scheduled `useEffect` is executed. This means that after every render cycle, every effect defined in the corresponding component is executed one after the other based on the positioning in the source code.
+_**If no dependency array is provided, every scheduled useEffect is executed. This means that after each render cycle, each effect defined in the corresponding component is executed in the order specified in the source code.**_
 
-So the order of your effect definitions matter. In our case, our single `useEffect` statement is executed whenever one of the state variables change.
+_**As a result, the order of your effect definitions is important. In our case, whenever one of the state variables changes, our single useEffect statement is executed. In the source code, sitioning is used.**_
 
-You have the ability to opt out from this behavior. This is managed with dependencies you provide as array entries. In these cases, React only executes the `useEffect` statement if at least one of the provided dependencies has changed since the previous run. In other words, with the dependency array, you make the execution dependent on certain conditions.
+_**As array entries, you provide. React only executes the useEffect statement in these cases if at least one of the provided dependencies has changed since the previous run. In other words, the dependency array makes the execution conditional on certain conditions.**_
 
-More often than not, this is what we want; we usually want to execute side effects after specific conditions, e.g., data has changed, a prop changed, or the user first sees our component. :arrow\_down:
+_**Most of the time, this is what we want; we usually want to execute side effects when certain conditions are met, such as when data changes, a prop changes, or the user first sees our component.**_
+{% endhint %}
 
 ### Multiple effects
 
@@ -188,17 +190,17 @@ const MultipleEffects = () => {
 }
 ```
 
-Note that `useEffect` calls can be skipped — i.e., not invoked on every render. This is done by passing a second array argument to the effect function.
+Note that `useEffect` calls can be skipped, not invoked on every render. This is done by passing a second array argument to the effect function.
 
 ## Cleaning up an effect <a href="#cleaningupaneffect" id="cleaningupaneffect"></a>
 
-React’s `useEffect` cleanup function saves applications from unwanted behaviors like memory leaks by cleaning up effects. In doing so, we can optimize our application’s performance.
+The application of React By cleaning up effects, the effect cleanup function protects applications from undesirable behaviors such as memory leaks. We can improve the performance of our application by doing so.
 
 ### What is the `useEffect` cleanup function?
 
-Just like the name implies, the `useEffect` cleanup is a function that allows us to tidy up our code before our component unmounts. When our code runs and reruns for every render, `useEffect` also cleans up after itself using the cleanup function.
+The **useEffect** cleanup function, as the name implies, allows us to clean up our code before our component unmounts. When our code runs and reruns for each render, **useEffect** uses the cleanup function to clean up after itself.
 
-The `useEffect` Hook is built in a way that we can return a function inside it and this return function is where the cleanup happens. The cleanup function prevents memory leaks and removes some unnecessary and unwanted behaviors.
+The **useEffect** Hook is designed in such a way that we can return a function from within it, and it is within this return function that the cleanup occurs. The cleanup function prevents memory leaks and eliminates some unwanted and unnecessary behaviors.
 
 Note that you don’t update the state inside the return function either:
 
@@ -206,17 +208,17 @@ Note that you don’t update the state inside the return function either:
 
 ### Why is the `useEffect` cleanup function useful?
 
-As stated previously, the `useEffect` cleanup function helps developers clean effects that prevent unwanted behaviors and optimizes application performance.
+As previously stated, the **useEffect** cleanup function assists developers in cleaning up effects that prevent unwanted behaviors and improve application performance.
 
-However, it is pertinent to note that the `useEffect` cleanup function does not only run when our component wants to unmount, it also runs right before the execution of the next scheduled effect.
+It is important to note, however, that the useEffect cleanup function runs not only when our component wants to unmount, but also right before the execution of the next scheduled effect.
 
-In fact, after our effect executes, the next scheduled effect is usually based on the dependency array
+&#x20;In fact, the next scheduled effect is usually based on the dependency array after our effect has completed.
 
-Therefore, when our effect is dependent on our prop or anytime we set up something that persists, we then have a reason to call the cleanup function.
+As a result, whenever our effect is dependent on our prop or whenever we set up something that persists, we have a reason to invoke the cleanup function.
 
-Let’s look at this scenario: imagine we get a fetch of a particular user through a user’s `id`, and, before the fetch completes, we change our mind and try to get another user. At this point, the prop, or in this case, the `id`, updates while the previous fetch request is still in progress.
+Consider the following scenario: suppose we receive a **fetch** of a specific user via a **user's id** and, before the fetch is completed, we change our mind and attempt to obtain another user.
 
-It is then necessary for us to abort the fetch using the cleanup function so we don’t expose our application to a memory leak.
+While the previous fetch request is still in progress, the **prop**, or in this case, the **id**, updates. To avoid exposing our application to a memory leak, we must abort the fetch using the cleanup function.
 
 ### When should we use the `useEffect` cleanup?
 
@@ -226,7 +228,7 @@ Let’s say we have a React component that fetches and renders data. If our comp
 
 To fix this error, we use the cleanup function to resolve it.
 
-According to React’s official documentation, “React performs the cleanup when the component unmounts. However… effects run for every render and not just once. This is why React also cleans up effects from the previous render before running the effects next time.”
+_`"React performs the cleanup when the component unmounts"`_ according to the official documentation. However, effects are applied to each render, not just the first. This is why React also cleans up effects from previous renders before running them again."
 
 The cleanup is commonly used to cancel all subscriptions made and cancel fetch requests.
 
@@ -250,7 +252,7 @@ const fetchData = async (url) => {
 };
 ```
 
-Put the fetchData function above in the useEffect hook and call it, like so:
+Put the **fetchData** function above in the **useEffect** hook and call it, like so:
 
 ```jsx
 useEffect(() => {

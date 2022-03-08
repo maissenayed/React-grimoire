@@ -2,13 +2,13 @@
 description: useRef is like class instance variable for function components.
 ---
 
-# 🆗 useRef
+# 🏁 useRef
 
 ## What are refs
 
-Sometimes when using React you’ll need an escape hatch to write imperative-style code to interact directly with DOM elements. Using React’s createRef method allows you to do just that!
+When using React, you may require an escape hatch to write imperative-style code in order to interact directly with **DOM** elements. You can do this by using React's **createRef** method!
 
-React provides a way to get references to DOM nodes by using `React.createRef()`. It’s really just an equivalent of this all-too-familiar snippet of JavaScript:
+`React.createRef` allows you to obtain references to **DOM** nodes (). It's really just a JavaScript equivalent of this all-too-familiar snippet:
 
 ![](<../.gitbook/assets/sdfd (1)>)
 
@@ -31,7 +31,7 @@ class Component extends Component {
 }
 ```
 
-When working with class-based components in the past, we used `createRef()` to create a ref. However, now that React recommends functional components, and general practice is to follow the Hooks way of doing things, we don’t need to use `createRef()`. Instead, we use `useRef(null)` to create refs in functional components.
+When working with class-based components, we used `createRef()` to create a ref. However, since React now recommends functional components and general practice is to use **Hooks**, we no longer need to use `createRef().` To create refs in functional components, we instead use `useRef(null).`
 
 ## What is useRef used for?
 
@@ -82,19 +82,19 @@ const countLogger = () => {
 }
 ```
 
-Here `const reference = useRef(0)` creates a reference reference initialized to 0. We use this reference object to store the number of clicks on a button. On clicking the button, the reference value is updated and logged to the console. As you might have noticed in your console that "Component rendered" is logged only once (during the initial render) which means that the button clicks, more precisely, the reference value updates do not trigger component re-renders.
+`const reference = useRef(0`) creates a reference reference with an initial value of 0. This reference object is used to keep track of how many times a button has been clicked. The reference value is updated and logged to the console when you click the button. As you may have noticed in your console, "Component rendered" is only logged once (during the initial render), implying that button clicks, or more precisely, reference value updates, do not cause component re-renders.
 
 ### Directly access DOM nodes
 
-When combined with the `ref` attribute, we could use `useRef` to obtain the underlying DOM nodes to perform DOM operations imperatively. In fact, this is really an escape hatch. We should only do this sparsely for things that React doesn't provide a declarative API for, such as focus management.&#x20;
+We could use **useRef** in conjunction with the `ref` attribute to obtain the underlying **DOM** nodes and perform **DOM** operations imperatively. In reality, this is an escape route. We should only do this sparingly for things like focus management, for which React does not provide a declarative API.
 
-One of the many concepts that React popularized among developers is the concept of declarative views. Before declarative views, most of us were modifying the DOM by calling functions that explicitly changed it.
+Declarative views are one of the many concepts popularized by React among developers. Prior to declarative views, most of us changed the **DOM** by calling functions that changed it explicitly.&#x20;
 
-we are now declaring views based on a state, and — though we are still calling functions to alter this state — we are not in control of when the DOM will change or even if it should change.
+We are now declaring views based on a state, and while we are still calling functions to change this state, we have no control over when or if the **DOM** will change.&#x20;
 
-Because of this inversion of control, we’d lose this imperative nature if it weren’t for refs.
+If it weren't for the refs, we'd lose this imperative nature due to the inversion of control.
 
-A common use case for `useRef` is to manage child DOM nodes:
+A common use case for `useRef` is to manage child **DOM** nodes:
 
 ```jsx
 function TextInputWithFocusButton() {
@@ -120,7 +120,9 @@ function TextInputWithFocusButton() {
 
 The example above works because if you pass a `ref` object to React, e.g., `<div ref={myRef} />`, React will set its `current` property to the corresponding DOM node whenever that node changes, i.e., `myRef = {current: *dom node*}`.
 
-`useRef` returns a plain JavaScript object, so it can be used for holding more than just DOM nodes — it can hold whatever value you want. This makes it the perfect choice for simulating instance-like variables in functional components:
+`useRef` returns a plain JavaScript object, so it can be used for holding more than just DOM nodes.
+
+It can hold whatever value you want. This makes it the perfect choice for simulating instance-like variables in functional components:
 
 ![](<../.gitbook/assets/ttttt1 (2)>)
 
@@ -140,7 +142,7 @@ Remember, the only difference between `useRef` and creating a `{current: ...}` o
 
 ### Integrating with DOM-based libraries
 
-As good as React is, there are a lot of utilities and libraries outside its ecosystem that have been in use on the web for years. For example, using refs allows us to combine React with a great animation library. It’s good to take advantage of their stability and resolution for some specific problems.
+As good as React is, there are many utilities and libraries that have been in use on the web for years that are not part of its ecosystem. Using refs, for example, allows us to combine React with a fantastic animation library. It's a good idea to use their stability and resolution for some specific problems.
 
 The [GSAP library](https://blog.logrocket.com/animations-react-hooks-greensock/) is a popular choice for animation examples. To use it, we need to send a DOM element to any of its methods.
 
@@ -261,9 +263,7 @@ const Input = forwardRef((props, ref) => {
 });
 ```
 
-Et voilá, focussing the input via refs works!
-
-Here's the code for doing so:
+Here's the final code for doing so:
 
 ```javascript
 import React, { useState, useRef, forwardRef } from 'React';
@@ -299,7 +299,7 @@ The `forwardRef` function **takes the name of the component from the function** 
 
 ![React DevTools anonymous function forwardRef](https://felixgerschau.com/static/8cc0dcf5e6d3a8bd5fd9e6a2636a5de0/b3e51/anonymous-function-devtools.png)
 
-There are a few ways to avoid this. First, you could use a regular function expression with a name like this:
+There are a few things you can do to avoid this. To begin, you could use a regular function expression with the following name:
 
 ```javascript
 const Input = forwardRef(function Input(props, ref) {
@@ -307,7 +307,7 @@ const Input = forwardRef(function Input(props, ref) {
 });
 ```
 
-If you're like me and haven't used this syntax in the last three years, you can also set the display name manually by adding the following line to the end of the file:
+If, like me, you haven't used this syntax in the last three years, you can manually set the display name by adding the following line to the end of the file:
 
 ```javascript
 Input.displayName = 'Input';
