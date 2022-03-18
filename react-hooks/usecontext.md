@@ -2,7 +2,7 @@
 description: Context is React’s way of handling shared data between multiple components.
 ---
 
-# ⚠ useContext
+# 🆗 useContext
 
 ## Introduction to prop drilling
 
@@ -78,15 +78,15 @@ Note that using the `useContext` Hook within a component implicitly subscribes t
 
 Here’s an even more important point to remember. If the ancestor component uses `React.memo` or `shouldComponentUpdate`, a re-render will still happen starting at the component that calls `useContext`.
 
-![A component is re-rendered when it calls useContext](../.gitbook/assets/re-render-component-calls-usecontext.png)
+![A component is re-rendered when it calls useContext](<../.gitbook/assets/re-render queue (5) (1).gif>)
 
 A component calling `useContext` will be re-rendered when the context value changes. If this is expensive, you may consider optimizing it by using [memoization](https://github.com/facebook/react/issues/15156#issuecomment-474590693).
 
 Remember that `useContext` only lets you read the context and subscribe to its changes. You still need a context provider, i.e., `ContextObject.Provider`, above in the component tree to provide the value to be read by `useContext`.
 
-![](../.gitbook/assets/contextcompere.png)
+![](<../.gitbook/assets/previous scroll height (8).gif>)
 
-![React Context](https://dmitripavlutin.com/90649ae4bdf379c482ad24e0dd220bc4/react-context-3.svg)
+![React Context](<../.gitbook/assets/Provider (1).gif>)
 
 You can have as many consumers as you want for a single context. If the context value changes (by changing the `value` prop of the provider `<Context.Provider value={value} />`), then all consumers are immediately notified and re-rendered.
 

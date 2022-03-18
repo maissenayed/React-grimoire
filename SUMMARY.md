@@ -13,7 +13,7 @@
 * [🏁 Form](react-fundamentals/form.md)
 * [🏁 Array and Lists](react-fundamentals/arrays-and-key-props.md)
 * [🏁 Class Component State](react-fundamentals/class-component-state.md)
-* [ℹ Class Component Life Cycle](react-fundamentals/class-component-life-cycle.md)
+* [🏁 Class Component Life Cycle](react-fundamentals/class-component-life-cycle.md)
 * [🏁 PropTypes](react-fundamentals/proptypes-todo.md)
 
 ## 🪝 React Hooks
@@ -22,7 +22,7 @@
 * [🏁 useState](react-hooks/usestate.md)
 * [🏁 useEffect](react-hooks/useeffect.md)
 * [🏁 useRef](react-hooks/useref.md)
-* [⚠ useContext](react-hooks/usecontext.md)
+* [🆗 useContext](react-hooks/usecontext.md)
 * [🏁 useMemo](react-hooks/usememo.md)
 * [🏁 useCallback](react-hooks/usecallback.md)
 * [🆗 useReducer](react-hooks/usereducer.md)

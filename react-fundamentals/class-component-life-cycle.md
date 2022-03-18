@@ -1,4 +1,4 @@
-# ℹ Class Component Life Cycle
+# 🏁 Class Component Life Cycle
 
 > The actual source code contents comes from [Ohans Emmanuel](https://blog.logrocket.com/author/ohansemmanuel/) blog.
 >
@@ -106,7 +106,7 @@ const MyComponent extends React.Component {
 
 You can return an object to update the state of the component:
 
-```
+```jsx
 ... 
 
   static getDerivedStateFromProps(props, state) { 
@@ -120,7 +120,7 @@ You can return an object to update the state of the component:
 
 Or you can return null to make no updates:
 
-```
+```jsx
 ... 
 
   static getDerivedStateFromProps(props, state) {
@@ -136,7 +136,7 @@ Remember, this method is called (or invoked) before the component is rendered to
 
 Here’s a quick example so you can see the `static getDerivedStateFromProps()` method in action. Consider a simple component that renders the number of points scored by a football team. As you may expect, the number of points is stored in the component state object:
 
-```
+```jsx
 class App extends Component {
   state = {
     points: 10
