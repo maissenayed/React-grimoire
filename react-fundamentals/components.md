@@ -2,11 +2,11 @@
 description: A piece of the puzzle
 ---
 
-# 🆗 Components
-
-![](../.gitbook/assets/download.png)
+# 🏁 Components
 
 ## Custom components
+
+![](../.gitbook/assets/component.gif)
 
 You frequently want to share code, just like in regular **JavaScript**, which you do by using functions. If you want to distribute **JSX**, you can do so as well. These functions are referred to as "components" in **React** and have some unique properties that's defined or called props.
 

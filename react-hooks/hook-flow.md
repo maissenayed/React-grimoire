@@ -1,4 +1,4 @@
-# 🏁 Hook flow
+# 🆗 Hook flow
 
 > But what exactly is the React Hook Flow?
 
