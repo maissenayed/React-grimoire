@@ -161,7 +161,7 @@ The text reads, “you have scored 10 points”  where 10 is the number of poi
 
 Let’s look at another example. If you put in the `static getDerivedStateFromProps` method as shown below, what number of points would be rendered?
 
-```
+```jsx
 class App extends Component {
   state = {
     points: 10
@@ -207,7 +207,7 @@ So when should you use the `static getDerivedStateFromProps` lifecycle method?
 
 The method name `getDerivedStateFromProps` comprises five words: get derived state from props. Essentially, `static getDerivedStateFromProps` allows a component to update its internal state in response to a change in props.
 
-![static getDerivedStateFromProps Diagram](https://blog.logrocket.com/wp-content/uploads/2019/01/static-getDerivedStateFromProps-diagram.png)
+![static getDerivedStateFromProps Diagram](../.gitbook/assets/in.gif)
 
 Component state in this manner is referred to as [derived state](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#when-to-use-derived-state).
 
@@ -217,7 +217,7 @@ As a rule of thumb, derived state should be used sparingly as you can introduce 
 
 After the `static getDerivedStateFromProps` method is called, the next lifecycle method in line is the `render` method:
 
-```
+```jsx
 class MyComponent extends React.Component {
 // render is the only required method for a class component 
    render() {
@@ -230,7 +230,7 @@ If you want to render elements to the DOM, — e.g., returning some `JSX` — th
 
 You could also return plain strings and numbers, as shown below:
 
-```
+```jsx
 class MyComponent extends React.Component {
    render() {
     return "Hurray" 
@@ -240,7 +240,7 @@ class MyComponent extends React.Component {
 
 Or, you could return arrays and fragments:
 
-```
+```jsx
 class MyComponent extends React.Component {
    render() {
     return [
@@ -251,7 +251,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-```
+```jsx
 class MyComponent extends React.Component {
    render() {
     return <React.Fragment>
@@ -264,7 +264,7 @@ class MyComponent extends React.Component {
 
 If you don’t want to render anything, you could return a boolean or `null` within the render method:
 
-```
+```jsx
 class MyComponent extends React.Component { 
    render() {
     return null
@@ -281,7 +281,7 @@ class MyComponent extends React.Component {
 
 Lastly, you could return a [portal](https://reactjs.org/docs/portals.html) from the render method:
 
-```
+```jsx
 class MyComponent extends React.Component {
   render() {
     return createPortal(this.props.children, document.querySelector("body"));
@@ -301,7 +301,7 @@ You would use the `componentDidMount` lifecycle method to grab a DOM node from t
 
 For example, let’s say you have a modal and want to render the content of the modal within a specific DOM element:
 
-```
+```jsx
 class ModalContent extends React.Component {
 
   el = document.createElement("section");
@@ -317,7 +317,7 @@ class ModalContent extends React.Component {
 
 If you also want to make network requests as soon as the component is mounted to the DOM, this is a perfect place to do so:
 
-```
+```jsx
 componentDidMount() {
   this.fetchListOfTweets() // where fetchListOfTweets initiates a netowrk request to fetch a certain list of tweets.
 }
@@ -325,7 +325,7 @@ componentDidMount() {
 
 You could also set up subscriptions such as timers. Here’s an example:
 
-```
+```jsx
 // e.g requestAnimationFrame 
 componentDidMount() {
     window.requestAnimationFrame(this._updateCountdown);
@@ -353,11 +353,11 @@ We already explained this method when reviewing the mounting lifecycle phase. Wh
 
 #### 2. `shouldComponentUpdate()` <a href="#shouldcomponentupdate" id="shouldcomponentupdate"></a>
 
-Oncethe `static getDerivedStateFromProps` method is called, the `shouldComponentUpdate` method is called next.
+Once the `static getDerivedStateFromProps` method is called, the `shouldComponentUpdate` method is called next.
 
 In most cases, you’ll want a component to rerender when state or props changes. However, you do have control over this behavior.
 
-![shouldComponentUpdate() React Lifecycle Method Example](https://blog.logrocket.com/wp-content/uploads/2019/01/shouldcomponendupdate-react-lifecycle-method-example.png)
+![shouldComponentUpdate() React Lifecycle Method Example](<../.gitbook/assets/re-render queue (4).gif>)
 
 Within this lifecycle method, you can return a boolean  —  `true` or `false` — and control whether the component gets rerendered (e.g., upon a change in state or props).
 
@@ -389,7 +389,7 @@ A classic case where the `getSnapshotBeforeUpdate` lifecycle method comes in han
 
 The implementation of the chat pane is as simple as it looks. Within the `App` component is an unordered list with a `Chats` component:
 
-```
+```jsx
 <ul className="chat-thread">
     <Chats chatList={this.state.chatList} />
  </ul>
@@ -399,7 +399,7 @@ The `Chats` component renders the list of chats, and for this, it needs a `chatL
 
 The `Chats` component has a simple implementation as follows:
 
-```
+```jsx
 class Chats extends Component {
   render() {
     return (
@@ -437,7 +437,7 @@ The way the `getSnapshotBeforeUpdate` lifecycle method works is that when it is 
 
 So we can use the `prevProps` and `prevState` parameters as shown below:
 
-```
+```jsx
 getSnapshotBeforeUpdate(prevProps, prevState) {
    
 }
@@ -445,7 +445,7 @@ getSnapshotBeforeUpdate(prevProps, prevState) {
 
 Within this method, you’re expected to either return a value or `null`:
 
-```
+```jsx
 getSnapshotBeforeUpdate(prevProps, prevState) {
    return value || null // where 'value' is a  valid JavaScript value    
 }
@@ -459,7 +459,7 @@ The `getSnapshotBeforeUpdate` React lifecycle method doesn’t work on its own. 
 
 The `componentDidUpdate` lifecycle method is invoked after the `getSnapshotBeforeUpdate`. As with the `getSnapshotBeforeUpdate` method it receives the previous props and state as arguments:
 
-```
+```jsx
 componentDidUpdate(prevProps, prevState) {
  
 }
@@ -471,7 +471,7 @@ Whatever value is returned from the `getSnapshotBeforeUpdate` lifecycle method i
 
 Let’s call the returned value from `getSnapshotBeforeUpdate`, snapshot, and here’s what we get thereafter:
 
-```
+```jsx
 componentDidUpdate(prevProps, prevState, snapshot) {
  
 }
@@ -483,7 +483,7 @@ To solve this, I’ll need to remind (or teach) you some DOM geometry. So bear w
 
 In the meantime, here’s all the code required to maintain the scroll position within the chat pane:
 
-```
+```jsx
 getSnapshotBeforeUpdate(prevProps, prevState) {
     if (this.state.chatList > prevState.chatList) {
       const chatThreadRef = this.chatThreadRef.current;
@@ -510,7 +510,7 @@ However, the graphic below highlights the actual region that holds the chat mess
 
 It is this `ul` we hold a reference to using a React Ref.
 
-```
+```jsx
 <ul className="chat-thread" ref={this.chatThreadRef}>
    ...
 </ul>
@@ -518,7 +518,7 @@ It is this `ul` we hold a reference to using a React Ref.
 
 First off, because `getSnapshotBeforeUpdate` may be triggered for updates via any number of props or even a state update, we wrap to code in a conditional that checks if there’s indeed a new chat message:
 
-```
+```jsx
 getSnapshotBeforeUpdate(prevProps, prevState) {
     if (this.state.chatList > prevState.chatList) {
       // write logic here
@@ -529,7 +529,7 @@ getSnapshotBeforeUpdate(prevProps, prevState) {
 
 The `getSnapshotBeforeUpdate` has to return a value. If no chat message was added, we will just return `null`:
 
-```
+```jsx
 getSnapshotBeforeUpdate(prevProps, prevState) {
     if (this.state.chatList > prevState.chatList) {
       // write logic here
@@ -540,7 +540,7 @@ getSnapshotBeforeUpdate(prevProps, prevState) {
 
 Now consider the full code for the `getSnapshotBeforeUpdate` method:
 
-```
+```jsx
 getSnapshotBeforeUpdate(prevProps, prevState) {
     if (this.state.chatList > prevState.chatList) {
       const chatThreadRef = this.chatThreadRef.current;
@@ -552,7 +552,7 @@ getSnapshotBeforeUpdate(prevProps, prevState) {
 
 First, consider a situation where the entire height of all chat messages doesn’t exceed the height of the chat pane:
 
-![componentDidUpdate Example](https://blog.logrocket.com/wp-content/uploads/2019/01/componentDidUpdate-react-lifecycle-method-example-1.png)
+![componentDidUpdate Example](<../.gitbook/assets/previous scroll height (2).gif>)
 
 Here, the expression `chatThreadRef.scrollHeight - chatThreadRef.scrollTop`will be equivalent to `chatThreadRef.scrollHeight - 0`.
 
@@ -570,7 +570,7 @@ The value passed in here — at this time, is the previous `scrollHeight` be
 
 In the `componentDidUpdate` we have the following code, but what does it do?
 
-```
+```jsx
 componentDidUpdate(prevProps, prevState, snapshot) {
     if (snapshot !== null) {
       const chatThreadRef = this.chatThreadRef.current;
@@ -583,15 +583,15 @@ In actuality, we are programmatically scrolling the pane vertically [from the to
 
 Since `snapshot` refers to the `scrollHeight` before the update, the above expression returns the height of the new chat message plus any other related height owing to the update. Please see the graphic below:
 
-![componentDidUpdate React Lifecycle Method Example](https://blog.logrocket.com/wp-content/uploads/2019/01/componentDidUpdate-react-lifecycle-method-example-2.png)
+![componentDidUpdate React Lifecycle Method Example](<../.gitbook/assets/previous scroll height (3).gif>)
 
 When the entire chat pane height is occupied with messages (and already scrolled up a bit), the `snapshot` value returned by the `getSnapshotBeforeUpdate` method will be equal to the actual height of the chat pane:
 
-![componentDidUpdate React Lifecycle Method Example](https://blog.logrocket.com/wp-content/uploads/2019/01/componentDidUpdate-react-lifecycle-method-example-3.png)
+![componentDidUpdate React Lifecycle Method Example](<../.gitbook/assets/previous scroll height.gif>)
 
 The computation from `componentDidUpdate` will set to `scrollTop` value to the sum of the heights of extra messages, which is exactly what we want.
 
-![componentDidUpdate React Lifecycle Method Example](https://blog.logrocket.com/wp-content/uploads/2019/01/componentDidUpdate-react-lifecycle-method-example-4.png)
+![componentDidUpdate React Lifecycle Method Example](<../.gitbook/assets/previous scroll height (1).gif>)
 
 If you got stuck, I’m sure going through the explanation (one more time) or checking the source code will help clarify your questions. You can also use the comments section to ask me.
 
@@ -603,7 +603,7 @@ The following method is invoked during the component unmounting phase:
 
 The `componentWillUnmount` lifecycle method is invoked immediately before a component is unmounted and destroyed. This is the ideal place to perform any necessary cleanup such as clearing up timers, cancelling network requests, or cleaning up any subscriptions that were created in `componentDidMount()` as shown below:
 
-```
+```jsx
 // e.g add event listener
 componentDidMount() {
     el.addEventListener()
@@ -623,7 +623,7 @@ Let’s implement a simple component to catch errors in the demo app. For this, 
 
 Here’s the most basic implementation:
 
-```
+```jsx
 import React, { Component } from 'react';
 
 class ErrorBoundary extends Component {
@@ -644,7 +644,7 @@ Whatever value is returned from this method is used to update the state of the c
 
 Let’s update the `ErrorBoundary` component to use this lifecycle method:
 
-```
+```jsx
 import React, { Component } from "react";
 class ErrorBoundary extends Component {
   state = {};
@@ -668,7 +668,7 @@ Right now, whenever an error is thrown in a descendant component, the error will
 
 The `componentDidCatch` method is also called after an error in a descendant component is thrown. Apart from the `error` thrown, it is passed one more argument which represents more information about the error:
 
-```
+```jsx
 componentDidCatch(error, info) {
     logToExternalService(error, info) // this is allowed. 
         //Where logToExternalService may make an API call.
@@ -677,7 +677,7 @@ componentDidCatch(error, info) {
 
 In this method, you can send the `error` or `info` received to an external logging service. Unlike `getDerivedStateFromError`, the `componentDidCatch`allows for side-effects:
 
-```
+```jsx
 componentDidCatch(error, info) {
     logToExternalService(error, info) // this is allowed. 
         //Where logToExternalService may make an API call.
@@ -686,7 +686,7 @@ componentDidCatch(error, info) {
 
 Let’s update the `ErrorBoundary` component to use this lifecycle method:
 
-```
+```jsx
 import React, { Component } from "react";
 class ErrorBoundary extends Component {
   state = { hasError: false };
