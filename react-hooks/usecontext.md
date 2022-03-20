@@ -2,7 +2,7 @@
 description: Context is React’s way of handling shared data between multiple components.
 ---
 
-# 🆗 useContext
+# useContext
 
 ## Introduction to prop drilling
 

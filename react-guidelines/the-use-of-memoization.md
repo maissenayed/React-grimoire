@@ -1,4 +1,4 @@
-# 🏁 The use of React.memo
+# The use of Memoization
 
 Since the release of the react hooks, there has been a lot of discussion about the use of memo() and useMemo(), but memoization is rarely required.&#x20;
 

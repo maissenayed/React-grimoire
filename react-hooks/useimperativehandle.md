@@ -1,4 +1,4 @@
-# 🏁 useImperativeHandle
+# useImperativeHandle
 
 According to the definition on [Reactjs’ official website](https://reactjs.org/docs/hooks-reference.html#useimperativehandle), useImperativeHandle customizes the instance value that is exposed to parent components when using ref.
 

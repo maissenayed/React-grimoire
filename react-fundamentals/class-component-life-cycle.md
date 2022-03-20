@@ -1,4 +1,4 @@
-# 🏁 Class Component Life Cycle
+# Class Component Life Cycle
 
 > The actual source code contents comes from [Ohans Emmanuel](https://blog.logrocket.com/author/ohansemmanuel/) blog.
 >

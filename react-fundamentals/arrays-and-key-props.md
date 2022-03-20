@@ -1,4 +1,4 @@
-# 🏁 Array and Lists
+# Array and Lists
 
 ## Creating a list
 

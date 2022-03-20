@@ -1,4 +1,4 @@
-# 🏁 Intro to hooks
+# Intro to hooks
 
 React Hooks is a fancy name for functions that let you hook into React state and lifecycle features in functional components. This was introduced with the React 16.8 update and has since become an essential component of any React application.
 

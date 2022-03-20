@@ -2,7 +2,7 @@
 description: the old way prior to react 16.8.0
 ---
 
-# 🏁 Class Component State
+# Class Component State
 
 ## What is State?
 

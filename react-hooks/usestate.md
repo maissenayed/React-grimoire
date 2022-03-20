@@ -1,4 +1,4 @@
-# 🏁 useState
+# useState
 
 ![](../.gitbook/assets/useState)
 

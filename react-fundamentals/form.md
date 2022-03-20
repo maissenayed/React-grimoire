@@ -1,4 +1,4 @@
-# 🏁 Form
+# Form
 
 There aren't many things you have to learn in **React** to interact with forms beyond what you can do with regular **DOM APIs** and **JavaScript**.
 

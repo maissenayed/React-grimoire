@@ -2,8 +2,6 @@
 
 {% embed url="https://reactjs.org/docs/hooks-reference.html#uselayouteffect" %}
 
-### `useLayoutEffect` <a href="#uselayouteffect" id="uselayouteffect"></a>
-
 Your `useLayoutEffect` callback/effects will be fired _**synchronously**_ after all DOM mutations, i.e., _**before**_ the browser has a chance to paint.
 
 This can be useful if you need to make DOM measurements (like getting the scroll position or other styles for an element) and then make DOM mutations or trigger a synchronous re-render by updating state.
@@ -22,12 +20,7 @@ useLayoutEffect(() => {
 }, [arrayDependency])
 ```
 
-
-
-It looks exactly like useEffect but different use-cases. Here is the syntax for it;\
-
-
-
+It looks exactly like useEffect but different use-cases. Here is the syntax for it
 
 ```jsx
 const component =() => {
@@ -60,8 +53,6 @@ const component =() => {
     )
   }
 ```
-
-
 
 ### Timing of an effect <a href="#timingofaneffect" id="timingofaneffect"></a>
 

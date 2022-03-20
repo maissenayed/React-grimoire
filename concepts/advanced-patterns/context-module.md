@@ -1,4 +1,4 @@
-# 🏁 Context Module
+# Context Module
 
 You can use the Context Module Functions Pattern to encapsulate a complex set of state changes in a utility function that can be tree-shaken and loaded lazily.
 
@@ -95,7 +95,7 @@ This isn't a _bad_ solution necessarily. But [DanAbramov](https://twitter.com/da
 
 > Helper methods are object junk that we need to recreate and compare for no purpose other than superficially nicer looking syntax.
 
-What Dan suggests (and what Facebook does) is to use pass dispatch, as we did originally. And, to address the annoyance that we were attempting to address in the first place, they employ importable "helpers" that accept **dispatch**. Let's take a look at what that might look like:
+Dan suggests (and Facebook does) passing dispatch, which is what we did originally. In order to address the issues (duplication, for example), they use importable "helpers" that accept dispatch. Let's take a look at how that might work:
 
 ```jsx
 const CounterContext = React.createContext()

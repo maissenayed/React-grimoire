@@ -1,4 +1,4 @@
-# 🏁 useMemo
+# useMemo
 
 As apps become larger and more complex, writing efficient React code is becoming more and more important than ever. Re-rendering large components is expensive, and giving the browser a significant amount of work through a single-page application (SPA) increases processing time and may drive away users.
 

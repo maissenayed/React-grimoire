@@ -2,7 +2,7 @@
 description: The Elegant React way
 ---
 
-# 🏁 JSX
+# JSX
 
 Writing our code with React.createElement() and reactDOM.render(), it's a little bit verbose; not that readable.
 

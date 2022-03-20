@@ -1,4 +1,4 @@
-# 🏁 useEffect
+# useEffect
 
 `React.useEffect` is an in-built **hook** that lets you run custom code after React renders (and re-renders) your component to the **DOM**. It accepts a callback function that React will call after the **DOM** has been rendered, but first, let's define an effect.
 

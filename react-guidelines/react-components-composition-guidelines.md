@@ -1,4 +1,4 @@
-# 🏁 React Components Composition Guidelines
+# React Components Composition Guidelines
 
 > One of the many great parts of React is how it makes you think about apps as you build them.
 

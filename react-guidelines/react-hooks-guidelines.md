@@ -1,4 +1,4 @@
-# 🏁 React hooks guidelines
+# React hooks guidelines
 
 {% hint style="info" %}
 **Before react 16.8, it was already possible to reuse some stateful logic across your app with higher-order components and render props but Custom Hooks let you do it without adding more components to your tree.**

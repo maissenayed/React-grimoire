@@ -1,4 +1,4 @@
-# 🏁 Custom hooks
+# Custom hooks
 
 How do you see the interaction between the user interface and the logic? The view must draw elements for the user and record and display data based on the user's interactions. The logic, on the other hand, is responsible for requesting, generating, and processing data, as well as storing it for future use. In React, we can put States and use Effects to detect their changes, and we can handle a store-action app with these two Hooks. We can, however, make our own Hooks. Custom Hook is a single function that is prefixed with the word "use," such as "**useUser**" or "**useRole**." Hooks allow for the encapsulation and abstraction of complex operations into functional and linear code.
 
