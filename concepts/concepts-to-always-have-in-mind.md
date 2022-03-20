@@ -1390,6 +1390,8 @@ class Button extends React.Component {
 
 ## References and articles :
 
+{% embed url="https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795" %}
+
 {% embed url="https://reactpatterns.com" %}
 
 {% embed url="https://rangle.github.io/react-training/advanced" %}
