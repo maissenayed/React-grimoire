@@ -10,9 +10,9 @@ There has always been a need to share data with different components when workin
 
 Let’s consider the diagram below:
 
-&#x20;
+![](<../.gitbook/assets/re-render queue (4) (2).gif>)
 
-![](<../.gitbook/assets/re-render queue (1) (1).gif>)
+&#x20;
 
 For the data in the A component to be accessed in the C component, it has to be passed down as prop to the B component, and then finally the C component. This is known as threading.
 
@@ -70,23 +70,23 @@ Again, in case if the context value changes, `<Context.Consumer>` will re-render
 
 The value returned from `useContext` is determined by the value `prop` of the nearest `Provider` above the calling component in the tree.
 
-![](<../.gitbook/assets/re-render queue (2) (6).gif>)
+![](<../.gitbook/assets/re-render queue (5).gif>)
 
 Note that using the `useContext` Hook within a component implicitly subscribes to the nearest `Provider` in the component tree, i.e., when the `Provider` updates, this Hook will trigger a serenader with the latest value passed to that `Provider`.
 
-![](<../.gitbook/assets/re-render queue (3) (2).gif>)
+![](<../.gitbook/assets/re-render queue (6).gif>)
 
 Here’s an even more important point to remember. If the ancestor component uses `React.memo` or `shouldComponentUpdate`, a re-render will still happen starting at the component that calls `useContext`.
 
-![A component is re-rendered when it calls useContext](<../.gitbook/assets/re-render queue (5) (1).gif>)
+![](<../.gitbook/assets/re-render queue (11).gif>)
 
 A component calling `useContext` will be re-rendered when the context value changes. If this is expensive, you may consider optimizing it by using [memoization](https://github.com/facebook/react/issues/15156#issuecomment-474590693).
 
 Remember that `useContext` only lets you read the context and subscribe to its changes. You still need a context provider, i.e., `ContextObject.Provider`, above in the component tree to provide the value to be read by `useContext`.
 
-![](<../.gitbook/assets/previous scroll height (8).gif>)
+![](<../.gitbook/assets/previous scroll height (4) (1).gif>)
 
-![React Context](<../.gitbook/assets/Provider (1).gif>)
+![](<../.gitbook/assets/Provider (1).png>)
 
 You can have as many consumers as you want for a single context. If the context value changes (by changing the `value` prop of the provider `<Context.Provider value={value} />`), then all consumers are immediately notified and re-rendered.
 

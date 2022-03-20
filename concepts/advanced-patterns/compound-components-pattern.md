@@ -54,7 +54,7 @@ Flexible markup structure: The component's UI has great flexibility and can crea
 
 Separation of concerns: Most of the logic is contained in the main Counter component, and React.Context is used to share the states and handlers of all child components . This allows for a clear separation of responsibilities.
 
-![](https://blog.kakaocdn.net/dn/dGLSX7/btriac3DKnt/gjeFYUUFMUCEcZZUp2KlT1/img.jpg)
+![](<../../.gitbook/assets/re-render queue (16).png>)
 
 ### Disadvantages
 

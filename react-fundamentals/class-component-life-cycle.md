@@ -207,7 +207,7 @@ So when should you use the `static getDerivedStateFromProps` lifecycle method?
 
 The method name `getDerivedStateFromProps` comprises five words: get derived state from props. Essentially, `static getDerivedStateFromProps` allows a component to update its internal state in response to a change in props.
 
-![static getDerivedStateFromProps Diagram](../.gitbook/assets/in.gif)
+![](<../.gitbook/assets/re-render queue (9).gif>)
 
 Component state in this manner is referred to as [derived state](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#when-to-use-derived-state).
 
@@ -357,7 +357,7 @@ Once the `static getDerivedStateFromProps` method is called, the `shouldComponen
 
 In most cases, you’ll want a component to rerender when state or props changes. However, you do have control over this behavior.
 
-![shouldComponentUpdate() React Lifecycle Method Example](<../.gitbook/assets/re-render queue (4).gif>)
+![](<../.gitbook/assets/re-render queue (10).gif>)
 
 Within this lifecycle method, you can return a boolean  —  `true` or `false` — and control whether the component gets rerendered (e.g., upon a change in state or props).
 
@@ -552,7 +552,7 @@ getSnapshotBeforeUpdate(prevProps, prevState) {
 
 First, consider a situation where the entire height of all chat messages doesn’t exceed the height of the chat pane:
 
-![componentDidUpdate Example](<../.gitbook/assets/previous scroll height (2).gif>)
+![](<../.gitbook/assets/previous scroll height (2).gif>)
 
 Here, the expression `chatThreadRef.scrollHeight - chatThreadRef.scrollTop`will be equivalent to `chatThreadRef.scrollHeight - 0`.
 
@@ -583,15 +583,15 @@ In actuality, we are programmatically scrolling the pane vertically [from the to
 
 Since `snapshot` refers to the `scrollHeight` before the update, the above expression returns the height of the new chat message plus any other related height owing to the update. Please see the graphic below:
 
-![componentDidUpdate React Lifecycle Method Example](<../.gitbook/assets/previous scroll height (3).gif>)
+![](<../.gitbook/assets/previous scroll height (3) (2).gif>)
 
 When the entire chat pane height is occupied with messages (and already scrolled up a bit), the `snapshot` value returned by the `getSnapshotBeforeUpdate` method will be equal to the actual height of the chat pane:
 
-![componentDidUpdate React Lifecycle Method Example](<../.gitbook/assets/previous scroll height.gif>)
+![](<../.gitbook/assets/previous scroll height (1).gif>)
 
 The computation from `componentDidUpdate` will set to `scrollTop` value to the sum of the heights of extra messages, which is exactly what we want.
 
-![componentDidUpdate React Lifecycle Method Example](<../.gitbook/assets/previous scroll height (1).gif>)
+![](<../.gitbook/assets/previous scroll height (5).gif>)
 
 If you got stuck, I’m sure going through the explanation (one more time) or checking the source code will help clarify your questions. You can also use the comments section to ask me.
 

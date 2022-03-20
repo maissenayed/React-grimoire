@@ -14,7 +14,7 @@ In order to solve this problem, the approach is to communicate the state of the 
 
 It suffices for this that a component gives in properties to the descending component a callback function so that the latter can go up its state.
 
-![](<../.gitbook/assets/Where\_to\_put\_React\_State (1).png>)
+![](../.gitbook/assets/Provider.png)
 
 {% embed url="https://reactjs.org/docs/lifting-state-up.html" %}
 

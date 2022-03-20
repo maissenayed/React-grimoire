@@ -40,7 +40,7 @@ Atomic Design is a methodology developed by [Brad Frost](https://bradfrost.com/b
 * &#x20;Molecules are a collection of atoms that come together to form a more complicated component, such as a search bar. In this example, the search bar component will have the input field, search button, and icon.&#x20;
 * Organisms, like a top navigation bar, are even more complicated components that can incorporate both molecules and atoms. The navigational atoms "home" and "login," as well as the molecular component of the search bar and the brand insignia, may be included in the bar.
 
-![](<../.gitbook/assets/re-render queue (3).gif>)
+![](<../.gitbook/assets/re-render queue (3) (1).gif>)
 
 ### What Is A Style Guide?
 

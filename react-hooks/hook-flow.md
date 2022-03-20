@@ -6,7 +6,7 @@
 **You probably already know the Lifecycle Methods like componentDidMount or componentDidUpdate. These are used in Class Components. Since most of the time, it’s easier to write a functional component . For this, the React Core Team introduced hooks in Version 16.8. Hooks get called in a specific order, and that’s what we call the hook flow.**
 {% endhint %}
 
-{% embed url="https://raw.githubusercontent.com/donavon/hook-flow/master/hook-flow.png" %}
+![](<../.gitbook/assets/React Hook Flow Diagram.png>)
 
 React Hooks flow includes:
 

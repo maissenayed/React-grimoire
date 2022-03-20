@@ -29,7 +29,7 @@ Also, to update state, the state updater function `setState` should be invoked w
 
 By doing this, a new re-render of the component is queued. `useState` guarantees that the `state` value will always be the most recent after applying updates.
 
-![](<../.gitbook/assets/re-render queue (5).gif>)
+![](<../.gitbook/assets/re-render queue.gif>)
 
 For referential checks, the `setState` function’s reference never changes during re-renders.
 
@@ -113,7 +113,7 @@ In the example above, the button grows every time it’s clicked. Since the new 
 
 The `initialState` argument to `useState` is only used during your initial render.
 
-![](<../.gitbook/assets/re-render queue (1) (2).gif>)
+![](<../.gitbook/assets/re-render queue (1) (1).gif>)
 
 ```jsx
 // subsequent prop updates are ignored 

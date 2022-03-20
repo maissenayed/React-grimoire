@@ -106,7 +106,7 @@ items.reduce(sum, initial value)
 
 While we just finished understanding how the `reduce` method works in JavaScript, turns out both the Redux library and the `useReducer` hook shares a common pattern, hence the similar name.
 
-![](../.gitbook/assets/dffdsffd.png)
+![](<../.gitbook/assets/previous scroll height.png>)
 
 ## How does useReducer works?
 
@@ -232,7 +232,7 @@ Now, in the child component, we receive the props, which, when emitted, will tri
 
 Wiring all these terms together, here's how the state update using a reducer works.
 
-![](../.gitbook/assets/diagram.svg)
+![](../.gitbook/assets/77777.gif)
 
 As a result of an event handler or after completing a fetch request, you call the _dispatch_ function with the _action object_.
 
