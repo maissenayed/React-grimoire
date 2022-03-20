@@ -1,4 +1,4 @@
-# ⚠ Custom hook pattern
+# Custom hook pattern
 
 Let's take a closer look at "reversal of control" here. Now the main logic is a user custom Hook forwarded to These hooks are user-accessible and allow easier control of the component by exposing several internal logic ( States , Handlers ) .
 
@@ -56,7 +56,7 @@ export { Component };
 
 &#x20;
 
-![](https://blog.kakaocdn.net/dn/bIx0uy/btrh9RSWNVh/y3eFHfdUAKbbqZB7cO5Ul1/img.jpg)
+![](<../../.gitbook/assets/re-render queue (13).png>)
 
 ## &#x20;Disadvantages
 

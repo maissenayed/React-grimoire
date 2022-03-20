@@ -1,4 +1,4 @@
-# ⚠ State Reducer
+# State Reducer
 
 The state reducer pattern gives even more control to the consumer than the render props patterns. Whereas the render props pattern allows consumers to be in control over the UI based on state, the state reducer pattern allows the consumer to add logic to state changes themselves, while also rendering any content they would like.
 
@@ -20,7 +20,7 @@ Granting more control: Even in the most complex cases, using state reducers is t
 
 &#x20;
 
-![ ](https://blog.kakaocdn.net/dn/cdhpp5/btrh93G47Eu/Mk2tSYN6Jaw1gBgcwHuL11/img.png)
+![ ](<../../.gitbook/assets/re-render queue (12).png>)
 
 ## Disadvantages
 

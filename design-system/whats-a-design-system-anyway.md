@@ -40,7 +40,7 @@ Atomic Design is a methodology developed by [Brad Frost](https://bradfrost.com/b
 * &#x20;Molecules are a collection of atoms that come together to form a more complicated component, such as a search bar. In this example, the search bar component will have the input field, search button, and icon.&#x20;
 * Organisms, like a top navigation bar, are even more complicated components that can incorporate both molecules and atoms. The navigational atoms "home" and "login," as well as the molecular component of the search bar and the brand insignia, may be included in the bar.
 
-![](<../.gitbook/assets/re-render queue (3) (1).gif>)
+![](<../.gitbook/assets/re-render queue (3) (3).gif>)
 
 ### What Is A Style Guide?
 
@@ -141,7 +141,7 @@ Each has advantages and disadvantages, but in general, the more customized your 
 
 If the organization has specific needs that cannot be met by open-source design systems, the investment in a custom design system will be worthwhile. As customizations and adjustments to the design system increase, the cost savings you may have gained by using the existing design system will diminish, and you may be better off creating your own design system anyway in the long run. Before embarking on design system endeavors and weighing the tradeoffs, make sure you understand what your organization requires.
 
-![](<../.gitbook/assets/re-render queue (2) (4).gif>)
+![](<../.gitbook/assets/re-render queue (2) (2).gif>)
 
 Finally, establishing a full-fledged design system for a proof of concept or an initial prototype that is expected to alter is likely to be time and money consuming. After all, the benefit is design replicability, which is in the future. Though it may be tempting to establish these right away, note that a design system isn't intended to be a portfolio of work, but rather a functional toolkit or resource that allows designers and developers to work more efficiently. Nevertheless, if you are unsure about the usefulness of a design system, think about the duration you will use to evaluate your design work. When a company anticipate years of future, iterative design work, design systems are ideal.
 

@@ -1,4 +1,4 @@
-# 🆗 Lifting State Up
+# Lifting State Up
 
 ## The state sharing problem
 

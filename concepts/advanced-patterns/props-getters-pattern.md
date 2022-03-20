@@ -1,4 +1,4 @@
-# ⚠ Props Getters Pattern
+# Props Getters Pattern
 
 While this pattern gives you a lot of control, it's harder to integrate your components. Users have to deal with the many props of native hooks themselves and rewrite the logic themselves. The Props Getters pattern hides this complexity by providing a list of props getters instead of exposing the default props. A getter is a function that returns a bunch of props, and gives it a meaningful name so that users can easily connect to the correct JSX element.
 
@@ -14,7 +14,7 @@ Easy to use: Provides an easy way to integrate components and hides complexity. 
 
 ![](../../.gitbook/assets/dsdg.png)
 
-![ ](https://blog.kakaocdn.net/dn/bsVSTY/btrijq7Vi0k/K9bWazPtinptyPf3FBKxbk/img.png)
+![ ](<../../.gitbook/assets/re-render queue (14).png>)
 
 Flexibility: Users can override the props contained in the getter if needed for a specific use case.
 

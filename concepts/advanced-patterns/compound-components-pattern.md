@@ -1,4 +1,4 @@
-# ⚠ Compound Components Pattern
+# Compound Components Pattern
 
 ## Compound Components Pattern <a href="#6eaa" id="6eaa"></a>
 

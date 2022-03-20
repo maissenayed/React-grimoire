@@ -1,4 +1,4 @@
-# 🆗 useLayoutEffect
+# useLayoutEffect
 
 {% embed url="https://reactjs.org/docs/hooks-reference.html#uselayouteffect" %}
 

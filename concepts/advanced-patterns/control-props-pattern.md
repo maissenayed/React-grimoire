@@ -1,4 +1,4 @@
-# ⚠ Control Props Pattern
+# Control Props Pattern
 
 Normally, you would control the state of a component from within its internal state. But there are a few instances where you want to be able to override the internal state of a component and control the state from the parent component such as updating content when something happens outside the component. This is easily achieved with the controlled props pattern. For example, you have a dropdown that keeps track of its own `open` state internally. But we want the parent component to be able to update the state of the component based on some other logic.
 
@@ -35,7 +35,7 @@ const Component = () => {
 export { Component };
 ```
 
-![](https://blog.kakaocdn.net/dn/dvk8p6/btrh9RZNfGO/kAO6ZnaPjLLpYN3tW7pgnk/img.jpg)
+![](<../../.gitbook/assets/re-render queue (15).png>)
 
 ## Disadvantages
 
