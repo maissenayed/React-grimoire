@@ -36,7 +36,7 @@
 
 * [React Components Composition Guidelines](react-guidelines/react-components-composition-guidelines.md)
 * [React hooks guidelines](react-guidelines/react-hooks-guidelines.md)
-* [The use of Memoization](react-guidelines/the-use-of-memoization.md)
+* [The use of Memoization](react-guidelines/when-to-use-react.memo.md)
 * [🆗 Lifting State Up](react-guidelines/where-to-put-react-state.md)
 
 ## 🔭 Concepts

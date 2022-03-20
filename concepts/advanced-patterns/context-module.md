@@ -95,7 +95,7 @@ This isn't a _bad_ solution necessarily. But [DanAbramov](https://twitter.com/da
 
 > Helper methods are object junk that we need to recreate and compare for no purpose other than superficially nicer looking syntax.
 
-Dan suggests (and Facebook does) passing dispatch, which is what we did originally. In order to address the issues (duplication, for example), they use importable "helpers" that accept dispatch. Let's take a look at how that might work:
+Dan suggests (and what Facebook does) the use  of importable "helpers" that accept dispatch. Let's take a look at how that might work:
 
 ```jsx
 const CounterContext = React.createContext()
