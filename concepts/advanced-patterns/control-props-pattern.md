@@ -4,6 +4,10 @@ Normally, you would control the state of a component from within its internal st
 
 This pattern transforms a component into a Controlled Component . External state serves as a "single source of truth" that allows users to insert custom logic to change the default behavior of a component.
 
+## Libraries that use this pattern
+
+{% embed url="https://mui.com/components/rating#rating" %}
+
 ## Advantages
 
 Giving more control: Because the main state is exposed outside the component, the user has direct control over that component.
@@ -37,9 +41,7 @@ export { Component };
 
 Implementation complexity: Component behavior was previously possible by implementing it in one place ( JSX ) , but now requires implementation in 3 different places ( JSX / useState / handleChange ) .
 
-## Libraries that use this pattern
-
-{% embed url="https://mui.com/components/rating#rating" %}
+{% embed url="https://codesandbox.io/embed/react-patterns-uenl15?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fpatterns%2Fcontrol-props%2FUsage.js&theme=dark" %}
 
 ## References and articles :
 

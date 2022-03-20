@@ -8,25 +8,27 @@ You may wonder why use render props at all if state reducer can do everything re
 
 In this example, we used the State reducer pattern and the Custom hook pattern together, but you can also use it with the Compound components pattern to pass the reducer directly to the main component Counter .
 
+## Libraries using this pattern&#x20;
+
+{% embed url="https://github.com/downshift-js/downshift#statereducer" %}
+
 ## Advantages
 
 Granting more control: Even in the most complex cases, using state reducers is the best way to hand over control to the user. All internal component operations are now externally accessible and can be overridden.
 
-&#x20;
-
-![](https://blog.kakaocdn.net/dn/cdhpp5/btrh93G47Eu/Mk2tSYN6Jaw1gBgcwHuL11/img.png)
+![](<../../.gitbook/assets/gate (1).png>)
 
 &#x20;
+
+![ ](https://blog.kakaocdn.net/dn/cdhpp5/btrh93G47Eu/Mk2tSYN6Jaw1gBgcwHuL11/img.png)
 
 ## Disadvantages
 
-· Implementation complexity: This pattern is certainly the most difficult implementation for both component developers and users.
+Implementation complexity: This pattern is certainly the most difficult implementation for both component developers and users.
 
-· Lack of visibility: The behavior of reducers can change, requiring a deep understanding of the component's internal logic.
+Lack of visibility: The behavior of reducers can change, requiring a deep understanding of the component's internal logic.
 
-## Libraries using this pattern&#x20;
-
-{% embed url="https://github.com/downshift-js/downshift#statereducer" %}
+{% embed url="https://codesandbox.io/embed/react-patterns-uenl15?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fpatterns%2Fstate-reducer%2FUsage.js&theme=dark" %}
 
 ## &#x20;References and articles :
 

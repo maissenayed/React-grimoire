@@ -12,7 +12,7 @@ While this pattern gives you a lot of control, it's harder to integrate your com
 
 Easy to use: Provides an easy way to integrate components and hides complexity. Users just need to connect the correct getter to the correct JSX element.
 
-![](../../.gitbook/assets/dfsfd.png)
+![](../../.gitbook/assets/dsdg.png)
 
 ![ ](https://blog.kakaocdn.net/dn/bsVSTY/btrijq7Vi0k/K9bWazPtinptyPf3FBKxbk/img.png)
 

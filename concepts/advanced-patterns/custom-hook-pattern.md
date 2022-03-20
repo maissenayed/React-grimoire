@@ -2,6 +2,12 @@
 
 Let's take a closer look at "reversal of control" here. Now the main logic is a user custom Hook forwarded to These hooks are user-accessible and allow easier control of the component by exposing several internal logic ( States , Handlers ) .
 
+## Libraries that use this pattern
+
+{% embed url="https://react-table.tanstack.com/docs/examples/basic" %}
+
+{% embed url="https://react-hook-form.com/api" %}
+
 ## Advantages
 
 More Control: Users can change the behavior of the main component by inserting their own logic between hooks and JSX components.
@@ -56,13 +62,7 @@ export { Component };
 
 Implementation complexity: the logic is decoupled from the rendering and it is up to you to connect the two. To properly implement a component, you need a deep understanding of how the component works.
 
-![](https://blog.kakaocdn.net/dn/Opk2U/btrh5ZdmQfg/kXcePR9sx9HgPFpkSBMf0K/img.jpg)
-
-## Libraries that use this pattern
-
-{% embed url="https://react-table.tanstack.com/docs/examples/basic" %}
-
-{% embed url="https://react-hook-form.com/api" %}
+{% embed url="https://codesandbox.io/embed/react-patterns-uenl15?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fpatterns%2Fcustom-hooks%2FUsage.js&theme=dark" %}
 
 ## References and articles :
 
