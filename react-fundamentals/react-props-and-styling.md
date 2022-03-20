@@ -20,7 +20,7 @@ Think of props as arguments to a function. React components are functions which 
 
 As we already know, the react components arrange the UI in the form of a tree where the parent component becomes the root and child components become branches and sub-branches. Now suppose parent component wants to send data to one of its deeply nested components. Let us say from component 1 you need to send a property to component 6. How will you do that?
 
-![](../.gitbook/assets/propq.gif)
+![](<../.gitbook/assets/re-render queue (7).gif>)
 
 You cannot pass down a property directly to the target component. This is because React follows the rule where properties have to flow down from a parent component to an _immediate_ child component. This means you can’t skip a layer of child components when sending a property and the child components can’t send property back up to a parent as well. You can have default props in case a parent component doesn’t pass down props so that they are still set. This is why React has one-way data binding.
 
