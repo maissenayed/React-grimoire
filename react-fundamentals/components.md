@@ -2,7 +2,7 @@
 description: A piece of the puzzle
 ---
 
-# 🏁 Components
+# Components
 
 ## Custom components
 
@@ -268,8 +268,6 @@ We can even nest those element inside each others:
 
 **But always bear in mind that anything that we will do with JSX we can do with React raw APIs.**&#x20;
 {% endhint %}
-
-
 
 ## Conditional Rendering
 

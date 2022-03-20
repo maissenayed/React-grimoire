@@ -1,4 +1,4 @@
-# 🏁 PropTypes
+# PropTypes
 
 Every React app will be composed of an hierarchical tree of components that have different props, certainly then we will need to define and structure our props , to avoid bugs and errors .
 
@@ -327,7 +327,7 @@ Component.propTypes = {
 * `PropTypes.oneOf`: The prop is limited to a specified set of values, treating it like an enum
 * `PropTypes.oneOfType`: The prop should be one of a specified set of types, behaving like a union of types
 
-```
+```jsx
 Component.propTypes = {
 
   enumProp: PropTypes.oneOf([true, false, 0, 'Unknown']),
@@ -350,7 +350,7 @@ Besides the`PropTypes.array` and `PropTypes.object` validators, `PropTypes` also
 
 `PropTypes.arrayOf` ensures that the prop is an array in which all items match the specified type.
 
-```
+```jsx
 Component.propTypes = {
 
   peopleArrayProp: PropTypes.arrayOf(
@@ -371,7 +371,7 @@ Component.propTypes = {
 
 `PropTypes.objectOf` ensures that the prop is an object in which all property values match the specified type.
 
-```
+```jsx
 Component.propTypes = {
 
   booleanObjectProp: PropTypes.objectOf(
@@ -394,7 +394,7 @@ Component.propTypes = {
 
 You can use `PropTypes.shape` when a more detailed validation of an object prop is required. It ensures that the prop is an object that contains a set of specified keys with values of the specified types.
 
-```
+```jsx
 Component.propTypes = {
   profileProp: PropTypes.shape({
     id: PropTypes.number,
@@ -410,7 +410,7 @@ Component.propTypes = {
 
 For strict (or exact) object matching, you can use `PropTypes.exact` as follows:
 
-```
+```jsx
 Component.propTypes = {
   subjectScoreProp: PropTypes.exact({
     subject: PropTypes.oneOf(['Maths', 'Arts', 'Science']),
@@ -423,7 +423,7 @@ Component.propTypes = {
 
 The `PropTypes` validators we’ve explored so far all allow the prop to be optional. However, you can chain `isRequired` to any prop validator to ensure that a warning is shown whenever the prop is not provided.
 
-```
+```jsx
 Component.propTypes = {
 
   requiredAnyProp: PropTypes.any.isRequired,
@@ -455,7 +455,7 @@ The custom validation function takes three arguments:
 
 If the validation fails, it should return an `Error` object. The error should not be thrown. Also, `console.warn` should not be used inside the custom validation function.
 
-```
+```jsx
 const isEmail = function(props, propName, componentName) {
   const regex = /^((([^<>()[]\.,;:s@"]+(.[^<>()[]\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,})))?$/;
   
@@ -475,7 +475,7 @@ Component.propTypes = {
 
 Custom validation functions can also be used with `PropTypes.oneOfType`. Here is a simple example using the `isEmail` custom validation function in the previous code snippet:
 
-```
+```jsx
 Component.propTypes = {
   email: PropTypes.oneOfType([
     isEmail,
@@ -488,10 +488,12 @@ Component.propTypes = {
 
 `Component` will be valid in both of these scenarios:
 
-```
+{% code title="" %}
+```jsx
 <Component email="glad@me.com" />
 <Component email={{ address: 'glad@me.com' }} />
 ```
+{% endcode %}
 
 #### Custom validators and collections
 
@@ -507,7 +509,7 @@ However, the custom validation function takes five arguments instead of three:
 
 Below is a modified version of the `isEmail` custom validation function for use with collection types.
 
-```
+```jsx
 const isEmail = function(propValue, key, componentName, location, propFullName) {
   const regex = /^((([^<>()[]\.,;:s@"]+(.[^<>()[]\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,})))?$/;
   

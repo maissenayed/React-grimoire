@@ -9,7 +9,7 @@ As a result, I wanted to create this booklet to provide a learning step up. It's
 If you find this book useful, please feel free to add it to your reading list, bookmark it, or share it with the team. It would also be great if you could :star: it on Github so that it can reach more hungry minds.
 
 {% hint style="info" %}
-**This is an open source project, if you want to contribute please be my gust and send  Pr**&#x20;
+**This is an open source project, if you want to contribute please be my guest and send  Pr**&#x20;
 {% endhint %}
 
 {% embed url="https://github.com/maissenayed/React-grimoire" %}
@@ -26,9 +26,11 @@ If you find this book useful, please feel free to add it to your reading list, b
 
 {% hint style="warning" %}
 **Git book has only a light theme, if you are like me and you like always your reading materials on Dark themed pages, please try this chrome extension**
-
-[https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh)
 {% endhint %}
+
+&#x20;                                                            :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down:
+
+{% embed url="https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh" %}
 
 ### &#x20;References and articles :
 
