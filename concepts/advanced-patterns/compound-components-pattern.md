@@ -44,11 +44,13 @@ So let’s go over the advantages of using the Compound Component pattern one la
 
 Reduced API complexity: Instead of putting all props in one huge parent component and descending into sub UI components, each prop is tied to the most appropriate SubComponent.
 
-![](https://blog.kakaocdn.net/dn/yf23A/btriac3DGbW/K3mrlDDkP4fx0dlAToJhA1/img.jpg)
+![](../../.gitbook/assets/OLDcompound.png)
+
+To this:
+
+![](../../.gitbook/assets/compound.png)
 
 Flexible markup structure: The component's UI has great flexibility and can create multiple cases from one component. For example, the user can change the order of SubComponents or decide which of them should be displayed.
-
-![](https://blog.kakaocdn.net/dn/8ZzdS/btrh4NYxSeo/tVje3ivYkfDqGi2oCDkcdk/img.jpg)
 
 Separation of concerns: Most of the logic is contained in the main Counter component, and React.Context is used to share the states and handlers of all child components . This allows for a clear separation of responsibilities.
 
@@ -59,16 +61,9 @@ Separation of concerns: Most of the logic is contained in the main Counter compo
 Too much flexibility in the UI: More flexibility means it's more likely to cause unexpected behavior. For example, there may be unneeded child components, the child components may be out of order, and the necessary child components may not exist.\
 Depending on how you want your users to use your component, you may want to limit your flexibility to some extent.
 
-&#x20;
+![ ](../../.gitbook/assets/discompound.png)
 
-![](https://blog.kakaocdn.net/dn/r59h6/btribAQterl/b96c4sa5jUwYsjusvqEz51/img.jpg)
-
-JSX too heavy: Applying this pattern JSXThe number of lines increases, especially if you are using a linter like EsLint or a code formatter like Prettier . It's not a big deal at the single-component level, but the difference becomes more apparent as you scale up.\
-
-
-&#x20;
-
-![](https://blog.kakaocdn.net/dn/b5O5mN/btriaVAxR9y/TR7AH27P5cr511615WWgkk/img.jpg)
+**JSX too heavy**: Applying this pattern JSX The number of lines increases, especially if you are using a linter like EsLint or a code formatter like Prettier . It's not a big deal at the single-component level, but the difference becomes more apparent as you scale up.
 
 {% hint style="info" %}
 As a side note, a lot of UI libraries like ant D use `.` for their compound component API like so:
@@ -85,6 +80,8 @@ As a side note, a lot of UI libraries like ant D use `.` for their compound comp
 
 This approach is strictly optional and you can write your component however you prefer. It doesn’t affect the end result in any significant way.
 {% endhint %}
+
+{% embed url="https://codesandbox.io/embed/react-patterns-uenl15?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fpatterns%2Fcompound-component%2FUsage.js&theme=dark" %}
 
 ## References and articles :
 
