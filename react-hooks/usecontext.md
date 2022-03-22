@@ -78,7 +78,7 @@ Note that using the `useContext` Hook within a component implicitly subscribes t
 
 Here’s an even more important point to remember. If the ancestor component uses `React.memo` or `shouldComponentUpdate`, a re-render will still happen starting at the component that calls `useContext`.
 
-![](<../.gitbook/assets/re-render queue (5) (1) (1).gif>)
+![](<../.gitbook/assets/re-render queue (11).gif>)
 
 A component calling `useContext` will be re-rendered when the context value changes. If this is expensive, you may consider optimizing it by using [memoization](https://github.com/facebook/react/issues/15156#issuecomment-474590693).
 

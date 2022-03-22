@@ -10,7 +10,7 @@ When using React, you may require an escape hatch to write imperative-style code
 
 `React.createRef` allows you to obtain references to **DOM** nodes (). It's really just a JavaScript equivalent of this all-too-familiar snippet:
 
-![](../.gitbook/assets/sdfd)
+![](<../.gitbook/assets/sdfd (1)>)
 
 This is exactly what `React.createRef()` does, although it requires a bit of a different setup.
 
@@ -124,7 +124,7 @@ The example above works because if you pass a `ref` object to React, e.g., `<div
 
 It can hold whatever value you want. This makes it the perfect choice for simulating instance-like variables in functional components:
 
-![](../.gitbook/assets/ttttt1)
+![](<../.gitbook/assets/ttttt1 (2)>)
 
 In the example above, we log `initialProp` and `prop` via `useEffect`. This will be logged on mount and every time `prop` changes.
 

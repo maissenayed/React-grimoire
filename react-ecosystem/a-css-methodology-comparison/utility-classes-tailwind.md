@@ -12,7 +12,7 @@ It is made for small teams projects, but shines with Design System-ready teams
 
 Here, you can find a button design implemented with classic CSS:
 
-![](<../../.gitbook/assets/css (1)>)
+![](../../.gitbook/assets/css)
 
 
 

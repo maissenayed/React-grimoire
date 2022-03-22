@@ -44,7 +44,7 @@ So let’s go over the advantages of using the Compound Component pattern one la
 
 Reduced API complexity: Instead of putting all props in one huge parent component and descending into sub UI components, each prop is tied to the most appropriate SubComponent.
 
-![](<../../.gitbook/assets/OLDcompound (1).png>)
+![](<../../.gitbook/assets/OLDcompound (1) (1).png>)
 
 To this:
 
@@ -61,7 +61,7 @@ Separation of concerns: Most of the logic is contained in the main Counter compo
 Too much flexibility in the UI: More flexibility means it's more likely to cause unexpected behavior. For example, there may be unneeded child components, the child components may be out of order, and the necessary child components may not exist.\
 Depending on how you want your users to use your component, you may want to limit your flexibility to some extent.
 
-![ ](<../../.gitbook/assets/discompound (1).png>)
+![ ](../../.gitbook/assets/discompound.png)
 
 **JSX too heavy**: Applying this pattern JSX The number of lines increases, especially if you are using a linter like EsLint or a code formatter like Prettier . It's not a big deal at the single-component level, but the difference becomes more apparent as you scale up.
 
