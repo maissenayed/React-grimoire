@@ -1,6 +1,28 @@
+
+<!-- HTML Meta Tags -->
+
+<meta name="description" content="">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://maissen.gitbook.io/react-grimoire/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Introduction">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.gitbook.com/cdn-cgi/image/height=640,width=1280,fit=contain,dpr=1,format=auto/https%3A%2F%2F2162971266-files.gitbook.io%2F~%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MF_PCkC6EJQO74OPq_g%252Fsocialpreview%252F56V6tC9Sh1vtkVeT2krJ%252F-MF_PCkC6EJQO74OPq_g.png%3Falt%3Dmedia%26token%3Da452a850-ac79-40f4-9e63-d234a849a9f7">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="maissen.gitbook.io">
+<meta property="twitter:url" content="https://maissen.gitbook.io/react-grimoire/">
+<meta name="twitter:title" content="Introduction">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.gitbook.com/cdn-cgi/image/height=640,width=1280,fit=contain,dpr=1,format=auto/https%3A%2F%2F2162971266-files.gitbook.io%2F~%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MF_PCkC6EJQO74OPq_g%252Fsocialpreview%252F56V6tC9Sh1vtkVeT2krJ%252F-MF_PCkC6EJQO74OPq_g.png%3Falt%3Dmedia%26token%3Da452a850-ac79-40f4-9e63-d234a849a9f7">
+
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+      
 # ⁉ Introduction
 
-## ⁉ Introduction
+
 
 My father always told me that knowledge should be freely available, and I agree. Witnessing the difficulties that most people face while learning and working with react, particularly in finding simple tutorials here and there that are extremely useful knowledge for the beginning phase, but rarely go deep in concepts, patterns, and advanced features.
 
