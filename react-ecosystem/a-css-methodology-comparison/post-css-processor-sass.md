@@ -44,7 +44,7 @@ To create a mixin you use the `@mixin` directive and give it a name. We've named
 
 Although not unique to Sass, using bundlers such as webpack allows you to split your Sass (or CSS, in the case of CSS modules) into files. This is useful because it helps organize code and makes CSS maintenance easier.
 
-![](<../../.gitbook/assets/Screenshot from 2022-02-23 18-59-46.png>)
+![](<../../.gitbook/assets/Screenshot from 2022-02-23 18-59-46 (1).png>)
 
 ### **Freedom**
 

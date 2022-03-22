@@ -1,56 +1,40 @@
-<meta name="description" content=" A dive deep book into react advanced patterns and best contents">
-
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://maissen.gitbook.io/react-grimoire/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="React-Grimoire">
-<meta property="og:description" content=" A dive deep book into react advanced patterns and best contents">
-<meta property="og:image" content="https://app.gitbook.com/share/space/thumbnail/-MF_PCkC6EJQO74OPq_g.png?color=#004dcf&logo=https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MF_PCkC6EJQO74OPq_g%2Ficon%2FQ6YJDZOKUnuu01YUV3bf%2FReact-logo.svg?alt=media&token=9b8bbfd7-2a2a-4d60-a00b-69b326778d33&theme=light">
-
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="maissen.gitbook.io">
-<meta property="twitter:url" content="https://maissen.gitbook.io/react-grimoire/">
-<meta name="twitter:title" content="React-Grimoire">
-<meta name="twitter:description" content=" A dive deep book into react advanced patterns and best contents">
-<meta name="twitter:image" content="https://app.gitbook.com/share/space/thumbnail/-MF_PCkC6EJQO74OPq_g.png?color=#004dcf&logo=https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MF_PCkC6EJQO74OPq_g%2Ficon%2FQ6YJDZOKUnuu01YUV3bf%2FReact-logo.svg?alt=media&token=9b8bbfd7-2a2a-4d60-a00b-69b326778d33&theme=light">
-
-<!-- Meta Tags Generated via https://www.opengraph.xyz -->
 # ⁉ Introduction
+
+## ⁉ Introduction
 
 My father always told me that knowledge should be freely available, and I agree. Witnessing the difficulties that most people face while learning and working with react, particularly in finding simple tutorials here and there that are extremely useful knowledge for the beginning phase, but rarely go deep in concepts, patterns, and advanced features.
 
-Also Finding unique content blogs, channels, podcasts it's a big endeavor specially for new comers.&#x20;
+Also Finding unique content blogs, channels, podcasts it's a big endeavor specially for new comers.
 
 As a result, I wanted to create this booklet to provide a learning step up. It's the result of months of work in which I tried to study my resources and references and present them as simply as possible while also highlighting good examples and edge cases.
 
 If you find this book useful, please feel free to add it to your reading list, bookmark it, or share it with the team. It would also be great if you could :star: it on Github so that it can reach more hungry minds.
 
 {% hint style="info" %}
-**This is an open source project, if you want to contribute please be my guest and send  Pr**&#x20;
+**This is an open source project, if you want to contribute please be my guest and send Pr**
 {% endhint %}
 
 {% embed url="https://github.com/maissenayed/React-grimoire" %}
 
-### Disclaimer&#x20;
+#### Disclaimer
 
 {% hint style="danger" %}
 **It is mandatory to have a good basic knowledge with JavaScript, and DOM manipulation concepts.**
 {% endhint %}
 
 {% hint style="info" %}
-**I recommend to dive deep in those concept before tackling React and I assure you that not only React will be easier to understand but also anything that involves JavaScript Ecosystem will be easier to digest.**&#x20;
+**I recommend to dive deep in those concept before tackling React and I assure you that not only React will be easier to understand but also anything that involves JavaScript Ecosystem will be easier to digest.**
 {% endhint %}
 
 {% hint style="warning" %}
 **Git book has only a light theme, if you are like me and you like always your reading materials on Dark themed pages, please try this chrome extension**
 {% endhint %}
 
-&#x20;                                                            :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down:
+:arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down: :arrow\_down:
 
 {% embed url="https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh" %}
 
-### &#x20;References and articles :
+#### References and articles :
 
 {% embed url="https://javascript.info" %}
 
@@ -66,7 +50,7 @@ If you find this book useful, please feel free to add it to your reading list, b
 
 {% embed url="https://www.techinterviewhandbook.org/algorithms/introduction" %}
 
-This is my old booklet in which you find various articles and cheat sheets, bits of code that I found useful during my career. Enjoy!&#x20;
+This is my old booklet in which you find various articles and cheat sheets, bits of code that I found useful during my career. Enjoy!
 
 {% embed url="https://maissen.gitbook.io/maissen-grimoire" %}
 

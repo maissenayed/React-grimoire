@@ -4,7 +4,7 @@
 
 The signature for the `useState` Hook is as follows:
 
-![](<../.gitbook/assets/useState2 (1).png>)
+![](<../.gitbook/assets/useState2 (1) (1)>)
 
 Here, `state` and `setState` refer to the state value and updater function returned on invoking `useState` with some `initialState`.
 

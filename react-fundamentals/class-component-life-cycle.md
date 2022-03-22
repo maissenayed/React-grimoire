@@ -591,7 +591,7 @@ When the entire chat pane height is occupied with messages (and already scrolled
 
 The computation from `componentDidUpdate` will set to `scrollTop` value to the sum of the heights of extra messages, which is exactly what we want.
 
-![](<../.gitbook/assets/previous scroll height (5).gif>)
+![](<../.gitbook/assets/previous scroll height (1) (1).gif>)
 
 If you got stuck, I’m sure going through the explanation (one more time) or checking the source code will help clarify your questions. You can also use the comments section to ask me.
 

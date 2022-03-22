@@ -56,7 +56,7 @@ To demonstrate, this example renders an array of checkbox elements. Try clicking
 
 And when i tried to log what checkboxes is rendering  i have this particular tree
 
-![](<../.gitbook/assets/Screenshot from 2022-02-01 22-13-23.png>)
+![](<../.gitbook/assets/Screenshot from 2022-02-01 22-13-23 (1).png>)
 
 We can observe that indeed we have 3 Element of type input that they all have a prop type="checkbox",but there is not really something that can distinguish them.
 

@@ -24,7 +24,7 @@ However, there are times when we need our components to interact with APIs that 
 
 The basic signature of `useEffect` is as follows:
 
-![](../.gitbook/assets/effect.png)
+![](<../.gitbook/assets/effect (1).png>)
 
 Let's analyse this example
 
