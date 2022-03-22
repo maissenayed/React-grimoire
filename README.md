@@ -1,3 +1,21 @@
+<meta name="description" content=" A dive deep book into react advanced patterns and best contents">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://maissen.gitbook.io/react-grimoire/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="React-Grimoire">
+<meta property="og:description" content=" A dive deep book into react advanced patterns and best contents">
+<meta property="og:image" content="https://app.gitbook.com/share/space/thumbnail/-MF_PCkC6EJQO74OPq_g.png?color=#004dcf&logo=https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MF_PCkC6EJQO74OPq_g%2Ficon%2FQ6YJDZOKUnuu01YUV3bf%2FReact-logo.svg?alt=media&token=9b8bbfd7-2a2a-4d60-a00b-69b326778d33&theme=light">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="maissen.gitbook.io">
+<meta property="twitter:url" content="https://maissen.gitbook.io/react-grimoire/">
+<meta name="twitter:title" content="React-Grimoire">
+<meta name="twitter:description" content=" A dive deep book into react advanced patterns and best contents">
+<meta name="twitter:image" content="https://app.gitbook.com/share/space/thumbnail/-MF_PCkC6EJQO74OPq_g.png?color=#004dcf&logo=https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MF_PCkC6EJQO74OPq_g%2Ficon%2FQ6YJDZOKUnuu01YUV3bf%2FReact-logo.svg?alt=media&token=9b8bbfd7-2a2a-4d60-a00b-69b326778d33&theme=light">
+
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
 # ⁉ Introduction
 
 My father always told me that knowledge should be freely available, and I agree. Witnessing the difficulties that most people face while learning and working with react, particularly in finding simple tutorials here and there that are extremely useful knowledge for the beginning phase, but rarely go deep in concepts, patterns, and advanced features.
