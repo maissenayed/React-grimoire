@@ -1079,7 +1079,7 @@ In this example, the module defines a single, **default export**, so it can be a
 
 Now, **any other JavaScript module** can import the functionality offered by uppercase.js by importing it.
 
-An HTML page can add a module by using a `<scri`pt> tag with the sp`ecial type="m`odule" attribute:
+An HTML page can add a module by using a `<script>` tag with the special `type="module"` attribute:
 
 ```
 <script type="module" src="index.js"><;/script>
