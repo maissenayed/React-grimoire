@@ -375,7 +375,7 @@ Most likely, you’ll rarely reach for this lifecycle method. But it comes in ha
 
 Here’s the important thing: the value queried from the DOM in `getSnapshotBeforeUpdate` refers to the value just before the DOM is updated, even though the `render` method was previously called.
 
-Think about how you use version control systems, such as [Git](https://git-scm.com). A basic example is that you write code and stage your changes before pushing to the repo.
+Think about how you use version control systems, such as [Git](https://git-scm.com/). A basic example is that you write code and stage your changes before pushing to the repo.
 
 Let’s assume the render function was called to stage your changes before actually pushing to the DOM. Before the actual DOM update, information retrieved from `getSnapshotBeforeUpdate` refers to those before the actual visual DOM update.
 

@@ -1,6 +1,6 @@
 # A CSS methodology comparison
 
-Using [Ant design](https://ant.design) or [material ui ](https://mui.com)is nit for fast MVP to production based apps,If you work with a modest team on a single app, you’re better off with a directory of UI components.
+Using [Ant design](https://ant.design/) or [material ui ](https://mui.com/)is nit for fast MVP to production based apps,If you work with a modest team on a single app, you’re better off with a directory of UI components.
 
 But the question arise when having the need of sharing UI components across many projects. and I you find yourself pasting the same UI components, here comes the need for a design system
 
