@@ -33,13 +33,13 @@ With that in mind, you need two JavaScript files to write React applications for
 
 Let's convert our file to use React! using just raw React APIs here.
 
-In modern applications you'll get **React** and **React DOM** files from a "package registry" like [npm](https://npmjs.com) ([react](https://npm.im/react) and [react-dom](https://npm.im/react-dom)).or even use project builder like:
+In modern applications you'll get **React** and **React DOM** files from a "package registry" like [npm](https://npmjs.com/) ([react](https://npm.im/react) and [react-dom](https://npm.im/react-dom)).or even use project builder like:
 
 {% content-ref url="../react-ecosystem/build-tool-choice-for-mvp-projects.md" %}
 [build-tool-choice-for-mvp-projects.md](../react-ecosystem/build-tool-choice-for-mvp-projects.md)
 {% endcontent-ref %}
 
-But we will use [https://unpkg.com/](https://unpkg.com). It's **CDN** (global content delivery network) that will allow us ready-to-use script files in regular script tags so you don't have to bother installing them.&#x20;
+But we will use [https://unpkg.com/](https://unpkg.com/). It's **CDN** (global content delivery network) that will allow us ready-to-use script files in regular script tags so you don't have to bother installing them.&#x20;
 
 ```jsx
  ...

@@ -4,7 +4,7 @@ In this Section i'll try my best to explain common react patterns used from Reac
 
 > The actual contents comes from Epic React’s Advanced React Patterns Workshop.
 >
-> If you have interests, you can check [Epic React](https://epicreact.dev) by Kent C. Dodds.
+> If you have interests, you can check [Epic React](https://epicreact.dev/) by Kent C. Dodds.
 
 AS a React developer, you may have asked the following question at least once.
 

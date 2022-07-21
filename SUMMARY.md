@@ -2,7 +2,7 @@
 
 * [⁉ Introduction](README.md)
 
-## 🧑🎓 React Fundamentals&#x20;
+## 🧑🎓  React Fundamentals
 
 * [The Basic javascript "Hello world"](<README (1).md>)
 * [Basic view on React core API's](react-fundamentals/basic-view-on-react-core-apis.md)
@@ -31,6 +31,7 @@
 * [Hook flow](react-hooks/hook-flow.md)
 * [Custom hooks](react-hooks/custom-hooks/README.md)
   * [useDebugValue](react-hooks/custom-hooks/usedebugvalue.md)
+* [React 18 hooks](react-hooks/react-18-hooks.md)
 
 ## 📓 React Guidelines
 
@@ -71,7 +72,7 @@
 
 * [In Progress](testing/in-progress.md)
 
-## 🎭 Performance&#x20;
+## 🎭 Performance
 
 * [in Progress](performance/in-progress.md)
 

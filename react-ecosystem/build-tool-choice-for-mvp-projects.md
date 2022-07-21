@@ -10,13 +10,13 @@ It was a very good build tool : it has a lot of integrations that is mature and 
 
 {% embed url="https://vitejs.dev" %}
 
-Like create-react-app it's a build tool created by [Evan You](https://evanyou.me) the creator of Vue.js.
+Like create-react-app it's a build tool created by [Evan You](https://evanyou.me/) the creator of Vue.js.
 
 It's by far faster than create react up as it uses [Rollup](https://rollupjs.org/guide/en/) under the hood against the MegaZord [webpack](https://webpack.js.org) used by Create-react-app .
 
 {% embed url="https://www.youtube.com/watch?v=DkGV5F4XnfQ" %}
 
-For all my personal small projects i use Vite as it's blazing fast. but for more complex projects i will choose a framework like [next.js](https://nextjs.org) or [gatsby](https://www.gatsbyjs.com)  . For now let's stick with vite and JavaScript. and i will talk about my favorite stack in the **** [**react ecosystem**](broken-reference) section
+For all my personal small projects i use Vite as it's blazing fast. but for more complex projects i will choose a framework like [next.js](https://nextjs.org/) or [gatsby](https://www.gatsbyjs.com/)  . For now let's stick with vite and JavaScript. and i will talk about my favorite stack in the **** [**react ecosystem**](broken-reference) section
 
 You can read more about Vite comparison :
 

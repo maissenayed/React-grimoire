@@ -4,7 +4,7 @@ CSS is at the heart of it all, the bread and butter, if you will. This is what e
 
 Sass is a scripting language for preprocessors that is compiled into CSS. Sass is an improved way of writing CSS that provides developers with powerful tools such as variables, mixins, and nesting; in short, it makes CSS writing easier and more efficient.
 
-Officially described as “[CSS with superpowers](https://sass-lang.com),” SCSS (or Sass) offers a way to write styles for websites with more enhanced CSS syntax. In general, browsers do not know how to process SCSS features, such as functions, mixins, and nesting. We’ll need to convert them to regular CSS files to run them in the browser.
+Officially described as “[CSS with superpowers](https://sass-lang.com/),” SCSS (or Sass) offers a way to write styles for websites with more enhanced CSS syntax. In general, browsers do not know how to process SCSS features, such as functions, mixins, and nesting. We’ll need to convert them to regular CSS files to run them in the browser.
 
 ## **Sass: Pros**
 

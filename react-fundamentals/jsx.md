@@ -41,7 +41,7 @@ Learning all of this just to avoid typing createElement() a few times doesn't ma
 * It assists React in producing more useful error and warning messages
 
 {% hint style="info" %}
-Because JSX is not actually JavaScript, you have to convert it using something called a code compiler. [Babel](https://babeljs.io) is one such tool.
+Because JSX is not actually JavaScript, you have to convert it using something called a code compiler. [Babel](https://babeljs.io/) is one such tool.
 
 Pro tip: If you'd like to see how JSX gets compiled to JavaScript, [check out the online babel REPL here](https://babeljs.io/repl#?builtIns=App\&code\_lz=MYewdgzgLgBArgSxgXhgHgCYIG4D40QAOAhmLgBICmANtSGgPRGm7rNkDqIATtRo-3wMseAFBA\&presets=react\&prettier=true).
 
