@@ -12,7 +12,7 @@ It was a very good build tool : it has a lot of integrations that is mature and 
 
 Like create-react-app it's a build tool created by [Evan You](https://evanyou.me/) the creator of Vue.js.
 
-It's by far faster then create react up as it uses [Rollup](https://rollupjs.org/guide/en/) under the hood against the MegaZord [webpack](https://webpack.js.org/) used by Create-react-app .
+It's by far faster than create react up as it uses [Rollup](https://rollupjs.org/guide/en/) under the hood against the MegaZord [webpack](https://webpack.js.org) used by Create-react-app .
 
 {% embed url="https://www.youtube.com/watch?v=DkGV5F4XnfQ" %}
 
@@ -57,7 +57,7 @@ With Yarn:
 $ yarn create vite
 ```
 
-You can also directly specify the project name and the template you want to use via additional command line options. For example, to scaffold a Vite + Vue project, run:
+You can also directly specify the project name and the template you want to use via additional command line options. For example, to scaffold a Vite + React project, run:
 
 ```
 # npm 6.x

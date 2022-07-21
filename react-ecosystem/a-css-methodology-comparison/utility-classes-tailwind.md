@@ -30,7 +30,7 @@ In the above line of code, a simple button is defined using the following classe
 * `px-4` sets the width.
 * `rounded-full` rounds the shape of the button.
 
-Right off the bat, you’re probably thinking “Ew, talk about hard to read markup.” Even the developers of Tailwind will admit, in terms of first impressions, it’s not great, and that you have to try it to believe it! When I first looked into Tailwind, I was skeptical. I value readable code, and this seems like the opposite so why are so many developers swearing by Tailwind’s approach to utility-first?
+Right off the bat, you’re probably thinking “Ew, talk about hard to read markup.” Even the developers of Tailwind will admit, in terms of first impressions, it’s not great, and that you have to try it to believe it! When I first looked into Tailwind, I was sceptical. I value readable code, and this seems like the opposite so why are so many developers swearing by Tailwind’s approach to utility-first?
 
 ### **Utility-First: Pros**
 
